@@ -1,0 +1,808 @@
+
+0:00
+0:09
+OK, this is quiz review day. The quiz coming up on Wednesday will before this
+0:17
+lecture the quiz will be this hour one o'clock Wednesday in Walker, top floor of Walker, closed book, all normal.
+0:27
+I wrote down what we've covered in this second part
+0:33
+of the course, and actually I'm impressed as I write it.
+0:38
+so that's chapter four on orthogonality and you're remembering these --
+0:45
+what this is suggesting, these are those columns are orthonormal vectors, and then we call that matrix Q and the --
+0:56
+what's the key -- how do we state the fact that those v- those columns are orthonormal in terms of Q,
+1:04
+it means that Q transpose Q is the identity.
+1:11
+So that's the matrix statement of the -- of the property that the columns are orthonormal,
+1:18
+the dot products are either one or zero, and then we computed the projections onto lines and onto
+1:30
+subspaces, and we used that to solve problems Ax=b in --
+1:35
+in the least square sense, when there was no solution, we found the best solution. And then finally this Graham-Schmidt idea,
+1:43
+which takes independent vectors and lines them up, takes --
+1:50
+subtracts off the projections of the part you've already done, so that the new part is orthogonal
+1:58
+and so it takes a basis to an orthonormal basis.
+2:03
+And you -- those calculations involve square roots a lot because you're making things unit vectors,
+2:11
+but you should know that step. OK, for determinants, the three big --
+2:16
+the big picture is the properties of the determinant, one to three d- properties one, two and three, d-
+2:24
+that define the determinant, and then four, five, six through ten were consequences.
+2:31
+Then the big formula that has n factorial terms, half of them have plus signs and half minus signs, and then
+2:38
+the cofactor formula. So and which led us to a formula for the inverse.
+2:46
+And finally, just so you know what's covered in from chapter three, it's section six point
+2:53
+one and two, so that's the basic idea of eigenvalues
+2:58
+and eigenvectors, the equation for the eigenvalues, the mechanical step, this is really Ax equal lambda
+3:07
+x for all n eigenvectors at once, if we have n independent eigenvectors,
+3:14
+and then using that to compute powers of a matrix. So you notice the differential equations not on this list,
+3:22
+because that's six point three, that that's for the third quiz.
+3:28
+OK. Shall I what I usually do for review is to take an old exam
+3:36
+and just try to pick out questions that are significant and write them quickly on the board, shall I --
+3:44
+shall I proceed that way again? This -- this exam is really old.
+3:51
+November nineteen -- nineteen eighty-four, so that was before the Web existed.
+3:59
+So not only were the lectures not on the Web, nobody even had a Web page, my God.
+4:07
+OK, so can I nevertheless linear algebra was still as great as ever.
+4:14
+So may I and that wasn't meant to be a joke, OK, all right,
+4:22
+so let me just take these questions as they come.
+4:28
+All right. OK. So the first question's about projections. It says we're given the line, the --
+4:35
+the vector a is the vector two, one, two, and I want to find the projection matrix P that
+4:44
+projects onto the line through a. So my picture is, well I'm in three dimensions, of course,
+4:51
+so there's a vector, two -- there's the vector a, two, one, two, let me draw the whole line through it,
+4:59
+and I want to project any vector b onto that line,
+5:05
+and I'm looking for the projection matrix. So -- so this -- the projection matrix is the matrix that I
+5:12
+multiply b by to get here. And I guess this first part, this is just part one
+5:19
+a, I'm really asking you the -- the quick way to answer, to find P, is just to remember what the formula is.
+5:28
+And -- and we're in -- we're projecting onto a line, so our formula, our -- our usual formula is AA transpose A
+5:37
+inverse A transpose, but now A is just a column,
+5:43
+one-column matrix, so it'll be just a, so I'll just call it
+5:49
+little a, little a transpose, and this is just a number now, one by one, so I can put it in the denominator,
+5:56
+so there's our -- that's really what we want to remember, and -- and using that two, one, two, what will I get?
+6:05
+I'm dividing by -- what's the length squared of that vector?
+6:12
+So what's a transpose a? Looks like nine, and what's the matrix, well, I'm --
+6:18
+I'm doing two, one, two against two, one, two, so it's one-ninth of this matrix four, two, four,
+6:28
+two, one, two, four, two, four.
+6:34
+Now the next part asked about eigenvalues. So you see we're -- since we're learning,
+6:39
+we know a lot more now, we can make connections between these chapters, so what's the eigenvector,
+6:47
+what are the eigenvalues of P? I could ask what's the rank of P. What's
+6:53
+the rank of that matrix? Uh -- one. Rank is one.
+6:59
+What's the column space? If I apply P to all vectors then I fill up the column space,
+7:06
+it's combinations of the columns, so what's the column space? Well, it's just this line.
+7:13
+The column space is the line through two, one, two. And now what's the eigenvalue?
+7:20
+So, or since that matrix has rank one, so tell me the eigenvalues of this matrix.
+7:26
+It's a singular matrix, so it certainly has an eigenvalue zero.
+7:34
+Actually, the rank is only one, so that means that there like going to be
+7:42
+t- a two-dimensional null space, there'll be at least two,
+7:48
+this lambda equals zero will be repeated twice because I can find two independent eigenvectors
+7:55
+with lambda equals zero, and then of course since it's got three eigenvalues, what's the third one?
+8:02
+It's one. How do I know it's one? Either from the trace, which is nine over nine, which is one,
+8:09
+or by remembering what -- what is the eigenvector, and actually now
+8:16
+it's going to ask for the eigenvector, so what's the eigenvector for that eigenvalue?
+8:21
+What's the eigenvector for that eigenvalue?
+8:28
+It's the -- it's the vector that doesn't move, eigenvalue one,
+8:35
+so the vector that doesn't move is a. This a is the --
+8:41
+is -- is also the eigenvector with lambda equal one,
+8:47
+because if I apply the projection matrix to a, I get a again.
+8:52
+Everybody sees that if I apply that matrix to a, can I do it in little letters, if I apply that matrix to a,
+8:59
+then I have a transpose a canceling a transpose a and I get a again. So sure enough, Pa equals a.
+9:06
+And the eigenvalue is one.
+9:12
+OK. Good. now, actually it asks you further to solve this
+9:22
+difference equation, so this will be -- this is -- this is solve u(k+1)=Puk, starting from u0 equal nine,
+9:36
+nine, zero. And find uk.
+9:41
+So -- so what's up?
+9:49
+Shall we find u1 first of all? So just to get started.
+9:55
+So what is u1? It's Pu0 of course.
+10:01
+So if I do the projection of -- of this vector onto the line, so this is like my vector b now
+10:10
+that I'm projecting onto the line, I get a times a transpose u0 over a transpose a.
+10:19
+Well, one way or another I just do this multiplication. but maybe this is the easiest way to do it.
+10:26
+a transpose, can I remember what a is on this board? Two, one, two, so I'm projecting onto the line through there.
+10:37
+This is the projection, it's P times the vector u0, so what do I have for a transpose u0 looks like
+10:44
+eighteen, looks like twenty-seven, and a transpose a we figured was nine,
+10:50
+so it's three a, so that this is the -- this is the x hat,
+10:57
+the -- the multiple of a, in -- in our formulas, and of course that's six, three, six.
+11:03
+So that's u1.
+11:08
+Computed out directly. That's on the line through a and it's the closest point to u0,
+11:17
+and it's just Pu0. You just straightforward multiplication produces that.
+11:23
+OK. Now, what's u2?
+11:28
+Well, u2 is Pu1, I agree. Do I need to compute that again?
+11:35
+No, because once I'm already on the line through A, uk will be,
+11:41
+I could do the projection k times, but it's enough just to do it once.
+11:47
+It's the same, it's the same, six, three, six.
+11:53
+So this is a case where I could and --
+11:59
+and actually on the quiz if you see one of these, which could very well be there, and it could very well be not
+12:09
+a projection matrix, then we would use all the eigenvalues
+12:16
+and eigenvectors. Let's think for a moment, how do you do those? M - the point of this small part of a question was that when P
+12:24
+is a projection matrix, so that P squared equals P and P cubed equals P, then -- then we don't need to get into the mechanics
+12:33
+of all knowing all the other eigenvalues and eigenvectors. We just can go directly.
+12:40
+But if P was now some other matrix, can you just --
+12:48
+let's just remember from these very recent lectures how you would proceed. from these very recent lectures we know that uk we would --
+12:57
+we would expand u0 as a combination of eigenvectors.
+13:02
+Let me leave -- yeah, as a combination of eigenvectors, c1x1, some multiple of the second eigenvector,
+13:12
+some multiple of the third eigenvector, and then A to the ku0 would be c1, so this --
+13:22
+we have to find these numbers here, that's the work actually. The work is find the eigenvalues,
+13:30
+find the eigenvectors and find the c-s because they all come into the formula.
+13:35
+We have -- so -- so to do this, you can see what you have
+13:50
+to compute. You have to compute the eigenvalues, you have to compute the eigenvectors,
+13:55
+and then to match u0 you compute the c-s, and then you've got it.
+14:01
+So it's -- it's just that's a formula that shows what pieces
+14:06
+we need. And what would actually happen in the case of this projection
+14:12
+matrix? If this A is a projection matrix, then a couple of eigenvalues are zero.
+14:19
+That's why we just throw those away. The other eigenvalue was a one, so that we got the same thing
+14:27
+every time, c3x3. From the first time, second time,
+14:33
+third, all iterations pro- left us with this constant, left us right here at six, three, six.
+14:39
+But maybe I take -- I'm taking this chance to remind you of what to do for other matrices.
+14:47
+OK. So that's part way through.
+14:52
+OK. The next question in nineteen eighty-four is fitting a straight line to points.
+15:01
+And actually a straight line through the origin. A straight line through the origin.
+15:06
+So can I go to question two? So this is fitting a straight line to these points, can I --
+15:15
+I'll just give you the points at t=1 the y is four, at t=2,
+15:26
+y is five, at t=3, y is eight.
+15:34
+So we've got points one, two, three, four, five, and eight.
+15:42
+And I'm trying to fit a straight line through the origin to these three values.
+15:48
+OK, so my equation that I'm allowing myself
+15:57
+is just y equal Dt. So I have only one unknown.
+16:03
+One degree of freedom. One parameter D. So I'm expecting to end up my matrix so my -- my --
+16:12
+when I try to -- when I try to fit a straight line, that goes through the origin, that's because it goes
+16:19
+through the origin, I've lost the constant c here, so I have just this should be a quick calculation.
+16:27
+and I can write down the three equations that -- that --
+16:32
+that would -- I'd like to solve if the line went through the points, that's a good start.
+16:38
+Because that displays the matrix.
+16:43
+So can I continue that problem? We would like to solve--
+16:48
+so y is Dt, so I'd like to solve D times one times
+16:54
+D equals four, two times D equals five and three
+17:00
+times D equals eight. That would be perfection. If I could find such a D, then the line y
+17:09
+equal Dt would satisfy all three equations, would go through all three points, but it doesn't exist.
+17:16
+So -- so I have to solve this -- so the -- my matrix is now you can see my matrix, it just has one column.
+17:23
+Multiplying a scalar D. And you can see the right-hand side.
+17:30
+This is my Ax=b. I don't need three equals signs now because I've got vectors.
+17:38
+OK. There's Ax=b and you take it from there. You the -- the best x will be -- will come from --
+17:47
+so what's the -- the key equation? So this is the A, this is the Ax hat equal b equation.
+17:54
+Well, Ax=b. And what's the equation for x hat?
+18:00
+The best D, so to find the best D, the best x,
+18:08
+the equation is A transpose A, the best D,
+18:14
+is A transpose times the right-hand side.
+18:20
+This is all coming from projection on a line, our -- our matrix only has one column.
+18:26
+So A transpose A would be maybe fourteen, D hat, and A transpose b I'm getting four, ten,
+18:35
+and twenty-four. Is that right? Four, ten and twenty-four.
+18:40
+So thirty-eight. So that tells me the best D hat is D hat
+18:47
+is thirty-eight over fourteen. OK.
+18:53
+Fine. All right. so we found the best line.
+18:59
+And now here's a -- here's the next question. What vector did I just project onto what line?
+19:07
+See in this section on least squares here's the key point,
+19:12
+I'm -- I'm asking you to think of the least squares problem in two ways.
+19:17
+Two different pictures. Two different graphs. One graph is this.
+19:22
+This is a graph in the -- in the b -- in the tb plane, ty plane.
+19:28
+The -- the -- the line itself. The other picture I'm asking you to think of is like my projection picture.
+19:35
+What -- what projection -- what -- what vector I -- I projecting onto what line or what subspace when I -- when I
+19:42
+do this? So the -- my second picture is a projection picture that --
+19:48
+that sees the whole thing with vectors. Here's my vector of course that I'm projecting.
+19:53
+I'm projecting that vector b onto the column space of A.
+20:06
+Of if you like -- it's just a line onto that's the line
+20:15
+it's just a line, of course. That's what this calculation is doing.
+20:21
+This is computing the best D, which is -- this is the x hat.
+20:30
+So -- so seeing it as a projection means I don't see the projection in this figure, right?
+20:36
+In this figure I'm not projecting those points onto that line or anything of the sort.
+20:41
+The projection s-picture for -- for least squares is in the --
+20:48
+in the space where b lies, the whole vector b, and the columns of A.
+20:54
+And then the x is the best combination
+21:02
+that gives the projection. OK. So that's a chance to tell me that.
+21:07
+OK. I'll go -- OK now finally in orthogonality there's the Graham-Schmidt idea.
+21:14
+So that's problem two D here.
+21:20
+It asks me if I have two vectors, a1 equal one, two, three, and a2 equal one, one, one, find
+21:32
+two orthogonal vectors in that plane. So those two vectors give a plane, they give a plane.
+21:43
+Which is of course the -- the column space of the -- of the matrix.
+21:50
+And I'm looking for an orthogonal basis for that plane. So I'm looking for two orthogonal vectors.
+21:58
+And of course there are lots of -- I mean, I've got a plane there.
+22:05
+If I get one orthogonal pair, I can rotate it. There's not just one answer here.
+22:10
+But Graham-Schmidt says OK, start with the first vector,
+22:16
+and let that be -- and keep that one. And then take the second one orthogonal to this.
+22:23
+So -- so Graham-Schmidt says start with this one and then make a second vector B, can I call that second vector B,
+22:31
+this is going to be orthogonal to, so perpendicular to a1. If I can with my chalk create the key equation.
+22:40
+This vector B is going to be this one, one, one,
+22:46
+but that one, one -- one, one, one is not perpendicular to a1, so I have to subtract off its projection,
+22:54
+I have to subtract off the B, the -- the B trans- ye the B --
+23:00
+the -- the I should say the a1 transpose b over a1 transpose
+23:07
+a1, that multiple of a1, I've got to remove.
+23:14
+So I just have to compute what that is, and I get ano- I get a vector B that's orthogonal to a1.
+23:21
+It's the -- it's -- it's the original vector minus its projection.
+23:29
+Oh, so what is -- I mean this to be a2.
+23:36
+So I'm projecting a2 onto the line through a1. Yeah. That's the part that I don't want because that's
+23:42
+in the direction I already have, so I subtract off that projection and I get the part I want,
+23:48
+the orthogonal part. So that's the Graham-Schmidt thing and we can put numbers in.
+23:54
+OK. one, one, one take away a1 transpose a2 is six,
+24:00
+a1 transpose a1 is fourteen,multiplying a1.
+24:06
+And that gives us the new orthogonal vector B.
+24:13
+Because I only ask for orthogonal right now, I don't have to divide by the length which
+24:19
+will involve a square root. OK. Third question.
+24:27
+Third question. All right, let me -- I'll move this board up.
+24:33
+third question will probably be about eigenvalues. OK.
+24:38
+Three. This is a four-by-four matrix.
+24:44
+Its eigenvalues are lambda one, lambda two, lambda three, lambda four.
+24:50
+Question one. What's the condition on the lambdas so
+24:55
+that the matrix is invertible? OK. So under what conditions on the lambdas
+25:02
+will the matrix be invertible? So that's easy.
+25:08
+Invertible if what's the condition on the lambdas?
+25:17
+None of them are zero. A zero eigenvalue would mean something in the null space
+25:23
+would mean a solution to Ax=0x, but we're invertible, so none of them is zero, the product --
+25:32
+however you want to say, no -- no zero eigenvalues.
+25:38
+Good. OK, what's the determinant of A inverse? The determinant of A inverse?
+25:45
+So where is that going to come from?
+25:52
+Well, if we knew the eigenvalues of A inverse, we could multiply them together to find the determinant.
+25:59
+And we do know the eigenvalues of A inverse. What are they? They're just one over lambda one times
+26:08
+one over lambda two, that's the second eigenvalue, the third eigenvalue and the
+26:13
+fourth. So the product of the four eigenvalues of the inverse
+26:18
+will give us the determinant of the inverse. Fine. OK. And what's the trace of A plus I?
+26:39
+So what do we know about trace? It's the sum down the diagonal, but we
+26:46
+don't know what our matrix is. The trace is also the sum of the eigenvalues,
+26:51
+and we do know the eigenvalues of A plus I. So we just add them up.
+26:57
+So what -- what's the first eigenvalue of A plus I?
+27:02
+When the matrix A has eigenvalues lambda one, two, three and four, then the eigenvalues
+27:08
+if I add the identity, that moves all the eigenvalues by one, so I just add up lambda one plus one,
+27:17
+lambda two plus one, and so on, lambda three plus one, lambda
+27:22
+four plus one, so it's lambda one plus lambda two plus lambda three plus lambda four plus four.
+27:32
+Right. That movement by the identity moved all the eigenvalues
+27:38
+by one, so it moved the whole trace by four. So it was the trace of A plus four more.
+27:45
+OK. Let's see. We may be finished this quiz twenty minutes early.
+27:51
+No. There's another question. Oh, God, OK.
+27:57
+How did this class ever do it? Well, you'll see. you'll be able to do it.
+28:02
+OK. this has got to be a determinant question. All right.
+28:09
+More determinants and cofactors and big formula question. OK.
+28:14
+Let me do that. So it's about a matrix, a -- a whole family of matrices.
+28:22
+Here's the four-by-four one. The four-by-four one is, and -- and all the matrices in this
+28:29
+family are tridiagonal with --
+28:35
+with ones. Otherwise zeroes. So that's the pattern, and we've seen this matrix.
+28:43
+OK. So the -- it's tridiagonal with ones on the diagonal, ones above and ones below, and you see the general formula An,
+28:52
+so I'll use Dn for the determinant of An.
+28:58
+OK. All right. So I'm going to do a -- the first question is use cofactors to show that Dn is
+29:14
+something times D(n-1) plus something times D(n-2).
+29:20
+And find those somethings. OK.
+29:26
+So this -- the fact that it's tridiagonal with these constant diagonals means that there is such a recurrence formula.
+29:37
+And so the first question is find it. Well, what's the recurrence formula? OK, how does it go?
+29:43
+So I'll use cofactors along the first row. So I take that number times its cofactor.
+29:51
+So it's one times its cofactor and what is its cofactor?
+29:56
+D(n-1), right, exactly, the cofactor is this -- is this guy uses up row one and column one,
+30:03
+so the cofactor is down here, so it's one of those.
+30:10
+OK, that's the first cofactor term. Now the other cofactor term is this guy.
+30:17
+Which uses up row one and column two and what's surprising about that?
+30:24
+When you use row one and column two that brings in a minus.
+30:30
+There'll be a minus because the -- the cofactor is this determinant times minus one.
+30:38
+The the one-two cofactor is that determinant with its sign
+30:44
+changed. OK. So I have to look at that determinant and I have to remember in my head a sign is going to get changed.
+30:50
+OK. Now how do I do that determinant? How do I make that one clear?
+30:58
+I -- the -- the neat way to do is -- is here I see I -- I'll use cofactors down the first column.
+31:05
+Because the first column is all zeroes except for that one, so this one is now -- and what's its cofactor?
+31:13
+Within this three-by-three its cofactor will be two-by-two, and what is it?
+31:19
+It's this, right? So -- so that part is all gone, so I'm taking that times its
+31:25
+cofactor, then zero times whatever its cofactor is, so it's really just one times and what's this in the general
+31:34
+n-by-n case? It's Dn minus two.
+31:39
+But now so is this a plus or sign or a minus sign, it's -- it's just a one, because there's a one from there and a one from
+31:48
+there. And is it a plus or a minus? It's minus I guess because there was a minus the first time
+31:56
+and then the second time it's a plus, so it's overall it's a minus. So there's my a and b were one and minus one.
+32:04
+Those constants. Th- that's the -- that's the recurrence. OK.
+32:10
+And oh, then it asks you to then it asks you to solve this thing
+32:19
+first by writing it as a -- as a system.
+32:25
+So now I'd like to know the solution. I -- I better know how it starts, right?
+32:30
+It starts with D1, what was D1, that's just the one-by-one case, so D1 is one, and what is D2?
+32:39
+Just to get us started and then this would give us D3, D4, and forever.
+32:45
+D2 is this two-by-two that I'm seeing here and that determinant is obviously zero.
+32:51
+So those little ones will start the recurrence and then we take
+32:57
+off. And then the idea is to write this recurrence as -- as a Dn, D(n-1) is some matrix times the one before,
+33:11
+the D(n-1), D(n-2).
+33:20
+What's the matrix? You see, you remember this step of taking a single second order
+33:26
+equation and by introducing a vector unknown to make it into a --
+33:32
+to a first order system. OK. So Dn is one of Dn minus one minus one, I think that --
+33:41
+that goes in the first row, right? From the equation above? And the second one is this is the same as this,
+33:48
+so one and zero are fine.
+33:53
+So there's the matrix. OK. So now how do I proceed?
+33:58
+We can guess what this examiner's got in his little mind.
+34:07
+well, find the eigenvalues.
+34:12
+And actually it tells us that the sixth power
+34:19
+of these eigenvalues turns out to be one. Uh, well, can -- can we get the equation for the eigenvalues?
+34:30
+Let's do it and let's get a formula for them. OK. So what are the eigenvalues?
+34:35
+I look at the -- the matrix, this determinant one minus lambda and zero minus lambda, and these guys are still there,
+34:44
+I compute that determinant, I get lambda squared minus lambda and then plus one.
+34:52
+And I set that to zero. OK. So we're not Fibonacci here.
+34:59
+We're -- we're not seeing Fibonacci numbers. Because the sign -- we had a sign change there.
+35:07
+And it's not clear right away whether these -- whether this -- is it clear?
+35:13
+Is this matrix stable or unstable?
+35:18
+When we take -- when we go further and further out? Are these Ds increasing?
+35:23
+Are they going to zero? Are they bouncing around periodically? the answers have to be here.
+35:30
+I would like to know how big these lambdas are, right? And the point is probably these -- let's -- let's see,
+35:37
+what's lambda? From the quadratic formula lambda is one, I switch the sign of that, plus or minus
+35:45
+the square root of one minus 4ac, I getting a minus three
+35:50
+there? Over two.
+35:58
+What's up? They're complex. The -- the eigenvalues are one plus square root of three I
+36:08
+over two and one minus square root of three I over two.
+36:15
+What's the magnitude of lambda? That's the key point for stability.
+36:22
+These are two numbers in the complex plane. One plus some -- somewhere here, and its complex conjugate
+36:30
+there. I want to know how far from the origin are those numbers.
+36:37
+What's the magnitude of lambda? And do you see what it is?
+36:43
+Do you recognize this -- a number like that? Take the real part squared and the imaginary part squared
+36:50
+and add. What do you get? So the real part squared is a quarter.
+36:57
+The imaginary part squared is three-quarters. They add to one. That's a number with -- that's on the unit circle.
+37:06
+That's an e to the i theta. That's a cos(theta)+isin(theta). And what's theta?
+37:14
+This -- this is like a complex number that's worth knowing, it's not totally obvious but it's nice.
+37:23
+That's -- I should see that as cos(theta)+isin(theta), and the angle that would do that is sixty degrees,
+37:30
+pi over three. So that's a -- let me improve my picture.
+37:36
+So those -- that's e to the i pi over six -- pi over three. This is -- this number is e to the i pi over three and e
+37:46
+to the minus i pi over three. We'll be doing more complex numbers briefly
+37:54
+but a little more in the next two days.
+37:59
+next two lectures. Anyway, the -- so what's the deal with stability,
+38:05
+what do the Dn-s do? Well, look, if -- if I take the sixth power I'm around at one,
+38:13
+the problem actually told me this. The sixth power of those eigenvalues brings me around to
+38:18
+What does that tell you about the matrix, by the way? one. Suppose you know -- this was a great quiz question,
+38:26
+so I should never have just said it, but popped out. Suppose lambda one to the sixth and lambda two to the sixth are
+38:33
+-- are one, which they are. What does that tell me about a m- a matrix?
+38:40
+About my matrix A here. Well, what -- what matrix is connected with lambda one
+38:47
+to the sixth and lambda two to the sixth? It's got to be the matrix A to the sixth. So what is A to the sixth for that matrix?
+38:55
+It's got eigenvalues one and one. Because when I take the sixth power, actually, ye,
+39:04
+if I take the sixth power b- all the sixth power of that is one and the sixth power of that is one, the sixth power of this
+39:12
+is e to the two pi i, that's one, the sixth power of this is e to the minus two pi i, that's one.
+39:19
+So the sixth powers, the -- the sixth power of that matrix has eigenvalues one and one, so what is it?
+39:27
+It's the identity, right. So if I operate this -- if I run this thing six times,
+39:33
+I'm back where I was. The sixth power of that matrix is the identity.
+39:39
+Good. OK. So it'll loop around, it's -- it doesn't go to zero,
+39:44
+it doesn't blow up, it just periodically goes around with period six.
+39:50
+OK. let's just see if there's a -- all right.
+39:58
+I'll -- let's see. Could I also look at a -- at a final exam from nineteen ninety-two.
+40:05
+I think that's yeah, let me do that on this last board.
+40:11
+It starts -- a lot of the questions in this exam are
+40:18
+about a family of matrices. Let me give you the fourth, the fourth guy in the family is --
+40:25
+has a one, so it's zeroes on the diagonal, but these are going one, two, three and so on.
+40:34
+One, two, three, and so on. But, for the four-by-four case I'm stopping at four.
+40:42
+You see the pattern? It's a family of matrices which is growing,
+40:49
+and actually the numbers -- it's symmetric, right, it's equal to A4 transpose.
+40:56
+And we can ask all sorts of questions about its null space, its range, r- its column space find the projection
+41:07
+matrix onto the column space of A3, for example, is in here.
+41:12
+So -- so one -- so A3 is zero, one, zero, one, zero, two,
+41:21
+zero, two, zero.
+41:32
+OK, find the projection matrix onto the column space. By the way, is that matrix singular or invertible?
+41:41
+Singular. Why do we know it's singular? I see that column three is a multiple of column one.
+41:50
+Or we could take its determinant. So it's certainly singular.
+41:55
+The projection will be matrix will be three-by-three but it will project onto the column space,
+42:03
+it'll project onto this plane. The column space of A3, and I guess I would find it from
+42:09
+the formula AA -- AA transpose A inverse, I would have to --
+42:15
+I would -- I guess I would do all this.
+42:20
+There may be a better way, perhaps I could think there might be a slightly quicker way, but that would come out pretty fast.
+42:27
+OK. So that's be the projection matrix. Next question. Find the eigenvalues and eigenvectors of that matrix.
+42:35
+OK. There's a three-by-three matrix, oh, yeah, so what are its eigenvalues and eigenvectors,
+42:40
+we haven't done any three-by-threes. Let's do one. I want to find, so how do I find eigenvalues?
+42:48
+I take the determinant of A3 minus lambda I. So this is you just have to -- so I'm subtracting lambda from
+42:57
+the diagonal, and I have a one, one, zero, zero, two,
+43:02
+two there, and I just have to find that determinant. OK, since it's three-by-three I'll just go for it.
+43:11
+This way gives me minus lambda cubed and a zero and zero.
+43:16
+Then in this direction which has the minus sign, that's a zero, four lambdas, I mean minus four lambdas,
+43:25
+and minus another lambda, so that's minus five lambdas, but that direction goes with a minus sign,
+43:32
+so I think it's plus five lambda. That looks like the determinant of A3 minus lambda I,
+43:40
+so I set it to zero. So what are the eigenvalues?
+43:45
+Well, lambda equals zero -- lambda factors out of this, times minus lambda squared plus four,
+43:52
+so the eigenvalues are five, thanks, thanks,
+44:03
+so the eigenvalues are zero, square root of five, and minus square root of five.
+44:11
+And I would never write down those three eigenvalues without checking the trace to tell the truth.
+44:17
+Because -- because we did a bunch of calculations here but then I can quickly add up the eigenvalues to get zero,
+44:22
+add up the trace to get zero, and feel that I'm -- well, I guess that wouldn't have caught my error if I'd made it
+44:30
+-- if -- if that had been a four I wouldn't have noticed,the determinant isn't anything greatly useful here, right,
+44:37
+because the determinant is just zero. And so I never would know whether that five
+44:44
+was right or wrong, but thanks for making it right. OK.
+44:49
+Ha. Question two c, whoever wrote this, probably me,
+45:00
+said this is not difficult. I don't know why I put that in.
+45:06
+just -- it asks for the projection matrix onto the column space of A4.
+45:12
+How could I have thought that wasn't difficult?
+45:17
+It looks extremely difficult. what's the projection matrix
+45:25
+onto the column space of A4?
+45:32
+I don't know whether that -- this is not difficult is just like helpful or -- or insulting.
+45:37
+Uh, what do you think? The -- what's the column space of A4 here?
+45:43
+Well, what's our first question is is the matrix singular
+45:52
+or invertible? If the answer is invertible, then what's the column space?
+45:58
+If -- if this matrix A4 is invertible, so that's my guess,
+46:03
+if this problem's easy it has to be because this matrix is probably invertible. Then its column space is R^4, good,
+46:12
+the column space is the whole space, and the answer to this easy question is the projection
+46:18
+matrix is the identity, it's the four-by-four identity matrix. If this matrix is invertible.
+46:26
+Shall we check invertibility? How would you find its determinant? Can we just like take the determinant of that matrix?
+46:33
+I could ask you how -- so there -- there are twenty-four terms, do we want to write all twenty-four terms down?
+46:39
+not in the remaining ten seconds. Better to use cofactors. So I go along row one, I see one --
+46:47
+the only nonzero is this guy, so I should take that one times the cofactor.
+46:53
+Now so I'm down to this determinant. OK. So now I'm -- look at this first column, I see one times this,
+47:00
+there's the cofactor of the one, so I'm using up row one -- row one and column one of this three-by-three matrix,
+47:09
+I'm down to this cofactor, and by the way, those were both plus signs, right? No, they weren't.
+47:15
+That was a minus sign. That was a -- that was a minus, and then that was a plus, and then this, so
+47:22
+what's the determinant? Nine. Nine. Determinant is nine.
+47:27
+Determinant of A4 is nine. OK. Where A3, so my guess is I'll put that on the final this
+47:38
+year, the -- probably the odd- numbered ones are singular and the even-numbered ones are invertible.
+47:47
+And I don't know what the determinants are but I'm betting that they have some nice formula.
+47:55
+OK. So, recitations this week will also be quiz review
+48:02
+and then the quiz is Wednesday at one o'clock.
+48:08
+Thanks. 

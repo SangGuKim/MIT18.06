@@ -1,0 +1,802 @@
+https://www.youtube.com/watch?v=JibVXBElKL0
+
+# Intro
+0:00
+0:09
+Okay. This is lecture five in linear algebra. And, it will complete this chapter of the book.
+0:19
+So the last section of this chapter
+0:24
+is two point seven that talks about permutations, which
+0:30
+finished the previous lecture, and transposes, which also came in the previous lecture.
+0:36
+There's a little more to do with those guys, permutations and transposes.
+# Permutations
+0:42
+But then the heart of the lecture will be the beginning
+0:48
+of what you could say is the beginning of linear algebra, the beginning of real linear algebra which is seeing
+0:57
+a bigger picture with vector spaces -- not just vectors, but spaces of vectors and sub-spaces of those spaces.
+1:06
+So we're a little ahead of the syllabus, which is good, because we're coming to the place
+1:13
+where, there's a lot to do. Okay. So, to begin with permutations.
+1:22
+Can I just -- so these permutations, those are matrices P and they execute
+1:36
+row exchanges.
+1:42
+And we may need them. We may have a perfectly good matrix, a perfect matrix A that's invertible that we can solve A
+1:52
+x=b, but to do it -- I've got to allow myself that extra freedom
+2:00
+that if a zero shows up in the pivot position I move it away.
+2:05
+I get a non-zero. I get a proper pivot there by exchanging from a row below.
+2:12
+And you've seen that already, and I just want to collect the ideas together.
+2:18
+And principle, I could even have to do that two times, or more times.
+2:24
+So I have to allow -- to complete the -- the theory, the possibility that I take my matrix A,
+2:34
+I start elimination, I find out that I need row exchanges and I do it and continue and I finish.
+2:41
+Okay. Then all I want to do is say -- and I won't make a big project
+2:49
+out of this -- what happens to A equal L U?
+2:54
+So A equal L U --
+2:59
+this was a matrix L with ones on the diagonal and zeroes
+3:05
+above and multipliers below, and this U we know, with zeroes down here.
+3:13
+That's only possible.
+3:19
+That description of elimination assumes that we don't have a P, that we don't have any row exchanges.
+3:26
+And now I just want to say, okay, how do I account for row exchanges? Because that doesn't.
+3:33
+The P in this factorization is the identity matrix.
+3:40
+The rows were in a good order, we left them there. Maybe I'll just add a little moment of reality,
+3:47
+too, about how Matlab actually does elimination.
+3:55
+Matlab not only checks whether that pivot is not zero, as every human would do.
+# Row Exchanges
+4:02
+It checks for is that pivot big enough, because it doesn't like very, very small pivots.
+4:09
+Pivots close to zero are numerically bad. So actually if we ask Matlab to solve a system,
+4:16
+it will do some elimination some row exchanges, which we don't think are necessary.
+4:23
+Algebra doesn't say they're necessary, but accuracy -- numerical accuracy says they are.
+4:31
+Well, we're doing algebra, so here we will say, well, what do row exchanges do,
+4:39
+but we won't do them unless we have to. But we may have to.
+4:45
+And then, the result is --
+4:50
+it's hiding here. It's the main fact.
+4:56
+This is the description of elimination with row exchanges. So A equal L U becomes P A equal L U.
+5:12
+So this P is the matrix that does the row exchanges, and actually it does them --
+5:18
+it gets the rows into the right order, into the good order where pivots will not --
+5:23
+where zeroes won't appear in the pivot position, where L and U will come out right as up here.
+5:32
+So, that's the point. Actually, I don't want to labor that point,
+# Permutation Matrix
+5:39
+that a permutation matrix -- and you remember what those were.
+5:47
+I'll remind you from last time of what the main points about permutation matrices were --
+5:57
+and then just leave this factorization as the general case.
+6:03
+This is -- any invertible A we get this.
+6:17
+For almost every one, we don't need a P. But there's that handful that do need row exchanges,
+6:24
+and if we do need them, there they are. Okay, finally, just to remember what P was.
+6:30
+So permutations, P is the identity matrix
+6:46
+with reordered rows.
+6:51
+6:56
+I include in reordering the possibility that you just leave them the same. So the identity matrix is -- okay.
+7:02
+That's, like, your basic permutation matrix --
+7:08
+your do-nothing permutation matrix is the identity. And then there are the ones that exchange two rows and then
+7:15
+the ones that exchange three rows and then then ones that exchange four --
+7:21
+well, it gets a little -- it gets more interesting algebraically
+7:27
+if you've got four rows, you might exchange them all in one big cycle. One to two, two to three, three to four, four to one.
+7:35
+Or you might have -- exchange one and two and three and four.
+7:41
+Lots of possibilities there. In fact, how many possibilities?
+7:46
+The answer was (n)factorial. This is n(n-1)(n-2)...
+7:56
+(3)(2)(1). That's the number of -- this counts the reorderings,
+8:05
+the possible reorderings. So it counts all the n by n permutations.
+8:15
+8:23
+And all those matrices have these -- have this nice property that they're all invertible,
+8:32
+because we can bring those rows back into the normal order.
+8:39
+And the matrix that does that is just P -- is just the same as the transpose.
+8:46
+You might take a permutation matrix, multiply by its transpose and you will see how --
+8:51
+that the ones hit the ones and give the ones in the identity
+8:57
+matrix. So this is a -- we'll be highly interested in matrices
+9:02
+that have nice properties. And one property that -- maybe I could rewrite that as P
+9:09
+transpose P is the identity. That tells me in other words that this
+9:16
+is the inverse of that. Okay. We'll be interested in matrices that have P transpose
+9:25
+P equal the identity. There are more of them than just permutations, but my point right now is that permutations are like a little
+9:35
+group in the middle -- in the center of these special matrices.
+9:42
+Okay. So now we know how many there are.
+9:47
+Twenty four in the case of -- there are twenty four four by four permutations, there are five factorial which is
+9:55
+a hundred and twenty, five times twenty four would bump us up to a hundred and twenty -- so listing all the five by five
+10:03
+permutations would be not so much fun.
+# Transpose Matrix
+10:09
+Okay. So that's permutations.
+10:15
+Now also in section two seven is some discussion of transposes.
+10:20
+And can I just complete that discussion. First of all, I haven't even transposed a matrix
+10:30
+on the board here, have I? So I'd better do it. So suppose I take a matrix like (1 2 4; 3 3 1).
+10:39
+It's a rectangular matrix, three by two.
+10:47
+And I want to transpose it. So what's --
+10:53
+I'll use a T, also Matlab would use a prime.
+10:59
+And the result will be -- I'll right it here, because this was three rows and two columns,
+11:07
+this was a three by two matrix. The transpose will be two rows and three columns,
+11:13
+two by three. So it's short and wider.
+11:20
+And, of course, that row -- that column becomes a row --
+11:25
+that column becomes the other row. And at the same time, that row became a column.
+11:36
+This row became a column. Oh, what's the general formula for the transpose?
+11:41
+So the transpose --
+11:48
+you see it in numbers. What I'm going to write is the same thing in symbols.
+11:54
+The numbers are the clearest, of course. But in symbols, if I take A transpose
+12:04
+and I ask what number is in row I and column J of A transpose?
+12:10
+Well, it came out of A.
+12:16
+It came out A by this flip across the main diagonal.
+12:22
+And, actually, it was the number in A
+12:28
+which was in row J, column I.
+12:34
+So the row and column -- the row and column numbers just get reversed.
+12:39
+The row number becomes the column number, the column number becomes the row number. No problem.
+12:45
+Okay. Now, a special -- the best matrices, we could say.
+12:52
+In a lot of applications, symmetric matrices show up.
+12:58
+So can I just call attention to symmetric matrices?
+13:07
+What does that mean? What does that word symmetric mean? It means that this transposing doesn't change the matrix.
+13:16
+A transpose equals A. And an example.
+13:21
+So, let's take a matrix that's symmetric,
+13:29
+so whatever is sitting on the diagonal -- but now what's above the diagonal, like a one,
+13:36
+had better be there, a seven had better be here, a nine had better be there.
+13:43
+There's a symmetric matrix. I happened to use all positive numbers as its entries.
+13:52
+That's not the point. The point is that if I transpose that matrix, I get it back again.
+13:58
+So symmetric matrices have this property A transpose equals A. I guess at this point --
+14:07
+I'm just asking you to notice this family of matrices that
+14:14
+are unchanged by transposing. And they're easy to identify, of course.
+14:22
+You know, it's not maybe so easy before we had a case where
+14:28
+the transpose gave the inverse. That's highly important, but not so simple to see.
+14:36
+This is the case where the transpose gives the same matrix back again. That's totally simple to see.
+14:42
+Okay. Could actually -- maybe I could even say when would we get such
+14:49
+a matrix? For example, this -- that matrix is absolutely far from
+14:55
+symmetric, right? The transpose isn't even the same shape --
+15:01
+because it's rectangular, it turns the -- lies down on its side.
+15:06
+But let me tell you a way to get a symmetric matrix out of this.
+15:11
+Multiply those together. If I multiply this rectangular, shall I
+15:17
+call it R for rectangular? So let that be R for rectangular matrix
+15:22
+and let that be R transpose, which it is. Then I think that if I multiply those together,
+15:32
+I get a symmetric matrix. Can I just do it with the numbers and then ask you why, how did I know it would be symmetric?
+15:44
+So my point is that R transpose R is always symmetric.
+15:52
+Okay?
+15:57
+And I'm going to do it for that particular R transpose R which was --
+16:02
+let's see, the column was one two four three three one.
+16:09
+I called that one R transpose, didn't I, and I called this guy one two four three three one.
+16:16
+I called that R. Shall we just do that multiplication? Okay, so up here I'm getting a ten.
+16:22
+Next to it I'm getting two, a nine, I'm getting an eleven. Next to that I'm getting four and three, a seven.
+16:30
+Now what do I get there? This eleven came from one three times two three, right?
+16:37
+Row one, column two. What goes here? Row two, column one.
+16:43
+But no difference. One three two three or two three one three, same thing.
+16:50
+It's going to be an eleven. That's the symmetry. I can continue to fill it out.
+16:56
+What -- oh, let's get that seven. That seven will show up down here, too, and then four more numbers.
+17:02
+That seven will show up here because one three times four one gave the seven, but also four one times one three
+17:10
+will give that seven. Do you see that it works?
+17:16
+Actually, do you want to see it work also in matrix language?
+17:24
+I mean, that's quite convincing, right? That seven is no accident.
+17:29
+The eleven is no accident.
+17:35
+But just tell me how do I know if I transpose this guy --
+17:40
+How do I know it's symmetric? Well, I'm going to transpose it. And when I transpose it, I'm hoping
+17:49
+I get the matrix back again. So can I transpose R transpose R?
+17:54
+So just -- so, why?
+17:59
+Well, my suggestion is take the transpose.
+18:09
+That's the only way to show it's symmetric. Take the transpose and see that it didn't change. Okay, so I take the transpose of R transpose R.
+18:19
+Okay. How do I do that? This is our little practice on the rules for transposes.
+18:27
+So the rule for transposes is the order gets reversed.
+18:33
+Just like inverses, which we did prove, same rule for transposes and -- which we'll now use.
+# Transpose Rule
+18:44
+So the order gets reversed. It's the transpose of that that comes first,
+18:51
+and the transpose of this that comes -- no.
+18:56
+Is that -- yeah. That's what I have to write, right? This is a product of two matrices and I want its
+19:03
+transpose. So I put the matrices in the opposite order and I transpose them. But what have I got here?
+19:09
+What is R transpose transpose?
+19:15
+Well, don't all speak at once. R transpose transpose, I flipped over the diagonal,
+19:22
+I flipped over the diagonal again, so I've got R.
+19:28
+And that's just my point, that if I started with this matrix, I transposed it, I got it back again.
+19:34
+So that's the check, without using numbers, but with --
+19:46
+it checked in two lines that I always get symmetric matrices
+19:52
+this way. And actually, that's where they come from in so many practical applications.
+20:00
+Okay. So now I've said something today about permutations and about
+20:07
+transposes and about symmetry and I'm ready
+20:14
+for chapter three. Can we take a breath --
+20:21
+the tape won't take a breath, but the lecturer will, because to tell you about vector spaces is --
+20:31
+we really have to start now and think, okay, listen up.
+20:38
+What are vector spaces?
+# Vector Spaces
+20:47
+And what are sub-spaces? Okay. So, the point is, The main operations that we do --
+21:01
+what do we do with vectors? We add them. We know how to add two vectors.
+21:07
+We multiply them by numbers, usually called scalers.
+21:13
+If we have a vector, we know what three V is. If we have a vector V and W, we know what V plus W is.
+21:24
+Those are the two operations that we've got to be able to do.
+21:29
+To legitimately talk about a space of vectors, the requirement is that we should
+21:35
+be able to add the things and multiply by numbers and that there should be some decent rules satisfied.
+21:44
+Okay. So let me start with examples. So I'm talking now about vector spaces.
+21:50
+21:56
+And I'm going to start with examples.
+22:06
+Let me say again what this word space is meaning. When I say that word space, that means to me
+22:14
+that I've got a bunch of vectors, a space of vectors.
+22:19
+But not just any bunch of vectors. It has to be a space of vectors --
+22:28
+has to allow me to do the operations that vectors are for. I have to be able to add vectors and multiply by numbers.
+22:37
+I have to be able to take linear combinations. Well, where did we meet linear combinations?
+22:43
+We met them back in, say in R^2.
+22:48
+So there's a vector space. What's that vector space?
+22:54
+So R two is telling me I'm talking about real numbers
+22:59
+and I'm talking about two real numbers. So this is all two dimensional vectors --
+23:11
+real, such as --
+23:16
+well, I'm not going to be able to list them all. But let me put a few down. |3; 2|, |0;0|, |pi; e|.
+23:30
+So on.
+23:35
+And it's natural -- okay. Let's see, I guess I should do algebra first.
+23:44
+Algebra means what can I do to these vectors? I can add them. I can add that to that.
+23:50
+And how do I do it? A component at a time, of course. Three two added to zero zero gives me, three two.
+23:58
+Sorry about that. Three two added to pi e gives me three plus pi, two plus e.
+24:05
+Oh, you know what it does. And you know the picture that goes with it.
+24:11
+There's the vector three two. And often, the picture has an arrow.
+24:19
+The vector zero zero, which is a highly important vector -- it's got, like, the most important here
+24:24
+-- is there. And of course there's not much of an arrow.
+24:29
+Pi -- I'll have to remember -- pi is about three and a little
+24:35
+more, e is about two and a little more. So maybe there's pi e.
+24:41
+I never drew pi e before. It's just natural to --
+24:47
+this is the first component on the horizontal
+24:55
+and this is the second component, going up the vertical.
+25:02
+Okay. And the whole plane is R two.
+25:07
+So R two is, we could say, the plane.
+25:14
+The xy plane. That's what everybody thinks.
+25:24
+But the point is it's a vector space because all those vectors
+25:32
+are in there. If I removed one of them -- Suppose I removed zero zero.
+25:39
+Suppose I tried to take the -- considered the X Y plane with a puncture, with a point removed.
+25:46
+Like the origin. That would be, like, awful to take the origin away. Why is that?
+25:52
+Why do I need the origin there? Because I have to be allowed -- if I had these other vectors,
+25:59
+I have to be allowed to multiply three two -- this was three two --
+26:05
+by anything, by any scaler, including zero. I've got to be allowed to multiply by zero
+26:12
+and the result's got to be there. I can't do without that point.
+26:18
+And I have to be able to add three two to the opposite guy,
+26:23
+minus three minus two. And if I add those I'm back to the origin again.
+26:29
+No way I can do without the origin. Every vector space has got that zero vector in it.
+26:36
+Okay, that's an easy vector space, because we have a natural picture of it.
+26:42
+Okay. Similarly easy is R^3.
+26:50
+This would be all -- let me go up a little here. This would be --
+26:57
+R three would be all three dimensional vectors -- or shall I say vectors with three real components.
+27:09
+Okay.
+27:15
+Let me just to be sure we're together,
+27:21
+let me take the vector three two zero.
+27:29
+Is that a vector in R^2 or R^3? Definitely it's in R^3.
+27:38
+It's got three components. One of them happens to be zero, but that's a perfectly okay number.
+27:43
+So that's a vector in R^3. We don't want to mix up the --
+27:51
+I mean, keep these vectors straight and keep R^n straight. So what's R^n?
+27:57
+R^n. So this is our big example, is all vectors with n components.
+28:05
+And I'm making these darn things column vectors.
+28:11
+Can I try to follow that convention, that they'll be column vectors, and their components should
+28:17
+be real numbers. Later we'll need complex numbers and complex vectors,
+28:24
+but much later. Okay. So that's a vector space.
+28:31
+Now, let's see. What do I have to tell you about vector spaces? I said the most important thing, which is that we can add any
+28:44
+two of these and we -- still in R^2. We can multiply by any number and we're still in R^2.
+28:50
+We can take any combination and we're still in R^2. And same goes for R^n.
+28:55
+It's -- honesty requires me to mention that these operations
+# Rules
+29:02
+of adding and multiplying have to obey a few rules.
+29:08
+Like, we can't just arbitrarily say, okay, the sum of three two and pi e is zero zero.
+29:15
+It's not. The sum of three two and minus three two is zero zero.
+29:22
+So -- oh, I'm not going to -- the book, actually, lists the eight rules that the addition and multiplication
+29:32
+have to satisfy, but they do. They certainly satisfy it in R^n and usually it's not those
+29:38
+eight rules that are in doubt. What's -- the question is, can we do those additions and do we
+29:50
+stay in the space? Let me show you a case where you can't.
+29:55
+So suppose this is going to be not a vector space.
+30:05
+Suppose I take the xy plane -- so there's R^2. That is a vector space.
+30:11
+Now suppose I just take part of it. Just this.
+30:17
+Just this one -- this is one quarter of the vector space.
+30:24
+All the vectors with positive or at least not negative
+30:29
+components. Can I add those safely?
+# Subspace
+30:37
+Yes. If I add a vector with, like, two -- three two to another vector like five six,
+30:45
+I'm still up in this quarter, no problem with adding. But there's a heck of a problem with multiplying by scalers,
+30:54
+because there's a lot of scalers that will take me out of this quarter plane, like negative ones.
+31:02
+If I took three two and I multiplied by minus five, I'm way down here.
+31:08
+So that's not a vector space, because it's not -- closed is the right word.
+31:14
+It's not closed under multiplication by all real numbers.
+31:19
+So a vector space has to be closed under multiplication
+31:27
+and addition of vectors. In other words, linear combinations. It -- so, it means that if I give you a few vectors --
+31:37
+yeah look, here's an important -- here -- now we're getting to some really important vector spaces. Well, R^n -- like, they are the most important.
+31:47
+But we will be interested in so- in vector spaces that are
+31:52
+inside R^n. Vector spaces that follow the rules, but they --
+32:01
+we don't need all of -- see, there we started with R^2 here,
+32:10
+and took part of it and messed it up. What we got was not a vector space.
+32:17
+Now tell me a vector space that is part of R^2 and is still
+32:25
+safely -- we can multiply, we can add and we stay in this
+32:31
+smaller vector space. So it's going to be called a subspace. So I'm going to change this bad example to a good one.
+32:40
+Okay. So I'm going to start again with R^2, but I'm going to take an example -- it is a vector space,
+32:50
+so it'll be a vector space inside R^2.
+32:56
+And we'll call that a subspace of R^2.
+33:03
+Okay. What can I do?
+33:09
+It's got something in it. Suppose it's got this vector in it.
+33:14
+Okay. If that vector's in my little subspace
+33:19
+and it's a true subspace, then there's got to be some more in it,
+33:24
+right? I have to be able to multiply that by two, and that double vector has to be included.
+33:33
+Have to be able to multiply by zero, that vector, or by half, or by three quarters.
+33:39
+All these vectors. Or by minus a half, or by minus one.
+33:44
+I have to be able to multiply by any number. So that is going to say that I have to have that whole line.
+33:52
+Do you see that? Once I get a vector in there --
+33:58
+I've got the whole line of all multiples of that vector. I can't have a vector space without extending to get
+34:09
+those multiples in there. Now I still have to check addition.
+34:15
+But that comes out okay. This line is going to work, because I could add something
+34:20
+on the line to something else on the line and I'm still on the line.
+34:26
+So, example. So this is all examples of a subspace --
+34:33
+our example is a line in R^2 actually -- not just any line.
+34:45
+If I took this line, would that --
+34:50
+so all the vectors on that line. So that vector and that vector and this vector and this vector
+34:56
+-- in lighter type, I'm drawing something that doesn't work.
+35:05
+It's not a subspace. The line in R^2 -- to be a subspace, the line in R^2 must go through the zero vector.
+35:15
+Because -- why is this line no good?
+35:21
+Let me do a dashed line.
+35:27
+Because if I multiplied that vector on the dashed line by zero, then I'm down here, I'm not on the dashed line.
+35:34
+Z- zero's got to be. Every subspace has got to contain zero --
+35:39
+because I must be allowed to multiply by zero and that will always give me the zero vector.
+35:46
+Okay. Now, I was going to make --
+35:51
+create some subspaces. Oh, while I'm in R^2, why don't we think of all
+35:59
+the possibilities. R two, there can't be that many. So what are the possible subspaces of R^2?
+36:07
+Let me list them. So I'm listing now the subspaces of R^2.
+36:16
+And one possibility that we always allow
+36:23
+is all of R two, the whole thing, the whole space.
+36:29
+That counts as a subspace of itself. You always want to allow that.
+# Lines
+36:35
+Then the others are lines -- any line, meaning infinitely far in both directions
+36:45
+through the zero.
+36:55
+So that's like the whole space -- that's like whole two D space.
+37:00
+This is like one dimension. Is this line the same as R^1 ? No.
+37:07
+You could say it looks a lot like R^1. R^1 was just a line and this is a line.
+37:14
+But this is a line inside R^2. The vectors here have two components.
+37:20
+So that's not the same as R^1, because there the vectors only have one component.
+37:25
+Very close, you could say, but not the same. Okay. And now there's a third possibility.
+37:32
+There's a third subspace that's --
+37:40
+of R^2 that's not the whole thing, and it's not a line.
+37:47
+It's even less. It's just the zero vector alone. The zero vector alone, only.
+37:55
+38:01
+I'll often call this subspace Z, just for zero. Here's a line, L.
+38:07
+Here's a plane, all of R^2. So, do you see that the zero vector's okay?
+38:14
+You would just -- to understand subspaces, we have to know the rules -- and knowing the rules means that we
+38:20
+have to see that yes, the zero vector by itself, just this guy alone satisfies the rules.
+38:27
+Why's that? Oh, it's too dumb to tell you. If I took that and added it to itself, I'm still there.
+38:36
+If I took that and multiplied by seventeen, I'm still there. So I've done the operations, adding and multiplying
+38:44
+by numbers, that are required, and I didn't go outside this one point space.
+38:50
+So that's always -- that's the littlest subspace.
+38:57
+And the largest subspace is the whole thing and in-between come all --
+39:02
+whatever's in between. Okay. So for example, what's in between for R^3?
+39:07
+So if I'm in ordinary three dimensions, the subspace is R, all of R^3 at one extreme, the zero vector at the bottom.
+39:18
+And then a plane, a plane through the origin.
+39:23
+Or a line, a line through the origin. So with R^3, the subspaces were R^3, plane through the origin,
+39:32
+line through the origin and a zero vector by itself, zero zero zero, just that single vector.
+39:43
+Okay, you've got the idea. But, now comes --
+# Subspaces
+39:51
+the reality is -- what are these -- where do these subspaces come --
+39:57
+how do they come out of matrices? And I want to take this matrix --
+40:06
+oh, let me take that matrix. So I want to create some subspaces out of that matrix.
+40:17
+Well, one subspace is from the columns.
+40:26
+Okay. So this is the important subspace,
+40:34
+the first important subspace that comes from that matrix -- I'm going to -- let me call it A again.
+40:40
+Back to -- okay. I'm looking at the columns of A.
+40:48
+Those are vectors in R^3. So the columns are in R^3. The columns are in R^3.
+40:58
+So I want those columns to be in my subspace.
+41:04
+Now I can't just put two columns in my subspace
+41:11
+and call it a subspace. What do I have to throw in -- if I'm going to put those two
+41:16
+columns in, what else has got to be there to have a subspace? I must be able to add those things.
+41:25
+So the sum of those columns -- so these columns are in R^3, and I have to be able --
+41:34
+I'm, you know, I want that to be in my subspace, I want that to be in my subspace, but therefore I have to be able to multiply them by anything.
+41:42
+Zero zero zero has got to be in my subspace. I have to be able to add them so that four five five
+41:48
+is in the subspace. I've got to be able to add one of these plus three of these. That'll give me some other vector.
+41:54
+I have to be able to take all the linear combinations.
+42:02
+So these are columns in R^3 and all there linear combinations
+42:14
+form a subspace.
+42:21
+What do I mean by linear combinations? I mean multiply that by something, multiply that by something and add.
+42:28
+The two operations of linear algebra, multiplying by numbers
+42:33
+and adding vectors. And, if I include all the results,
+42:38
+then I'm guaranteed to have a subspace. I've done the job.
+42:46
+And we'll give it a name -- the column space.
+42:53
+Column space.
+43:01
+And maybe I'll call it C of A. C for column space.
+43:07
+There's an idea there that --
+43:15
+Like, the central idea for today's lecture is --
+43:22
+got a few vectors. Not satisfied with a few vectors, we want a space of vectors.
+43:29
+The vectors, they're in -- these vectors in -- are in R^3 , so our space of vectors will be vectors in R^3.
+43:37
+The key idea's -- we have to be able to take their combinations.
+43:42
+So tell me, geometrically, if I drew all these things -- like if I drew one two four, that would be somewhere maybe
+43:50
+there. If I drew three three one, who knows, might be -- I don't know, I'll say there.
+43:57
+There's column one, there's column two. What else -- what's in the whole column space?
+44:06
+How do I draw the whole column space now? I take all combinations of those two vectors.
+44:13
+Do I get -- well, I guess I actually listed the possibilities.
+44:19
+Do I get the whole space? Do I get a plane?
+44:24
+I get more than a line, that's for sure. And I certainly get more than the zero vector, but I do get the zero vector included.
+44:31
+What do I get if I combine -- take all the combinations of two vectors in R^3 ?
+44:39
+So I've got all this stuff on --
+44:46
+that whole line gets filled out, that whole line gets filled out, but all in-between gets filled out -- between the two lines because I --
+44:52
+I allowed to add something from one line, something from the other. You see what's coming?
+44:58
+I'm getting a plane.
+45:05
+That's my -- and it's through the origin.
+45:10
+Those two vectors, namely one two four and three three one,
+45:17
+when I take all their combinations, I fill out a whole plane. Please think about that.
+45:25
+That's the picture you have to see. You sure have to see it in R^3 , because we're going to do it
+45:31
+in R^10, and we may take a combination of five vectors in R^10, and what will we have?
+45:40
+God knows. It's some subspace. We'll have five vectors.
+45:46
+They'll all have ten components. We take their combinations.
+45:52
+We don't have R^5 , because our vectors have ten components.
+45:58
+And we possibly have, like, some five dimensional flat thing
+46:05
+going through the origin for sure. Well, of course, if those five vectors were all on the line,
+46:12
+then we would only get that line. So, you see, there are, like, other possibilities here. It depends what -- it depends on those five vectors.
+46:21
+Just like if our two columns had been on the same line, then the column space would have been only a line.
+46:28
+Here it was a plane. Okay.
+46:35
+I'm going to stop at that point. That's the central idea of -- the great example of how
+46:44
+to create a subspace from a matrix. Take its columns, take their combinations,
+46:51
+all their linear combinations and you get the column space.
+46:57
+And that's the central sort of -- we're looking at linear algebra at a higher level.
+47:04
+When I look at A -- now, I want to look at Ax=b. That'll be the first thing in the next lecture.
+47:10
+How do I understand Ax=b in this language --
+47:17
+in this new language of vector spaces and column spaces.
+47:22
+And what are other subspaces? So the column space is a big one, there are others to come.
+47:30
+Okay, thanks. 

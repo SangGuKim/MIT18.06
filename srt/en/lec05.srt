@@ -1,0 +1,1568 @@
+1
+00:00:09,000 --> 00:00:19,000
+Okay. This is lecture five in linear algebra. And, it will complete this chapter of the book.
+
+2
+00:00:19,000 --> 00:00:24,000
+So the last section of this chapter
+
+3
+00:00:24,000 --> 00:00:30,000
+is two point seven that talks about permutations, which
+
+4
+00:00:30,000 --> 00:00:36,000
+finished the previous lecture, and transposes, which also came in the previous lecture.
+
+5
+00:00:36,000 --> 00:00:42,000
+There's a little more to do with those guys, permutations and transposes.
+
+6
+00:00:42,000 --> 00:00:48,000
+But then the heart of the lecture will be the beginning
+
+7
+00:00:48,000 --> 00:00:57,000
+of what you could say is the beginning of linear algebra, the beginning of real linear algebra which is seeing
+
+8
+00:00:57,000 --> 00:01:06,000
+a bigger picture with vector spaces -- not just vectors, but spaces of vectors and sub-spaces of those spaces.
+
+9
+00:01:06,000 --> 00:01:13,000
+So we're a little ahead of the syllabus, which is good, because we're coming to the place
+
+10
+00:01:13,000 --> 00:01:22,000
+where, there's a lot to do. Okay. So, to begin with permutations.
+
+11
+00:01:22,000 --> 00:01:27,599
+Can I just -- so these permutations, those are matrices P and they execute
+
+12
+00:01:36,000 --> 00:01:37,500
+row exchanges.
+
+13
+00:01:42,000 --> 00:01:52,000
+And we may need them. We may have a perfectly good matrix, a perfect matrix A that's invertible that we can solve A
+
+14
+00:01:52,000 --> 00:02:00,000
+x=b, but to do it -- I've got to allow myself that extra freedom
+
+15
+00:02:00,000 --> 00:02:05,000
+that if a zero shows up in the pivot position I move it away.
+
+16
+00:02:05,000 --> 00:02:12,000
+I get a non-zero. I get a proper pivot there by exchanging from a row below.
+
+17
+00:02:12,000 --> 00:02:18,000
+And you've seen that already, and I just want to collect the ideas together.
+
+18
+00:02:18,000 --> 00:02:24,000
+And principle, I could even have to do that two times, or more times.
+
+19
+00:02:24,000 --> 00:02:34,000
+So I have to allow -- to complete the -- the theory, the possibility that I take my matrix A,
+
+20
+00:02:34,000 --> 00:02:41,000
+I start elimination, I find out that I need row exchanges and I do it and continue and I finish.
+
+21
+00:02:41,000 --> 00:02:49,000
+Okay. Then all I want to do is say -- and I won't make a big project
+
+22
+00:02:49,000 --> 00:02:54,000
+out of this -- what happens to A equal L U?
+
+23
+00:02:54,000 --> 00:02:56,400
+So A equal L U --
+
+24
+00:02:59,000 --> 00:03:05,000
+this was a matrix L with ones on the diagonal and zeroes
+
+25
+00:03:05,000 --> 00:03:13,000
+above and multipliers below, and this U we know, with zeroes down here.
+
+26
+00:03:13,000 --> 00:03:14,500
+That's only possible.
+
+27
+00:03:19,000 --> 00:03:26,000
+That description of elimination assumes that we don't have a P, that we don't have any row exchanges.
+
+28
+00:03:26,000 --> 00:03:33,000
+And now I just want to say, okay, how do I account for row exchanges? Because that doesn't.
+
+29
+00:03:33,000 --> 00:03:40,000
+The P in this factorization is the identity matrix.
+
+30
+00:03:40,000 --> 00:03:47,000
+The rows were in a good order, we left them there. Maybe I'll just add a little moment of reality,
+
+31
+00:03:47,000 --> 00:03:49,800
+too, about how Matlab actually does elimination.
+
+32
+00:03:55,000 --> 00:04:02,000
+Matlab not only checks whether that pivot is not zero, as every human would do.
+
+33
+00:04:02,000 --> 00:04:09,000
+It checks for is that pivot big enough, because it doesn't like very, very small pivots.
+
+34
+00:04:09,000 --> 00:04:16,000
+Pivots close to zero are numerically bad. So actually if we ask Matlab to solve a system,
+
+35
+00:04:16,000 --> 00:04:23,000
+it will do some elimination some row exchanges, which we don't think are necessary.
+
+36
+00:04:23,000 --> 00:04:31,000
+Algebra doesn't say they're necessary, but accuracy -- numerical accuracy says they are.
+
+37
+00:04:31,000 --> 00:04:39,000
+Well, we're doing algebra, so here we will say, well, what do row exchanges do,
+
+38
+00:04:39,000 --> 00:04:45,000
+but we won't do them unless we have to. But we may have to.
+
+39
+00:04:45,000 --> 00:04:47,399
+And then, the result is --
+
+40
+00:04:50,000 --> 00:04:52,800
+it's hiding here. It's the main fact.
+
+41
+00:04:56,000 --> 00:05:12,000
+This is the description of elimination with row exchanges. So A equal L U becomes P A equal L U.
+
+42
+00:05:12,000 --> 00:05:18,000
+So this P is the matrix that does the row exchanges, and actually it does them --
+
+43
+00:05:18,000 --> 00:05:23,000
+it gets the rows into the right order, into the good order where pivots will not --
+
+44
+00:05:23,000 --> 00:05:32,000
+where zeroes won't appear in the pivot position, where L and U will come out right as up here.
+
+45
+00:05:32,000 --> 00:05:39,000
+So, that's the point. Actually, I don't want to labor that point,
+
+46
+00:05:39,000 --> 00:05:47,000
+that a permutation matrix -- and you remember what those were.
+
+47
+00:05:47,000 --> 00:05:57,000
+I'll remind you from last time of what the main points about permutation matrices were --
+
+48
+00:05:57,000 --> 00:06:03,000
+and then just leave this factorization as the general case.
+
+49
+00:06:03,000 --> 00:06:06,600
+This is -- any invertible A we get this.
+
+50
+00:06:17,000 --> 00:06:24,000
+For almost every one, we don't need a P. But there's that handful that do need row exchanges,
+
+51
+00:06:24,000 --> 00:06:30,000
+and if we do need them, there they are. Okay, finally, just to remember what P was.
+
+52
+00:06:30,000 --> 00:06:32,800
+So permutations, P is the identity matrix
+
+53
+00:06:46,000 --> 00:06:47,500
+with reordered rows.
+
+54
+00:06:56,000 --> 00:07:02,000
+I include in reordering the possibility that you just leave them the same. So the identity matrix is -- okay.
+
+55
+00:07:02,000 --> 00:07:04,800
+That's, like, your basic permutation matrix --
+
+56
+00:07:08,000 --> 00:07:15,000
+your do-nothing permutation matrix is the identity. And then there are the ones that exchange two rows and then
+
+57
+00:07:15,000 --> 00:07:21,000
+the ones that exchange three rows and then then ones that exchange four --
+
+58
+00:07:21,000 --> 00:07:27,000
+well, it gets a little -- it gets more interesting algebraically
+
+59
+00:07:27,000 --> 00:07:35,000
+if you've got four rows, you might exchange them all in one big cycle. One to two, two to three, three to four, four to one.
+
+60
+00:07:35,000 --> 00:07:41,000
+Or you might have -- exchange one and two and three and four.
+
+61
+00:07:41,000 --> 00:07:46,000
+Lots of possibilities there. In fact, how many possibilities?
+
+62
+00:07:46,000 --> 00:07:48,800
+The answer was (n)factorial. This is n(n-1)(n-2)...
+
+63
+00:07:56,000 --> 00:08:00,000
+(3)(2)(1). That's the number of -- this counts the reorderings,
+
+64
+00:08:05,000 --> 00:08:09,800
+the possible reorderings. So it counts all the n by n permutations.
+
+65
+00:08:23,000 --> 00:08:32,000
+And all those matrices have these -- have this nice property that they're all invertible,
+
+66
+00:08:32,000 --> 00:08:39,000
+because we can bring those rows back into the normal order.
+
+67
+00:08:39,000 --> 00:08:46,000
+And the matrix that does that is just P -- is just the same as the transpose.
+
+68
+00:08:46,000 --> 00:08:51,000
+You might take a permutation matrix, multiply by its transpose and you will see how --
+
+69
+00:08:51,000 --> 00:08:57,000
+that the ones hit the ones and give the ones in the identity
+
+70
+00:08:57,000 --> 00:09:02,000
+matrix. So this is a -- we'll be highly interested in matrices
+
+71
+00:09:02,000 --> 00:09:09,000
+that have nice properties. And one property that -- maybe I could rewrite that as P
+
+72
+00:09:09,000 --> 00:09:16,000
+transpose P is the identity. That tells me in other words that this
+
+73
+00:09:16,000 --> 00:09:25,000
+is the inverse of that. Okay. We'll be interested in matrices that have P transpose
+
+74
+00:09:25,000 --> 00:09:35,000
+P equal the identity. There are more of them than just permutations, but my point right now is that permutations are like a little
+
+75
+00:09:35,000 --> 00:09:42,000
+group in the middle -- in the center of these special matrices.
+
+76
+00:09:42,000 --> 00:09:47,000
+Okay. So now we know how many there are.
+
+77
+00:09:47,000 --> 00:09:55,000
+Twenty four in the case of -- there are twenty four four by four permutations, there are five factorial which is
+
+78
+00:09:55,000 --> 00:10:03,000
+a hundred and twenty, five times twenty four would bump us up to a hundred and twenty -- so listing all the five by five
+
+79
+00:10:03,000 --> 00:10:05,799
+permutations would be not so much fun.
+
+80
+00:10:09,000 --> 00:10:10,600
+Okay. So that's permutations.
+
+81
+00:10:15,000 --> 00:10:20,000
+Now also in section two seven is some discussion of transposes.
+
+82
+00:10:20,000 --> 00:10:30,000
+And can I just complete that discussion. First of all, I haven't even transposed a matrix
+
+83
+00:10:30,000 --> 00:10:39,000
+on the board here, have I? So I'd better do it. So suppose I take a matrix like (1 2 4; 3 3 1).
+
+84
+00:10:39,000 --> 00:10:41,799
+It's a rectangular matrix, three by two.
+
+85
+00:10:47,000 --> 00:10:53,000
+And I want to transpose it. So what's --
+
+86
+00:10:53,000 --> 00:10:59,000
+I'll use a T, also Matlab would use a prime.
+
+87
+00:10:59,000 --> 00:11:07,000
+And the result will be -- I'll right it here, because this was three rows and two columns,
+
+88
+00:11:07,000 --> 00:11:13,000
+this was a three by two matrix. The transpose will be two rows and three columns,
+
+89
+00:11:13,000 --> 00:11:16,200
+two by three. So it's short and wider.
+
+90
+00:11:20,000 --> 00:11:25,000
+And, of course, that row -- that column becomes a row --
+
+91
+00:11:25,000 --> 00:11:36,000
+that column becomes the other row. And at the same time, that row became a column.
+
+92
+00:11:36,000 --> 00:11:41,000
+This row became a column. Oh, what's the general formula for the transpose?
+
+93
+00:11:41,000 --> 00:11:42,600
+So the transpose --
+
+94
+00:11:48,000 --> 00:11:54,000
+you see it in numbers. What I'm going to write is the same thing in symbols.
+
+95
+00:11:54,000 --> 00:12:04,000
+The numbers are the clearest, of course. But in symbols, if I take A transpose
+
+96
+00:12:04,000 --> 00:12:10,000
+and I ask what number is in row I and column J of A transpose?
+
+97
+00:12:10,000 --> 00:12:12,399
+Well, it came out of A.
+
+98
+00:12:16,000 --> 00:12:22,000
+It came out A by this flip across the main diagonal.
+
+99
+00:12:22,000 --> 00:12:28,000
+And, actually, it was the number in A
+
+100
+00:12:28,000 --> 00:12:30,799
+which was in row J, column I.
+
+101
+00:12:34,000 --> 00:12:39,000
+So the row and column -- the row and column numbers just get reversed.
+
+102
+00:12:39,000 --> 00:12:45,000
+The row number becomes the column number, the column number becomes the row number. No problem.
+
+103
+00:12:45,000 --> 00:12:52,000
+Okay. Now, a special -- the best matrices, we could say.
+
+104
+00:12:52,000 --> 00:12:58,000
+In a lot of applications, symmetric matrices show up.
+
+105
+00:12:58,000 --> 00:13:01,600
+So can I just call attention to symmetric matrices?
+
+106
+00:13:07,000 --> 00:13:16,000
+What does that mean? What does that word symmetric mean? It means that this transposing doesn't change the matrix.
+
+107
+00:13:16,000 --> 00:13:21,000
+A transpose equals A. And an example.
+
+108
+00:13:21,000 --> 00:13:23,799
+So, let's take a matrix that's symmetric,
+
+109
+00:13:29,000 --> 00:13:36,000
+so whatever is sitting on the diagonal -- but now what's above the diagonal, like a one,
+
+110
+00:13:36,000 --> 00:13:43,000
+had better be there, a seven had better be here, a nine had better be there.
+
+111
+00:13:43,000 --> 00:13:52,000
+There's a symmetric matrix. I happened to use all positive numbers as its entries.
+
+112
+00:13:52,000 --> 00:13:58,000
+That's not the point. The point is that if I transpose that matrix, I get it back again.
+
+113
+00:13:58,000 --> 00:14:07,000
+So symmetric matrices have this property A transpose equals A. I guess at this point --
+
+114
+00:14:07,000 --> 00:14:14,000
+I'm just asking you to notice this family of matrices that
+
+115
+00:14:14,000 --> 00:14:22,000
+are unchanged by transposing. And they're easy to identify, of course.
+
+116
+00:14:22,000 --> 00:14:28,000
+You know, it's not maybe so easy before we had a case where
+
+117
+00:14:28,000 --> 00:14:36,000
+the transpose gave the inverse. That's highly important, but not so simple to see.
+
+118
+00:14:36,000 --> 00:14:42,000
+This is the case where the transpose gives the same matrix back again. That's totally simple to see.
+
+119
+00:14:42,000 --> 00:14:49,000
+Okay. Could actually -- maybe I could even say when would we get such
+
+120
+00:14:49,000 --> 00:14:55,000
+a matrix? For example, this -- that matrix is absolutely far from
+
+121
+00:14:55,000 --> 00:15:01,000
+symmetric, right? The transpose isn't even the same shape --
+
+122
+00:15:01,000 --> 00:15:06,000
+because it's rectangular, it turns the -- lies down on its side.
+
+123
+00:15:06,000 --> 00:15:11,000
+But let me tell you a way to get a symmetric matrix out of this.
+
+124
+00:15:11,000 --> 00:15:17,000
+Multiply those together. If I multiply this rectangular, shall I
+
+125
+00:15:17,000 --> 00:15:22,000
+call it R for rectangular? So let that be R for rectangular matrix
+
+126
+00:15:22,000 --> 00:15:32,000
+and let that be R transpose, which it is. Then I think that if I multiply those together,
+
+127
+00:15:32,000 --> 00:15:44,000
+I get a symmetric matrix. Can I just do it with the numbers and then ask you why, how did I know it would be symmetric?
+
+128
+00:15:44,000 --> 00:15:52,000
+So my point is that R transpose R is always symmetric.
+
+129
+00:15:52,000 --> 00:15:53,500
+Okay?
+
+130
+00:15:57,000 --> 00:16:02,000
+And I'm going to do it for that particular R transpose R which was --
+
+131
+00:16:02,000 --> 00:16:09,000
+let's see, the column was one two four three three one.
+
+132
+00:16:09,000 --> 00:16:16,000
+I called that one R transpose, didn't I, and I called this guy one two four three three one.
+
+133
+00:16:16,000 --> 00:16:22,000
+I called that R. Shall we just do that multiplication? Okay, so up here I'm getting a ten.
+
+134
+00:16:22,000 --> 00:16:30,000
+Next to it I'm getting two, a nine, I'm getting an eleven. Next to that I'm getting four and three, a seven.
+
+135
+00:16:30,000 --> 00:16:37,000
+Now what do I get there? This eleven came from one three times two three, right?
+
+136
+00:16:37,000 --> 00:16:43,000
+Row one, column two. What goes here? Row two, column one.
+
+137
+00:16:43,000 --> 00:16:50,000
+But no difference. One three two three or two three one three, same thing.
+
+138
+00:16:50,000 --> 00:16:56,000
+It's going to be an eleven. That's the symmetry. I can continue to fill it out.
+
+139
+00:16:56,000 --> 00:17:02,000
+What -- oh, let's get that seven. That seven will show up down here, too, and then four more numbers.
+
+140
+00:17:02,000 --> 00:17:10,000
+That seven will show up here because one three times four one gave the seven, but also four one times one three
+
+141
+00:17:10,000 --> 00:17:16,000
+will give that seven. Do you see that it works?
+
+142
+00:17:16,000 --> 00:17:24,000
+Actually, do you want to see it work also in matrix language?
+
+143
+00:17:24,000 --> 00:17:29,000
+I mean, that's quite convincing, right? That seven is no accident.
+
+144
+00:17:29,000 --> 00:17:31,000
+The eleven is no accident.
+
+145
+00:17:35,000 --> 00:17:40,000
+But just tell me how do I know if I transpose this guy --
+
+146
+00:17:40,000 --> 00:17:49,000
+How do I know it's symmetric? Well, I'm going to transpose it. And when I transpose it, I'm hoping
+
+147
+00:17:49,000 --> 00:17:54,000
+I get the matrix back again. So can I transpose R transpose R?
+
+148
+00:17:54,000 --> 00:17:56,000
+So just -- so, why?
+
+149
+00:17:59,000 --> 00:18:01,799
+Well, my suggestion is take the transpose.
+
+150
+00:18:09,000 --> 00:18:19,000
+That's the only way to show it's symmetric. Take the transpose and see that it didn't change. Okay, so I take the transpose of R transpose R.
+
+151
+00:18:19,000 --> 00:18:27,000
+Okay. How do I do that? This is our little practice on the rules for transposes.
+
+152
+00:18:27,000 --> 00:18:33,000
+So the rule for transposes is the order gets reversed.
+
+153
+00:18:33,000 --> 00:18:44,000
+Just like inverses, which we did prove, same rule for transposes and -- which we'll now use.
+
+154
+00:18:44,000 --> 00:18:51,000
+So the order gets reversed. It's the transpose of that that comes first,
+
+155
+00:18:51,000 --> 00:18:56,000
+and the transpose of this that comes -- no.
+
+156
+00:18:56,000 --> 00:19:03,000
+Is that -- yeah. That's what I have to write, right? This is a product of two matrices and I want its
+
+157
+00:19:03,000 --> 00:19:09,000
+transpose. So I put the matrices in the opposite order and I transpose them. But what have I got here?
+
+158
+00:19:09,000 --> 00:19:11,000
+What is R transpose transpose?
+
+159
+00:19:15,000 --> 00:19:22,000
+Well, don't all speak at once. R transpose transpose, I flipped over the diagonal,
+
+160
+00:19:22,000 --> 00:19:28,000
+I flipped over the diagonal again, so I've got R.
+
+161
+00:19:28,000 --> 00:19:34,000
+And that's just my point, that if I started with this matrix, I transposed it, I got it back again.
+
+162
+00:19:34,000 --> 00:19:38,000
+So that's the check, without using numbers, but with --
+
+163
+00:19:46,000 --> 00:19:52,000
+it checked in two lines that I always get symmetric matrices
+
+164
+00:19:52,000 --> 00:20:00,000
+this way. And actually, that's where they come from in so many practical applications.
+
+165
+00:20:00,000 --> 00:20:07,000
+Okay. So now I've said something today about permutations and about
+
+166
+00:20:07,000 --> 00:20:09,799
+transposes and about symmetry and I'm ready
+
+167
+00:20:14,000 --> 00:20:21,000
+for chapter three. Can we take a breath --
+
+168
+00:20:21,000 --> 00:20:31,000
+the tape won't take a breath, but the lecturer will, because to tell you about vector spaces is --
+
+169
+00:20:31,000 --> 00:20:38,000
+we really have to start now and think, okay, listen up.
+
+170
+00:20:38,000 --> 00:20:39,599
+What are vector spaces?
+
+171
+00:20:47,000 --> 00:20:53,400
+And what are sub-spaces? Okay. So, the point is, The main operations that we do --
+
+172
+00:21:01,000 --> 00:21:07,000
+what do we do with vectors? We add them. We know how to add two vectors.
+
+173
+00:21:07,000 --> 00:21:13,000
+We multiply them by numbers, usually called scalers.
+
+174
+00:21:13,000 --> 00:21:24,000
+If we have a vector, we know what three V is. If we have a vector V and W, we know what V plus W is.
+
+175
+00:21:24,000 --> 00:21:29,000
+Those are the two operations that we've got to be able to do.
+
+176
+00:21:29,000 --> 00:21:35,000
+To legitimately talk about a space of vectors, the requirement is that we should
+
+177
+00:21:35,000 --> 00:21:44,000
+be able to add the things and multiply by numbers and that there should be some decent rules satisfied.
+
+178
+00:21:44,000 --> 00:21:49,599
+Okay. So let me start with examples. So I'm talking now about vector spaces.
+
+179
+00:21:56,000 --> 00:21:58,799
+And I'm going to start with examples.
+
+180
+00:22:06,000 --> 00:22:14,000
+Let me say again what this word space is meaning. When I say that word space, that means to me
+
+181
+00:22:14,000 --> 00:22:19,000
+that I've got a bunch of vectors, a space of vectors.
+
+182
+00:22:19,000 --> 00:22:28,000
+But not just any bunch of vectors. It has to be a space of vectors --
+
+183
+00:22:28,000 --> 00:22:37,000
+has to allow me to do the operations that vectors are for. I have to be able to add vectors and multiply by numbers.
+
+184
+00:22:37,000 --> 00:22:43,000
+I have to be able to take linear combinations. Well, where did we meet linear combinations?
+
+185
+00:22:43,000 --> 00:22:48,000
+We met them back in, say in R^2.
+
+186
+00:22:48,000 --> 00:22:54,000
+So there's a vector space. What's that vector space?
+
+187
+00:22:54,000 --> 00:22:59,000
+So R two is telling me I'm talking about real numbers
+
+188
+00:22:59,000 --> 00:23:11,000
+and I'm talking about two real numbers. So this is all two dimensional vectors --
+
+189
+00:23:11,000 --> 00:23:12,599
+real, such as --
+
+190
+00:23:16,000 --> 00:23:30,000
+well, I'm not going to be able to list them all. But let me put a few down. |3; 2|, |0;0|, |pi; e|.
+
+191
+00:23:30,000 --> 00:23:31,500
+So on.
+
+192
+00:23:35,000 --> 00:23:44,000
+And it's natural -- okay. Let's see, I guess I should do algebra first.
+
+193
+00:23:44,000 --> 00:23:50,000
+Algebra means what can I do to these vectors? I can add them. I can add that to that.
+
+194
+00:23:50,000 --> 00:23:58,000
+And how do I do it? A component at a time, of course. Three two added to zero zero gives me, three two.
+
+195
+00:23:58,000 --> 00:24:05,000
+Sorry about that. Three two added to pi e gives me three plus pi, two plus e.
+
+196
+00:24:05,000 --> 00:24:11,000
+Oh, you know what it does. And you know the picture that goes with it.
+
+197
+00:24:11,000 --> 00:24:19,000
+There's the vector three two. And often, the picture has an arrow.
+
+198
+00:24:19,000 --> 00:24:24,000
+The vector zero zero, which is a highly important vector -- it's got, like, the most important here
+
+199
+00:24:24,000 --> 00:24:29,000
+-- is there. And of course there's not much of an arrow.
+
+200
+00:24:29,000 --> 00:24:35,000
+Pi -- I'll have to remember -- pi is about three and a little
+
+201
+00:24:35,000 --> 00:24:41,000
+more, e is about two and a little more. So maybe there's pi e.
+
+202
+00:24:41,000 --> 00:24:47,000
+I never drew pi e before. It's just natural to --
+
+203
+00:24:47,000 --> 00:24:50,200
+this is the first component on the horizontal
+
+204
+00:24:55,000 --> 00:25:02,000
+and this is the second component, going up the vertical.
+
+205
+00:25:02,000 --> 00:25:07,000
+Okay. And the whole plane is R two.
+
+206
+00:25:07,000 --> 00:25:14,000
+So R two is, we could say, the plane.
+
+207
+00:25:14,000 --> 00:25:16,799
+The xy plane. That's what everybody thinks.
+
+208
+00:25:24,000 --> 00:25:32,000
+But the point is it's a vector space because all those vectors
+
+209
+00:25:32,000 --> 00:25:39,000
+are in there. If I removed one of them -- Suppose I removed zero zero.
+
+210
+00:25:39,000 --> 00:25:46,000
+Suppose I tried to take the -- considered the X Y plane with a puncture, with a point removed.
+
+211
+00:25:46,000 --> 00:25:52,000
+Like the origin. That would be, like, awful to take the origin away. Why is that?
+
+212
+00:25:52,000 --> 00:25:59,000
+Why do I need the origin there? Because I have to be allowed -- if I had these other vectors,
+
+213
+00:25:59,000 --> 00:26:05,000
+I have to be allowed to multiply three two -- this was three two --
+
+214
+00:26:05,000 --> 00:26:12,000
+by anything, by any scaler, including zero. I've got to be allowed to multiply by zero
+
+215
+00:26:12,000 --> 00:26:18,000
+and the result's got to be there. I can't do without that point.
+
+216
+00:26:18,000 --> 00:26:23,000
+And I have to be able to add three two to the opposite guy,
+
+217
+00:26:23,000 --> 00:26:29,000
+minus three minus two. And if I add those I'm back to the origin again.
+
+218
+00:26:29,000 --> 00:26:36,000
+No way I can do without the origin. Every vector space has got that zero vector in it.
+
+219
+00:26:36,000 --> 00:26:42,000
+Okay, that's an easy vector space, because we have a natural picture of it.
+
+220
+00:26:42,000 --> 00:26:44,000
+Okay. Similarly easy is R^3.
+
+221
+00:26:50,000 --> 00:26:57,000
+This would be all -- let me go up a little here. This would be --
+
+222
+00:26:57,000 --> 00:27:09,000
+R three would be all three dimensional vectors -- or shall I say vectors with three real components.
+
+223
+00:27:09,000 --> 00:27:10,500
+Okay.
+
+224
+00:27:15,000 --> 00:27:21,000
+Let me just to be sure we're together,
+
+225
+00:27:21,000 --> 00:27:24,200
+let me take the vector three two zero.
+
+226
+00:27:29,000 --> 00:27:38,000
+Is that a vector in R^2 or R^3? Definitely it's in R^3.
+
+227
+00:27:38,000 --> 00:27:43,000
+It's got three components. One of them happens to be zero, but that's a perfectly okay number.
+
+228
+00:27:43,000 --> 00:27:51,000
+So that's a vector in R^3. We don't want to mix up the --
+
+229
+00:27:51,000 --> 00:27:57,000
+I mean, keep these vectors straight and keep R^n straight. So what's R^n?
+
+230
+00:27:57,000 --> 00:28:05,000
+R^n. So this is our big example, is all vectors with n components.
+
+231
+00:28:05,000 --> 00:28:11,000
+And I'm making these darn things column vectors.
+
+232
+00:28:11,000 --> 00:28:17,000
+Can I try to follow that convention, that they'll be column vectors, and their components should
+
+233
+00:28:17,000 --> 00:28:24,000
+be real numbers. Later we'll need complex numbers and complex vectors,
+
+234
+00:28:24,000 --> 00:28:31,000
+but much later. Okay. So that's a vector space.
+
+235
+00:28:31,000 --> 00:28:44,000
+Now, let's see. What do I have to tell you about vector spaces? I said the most important thing, which is that we can add any
+
+236
+00:28:44,000 --> 00:28:50,000
+two of these and we -- still in R^2. We can multiply by any number and we're still in R^2.
+
+237
+00:28:50,000 --> 00:28:55,000
+We can take any combination and we're still in R^2. And same goes for R^n.
+
+238
+00:28:55,000 --> 00:29:02,000
+It's -- honesty requires me to mention that these operations
+
+239
+00:29:02,000 --> 00:29:08,000
+of adding and multiplying have to obey a few rules.
+
+240
+00:29:08,000 --> 00:29:15,000
+Like, we can't just arbitrarily say, okay, the sum of three two and pi e is zero zero.
+
+241
+00:29:15,000 --> 00:29:22,000
+It's not. The sum of three two and minus three two is zero zero.
+
+242
+00:29:22,000 --> 00:29:32,000
+So -- oh, I'm not going to -- the book, actually, lists the eight rules that the addition and multiplication
+
+243
+00:29:32,000 --> 00:29:38,000
+have to satisfy, but they do. They certainly satisfy it in R^n and usually it's not those
+
+244
+00:29:38,000 --> 00:29:50,000
+eight rules that are in doubt. What's -- the question is, can we do those additions and do we
+
+245
+00:29:50,000 --> 00:29:55,000
+stay in the space? Let me show you a case where you can't.
+
+246
+00:29:55,000 --> 00:29:59,400
+So suppose this is going to be not a vector space.
+
+247
+00:30:05,000 --> 00:30:11,000
+Suppose I take the xy plane -- so there's R^2. That is a vector space.
+
+248
+00:30:11,000 --> 00:30:17,000
+Now suppose I just take part of it. Just this.
+
+249
+00:30:17,000 --> 00:30:24,000
+Just this one -- this is one quarter of the vector space.
+
+250
+00:30:24,000 --> 00:30:29,000
+All the vectors with positive or at least not negative
+
+251
+00:30:29,000 --> 00:30:31,400
+components. Can I add those safely?
+
+252
+00:30:37,000 --> 00:30:45,000
+Yes. If I add a vector with, like, two -- three two to another vector like five six,
+
+253
+00:30:45,000 --> 00:30:54,000
+I'm still up in this quarter, no problem with adding. But there's a heck of a problem with multiplying by scalers,
+
+254
+00:30:54,000 --> 00:31:02,000
+because there's a lot of scalers that will take me out of this quarter plane, like negative ones.
+
+255
+00:31:02,000 --> 00:31:08,000
+If I took three two and I multiplied by minus five, I'm way down here.
+
+256
+00:31:08,000 --> 00:31:14,000
+So that's not a vector space, because it's not -- closed is the right word.
+
+257
+00:31:14,000 --> 00:31:19,000
+It's not closed under multiplication by all real numbers.
+
+258
+00:31:19,000 --> 00:31:27,000
+So a vector space has to be closed under multiplication
+
+259
+00:31:27,000 --> 00:31:37,000
+and addition of vectors. In other words, linear combinations. It -- so, it means that if I give you a few vectors --
+
+260
+00:31:37,000 --> 00:31:47,000
+yeah look, here's an important -- here -- now we're getting to some really important vector spaces. Well, R^n -- like, they are the most important.
+
+261
+00:31:47,000 --> 00:31:52,000
+But we will be interested in so- in vector spaces that are
+
+262
+00:31:52,000 --> 00:31:56,400
+inside R^n. Vector spaces that follow the rules, but they --
+
+263
+00:32:01,000 --> 00:32:10,000
+we don't need all of -- see, there we started with R^2 here,
+
+264
+00:32:10,000 --> 00:32:17,000
+and took part of it and messed it up. What we got was not a vector space.
+
+265
+00:32:17,000 --> 00:32:25,000
+Now tell me a vector space that is part of R^2 and is still
+
+266
+00:32:25,000 --> 00:32:31,000
+safely -- we can multiply, we can add and we stay in this
+
+267
+00:32:31,000 --> 00:32:40,000
+smaller vector space. So it's going to be called a subspace. So I'm going to change this bad example to a good one.
+
+268
+00:32:40,000 --> 00:32:50,000
+Okay. So I'm going to start again with R^2, but I'm going to take an example -- it is a vector space,
+
+269
+00:32:50,000 --> 00:32:56,000
+so it'll be a vector space inside R^2.
+
+270
+00:32:56,000 --> 00:32:59,200
+And we'll call that a subspace of R^2.
+
+271
+00:33:03,000 --> 00:33:05,000
+Okay. What can I do?
+
+272
+00:33:09,000 --> 00:33:14,000
+It's got something in it. Suppose it's got this vector in it.
+
+273
+00:33:14,000 --> 00:33:19,000
+Okay. If that vector's in my little subspace
+
+274
+00:33:19,000 --> 00:33:24,000
+and it's a true subspace, then there's got to be some more in it,
+
+275
+00:33:24,000 --> 00:33:33,000
+right? I have to be able to multiply that by two, and that double vector has to be included.
+
+276
+00:33:33,000 --> 00:33:39,000
+Have to be able to multiply by zero, that vector, or by half, or by three quarters.
+
+277
+00:33:39,000 --> 00:33:44,000
+All these vectors. Or by minus a half, or by minus one.
+
+278
+00:33:44,000 --> 00:33:52,000
+I have to be able to multiply by any number. So that is going to say that I have to have that whole line.
+
+279
+00:33:52,000 --> 00:33:58,000
+Do you see that? Once I get a vector in there --
+
+280
+00:33:58,000 --> 00:34:09,000
+I've got the whole line of all multiples of that vector. I can't have a vector space without extending to get
+
+281
+00:34:09,000 --> 00:34:15,000
+those multiples in there. Now I still have to check addition.
+
+282
+00:34:15,000 --> 00:34:20,000
+But that comes out okay. This line is going to work, because I could add something
+
+283
+00:34:20,000 --> 00:34:26,000
+on the line to something else on the line and I'm still on the line.
+
+284
+00:34:26,000 --> 00:34:33,000
+So, example. So this is all examples of a subspace --
+
+285
+00:34:33,000 --> 00:34:38,199
+our example is a line in R^2 actually -- not just any line.
+
+286
+00:34:45,000 --> 00:34:50,000
+If I took this line, would that --
+
+287
+00:34:50,000 --> 00:34:56,000
+so all the vectors on that line. So that vector and that vector and this vector and this vector
+
+288
+00:34:56,000 --> 00:35:00,000
+-- in lighter type, I'm drawing something that doesn't work.
+
+289
+00:35:05,000 --> 00:35:15,000
+It's not a subspace. The line in R^2 -- to be a subspace, the line in R^2 must go through the zero vector.
+
+290
+00:35:15,000 --> 00:35:21,000
+Because -- why is this line no good?
+
+291
+00:35:21,000 --> 00:35:23,400
+Let me do a dashed line.
+
+292
+00:35:27,000 --> 00:35:34,000
+Because if I multiplied that vector on the dashed line by zero, then I'm down here, I'm not on the dashed line.
+
+293
+00:35:34,000 --> 00:35:39,000
+Z- zero's got to be. Every subspace has got to contain zero --
+
+294
+00:35:39,000 --> 00:35:46,000
+because I must be allowed to multiply by zero and that will always give me the zero vector.
+
+295
+00:35:46,000 --> 00:35:51,000
+Okay. Now, I was going to make --
+
+296
+00:35:51,000 --> 00:35:59,000
+create some subspaces. Oh, while I'm in R^2, why don't we think of all
+
+297
+00:35:59,000 --> 00:36:07,000
+the possibilities. R two, there can't be that many. So what are the possible subspaces of R^2?
+
+298
+00:36:07,000 --> 00:36:16,000
+Let me list them. So I'm listing now the subspaces of R^2.
+
+299
+00:36:16,000 --> 00:36:18,800
+And one possibility that we always allow
+
+300
+00:36:23,000 --> 00:36:29,000
+is all of R two, the whole thing, the whole space.
+
+301
+00:36:29,000 --> 00:36:35,000
+That counts as a subspace of itself. You always want to allow that.
+
+302
+00:36:35,000 --> 00:36:45,000
+Then the others are lines -- any line, meaning infinitely far in both directions
+
+303
+00:36:45,000 --> 00:36:46,500
+through the zero.
+
+304
+00:36:55,000 --> 00:37:00,000
+So that's like the whole space -- that's like whole two D space.
+
+305
+00:37:00,000 --> 00:37:07,000
+This is like one dimension. Is this line the same as R^1 ? No.
+
+306
+00:37:07,000 --> 00:37:14,000
+You could say it looks a lot like R^1. R^1 was just a line and this is a line.
+
+307
+00:37:14,000 --> 00:37:20,000
+But this is a line inside R^2. The vectors here have two components.
+
+308
+00:37:20,000 --> 00:37:25,000
+So that's not the same as R^1, because there the vectors only have one component.
+
+309
+00:37:25,000 --> 00:37:32,000
+Very close, you could say, but not the same. Okay. And now there's a third possibility.
+
+310
+00:37:32,000 --> 00:37:34,400
+There's a third subspace that's --
+
+311
+00:37:40,000 --> 00:37:47,000
+of R^2 that's not the whole thing, and it's not a line.
+
+312
+00:37:47,000 --> 00:37:52,599
+It's even less. It's just the zero vector alone. The zero vector alone, only.
+
+313
+00:38:01,000 --> 00:38:07,000
+I'll often call this subspace Z, just for zero. Here's a line, L.
+
+314
+00:38:07,000 --> 00:38:14,000
+Here's a plane, all of R^2. So, do you see that the zero vector's okay?
+
+315
+00:38:14,000 --> 00:38:20,000
+You would just -- to understand subspaces, we have to know the rules -- and knowing the rules means that we
+
+316
+00:38:20,000 --> 00:38:27,000
+have to see that yes, the zero vector by itself, just this guy alone satisfies the rules.
+
+317
+00:38:27,000 --> 00:38:36,000
+Why's that? Oh, it's too dumb to tell you. If I took that and added it to itself, I'm still there.
+
+318
+00:38:36,000 --> 00:38:44,000
+If I took that and multiplied by seventeen, I'm still there. So I've done the operations, adding and multiplying
+
+319
+00:38:44,000 --> 00:38:50,000
+by numbers, that are required, and I didn't go outside this one point space.
+
+320
+00:38:50,000 --> 00:38:53,199
+So that's always -- that's the littlest subspace.
+
+321
+00:38:57,000 --> 00:39:02,000
+And the largest subspace is the whole thing and in-between come all --
+
+322
+00:39:02,000 --> 00:39:07,000
+whatever's in between. Okay. So for example, what's in between for R^3?
+
+323
+00:39:07,000 --> 00:39:18,000
+So if I'm in ordinary three dimensions, the subspace is R, all of R^3 at one extreme, the zero vector at the bottom.
+
+324
+00:39:18,000 --> 00:39:23,000
+And then a plane, a plane through the origin.
+
+325
+00:39:23,000 --> 00:39:32,000
+Or a line, a line through the origin. So with R^3, the subspaces were R^3, plane through the origin,
+
+326
+00:39:32,000 --> 00:39:43,000
+line through the origin and a zero vector by itself, zero zero zero, just that single vector.
+
+327
+00:39:43,000 --> 00:39:46,599
+Okay, you've got the idea. But, now comes --
+
+328
+00:39:51,000 --> 00:39:57,000
+the reality is -- what are these -- where do these subspaces come --
+
+329
+00:39:57,000 --> 00:40:06,000
+how do they come out of matrices? And I want to take this matrix --
+
+330
+00:40:06,000 --> 00:40:17,000
+oh, let me take that matrix. So I want to create some subspaces out of that matrix.
+
+331
+00:40:17,000 --> 00:40:19,800
+Well, one subspace is from the columns.
+
+332
+00:40:26,000 --> 00:40:28,800
+Okay. So this is the important subspace,
+
+333
+00:40:34,000 --> 00:40:40,000
+the first important subspace that comes from that matrix -- I'm going to -- let me call it A again.
+
+334
+00:40:40,000 --> 00:40:48,000
+Back to -- okay. I'm looking at the columns of A.
+
+335
+00:40:48,000 --> 00:40:58,000
+Those are vectors in R^3. So the columns are in R^3. The columns are in R^3.
+
+336
+00:40:58,000 --> 00:41:04,000
+So I want those columns to be in my subspace.
+
+337
+00:41:04,000 --> 00:41:11,000
+Now I can't just put two columns in my subspace
+
+338
+00:41:11,000 --> 00:41:16,000
+and call it a subspace. What do I have to throw in -- if I'm going to put those two
+
+339
+00:41:16,000 --> 00:41:25,000
+columns in, what else has got to be there to have a subspace? I must be able to add those things.
+
+340
+00:41:25,000 --> 00:41:34,000
+So the sum of those columns -- so these columns are in R^3, and I have to be able --
+
+341
+00:41:34,000 --> 00:41:42,000
+I'm, you know, I want that to be in my subspace, I want that to be in my subspace, but therefore I have to be able to multiply them by anything.
+
+342
+00:41:42,000 --> 00:41:48,000
+Zero zero zero has got to be in my subspace. I have to be able to add them so that four five five
+
+343
+00:41:48,000 --> 00:41:54,000
+is in the subspace. I've got to be able to add one of these plus three of these. That'll give me some other vector.
+
+344
+00:41:54,000 --> 00:42:02,000
+I have to be able to take all the linear combinations.
+
+345
+00:42:02,000 --> 00:42:06,400
+So these are columns in R^3 and all there linear combinations
+
+346
+00:42:14,000 --> 00:42:15,500
+form a subspace.
+
+347
+00:42:21,000 --> 00:42:28,000
+What do I mean by linear combinations? I mean multiply that by something, multiply that by something and add.
+
+348
+00:42:28,000 --> 00:42:33,000
+The two operations of linear algebra, multiplying by numbers
+
+349
+00:42:33,000 --> 00:42:38,000
+and adding vectors. And, if I include all the results,
+
+350
+00:42:38,000 --> 00:42:46,000
+then I'm guaranteed to have a subspace. I've done the job.
+
+351
+00:42:46,000 --> 00:42:53,000
+And we'll give it a name -- the column space.
+
+352
+00:42:53,000 --> 00:42:54,500
+Column space.
+
+353
+00:43:01,000 --> 00:43:07,000
+And maybe I'll call it C of A. C for column space.
+
+354
+00:43:07,000 --> 00:43:09,400
+There's an idea there that --
+
+355
+00:43:15,000 --> 00:43:22,000
+Like, the central idea for today's lecture is --
+
+356
+00:43:22,000 --> 00:43:29,000
+got a few vectors. Not satisfied with a few vectors, we want a space of vectors.
+
+357
+00:43:29,000 --> 00:43:37,000
+The vectors, they're in -- these vectors in -- are in R^3 , so our space of vectors will be vectors in R^3.
+
+358
+00:43:37,000 --> 00:43:42,000
+The key idea's -- we have to be able to take their combinations.
+
+359
+00:43:42,000 --> 00:43:50,000
+So tell me, geometrically, if I drew all these things -- like if I drew one two four, that would be somewhere maybe
+
+360
+00:43:50,000 --> 00:43:57,000
+there. If I drew three three one, who knows, might be -- I don't know, I'll say there.
+
+361
+00:43:57,000 --> 00:44:06,000
+There's column one, there's column two. What else -- what's in the whole column space?
+
+362
+00:44:06,000 --> 00:44:13,000
+How do I draw the whole column space now? I take all combinations of those two vectors.
+
+363
+00:44:13,000 --> 00:44:19,000
+Do I get -- well, I guess I actually listed the possibilities.
+
+364
+00:44:19,000 --> 00:44:24,000
+Do I get the whole space? Do I get a plane?
+
+365
+00:44:24,000 --> 00:44:31,000
+I get more than a line, that's for sure. And I certainly get more than the zero vector, but I do get the zero vector included.
+
+366
+00:44:31,000 --> 00:44:39,000
+What do I get if I combine -- take all the combinations of two vectors in R^3 ?
+
+367
+00:44:39,000 --> 00:44:42,199
+So I've got all this stuff on --
+
+368
+00:44:46,000 --> 00:44:52,000
+that whole line gets filled out, that whole line gets filled out, but all in-between gets filled out -- between the two lines because I --
+
+369
+00:44:52,000 --> 00:44:58,000
+I allowed to add something from one line, something from the other. You see what's coming?
+
+370
+00:44:58,000 --> 00:44:59,599
+I'm getting a plane.
+
+371
+00:45:05,000 --> 00:45:10,000
+That's my -- and it's through the origin.
+
+372
+00:45:10,000 --> 00:45:17,000
+Those two vectors, namely one two four and three three one,
+
+373
+00:45:17,000 --> 00:45:25,000
+when I take all their combinations, I fill out a whole plane. Please think about that.
+
+374
+00:45:25,000 --> 00:45:31,000
+That's the picture you have to see. You sure have to see it in R^3 , because we're going to do it
+
+375
+00:45:31,000 --> 00:45:40,000
+in R^10, and we may take a combination of five vectors in R^10, and what will we have?
+
+376
+00:45:40,000 --> 00:45:46,000
+God knows. It's some subspace. We'll have five vectors.
+
+377
+00:45:46,000 --> 00:45:52,000
+They'll all have ten components. We take their combinations.
+
+378
+00:45:52,000 --> 00:45:58,000
+We don't have R^5 , because our vectors have ten components.
+
+379
+00:45:58,000 --> 00:46:05,000
+And we possibly have, like, some five dimensional flat thing
+
+380
+00:46:05,000 --> 00:46:12,000
+going through the origin for sure. Well, of course, if those five vectors were all on the line,
+
+381
+00:46:12,000 --> 00:46:21,000
+then we would only get that line. So, you see, there are, like, other possibilities here. It depends what -- it depends on those five vectors.
+
+382
+00:46:21,000 --> 00:46:28,000
+Just like if our two columns had been on the same line, then the column space would have been only a line.
+
+383
+00:46:28,000 --> 00:46:30,400
+Here it was a plane. Okay.
+
+384
+00:46:35,000 --> 00:46:44,000
+I'm going to stop at that point. That's the central idea of -- the great example of how
+
+385
+00:46:44,000 --> 00:46:51,000
+to create a subspace from a matrix. Take its columns, take their combinations,
+
+386
+00:46:51,000 --> 00:46:57,000
+all their linear combinations and you get the column space.
+
+387
+00:46:57,000 --> 00:47:04,000
+And that's the central sort of -- we're looking at linear algebra at a higher level.
+
+388
+00:47:04,000 --> 00:47:10,000
+When I look at A -- now, I want to look at Ax=b. That'll be the first thing in the next lecture.
+
+389
+00:47:10,000 --> 00:47:17,000
+How do I understand Ax=b in this language --
+
+390
+00:47:17,000 --> 00:47:22,000
+in this new language of vector spaces and column spaces.
+
+391
+00:47:22,000 --> 00:47:30,000
+And what are other subspaces? So the column space is a big one, there are others to come.
+
+392
+00:47:30,000 --> 00:47:31,500
+Okay, thanks.
+

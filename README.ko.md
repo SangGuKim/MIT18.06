@@ -6,8 +6,8 @@
 
 Gilbert Strang 교수의 선형대수학 강의는 전 세계적으로 가장 인기 있는 수학 강의 중 하나입니다. 이 프로젝트는 다음과 같은 목표를 가지고 있습니다:
 
-1. YouTube에서 제공하는 원본 영어 스크립트 보존
-2. GPT와 Claude를 활용한 한국어 번역본 제작
+1. YouTube에서 제공하는 원본 영어 스크립트 보존 및 보완
+2. GPT와 Claude를 활용한 자연스러운 한국어 번역본 제작
 3. 번역된 내용을 기반으로 SRT 자막 파일 생성
 
 영어 스크립트에서 섹션 구분이 있는 부분은 마크다운 형식의 `#` 헤더로 처리하여 가독성을 높였습니다.
@@ -16,14 +16,14 @@ Gilbert Strang 교수의 선형대수학 강의는 전 세계적으로 가장 �
 
 ```
 .
-├── README.md
-├── README.en.md          # 영어 버전 README
+├── README.md             # 영어 버전 README
+├── README.ko.md          # 한국어 버전 README
 ├── scripts
-│   ├── original          # 원본 영어 스크립트
+│   ├── en                # 원본 영어 스크립트
 │   │   ├── lec01.txt
 │   │   ├── lec02.txt
 │   │   └── ...
-│   └── translated        # 한국어 번역 스크립트
+│   └── ko                # 한국어 번역 스크립트
 │       ├── lec01.txt
 │       ├── lec02.txt
 │       └── ...
@@ -37,7 +37,7 @@ Gilbert Strang 교수의 선형대수학 강의는 전 세계적으로 가장 �
 │       ├── lec02.srt
 │       └── ...
 └── tools                 # 변환 및 처리 도구
-    ├── txt_to_srt.py     # 텍스트 스크립트를 SRT 파일로 변환
+    ├── txt2srt.py        # 텍스트 스크립트를 SRT 파일로 변환
     └── ...
 ```
 

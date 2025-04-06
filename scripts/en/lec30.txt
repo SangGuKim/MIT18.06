@@ -1,0 +1,801 @@
+https://www.youtube.com/watch?v=Ts3o2I8_Mxc
+
+0:00
+0:07
+OK, this is the lecture on linear transformations.
+0:12
+Actually, linear algebra courses used to begin with this lecture, so you
+0:19
+could say I'm beginning this course again by talking about linear transformations.
+0:26
+In a lot of courses, those come first before matrices.
+0:35
+The idea of a linear transformation makes sense without a matrix, and physicists and other --
+0:43
+some people like it better that way. They don't like coordinates. They don't want those numbers.
+0:50
+They want to see what's going on with the whole space. But, for most of us, in the end, if we're
+0:59
+going to compute anything, we introduce coordinates, and then every linear transformation
+1:06
+will lead us to a matrix. And then, to all the things that we've done about null space
+1:17
+and row space, and determinant, and eigenvalues -- all will come from the matrix.
+1:24
+But, behind it -- in other words, behind this is the idea of a linear transformation.
+1:30
+Let me give an example of a linear transformation.
+1:35
+So, example. Example one.
+1:41
+A projection.
+1:47
+I can describe a projection without telling you any matrix,
+1:53
+anything about any matrix. I can describe a projection, say, this will be a linear transformation that takes, say,
+2:02
+all of R^2, every vector in the plane, into a vector in the plane.
+2:11
+And this is the way people describe, a mapping.
+2:17
+It takes every vector, and so, by what rule? So, what's the rule, is, I take a -- so here's the plane,
+2:27
+this is going to be my line, my line through my line,
+2:33
+and I'm going to project every vector onto that line. So if I take a vector like b -- or let me call the vector v
+2:42
+for the moment -- the projection -- the linear transformation is going
+2:47
+to produce this vector as T(v). So T -- it's like a function.
+2:54
+Exactly like a function. You give me an input, the transformation
+3:00
+produces the output. So transformation, sometimes the word map, or mapping is used.
+3:07
+A map between inputs and outputs.
+3:12
+So this is one particular map, this is one example, a projection that takes every vector -- here,
+3:20
+let me do another vector v, or let me do this vector w, what is T(w)?
+3:26
+You see? There are no coordinates here. I've drawn those axes, but I'm sorry I drew them,
+3:32
+I'm going to remove them, that's the whole point, is that we don't need axes, we just need -- so guts --
+3:41
+get it out of there, I'm not a physicist, so I draw those axes.
+3:47
+So the input is w, the output of the projection
+3:52
+is, project on that line, T(w). OK. Now, I could think of a lot of transformations T.
+4:01
+But, in this linear algebra course, I want it to be a linear transformation.
+4:07
+So here are the rules for a linear transformation.
+4:14
+Here, see, exactly, the two operations that we can do on vectors, adding and multiplying
+4:21
+by scalars, the transformation does something special with respect to those operations.
+4:27
+So, for example, the projection is a linear transformation
+4:33
+because -- for example, if I wanted to check that one, if I took v to be twice as long, the projection
+4:42
+would be twice as long. If I took v to be minus --
+4:48
+if I changed from v to minus v, the projection would change to a minus. So c equal to two, c equal minus one, any c is OK.
+4:57
+So you see that actually, those combine, I can combine those
+5:02
+into one statement. What the transformation does to any linear combination,
+5:11
+it must produce the same combination of T(v) and T(w).
+5:19
+Let's think about some -- I mean, it's like, not hard to decide,
+5:26
+is a transformation linear or is it not. Let me give you an example so you can tell me the answer.
+5:37
+Suppose my transformation is -- here's another example two.
+5:47
+Shift the whole plane.
+5:56
+So here are all my vectors, my plane, and every vector
+6:01
+v in the plane, I shift it over by, let's say, three by some vector v0.
+6:11
+Shift whole plane by v0. So every vector in the plane --
+6:18
+this was v, T(v) will be v+v0. There's T(v).
+6:23
+Here's v0. There's the typical v. And there's T(v).
+6:30
+You see what this transformation does? Takes this vector and adds to it.
+6:37
+Adds a fixed vector to it. Well, that seems like a pretty reasonable,
+6:43
+simple transformation, but is it linear? The answer is no, it's not linear.
+6:52
+Which law is broken? Maybe both laws are broken.
+6:57
+Let's see. If I double the length of v, does the transformation produce
+7:09
+something double -- do I double T(v)? No. If I double the length of v, in this transformation,
+7:16
+I'm just adding on the same one -- same v0, not two v0s, but only one v0 for every vector,
+7:24
+so I don't get two times the transform. Do you see what I'm saying?
+7:30
+That if I double this, then the transformation starts there and only goes one v0 out and doesn't double T(v).
+7:40
+In fact, a linear transformation -- what is T of
+7:47
+zero? That's just like a special case, but really worth noticing.
+7:53
+The zero vector in a linear transformation must get transformed to zero.
+8:00
+It can't move, because, take any vector V here --
+8:10
+well, so you can see why T of zero is zero. Take v to be the zero vector, take c to be three.
+8:20
+Then we'd have T of zero vector equaling three T of zero vector, the T of zero has to be zero.
+8:29
+OK. So, this example is really a non-example.
+8:34
+Shifting the whole plane is not a linear transformation.
+8:42
+Or if I cooked up some formula that involved squaring, or the transformation that, also non-example,
+8:55
+how about the transformation that, takes any vector
+9:01
+and produces its length?
+9:08
+So there's a transformation that takes any vector, say, any vector in R^3, let me just --
+9:14
+I'll just get a chance to use this notation again. Suppose I think of the transformation that takes any
+9:22
+vector in R^3 and produces this number.
+9:28
+So that, I could say, is a member of R^1, for example, if I wanted.
+9:34
+Or just real numbers. That's certainly not linear.
+9:41
+It's true that the zero vector goes to zero. But if I double a vector, it does double the length,
+9:49
+that's true. But suppose I multiply a vector by minus two.
+9:55
+What happens to its length? It just doubles. It doesn't get multiplied by minus two.
+10:02
+So when c is minus two in my requirement, I'm not satisfying that requirement.
+10:11
+So T of minus v is not minus v -- minus, the length,
+10:16
+it's just the length. OK, so that's another non-example. Projection was an example, let me give you another example.
+10:24
+I can stay here and have a -- this will be an example that is
+10:30
+a linear transformation, a rotation. Rotation by -- what shall we say?
+10:38
+By 45 degrees. OK? So again, let me choose this, this will be a mapping,
+10:47
+from the whole plane of vectors, into the whole plane
+10:54
+of vectors, and it just -- here is the input vector v, and the output vector foam this 45
+11:05
+degree rotation is just rotate that thing by 45 degrees, T(v).
+11:13
+So every vector got rotated. You see that I can describe this without any coordinates.
+11:19
+And see that it's linear.
+11:27
+If I doubled v, the rotation would just be twice as far out.
+11:33
+If I had v+w, and if I rotated each of them and added,
+11:39
+the answer's the same as if I add and then rotate. That's what the linear transformation is.
+11:46
+OK, so those are two examples. Two examples, projection and rotation, and I
+11:52
+could invent more that are linear transformations where I
+12:00
+haven't told you a matrix yet. Actually, the book has a picture of the action of linear
+12:11
+transformations --
+12:16
+actually, the cover of the book has it. So, in this section seven point one, we can think of a --
+12:25
+actually, here let's take this linear transformation, rotation, suppose I have, as the cover of the book has,
+12:33
+a house in R^2. So instead of this, let me take a small house in R^2.
+12:46
+So that's a whole lot of points. The idea is, with this linear transformation,
+12:51
+that I can see what it does to everything at once. I don't have to just take one vector at a time
+12:57
+and see what T of V is, I can take all the vectors on the outline of the house,
+13:05
+and see where they all go. In fact, that will show me where the whole house goes.
+13:12
+So what will happen with this particular linear transformation?
+13:19
+The whole house will rotate, so the result, if I can draw it,
+13:25
+will be, the house will be sitting there. OK.
+13:31
+And, but suppose I give some other examples. Oh, let me give some examples that involve a matrix.
+13:38
+Example three -- and this is important --
+13:45
+coming from a matrix at -- we always call A.
+13:50
+So the transformation will be, multiply by A.
+13:59
+There is a linear transformation. And a whole family of them, because every matrix
+14:07
+produces a transformation by this simple rule, just multiply every vector by that matrix, and it's linear,
+14:16
+right? Linear, I have to check that A(v) -- A times v plus w equals Av plus A w, which is fine,
+14:25
+and I have to check that A times vc equals c A(v).
+14:31
+Check. Those are fine. So there is a linear transformation.
+14:37
+And if I take my favorite matrix A, and I apply it to all vectors in the plane,
+14:46
+it will produce a bunch of outputs. See, the idea is now worth thinking
+14:52
+of, like, the big picture. The whole plane is transformed by matrix multiplication.
+15:01
+Every vector in the plane gets multiplied by A. Let's take an example, and see what happens
+15:08
+to the vectors of the house. So this is still a transformation from plane to plane, and let me take a particular matrix A --
+15:17
+well, if I cooked up a rotation matrix, this would be the right picture.
+15:24
+If I cooked up a projection matrix, the projection would be the picture. Let me just take some other matrix.
+15:31
+Let me take the matrix one zero zero minus one.
+15:39
+What happens to the house, to all vectors, and in particular,
+15:46
+we can sort of visualize it if we look at the house -- so the house is not rotated any more, what do I get?
+15:54
+What happens to all the vectors if I do this transformation?
+16:02
+I multiply by this matrix. Well, of course, it's an easy matrix, it's diagonal.
+16:07
+The x component stays the same, the y component reverses sign,
+16:13
+so that like the roof of that house, the point, the tip of the roof, has an x component which
+16:22
+stays the same, but its y component reverses, and it's down here.
+16:28
+And, of course, what we get is, the house is, like, upside down.
+16:33
+Now, I have to put -- where does the door go? I guess the door goes upside down there, right?
+16:40
+So here's the input, here's the input house,
+16:47
+and this is the output.
+16:52
+OK. This idea of a linear transformation is like kind of the abstract description
+17:00
+of matrix multiplication. And what's our goal here?
+17:07
+Our goal is to understand linear transformations, and the way to understand them is
+17:15
+to find the matrix that lies behind them. That's really the idea.
+17:21
+Find the matrix that lies behind them. Um, and to do that, we have to bring in coordinates.
+17:29
+We have to choose a basis. So let me point out what's the story --
+17:37
+if we have a linear transformation -- so start with -- start.
+17:48
+Suppose we have a linear transformation. Let -- from now on, let T stand for linear transformations.
+17:55
+I won't be interested in the nonlinear ones. Only linear transformations I'm interested in.
+18:01
+OK. I start with a linear transformation T. Let's suppose its inputs are vectors in R^3.
+18:11
+OK? And suppose its outputs are vectors in R^2, for example.
+18:21
+OK. What's an example of such a transformation, just before I go any further?
+18:26
+Any matrix of the right size will do this.
+18:32
+So what would be the right shape of a matrix? So, for example --
+18:43
+I'm wanting to give you an example, just because, here, I'm thinking of transformations
+18:50
+that take three-dimensional space to two-dimensional space.
+18:55
+And I want them to be linear, and the easy way to invent them
+19:01
+is a matrix multiplication. So example, T of v should be any A
+19:10
+v. Those transformations are linear, that's what 18.06 is about. And A should be what size, what shape of matrix should that be?
+19:20
+I want V to have three components, because this is what the inputs have -- so here's the input in R^3, and here's the output in R^2.
+19:39
+So what shape of matrix? So this should be, I guess, a two by three matrix?
+19:50
+Right? A two by three matrix.
+19:57
+A two by three matrix, we'll multiply a vector in R^3 -- you see I'm moving to coordinates so quickly,
+20:04
+I'm not a true physicist here. A two by three matrix, we'll multiply a vector in R^3
+20:13
+an produce an output in R^2, and it will be a linear transformation, and OK.
+20:20
+So there's a whole lot of examples, every two by three matrix give me an example,
+20:26
+and basically, I want to show you that there are no other examples. Every linear transformation is associated with a matrix.
+20:34
+Now, let me come back to the idea of linear transformation.
+20:42
+Suppose I've got this linear transformation in my mind,
+20:48
+and I want to tell you what it is.
+20:53
+Suppose I tell you what the transformation does to one vector. OK.
+20:58
+You know one thing, then. All right. So this is like the -- what I'm speaking about now is,
+21:05
+how much information is needed to know the transformation?
+21:20
+By knowing T, I -- to know T of v for all v.
+21:28
+All inputs. How much information do I have to give you so that you know what the transformation does
+21:35
+to every vector? OK, I could tell you what the transformation --
+21:40
+so I could take a vector v1, one particular vector,
+21:47
+tell you what the transformation does to it --
+21:53
+fine. But now you only know what the transformation does to one vector.
+21:59
+So you say, OK, that's not enough, tell me what it does to another vector.
+22:05
+So I say, OK, give me a vector, you give me a vector v2,
+22:10
+and we see, what does the transformation do to v2?
+22:17
+Now, you only know -- or do you only know what the transformation does to two vectors?
+22:23
+Have I got to ask you -- answer you about every vector in the whole input space, or can you,
+22:32
+knowing what it does to v1 and v2, how much do you now know about the transformation?
+22:39
+You know what the transformation does to a larger bunch of vectors than just these two,
+22:47
+because you know what it does to every linear combination.
+22:54
+You know what it does, now, to the whole plane of vectors,
+23:00
+with bases v1 and v2. I'm assuming v1 and v2 were independent.
+23:07
+If they were dependent, if v2 was six times v1, then I didn't give you any new information in T of v2,
+23:15
+you already knew it would be six times T of v1.
+23:20
+So you can see what I'd headed for. If I know what the transformation does
+23:27
+to every vector in a basis, then I know everything. So the information needed to know T of v for all inputs is T
+23:37
+of v1, T of v2, up to T of vm, let's say, or vn,
+23:47
+for any basis --
+23:53
+for a basis v1 up to vn. This is a base for any --
+24:02
+can I call it an input basis? It's a basis for the space of inputs.
+24:08
+The things that T is acting on. You see this point, that if I have a basis for the input
+24:19
+space, and I tell you what the transformation does to every one of those basis vectors, that
+24:25
+is all I'm allowed to tell you, and it's enough to know T of v
+24:31
+for all v-s, because why? Because every v is some combination of these basis
+24:39
+vectors, c1v1+...+cnvn, that's what a basis is, right?
+24:47
+It spans the space. And if I know what T does to this, and what T does to v2,
+24:56
+and what T does to vn, then I know what T does to V.
+25:05
+By this linearity, it has to be c1 T of v1 plus O one
+25:13
+plus cn T of vn.
+25:19
+There's no choice.
+25:26
+So, the point of this comment is that if I know what T does to a basis, to each vector in a basis, then
+25:37
+I know the linear transformation. The property of linearity tells me all the other vectors.
+25:43
+All the other outputs. OK. So now, we got -- so that light we now see,
+25:54
+what do we really need in a linear transformation, and we're ready to go to a
+25:59
+matrix. OK. What's the step now that takes us from a linear transformation that's
+26:07
+free of coordinates to a matrix that's been created
+26:14
+with respect to coordinates? The matrix is going to come from the coordinate system.
+26:20
+These are the coordinates. Coordinates mean a basis is decided.
+26:26
+Once you decide on a basis -- this is where coordinates come from.
+26:31
+You decide on a basis, then every vector, these are the coordinates in that basis.
+26:41
+There is one and only one way to express v
+26:46
+as a combination of the basis vectors, and the numbers you need in that combination
+26:52
+are the coordinates. Let me write that down. So what are coordinates? Coordinates come from a basis.
+27:05
+27:10
+Coordinates come from a basis. The coordinates of v, the coordinates of v
+27:17
+are these numbers that tell you how much of each basis vector
+27:32
+is in v. If I change the basis, I change the coordinates, right?
+27:37
+Now, we have always been assuming that were working with a standard basis, right?
+27:44
+The basis we don't even think about this stuff, because if I give you the vector v equals three two four,
+27:55
+you have been assuming completely -- and probably rightly -- that I had in mind the standard basis,
+28:04
+that this vector was three times the first coordinate vector,
+28:11
+and two times the second, and four times the third.
+28:22
+But you're not entitled -- I might have had some other basis in mind.
+28:27
+This is like the standard basis. And then the coordinates are sitting right there
+28:33
+in the vector. But I could have chosen a different basis, like I might have had eigenvectors of a matrix,
+28:42
+and I might have said, OK, that's a great basis, I'll use the eigenvectors of this matrix
+28:49
+as my basis vectors. Which are not necessarily these three, but some other basis.
+28:55
+So that was an example, this is the real thing,
+29:03
+the coordinates are these numbers, I'll circle them again, the amounts of each basis.
+29:08
+OK. So, if I want to create a matrix that
+29:15
+describes a linear transformation, now I'm ready to do that. OK, OK.
+29:20
+So now what I plan to do is construct the matrix A
+29:33
+that represents, or tells me about, a linear transformation,
+29:42
+linear transformation T. OK. So I really start with the transformation --
+29:51
+whether it's a projection or a rotation, or some strange movement of this house in the plane,
+29:57
+or some transformation from n-dimensional space to --
+30:02
+or m-dimensional space to n-dimensional space.
+30:08
+n to m, I guess. Usually, we'll have T, we'll somehow transform n-dimensional
+30:14
+space to m-dimensional space, and the whole point is that
+30:21
+if I have a basis for n-dimensional space -- I guess I need two bases, really.
+30:28
+I need an input basis to describe the inputs, and I need an output basis to give me coordinates --
+30:36
+to give me some numbers for the output. So I've got to choose two bases.
+30:41
+Choose a basis v1 up to vn for the inputs,
+30:51
+for the inputs in -- they came from R^n.
+30:57
+So the transformation is taking every n-dimensional vector
+31:03
+into some m-dimensional vector. And I have to choose a basis, and I'll call them w1 up to wn,
+31:12
+for the outputs. Those are guys in R^m.
+31:18
+Once I've chosen the basis, that settles the matrix --
+31:26
+I now working with coordinates. Every vector in R^n, every input vector has some coordinates.
+31:35
+So here's what I do, here's what I do. Can I say it in words?
+31:41
+I take a vector v. I express it in its basis, in the basis,
+31:48
+so I get its coordinates. Then I'm going to multiply those coordinates by the right matrix
+31:55
+A, and that will give me the coordinates of the output in the output basis.
+32:01
+I'd better write that down, that was a mouthful. What I want --
+32:06
+I want a matrix A that does what the linear transformation does.
+32:23
+And it does it with respecting these bases.
+32:29
+So I want the matrix to be -- well, let's suppose -- look,
+32:35
+let me take an example. Let me take the projection example.
+32:40
+The projection example. Suppose I take --
+32:45
+because we've got that -- we've got that projection in mind -- I can fit in here.
+32:50
+Here's the projection example. So the projection example, I'm thinking of n and m as two.
+32:58
+The transformation takes the plane, takes every vector in the plane, and, let me draw the plane,
+33:07
+just so we remember it's a plane -- and there's the thing that I'm projecting onto,
+33:15
+that's the line I'm projecting onto -- so the transformation takes every vector in the plane
+33:21
+and projects it onto that line. So this is projection, so I'm going to do projection.
+33:28
+OK. But, I'm going to choose a basis that I like better
+33:37
+than the standard basis. My basis -- in fact, I'll choose the same basis for inputs
+33:44
+and for outputs, and the basis will be -- my first basis vector will be right on the line.
+33:53
+There's my first basis vector. Say, a unit vector, on the line. And my second basis vector will be a unit vector perpendicular
+34:01
+to that line. And I'm going to choose that as the output basis, also. And I'm going to ask you, what's the matrix?
+34:11
+What's the matrix? How do I describe this transformation of projection
+34:17
+with respect to this basis? OK? So what's the rule? I take any vector v, it's some combination
+34:26
+of the first basis ve- vector, and the second basis vector.
+34:31
+Now, what is T of v?
+34:38
+Suppose the input is -- well, suppose the input is v1.
+34:45
+What's the output? v1, right? The projection leaves this one alone.
+34:53
+So we know what the projection does to this first basis vector, this guy, it leaves it.
+35:00
+What does the projection do to the second basis vector? It kills it, sends it to zero.
+35:08
+So what does the projection do to a combination?
+35:15
+It kills this part, and this part, it leaves alone.
+35:23
+Now, all I want to do is find the matrix. I now want to find the matrix that
+35:29
+takes an input, c1 c2, the coordinates,
+35:35
+and gives me the output, c1 0. You see that in this basis, the coordinates of the input
+35:44
+were c1, c2, and the coordinates of the output are c1,
+35:51
+And of course, not hard to find a matrix that will do that. The matrix that will do that is the matrix one, zero, zero,
+36:02
+zero. Because if I multiply input by that matrix A --
+36:10
+this is A times input coordinates --
+36:16
+and I'm hoping to get the output coordinates.
+36:23
+And what do I get from that multiplication? I get the right answer, c1 and zero.
+36:30
+So what's the point? So the first point is, there's a matrix that does the job.
+36:36
+If there's a linear transformation out there, coordinate-free, no coordinates, and then I
+36:42
+choose a basis for the inputs, and I choose a basis for the outputs, then
+36:47
+there's a matrix that does And what's the job? the job. It multiplies the input coordinates and produces
+36:56
+the output coordinates. Now, in this example -- let me repeat, I chose the input basis was the same as the output basis.
+37:05
+The input basis and output basis were both along the line, and perpendicular to the line.
+37:12
+They're actually the eigenvectors of the projection. And, as a result, the matrix came out diagonal.
+37:20
+In fact, it came out to be lambda. This is like, the good basis.
+37:27
+So the good -- the eigenvector basis is the good basis,
+37:37
+it leads to the matrix --
+37:43
+the diagonal matrix of eigenvalues lambda,
+37:49
+and just as in this example, the eigenvectors and eigenvalues
+37:54
+of this linear transformation were along the line,
+38:00
+and perpendicular. The eigenvalues were one and zero, and that's the matrix that we got.
+38:07
+OK. So that's a, like, the great choice of matrix, that's the choice a physicist would do when he had to finally
+38:16
+-- he or she had to finally bring coordinates in unwillingly, the coordinates to be chosen,
+38:24
+the good coordinates are the eigenvectors, because, if I did this projection in the standard
+38:32
+basis -- which I could do, right? I could do the whole thing in the standard basis --
+38:40
+I better try, if I can do that. What are we calling --
+38:45
+so I'll have to tell you now which line we're projecting on. Say, the 45 degree line.
+38:51
+So say we're projecting onto 45 degree line,
+38:59
+and we use not the eigenvector basis, but the standard basis.
+39:04
+The standard basis, v1, is one, zero, and v2 is zero, one.
+39:15
+And again, I'll use the same basis for the outputs.
+39:22
+Then I have to do this -- I can find a matrix, it will be the matrix
+39:29
+that we would always think of, it would be the projection matrix. It will be, actually, it's the matrix that we learned about
+39:39
+in chapter four, it's what I call the matrix --
+39:47
+do you remember, P was A, A transpose over A transpose A?
+39:52
+And I think, in this example, it will come out, one-half, one-half, one-half, one-half.
+39:58
+40:04
+I believe that's the matrix that comes from our formula. And that's the matrix that will do the job.
+40:10
+If I give you this input, one, zero, what's the output?
+40:19
+The output is one-half, one-half.
+40:24
+And that should be the right projection. And if I give you the input zero, one,
+40:31
+the output is, again, one-half, one-half, again the projection.
+40:37
+So that's the matrix, but not diagonal of course, because we didn't choose a great basis,
+40:43
+we just chose the handiest basis. Well, so the course has practically
+40:49
+been about the handiest basis, and just dealing with the matrix that we got.
+40:55
+And it's not that bad a matrix, it's symmetric, and it has this P squared equal P property,
+41:02
+all those things are good. But in the best basis, it's easy to see that P squared equals P,
+41:11
+and it's symmetric, and it's diagonal. So that's the idea then, is, do you
+41:19
+see now how I'm associating a matrix to the transformation?
+41:24
+I'd better write the rule down, I'd better write the rule down. The rule to find the matrix A.
+41:39
+All right, first column. So, a rule to find A, we're given the bases.
+41:50
+Of course, we don't -- because there's no way we could construct the matrix until we're told what the bases are.
+41:55
+So we're given the input basis, and the output basis, v1 to vn,
+42:01
+w1 to wm. Those are given. Now, in the first column of A, how do I find that column?
+42:10
+The first column of the matrix. So that should tell me what happens to the first basis
+42:18
+vector. So the rule is, apply the linear transformation to v1.
+42:28
+To the first basis vector. And then, I'll write it -- so that's the output, right?
+42:37
+The input is v1, what's the output? The output is in the output space,
+42:42
+it's some combination of these guys, and it's that combination that goes into the first column --
+42:50
+so, let me -- I'll put this word -- right, I'll say it in words again.
+42:57
+How to find this matrix. Take the first basis vector. Apply the transformation, then it's
+43:04
+in the output space, T of v1, so it's some combination of these outputs, this output basis.
+43:11
+So that combination, the coefficients in that combination will be the first column --
+43:19
+so a1, a row 2, column 1, w2, am1, wm.
+43:32
+There are the numbers in the first column of the matrix.
+43:38
+Let me make the point by doing the second column. Second column of A.
+43:47
+What's the idea, now? I take the second basis vector, I apply the transformation
+43:54
+to it, that's in -- now I get an output, so it's some combination in the output basis --
+44:01
+and that combination is the bunch of numbers that should go
+44:06
+in the second column of the matrix.
+44:15
+OK. And so forth. So I get a matrix, and the matrix I get
+44:22
+does the right job. Now, the matrix constructed that way, and following the rules
+44:29
+of matrix multiplication. The result will be that if I give you the input coordinates,
+44:37
+and I multiply by the matrix, so the outcome of all this
+44:42
+is A times the input coordinates correctly reproduces
+44:52
+the output coordinates.
+44:59
+Why is this right? Let me just check the first column.
+45:04
+Suppose the input coordinates are one and all zeros. What does that mean?
+45:09
+What's the input? If the input coordinates are one and other -- and the rest zeros, then the input is v1, right?
+45:19
+That's the vector that has coordinates one and all zeros. OK? When I multiply A by the one and all zeros,
+45:27
+I'll get the first column of A, I'll get these numbers. And, sure enough, those are the output coordinates for T of v1.
+45:37
+So we made it right on the first column, we made it right on the second column, we made it right on all the basis vectors,
+45:44
+and then it has to be right on every vector.
+45:50
+So there is a picture of the matrix for a linear
+45:56
+OK. transformation. Finally, let me give you another -- a different linear transformation.
+46:04
+The linear transformation that takes the derivative.
+46:10
+That's a linear transformation. Suppose the input space is all combination
+46:18
+c1 plus c2x plus c3 x squared.
+46:24
+So the basis is these simple functions.
+46:32
+Then what's the output?
+46:38
+Is the derivative. The output is the derivative, so the output is c2+2c3 x.
+46:48
+And let's take as output basis, the vectors one and x.
+46:55
+So we're going from a three-dimensional space of inputs to a two-dimensional space
+47:00
+of outputs by the derivative. And I don't know if you ever thought
+47:06
+that the derivative is linear.
+47:13
+But if it weren't linear, taking derivatives would take forever, right?
+47:19
+We are able to compute derivatives of functions exactly because we know it's a linear transformation,
+47:27
+so that if we learn the derivatives of a few functions, like sine x and cos x and e to the x,
+47:32
+and another little short list, then we can take all their combinations and we can do all the derivatives.
+47:40
+OK, now what's the matrix? What's the matrix? So I want the matrix to multiply these input vectors --
+47:50
+input coordinates, and give these output coordinates.
+47:57
+So I just think, OK, what's the matrix that does it? I can follow my rule of construction,
+48:02
+or I can see what the matrix is. It should be a two by three matrix, right?
+48:10
+And the matrix -- so I'm just figuring out, what do I want? No, I'll -- let me write it here.
+48:17
+What do I want from my matrix? What should that matrix do?
+48:23
+Well, I want to get c2 in the first output, so zero, one, zero will do it.
+48:28
+I want to get two c3, so zero, zero, two will do it.
+48:34
+That's the matrix for this linear transformation
+48:40
+with those bases and those coordinates. You see, it just clicks, and the whole point is that the inverse
+48:50
+matrix gives the inverse to the linear transformation, that the product of two matrices gives the right matrix
+48:58
+for the product of two transformations -- matrix multiplication really came from linear
+49:04
+transformations. I'd better pick up on that theme Monday after Thanksgiving.
+49:10
+And I hope you have a great holiday. I hope Indian summer keeps going.
+49:16
+OK, see you on Monday. 

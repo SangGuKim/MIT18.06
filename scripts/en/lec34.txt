@@ -1,0 +1,702 @@
+https://www.youtube.com/watch?v=RWvi4Vx4CDc
+
+0:00
+0:07
+OK. Good. The final class in linear algebra at MIT this Fall
+0:15
+is to review the whole course. And, you know the best way I know how to review
+0:23
+is to take old exams and just think through the problems.
+0:30
+So it will be a three-hour exam next Thursday.
+0:37
+Nobody will be able to take an exam before Thursday, anybody who needs to take it in some different way
+0:44
+after Thursday should see me next Monday. I'll be in my office Monday.
+0:49
+OK. May I just read out some problems
+0:54
+and, let me bring the board down, and let's start.
+1:06
+OK. Here's a question.
+1:12
+This is about a 3-by-n matrix.
+1:18
+And we're given -- so we're given -- given -- A x equals 1 0 0 has no solution.
+1:30
+And we're also given A x equals 0 1 0 has exactly one solution.
+1:45
+OK. So you can probably anticipate my first question,
+1:51
+what can you tell me about m? It's an m-by-n matrix of rank r, as always,
+1:59
+what can you tell me about those three numbers? So what can you tell me about m, the number of rows, n,
+2:12
+the number of columns, and r, the rank? OK.
+2:17
+See, do you want to tell me first what m is?
+2:23
+How many rows in this matrix?
+2:28
+Must be three, right? We can't tell what n is, but we can certainly
+2:40
+tell that m is three. OK. And, what do these things tell us?
+2:46
+Let's take them one at a time. When I discover that some equation has no solution,
+2:53
+that there's some right-hand side with no answer, what does that tell me about the rank of the matrix?
+3:01
+It's smaller m.
+3:11
+Is that right? If there is no solution, that tells me
+3:19
+that some rows of the matrix are combinations of other rows.
+3:26
+Because if I had a pivot in every row, then I would certainly be able to solve the system.
+3:34
+I would have particular solutions and all the good So any time that there's a system with no solutions,
+3:43
+stuff. that tells me that r must be below m. What about the fact that if, when there is a solution,
+3:50
+there's only one? What does that tell me?
+3:55
+Well, normally there would be one solution, and then we could add in anything in the null space.
+4:03
+So this is telling me the null space only has the 0 vector in it. There's just one solution, period,
+4:10
+so what does that tell me? The null space has only the zero vector in it? What does that tell me about the relation of r to n?
+4:18
+So this one solution only, that means the null space of the matrix must be just the zero vector,
+4:29
+and what does that tell me about r and n? They're equal.
+4:34
+The columns are independent. So I've got, now, r equals n, and r less than m,
+4:39
+and now I also know m is three. So those are really the facts I know.
+4:45
+n=r and those numbers are smaller than three.
+4:51
+Sorry, yes, yes. r is smaller than m, and n, of course, is also.
+4:58
+So I guess this summarizes what we can tell. In fact, why not give me a matrix --
+5:05
+because I would often ask for an example of such a matrix -- can you give me a matrix A that's an example?
+5:13
+That shows this possibility? Exactly, that there's no solution
+5:20
+with that right-hand side, but there's exactly one solution
+5:26
+with this right-hand side. Anybody want to suggest a matrix that does that?
+5:33
+Let's see. What do I -- what vector do I want in the column space?
+5:39
+I want zero, one, zero, to be in the column space, because I'm able to solve for that.
+5:45
+So let's put zero, one, zero in the column space. Actually, I could stop right there.
+5:51
+That would be a matrix with m equal three, three rows,
+5:56
+and n and r are both one, rank one, one column,
+6:04
+and, of course, there's no solution to that one. So that's perfectly good as it is.
+6:10
+Or if you, kind of, have a prejudice against matrices that only have one column,
+6:15
+I'll accept a second column. So what could I include as a second column
+6:20
+that would just be a different answer but equally good?
+6:26
+I could put this vector in the column space, too, if I wanted.
+6:31
+That would now be a case with r=n=2, but, of course,
+6:39
+three m eq- m is still three, and this vector is not in the column space.
+6:45
+So you're -- this is just like prompting us to remember all those things, column space, null space, all that stuff.
+6:53
+Now, I probably asked a second question about this type of thing.
+7:01
+OK. Oh, I even asked, write down an example of a Ah. matrix that fits the description.
+7:07
+Hm. I guess I haven't learned anything in twenty-six years.
+7:13
+CK. Cross out all statements that are false about any matrix with
+7:19
+these -- so again, these are -- this is the preliminary sta- these are the facts about my matrix, this is one example.
+7:27
+But, of course, by having an example, it will be easy to check some of these facts, or non-facts.
+7:33
+Let me, let me write down some, facts.
+7:40
+Some possible facts. So this is really true or false.
+7:45
+The determinant -- this is part one, the determinant of A transpose A is the same as the determinant
+7:55
+of A A transpose. Is that true or not? Second one, A transpose A, is invertible.
+8:05
+Is invertible. Third possible fact, A A transpose is positive definite.
+8:17
+So you see how, on an exam question,
+8:24
+I try to connect the different parts of the course. So, well, I mean, the simplest way
+8:33
+would be to try it with that matrix as a good example, but maybe we can answer, even directly.
+8:43
+Let me take number two first. Because I'm -- you know, I'm very, very fond of that matrix,
+8:51
+A transpose A. And when is it invertible?
+9:01
+When is the matrix A transpose A, invertible?
+9:08
+The great thing is that I can tell from the rank of A that I don't have to multiply out A transpose A.
+9:15
+A transpose A, is invertible -- well, if A has a null space other than the zero vector,
+9:24
+then it -- it's -- no way it's going to be invertible. But the beauty is, if the null space of A is just the zero
+9:31
+vector, so the fact -- the key fact is, this is invertible if r=n, by which I mean,
+9:40
+independent columns of A.
+9:46
+In A. In the matrix A. If r=n -- if the matrix A has independent columns,
+9:53
+then this combination, A transpose A, is square and still that same null space,
+10:00
+only the zero vector, independent columns all good, and so, what's the true/false?
+10:07
+Is it -- is this middle one T or F for this, in this setup?
+10:14
+Well, we discovered that -- we discovered that -- that r was n, from that second fact.
+10:22
+So this is a true. That's a true. And, of course, A transpose A, in this example,
+10:29
+would probably be -- what would A transpose A, be, for that matrix?
+10:35
+Can you multiply A transpose A, and see what it looks like for that matrix? What shape would it be?
+10:43
+It will be two by two. And what matrix will it be? The identity.
+10:48
+So, it checks out. OK, what about A A transpose?
+10:55
+Well, depending on the shape of A, it could be good or not so good.
+11:02
+It's always symmetric, it's always square, but what's the size, now? This is three by n, and this is n by three,
+11:11
+so the result is three by three.
+11:17
+Is it positive definite? I don't think so.
+11:23
+False. If I multiply that by A transpose, A A transpose,
+11:29
+what would the rank be? It would be the same as the rank of A, that's --
+11:36
+it would be just rank two. And if it's three-by-three, and it's only rank two,
+11:42
+it's certainly not positive definite. So what could I say about A A transpose,
+11:47
+if I wanted to, like, say something true about it? It's true that it is positive semi-definite.
+11:56
+If I made this semi-definite, it would always be true, always.
+12:01
+But if I'm looking for positive definite, then I'm looking at the null space of whatever's here,
+12:08
+and, in this case, it's got a null space.
+12:14
+So A, A -- eh, shall we just figure it out, here? A A transpose, for that matrix, will be three-by-three.
+12:22
+If I multiplied A by A transpose, what would the first row be?
+12:29
+All zeroes, right? First row of A A transpose, could only be all zeroes, so it's probably a one there and a one there,
+12:40
+or something like that. But, I don't even know if that's right.
+12:45
+But it's all zeroes there, so it's certainly not positive definite. Let me not put anything up I'm not sh- don't check.
+12:53
+What about this determinant? Oh, well, I guess -- that's a sort of tricky question.
+13:01
+Is it true or false in this case? It's false, apparently, because A transpose A, is invertible,
+13:08
+we just got a true for this one, and we got a false, we got a z- we got a non-invertible one
+13:15
+for this one. So actually, this one is false, number one.
+13:22
+That surprises us, actually, because it's, I mean, why was it tricky? Because what is true about determinants?
+13:30
+This would be true if those matrices were square. If I have two square matrices, A and any other matrix B,
+13:39
+could be A transpose, could be somebody else's matrix. Then it would be true that the determinant of B A
+13:47
+would equal the determinant of A B. But if the matrices are not square and it would actually be
+13:54
+true that it would be equal -- that this would equal the determinant of A times the determinant of A transpose.
+14:03
+We could even split up those two separate determinants. And, of course, those would be equal.
+14:09
+But only when A is square. So that's just, that's a question that rests on the,
+14:15
+the falseness rests on the fact that the matrix isn't square in the first place. OK, good.
+14:22
+Let's see. Oh, now, even asks more.
+14:28
+Prove that A transpose y equals c --
+14:34
+hah-God, it's -- this question goes on and on.
+14:40
+now I ask you about A transpose y=c.
+14:46
+So I'm asking you about the equation -- about the matrix A transpose. And I want you to prove that it has at least one solution --
+14:57
+one solution for every c, every right-hand side c,
+15:04
+and, in fact -- in fact, infinitely many solutions
+15:13
+for every c. OK. Well, none -- none of this is difficult,
+15:20
+but, it's been a little while.
+15:25
+So we just have to think again. When I have a system of equations -- this is --
+15:30
+this matrix A transpose is now, instead of being three by n,
+15:37
+it's n by three, it's n by m. Of course.
+15:43
+To show that a system has at least one solution,
+15:53
+when does this, when does this system -- when is the system always solvable?
+16:01
+When it has full row rank, when the rows are independent.
+16:06
+Here, we have n rows, and that's the rank.
+16:12
+So at least one solution, because the number
+16:19
+of rows, which is n, for the transpose, is equal to r, the rank.
+16:27
+This A transpose had independent rows because A had independent columns, right?
+16:34
+The original A had independent columns, when we transpose it,
+16:41
+it has independent rows, so there's at least one solution. But now, how do I even know that there are infinitely
+16:46
+many solutions? Oh, what do I -- I want to know something about the null space.
+16:52
+What's the dimension of the null space of A transpose?
+16:57
+So the answer has got to be the dimension of the null space of A transpose, what's
+17:03
+the general fact? If A is an m by n matrix of rank r,
+17:10
+what's the dimension of A transpose? The null space of A transpose?
+17:15
+Do you remember that little fourth subspace that's tagging along down in our big picture?
+17:24
+It's dimension was m-r.
+17:30
+And, that's bigger than zero. m is bigger than r. So there's a lot in that null space.
+17:37
+17:44
+So there's always one solution because n i- this is speaking about A transpose.
+17:52
+So for A transpose, the roles of m and n are reversed, of course, so I'm -- keep in mind that this board was about A transpose,
+18:01
+so the roles -- so it's the null space of a transpose, and there are m-r free variables.
+18:08
+OK, that's, like, just some, review.
+18:13
+Can I take another problem that's also sort of -- suppose the matrix A has three columns, v1, v2, v3.
+18:24
+Those are the columns of the matrix. All right.
+18:31
+Question A. Solve Ax=v1-v2+v3.
+18:36
+18:44
+Tell me what x is.
+18:53
+Well, there, you're seeing the most -- the one absolutely essential fact about matrix
+19:04
+multiplication, how does it work, when we do it a column at a time, the very, very first day,
+19:10
+way back in September, we did multiplication a column at a time. So what's x?
+19:16
+Just tell me? One minus one, one. Thanks. OK. Everybody's got that.
+19:22
+OK? Then the next question is, suppose that combination is zero --
+19:28
+oh, yes, OK, so question (b) says -- part (b) says, suppose this thing is zero.
+19:42
+Suppose that's zero. Then the solution is not unique.
+19:48
+Suppose I want true or false. -- and a reason.
+19:54
+Suppose this combination is zero.
+20:00
+v1-v2+v3. Show that -- what does that tell me?
+20:06
+So it's a separate question, maybe I sort of saved time by writing it that way,
+20:11
+but it's a totally separate question. If I have a matrix, and I know that column one minus column
+20:19
+two plus column three is zero, what does that tell me about whether the solution is unique or not?
+20:33
+Is there more than one solution? What's uniqueness about?
+20:40
+Uniqueness is about, is there anything in the null space, right? The solution is unique when there's
+20:46
+nobody in the null space except the zero vector. And, if that's zero, then this guy would be in the null space.
+20:57
+So if this were zero, then this x is in the null space of A.
+21:08
+So solutions are never unique, because I could always
+21:18
+add that to any solution, and Ax wouldn't change.
+21:26
+So it's always that question. Is there somebody in the null space? OK.
+21:33
+Oh, now, here's a totally different question. Suppose those three vectors, v1, v2, v3, are orthonormal.
+21:43
+So this isn't going to happen for orthonormal vectors. OK, so part (c), forget part (b).
+21:51
+c. If v1, v2, v3, are orthonormal --
+22:05
+so that I would usually have called them q1, q2, q3.
+22:11
+Now, what combination -- oh, here's a nice question, if I say so myself --
+22:19
+what combination of v1 and v2 is closest to v3?
+22:24
+What point on the plane of v1 and v2 is the closest point to v3 if these vectors are orthonormal?
+22:33
+So let me -- I'll start the sentence -- then the combination something times
+22:41
+v1 plus something times v2 is the closest combination to v3?
+22:51
+And what's the answer? What's the closest vector on that plane to v3?
+22:57
+Zeroes. Right. We just imagine the x, y, z axes, the v1, v2, th- v3
+23:07
+could be the standard basis, the x, y, z vectors,
+23:13
+and, of course, the point on the xy plane that's closest
+23:19
+to v3 on the z axis is zero. So if we're orthonormal, then the projection
+23:28
+of v3 onto that plane is perpendicular,
+23:34
+it hits right at zero. OK, so that's like a quick --
+23:39
+you know, an easy question, but still brings it out. OK.
+23:45
+Let me see what, shall I write down a Markov matrix,
+23:56
+and I'll ask you for its eigenvalues.
+24:01
+OK. Here's a Markov matrix -- this -- and, tell me its eigenvalues.
+24:14
+So here -- I'll call the matrix A, and I'll call this as point two, point four, point four,
+24:19
+point four, point four, point two, point four, point three,
+24:25
+point three, point four. OK.
+24:33
+Let's see -- it helps out to notice that column one plus
+24:39
+column two -- what's interesting about column one plus column two?
+24:46
+It's twice as much as column three. So column one plus column two equals two times column three.
+24:53
+I put that in there, column one plus column two equals twice column three.
+24:59
+That's observation. OK. Tell me the eigenvalues of the matrix.
+25:07
+OK, tell me one eigenvalue? Because the matrix is singular.
+25:15
+Tell me another eigenvalue? One, because it's a Markov matrix,
+25:20
+the columns add to the all ones vector, and that will be an eigenvector of A transpose.
+25:31
+And tell me the third eigenvalue? Let's see, to make the trace come out
+25:38
+right, which is point eight, we need minus point two.
+25:45
+OK. And now, suppose I start the Markov process.
+25:52
+Suppose I start with u(0) -- so I'm going to look at the powers of A applied to u(0).
+26:01
+This is uk. And there's my matrix, and I'm going to let u(0) be --
+26:09
+this is going to be zero, ten, zero. And my question is, what does that approach?
+26:21
+If u(0) is equal to this -- there is u(0). Shall I write it in?
+26:26
+Maybe I'll just write in u(0). A to the k, starting with ten people in state two,
+26:40
+and every step follows the Markov rule,
+26:48
+what does the solution look like after k steps? Let me just ask you that.
+26:54
+And then, what happens as k goes to infinity? This is a steady-state question, right?
+27:00
+I'm looking for the steady state. Actually, the question doesn't ask for the k step answer,
+27:06
+it just jumps right away to infinity -- but how would I express the solution after k steps?
+27:15
+It would be some multiple of the first eigenvalue to the k-th
+27:23
+power -- times the first eigenvector, plus some other multiple of the second eigenvalue,
+27:30
+times its eigenvector, and some multiple of the third eigenvalue, times its eigenvector.
+27:38
+OK. Good. And these eigenvalues are zero, one, and minus point two.
+27:49
+So what happens as k goes to infinity?
+27:55
+The only thing that survives the steady state --
+28:01
+so at u infinity, this is gone, this is gone,
+28:07
+all that's left is c2x2.
+28:16
+So I'd better find x2. I've got to find that eigenvector to complete the answer.
+28:22
+What's the eigenvector that corresponds to lambda equal one? That's the key eigenvector in any Markov process,
+28:29
+is that eigenvector. Lambda equal one is an eigenvalue, I need its eigenvector x2, and then
+28:38
+I need to know how much of it is in the starting vector u0.
+28:44
+OK. So, how do I find that eigenvector? I guess I subtract one from the diagonal, right?
+28:51
+So I have minus point eight, minus point eight, minus point six, and the rest, of course, is just --
+28:59
+still point four, point four, point four, point four, point three, point three, and hopefully,
+29:07
+that's a singular matrix, so I'm looking to solve A minus Ix
+29:19
+equal zero. Let's see -- can anybody spot the solution here? I don't know, I didn't make it easy for myself.
+29:24
+What do you think there?
+29:30
+Maybe those first two entries might be --
+29:39
+oh, no, what do you think? Anybody see it?
+29:44
+We could use elimination if we were desperate. Are we that desperate?
+29:51
+Anybody just call out if you see the vector that's in that null space.
+29:57
+Eh, there better be a vector in that null space, or I'm quitting.
+30:03
+Uh, ha- OK, well, I guess we could use elimination.
+30:11
+I thought maybe somebody might see it from further away.
+30:18
+Is there a chance that these guys are --
+30:23
+could it be that these two are equal and this is whatever it takes, like, something like three, three, two?
+30:31
+Would that possibly work? I mean, that's great for this -- no, it's not that great.
+30:37
+Three, three, four -- this is, deeper mathematics you're watching now.
+30:43
+Three, three, four, is that -- it works! Don't mess with it!
+30:49
+It works! Uh, yes. OK, it works, all right.
+30:54
+And, yes, OK, and, so that's x2, three, three, four,
+31:01
+and, how much of that vector is in the starting vector?
+31:11
+Well, we could go through a complicated process. But what's the beauty of Markov things?
+31:19
+That the total number of the total population, the sum of these doesn't change.
+31:27
+That the total number of people, they're moving around, but they don't get born or die or get dead.
+31:35
+So there's ten of them at the start, so there's ten of them there, so c2 is actually one, yes.
+31:41
+So that would be the correct solution. OK. That would be the u infinity.
+31:48
+OK. So I used there, in that process, sort of, the main facts about Markov matrices to, to get a jump on the answer.
+31:58
+OK. let's see. OK, here's some, kind of quick, short questions.
+32:05
+Uh, maybe I'll move over to this board, and leave that for the moment.
+32:11
+I'm looking for two-by-two matrices. And I'll read out the property I want, and you give me
+32:19
+an example, or tell me there isn't such a matrix. All right.
+32:24
+Here we go. First -- so two-by-twos. First, I want the projection onto the line
+32:36
+through A equals four minus three.
+32:41
+So it's a one-dimensional projection matrix
+32:49
+I'm looking for. And what's the formula for it?
+32:56
+What's the formula for the projection matrix P onto a line through A. And then we'd just plug in this particular A.
+33:03
+Do you remember that formula? There's an A and an A transpose, and normally we
+33:14
+would have an A transpose A inverse in the middle, but here we've just got numbers, so we just divide by it.
+33:20
+And then plug in A and we've got it.
+33:25
+So, equals. OK. You can put in the numbers. Trivial, right.
+33:31
+OK. Number two.
+33:38
+So this is a new problem. The matrix with eigenvalue zero and three and eigenvectors --
+33:45
+well, let me write these down. eigenvalue zero, eigenvector one, two, eigenvalue three, eigenvector two, one.
+33:56
+I'm giving you the eigenvalues and eigenvectors
+34:01
+instead of asking for them. Now I'm asking for the matrix.
+34:10
+What's the matrix, then? What's A?
+34:17
+Here was a formula, then we just put in some numbers, what's the formula here, into which we'll just put the given numbers?
+34:26
+It's the S lambda S inverse, right? So it's S, which is this eigenvector matrix,
+34:35
+it's the lambda, which is the eigenvalue matrix,
+34:41
+it's the S inverse, whatever that turns out to be, let me just leave it as inverse.
+34:46
+That has to be it, right?
+34:52
+Because if we went in the other direction, that matrix S would diagonalize A to produce lambda.
+35:00
+So it's S lambda S inverse. Good. OK, ready for number three.
+35:06
+A real matrix that cannot be factored into A --
+35:13
+I'm looking for a matrix A that never could equal B transpose B, for any B.
+35:24
+A two-by-two matrix that could not be factored in the form B transpose B.
+35:30
+So all you have to do is think, well, what does B transpose B, look like, and then pick something different.
+35:37
+What do you suggest?
+35:42
+Let's see. What shall we take for a matrix that could not have this form, B transpose B.
+35:49
+Well, what do we know about B transpose B? It's always symmetric. So just give me any non-symmetric matrix,
+35:56
+it couldn't possibly have that form. OK. And let me ask the fourth part of this question --
+36:02
+a matrix that has orthogonal eigenvectors,
+36:07
+but it's not symmetric.
+36:12
+What matrices have orthogonal eigenvectors, but they're not symmetric matrices?
+36:20
+What other families of matrices have orthogonal eigenvectors?
+36:28
+We know symmetric matrices do, but others, also. So I'm looking for orthogonal eigenvectors,
+36:40
+and, what do you suggest?
+36:47
+The matrix could be skew-symmetric. It could be an orthogonal matrix.
+36:55
+It could be symmetric, but that was too easy, so I ruled that out.
+37:01
+It could be skew-symmetric like one minus one, like that.
+37:11
+Or it could be an orthogonal matrix like cosine sine,
+37:19
+minus sine, cosine. All those matrices would have complex orthogonal
+37:28
+eigenvectors. But they would be orthogonal, and so those examples are fine.
+37:35
+OK. We can continue a little longer if you would like to, with
+37:45
+these -- from this exam. From these exams. Least squares?
+37:53
+OK, here's a least squares problem in which, to make life quick, I've given the answer --
+38:00
+it's like Jeopardy!, right? I just give the answer, and you give the question.
+38:06
+OK. Whoops, sorry.
+38:12
+Let's see, can I stay over here for the next question?
+38:17
+OK. least squares.
+38:22
+So I'm giving you the problem, one, one, one, zero, one, two,
+38:28
+c d equals three, four, one, and that's b, of course,
+38:35
+this is Ax=b. And the least squares solution --
+38:43
+Maybe I put c hat d hat to emphasize it's not the true solution.
+38:49
+So the least square solution -- the hats really go here -- is eleven-thirds and minus one.
+38:58
+Of course, you could have figured that out in no time. So this year, I'll ask you to do it, probably.
+39:05
+But, suppose we're given the answer, then let's just remember what happened.
+39:14
+OK, good question. What's the projection P of this vector onto the column
+39:21
+space of that matrix? So I'll write that question down, one.
+39:29
+What is P? The projection. The projection of b onto the column space of A is what?
+39:41
+Hopefully, that's what the least squares problem solved.
+39:50
+What is it? This was the best solution, it's eleven-thirds times column one,
+40:02
+plus -- or rather, minus one times column two.
+40:07
+Right? That's what least squares did. It found the combination of the columns that
+40:14
+was as close as possible to b. That's what least squares was doing. It found the projection.
+40:20
+OK? Secondly, draw the straight line problem that corresponds to
+40:26
+this system. So I guess that the straight line fitting a straight line
+40:32
+problem, we kind of recognize. So we recognize, these are the heights,
+40:37
+and these are the points, and so at zero, one, two, the heights are three, and at t equal to one,
+40:46
+the height is four, one, two, three, four, and at t equal to two, the height is one.
+40:53
+So I'm trying to fit the best straight line
+41:01
+through those points. God.
+41:07
+I could fit a triangle very well, but, I don't even know which way the best straight line goes.
+41:16
+Oh, I do know how it goes, because there's the answer,yes. It has a height eleven-thirds, and it has slope minus one,
+41:25
+so it's something like that. Great. OK. Now, finally -- and this completes the course --
+41:36
+find a different vector b, not all zeroes, for which the least square solution would be zero.
+41:45
+So I want you to find a different B so that the least square solution changes to all zeroes.
+41:54
+42:00
+So tell me what I'm really looking for here. I'm looking for a b where the best combination of these two
+42:08
+columns is the zero combination. So what kind of a vector b I looking for?
+42:15
+I'm looking for a vector b that's orthogonal to those columns. It's orthogonal to those columns,
+42:20
+it's orthogonal to the column space, the best possible answer is zero. So a vector b that's orthogonal to those columns -- let's see,
+42:29
+maybe one of those minus two of those, and one of those?
+42:35
+That would be orthogonal to those columns, and the best vector would be zero, zero.
+42:42
+OK. So that's as many questions as I can do in an hour, but you get three hours, and, let me just say,
+42:50
+as I've said by e-mail, thanks very much for your patience
+42:56
+as this series of lectures was videotaped, and, thanks for filling out these forms,
+43:04
+maybe just leave them on the table up there as you go out -- and above all, thanks for taking the course.
+43:10
+Thank you. Thanks. 

@@ -1,0 +1,734 @@
+https://www.youtube.com/watch?v=VqP2tREMvt0
+
+# Intro
+0:00
+0:09
+OK, here's linear algebra lecture seven. I've been talking about vector spaces
+0:19
+and specially the null space of a matrix and the column space of a matrix.
+0:26
+What's in those spaces. Now I want to actually describe them.
+0:32
+How do you describe all the vectors that are in those spaces? How do you compute these things?
+0:39
+So this is the, turning the idea, the definition,
+0:46
+into an algorithm. What's the algorithm for solving A x =0?
+0:53
+So that's the null space that I'm interested in. So can I take a particular matrix A and describe
+1:01
+the natural algorithm, and I'll execute it for that matrix --
+1:06
+here we go. So let me take the matrix as an example.
+# Rectangular Matrix Example
+1:12
+So we're definitely talking rectangular matrices in this chapter. So I'll make, I'll have four columns.
+1:22
+And three rows. Two four six eight and three six eight ten.
+1:29
+OK.
+1:36
+If I just look at those columns, and rows, well,
+# Elimination
+1:42
+I notice right away that column two is a multiple of column one.
+1:47
+It's in the same direction as column one. It's not independent. I'll expect to discover that in the process.
+1:56
+Actually, with rows, I notice that that row plus this row gives the third row.
+2:03
+So the third row is not independent. So, all that should come out of elimination.
+2:12
+So now what I -- my algorithm is elimination, but extended now
+2:19
+to the rectangular case, where we have to continue even if there's zeros in the pivot position,
+2:30
+we go on. OK, so let me execute elimination for that matrix.
+2:36
+My goal is always, while I'm doing elimination --
+2:42
+I'm not changing the null space. That's very important, right? I'm solving A x equals zero by elimination,
+2:50
+and when I do these operations that you already know, when I subtract a multiple of one
+2:56
+equation from another equation, I'm not changing the solutions.
+3:02
+So I'm not changing the null space. Actually, I changing the column space, as you'll see.
+3:08
+So you have to pay attention. What does elimination leave unchanged? And the answer is the solutions to the system are not changed
+3:18
+because I'm doing the same thing to -- I'm doing a legitimate operations on the equations.
+3:24
+Of course, on the right hand side it's always zero, and I don't plan to write zero all the time.
+3:30
+OK, so I'm really just working on the left side, but the right side is, is keeping up always zeros.
+3:39
+OK, so what's elimination? Well, you know where the first pivot is
+3:44
+and you know what to do with it. So can I just take the first step below here?
+3:51
+So that pivot row is fine. I take two times that row away from this one and I get zero
+4:00
+zero. That's signaling a difficulty. Two, two twos away from the six leaves me with a two.
+4:07
+Two twos away from the eight leaves me with a four. And now three of those away from here
+4:13
+is zero, again another zero, three twos away from that eight is the two, three twos away
+4:20
+from that ten is a four. OK. That's the first stage of elimination.
+4:26
+I've got the first column straight. So of course I move on to the second column.
+4:35
+I look in that position, I see a zero. I look below it, hoping for a non-zero
+4:43
+that I can do a row exchange. But it's zero below. So that's telling me that that column is -- well,
+4:53
+what it's really going to be telling me is that that column is a combination of the earlier columns.
+4:59
+It's that second column is dependent on the earlier columns. But I don't stop to think here.
+5:09
+In that column there's nothing to do. I go on to the next. So here's the next pivot.
+5:15
+So there's the first pivot and there's the second pivot, and I just keep this elimination going downwards.
+5:22
+So, so the next step keeps the first row,
+5:30
+keeps the second row with its pivot, so I've got my two pivots, and does elimination
+5:40
+to clear out the column below that pivot. So actually you see the multiplier is one.
+5:47
+It subtracts row two from row three and produces a row of zeros.
+5:53
+OK. That I would call that matrix U, right?
+5:59
+That's our upper -- well, I can't quite say upper triangular.
+6:05
+Maybe upper -- I don't know -- upper something.
+6:12
+It's in this so-called echelon form. The word echelon means, like, staircase form.
+6:21
+It's the, the non-zeros come in that staircase form. If there was another pivot here, then the staircase
+6:30
+would include that. But here's a case where we have two pivots only.
+6:37
+OK, so actually we've already discovered the most important number about this matrix.
+6:44
+The number of pivots is two. That number we will call the rank of the matrix.
+# Rank
+6:51
+So let me put immediately. The rank of A --
+6:58
+so I'm telling you what this word rank means in the algorithm.
+7:04
+It's equal to the number of pivots. And in this case, two.
+7:12
+OK, for me that number two is the crucial number. OK, now I go to -- you remember I'm always solving A x equals
+7:22
+zero, but now I can solve U x equals zero, right? Same solution, same null space.
+# Solution
+7:29
+OK. So I could stop here -- why don't I stop here and do the back substitution.
+7:36
+So now I have to ask you, how do I describe the solutions?
+7:42
+There are solutions, right, to A x equals zero. I knew there would be. I had three equations in four unknowns.
+7:50
+I certainly expected some solutions. Now I want to see what are they.
+7:55
+OK, here's the critical step. I refer to it up here as separating out
+8:04
+the pivot variables, the pivot columns, which are these two.
+8:09
+Here I have two pivot columns. Those, obviously, they're the columns with the pivots.
+8:15
+So I have two pivot columns.
+8:22
+And I have the other columns, I'll call free.
+8:27
+These are free columns, OK.
+8:32
+Why do I use those words? Why do I use that word free?
+8:38
+Because now I want to write, I want to find the solutions to U
+8:43
+x equals zero. Here is the way I do it. These free columns I can assign any number freely to those --
+8:58
+to the variables x2 and x4, the ones that multiply
+9:03
+columns two and four. So I can assign anything I like to x2 and x4.
+9:10
+And then I can solve the equations for x1 and x3.
+9:17
+Let me say that again. If I give -- let me, let me assign. So, so one particular x is to assign, say, the value one
+9:29
+to the, to x2, and zero to x4. Those are -- that was a free choice,
+9:35
+but it's a convenient choice. OK. Now I want to solve U x equals zero
+9:41
+and find numbers one and three, complete the solution.
+9:47
+Can I write down -- let's see. OK. Shall we just remember what U x equals zero represents?
+9:53
+What are my equations? That first equation is x1 plus just --
+10:00
+I'm just saying what are these matrices meaning. That's the first equation.
+10:07
+And the second equation was 2x3 + 4x4=0.
+10:14
+Those are my two equations. OK. Now the point is I can find x1 and x3 by back substitution.
+10:24
+So we're building on what we already know. The new thing is that there were some free variables that I
+10:31
+could give any numbers to. And I'm systematically going to make a choice like this, Now
+10:38
+what is x3? 1 and 0. Let's, let's go backwards, back up. I look at the last equation.
+10:45
+x3 is zero, from the last equation,
+10:50
+because, because x4 we've set x4 to zero,
+10:55
+and then we get x3 as zero. OK. Now we set x2 to be one, so what is x1?
+11:03
+Negative two, right? So then I have negative two plus two, zero and zero,
+11:10
+correctly giving zero. There is a vector in the null space. There is a solution to A x equals zero.
+11:17
+In fact, what solution is that? That simply says that minus two times the first column
+11:24
+plus one times the second column is the zero column. Of course that's right.
+11:29
+Minus two of that column plus one of that, or minus two of that plus one of that.
+11:35
+That solution is -- that, that's just what we saw immediately, that the second column is twice as big as the first column.
+11:43
+OK, tell me some more vectors in the null space. I found one.
+11:51
+Tell me, how to get a bunch more immediately out of that one.
+11:58
+Just take multiples of it. Any multiple of -- I could multiply this by anything.
+12:04
+I might as well call it, I could say, C, some multiple of this. So let me --
+12:10
+so X could be any multiple of this one. OK, that, that describes now a line,
+12:17
+an infinitely long line in four dimensional space.
+12:23
+But -- which is in the null space. Is that the whole null space?
+12:29
+No. I've got two free variables here. I made this choice, one and zero, for the free variables,
+12:37
+but I could have made another choice. Let me make the other choice zero and one.
+12:44
+You see my system. So let me repeat the system. This is the algorithm that you, you just learned to do.
+12:54
+Do elimination.
+12:59
+Decide which are the pivot columns and which are the free columns. That tells you that, that variables one and three
+13:05
+are pivot variables, two and four are free variables. Then those free variables, you assign them --
+13:14
+you give one of them the value one and the others the value zero -- in this case, we had a one and a zero --
+13:22
+and complete the solution. And you do -- you give the other one the value one and zero.
+13:28
+And now complete the solution. So let's complete that solution. I'm looking for a vector in the null space,
+13:35
+and it's absolutely going to be different from this guy, because, because any multiple of that zero
+13:42
+is never going to give the one. So I have somebody new in the null space, and let me finish it out.
+13:47
+What's x3 here? So we're going by back substitution, looking at this equation.
+13:53
+Now x4 we've changed, we're doing the other possibility,
+13:59
+where x2 is zero and x4 is one. So x3 will happen to be minus two.
+14:06
+And now what do I get for that first equation? x1 -- let's see.
+14:12
+Two x3s is minus four plus two -- do I get a two there?
+14:19
+Perhaps, yeah. Two for x1, minus four, and two.
+14:25
+OK. That's in the null space. What does that say about the columns?
+14:32
+That says that two of this column minus two
+14:37
+of this column plus this column gives zero, which it does. Two of that minus two of that and one of that
+14:46
+gives the zero column. OK, now, now I've found another vector in the null space.
+14:52
+Now we're ready to tell me the whole null space. What are all the solutions to Ax=0?
+15:00
+I've got this guy and when I have him,
+Special Solutions
+15:05
+what else is, goes into the null space along with that? These are my two special solutions.
+15:13
+I call them special -- I just invented that name. Special solutions. What's special about them is the special numbers
+15:21
+I gave to the free variables, the values zero and one
+15:27
+for the free variables. I could have given the free variables any values
+15:32
+and got vectors in the null space. But this was a good way to be sure I got t- got everybody.
+15:40
+OK, so once I have him, I also have any multiple, right?
+15:45
+So I could take any multiple of that and it's in the null space.
+15:50
+And now what else -- I left a little space for what? What -- a plus sign.
+15:58
+I can take any combination. Here is a line of vectors in the null space.
+16:04
+A bunch of solutions. Would you rather I say in the null space or would you rather
+16:09
+I say, OK, I'm solving Ax=0? Well, really I'm solving Ux=0.
+16:15
+Well, OK, let me put in that crucial plus sign.
+16:23
+I'm taking all the combinations of my two special solutions.
+16:29
+That's my conclusion there. The null space contains, contains exactly
+16:37
+all the combinations of the special solutions. And how many special solutions are there?
+16:46
+There's one for every free variable. And how many free variables are there?
+16:51
+Oh, I mean, we can see all the whole picture now. If the rank R was two, this is the,
+16:59
+this is the number of pivot variables, right, because it counted the pivots.
+17:05
+So how many free variables?
+17:11
+Well, you know it's two, right? What is it in -- for a matrix that's m rows, n columns,
+17:20
+n variables that means, with rank r? How many free variables have we got left?
+# Pivot Variables
+17:28
+If r of the variables are pivot variables, we have n-r --
+17:34
+in this case four minus two -- free variables. Do you see that first of all we get clean answers here?
+17:53
+We get r pivot variables -- so there really were r equations
+17:59
+here. There looked like three equations, but there were really only two independent equations.
+18:05
+And there were n-r variables that we could choose freely,
+18:11
+and we gave them those special zero one values, and we got the special solutions.
+18:19
+OK. For me -- we could stop at that point.
+18:25
+That gives you a complete algorithm for finding all the solutions to A x equals zero.
+18:34
+OK. Again, you do elimination --
+18:41
+going onward when a column, when there's nothing to be done on one column, you just continue.
+18:50
+There's this number r, the number of pivots, is crucial, and it leaves n-r free variables, which you
+19:01
+give values zero and one to. I would like to take one more step.
+19:08
+I would like to clean up this matrix even more. So now I'm going to go to -- this is in its,
+19:14
+this is in echelon form, upper triangular if you like.
+19:20
+I want to go one more step to make it as good as it can be.
+#Matrix R
+19:25
+OK, so now I'm going to speak about the reduced row echelon
+19:31
+form. OK, so now I'm going to speak about the matrix R, which is the reduced row echelon form.
+19:44
+So what does that mean? That means I just -- I can, I can work harder on U.
+19:52
+So let me start, let me suppose I got as far as U, which was good.
+19:58
+20:08
+Notice how that row of zeros appeared. I didn't comment on that, but I should have.
+20:15
+That row of zeros up here is because row three was
+20:20
+a combination of rows one and two, and elimination discovered that fact.
+20:27
+When we get a row of zeros, that's telling us that the --
+20:32
+original row that was there was a combination of other rows,
+20:38
+and elimination knocked it out. OK, so we got this far.
+20:44
+Now how can I clean that up further? I can do, elimination upwards.
+20:51
+I can get zero above the pivots. So this reduced row echelon form has zeros
+20:58
+above and below the pivots.
+21:05
+So let me do that.
+21:11
+So now I'll subtract one of this from the row above. That will leave a zero and a minus two in there.
+21:20
+And that's good.
+21:26
+OK, and I can clean it up even one more step. I can make the pivots --
+21:33
+the pivots I'm going to make equal to one, because I can divide equation two by the pivot.
+21:41
+That won't change the solutions. So let me do that. And then I really --
+21:46
+I'm ready to stop. One, two, zero, minus two, zero, zero, one, two.
+21:53
+I divided the second equation by two, because now I have a one in the pivot and zeros below.
+22:05
+OK. This is my matrix R.
+22:14
+I guess I'm hoping that you could now execute the whole algorithm.
+22:21
+Matlab will do it immediately with the command --
+22:27
+reduced row echelon form of A.
+22:34
+So if I input that original matrix A and then I write, then I type that command, press return,
+22:43
+that matrix will appear. That's the reduced row echelon form,
+22:49
+and it's got all the information as clear as can be.
+23:00
+What, what information has it got? Well, of course it immediately tells me the pivot rows, pivot rows, one and two,
+23:08
+pivot columns, one and three. And in fact it's got the identity matrix in there,
+23:15
+It's, it's got zeros above and below the pivots, right? and the pivots are one, so it's, so it's got a --
+23:22
+so notice the two by two identity matrix that's sitting
+23:30
+in the pivot rows and pivot columns. it's I in the pivot rows and columns.
+23:42
+It's got zero rows below.
+23:48
+Those are always indicating that original rows were,
+23:56
+were combinations of other rows. So we really only had two rows there.
+24:02
+And now it also -- so there's the identity. Now it's also got its free columns.
+24:10
+And, they're cleaned up as much as possible.
+24:17
+Actually, actually it's now so cleaned up that the special solutions, I can read off -- you remember I went through
+24:26
+the steps of computing this -- doing back substitution?
+24:32
+Let me, let me, instead of that system, let me take this improved system.
+24:39
+So I'm going to use these numbers, right. In these equations, what did I do?
+24:45
+I divided this equation by two and, oh yeah
+24:52
+and I had subtracted two of this, which knocked out this guy and made that a minus sign.
+24:58
+Is that what -- I've now written Rx equals zero.
+25:04
+25:10
+Now I guess I'm hoping everybody in this room understands the solutions to the original A x equals zero,
+25:19
+the midway, halfway, U x equals zero, and the final R x equals zero are all the same.
+25:27
+Because going from one of those to another one I didn't mess up.
+25:33
+I just multiplied equations and subtracted from other equations, which I'm allowed to do.
+25:39
+OK. But my point is that now if I do this free variables
+25:47
+and back substitution, it's just, the numbers are there. When I let x -- so in this guy, I let x2 be one and x4 be zero.
+26:01
+I, I guess, what I seeing here? Let me, let me sort of separate this out here.
+26:07
+I'm seeing in the pivot, in the pivot columns,
+26:12
+if I, if I put the pivot columns here, I'm seeing those. And I'm -- in the free columns I'm seeing --
+26:21
+what I seeing in the free columns? A two, zero in that first free column, the x2 column,
+26:29
+and a minus two, two in the fourth column, the other free column.
+26:36
+And the row of zeros below, which of course have no --
+26:41
+that equation is zero equals zero. That's satisfied. Here's my point.
+26:48
+That when I do back substitution, these numbers are exactly what shows up --
+26:55
+oh, their signs get switched. I was going to say those numbers, two, minus two, zero,
+27:01
+two, can I just circle the -- this is the free part of the matrix.
+27:07
+This is the identity part. This is the free part, maybe I'll call it F.
+27:14
+This, of course, I call I, because it's the identity. The free part is a, I mean, I'm just doing back substitution.
+27:25
+And those free numbers will show up, with a minus sign, because they pop onto the other side of the equation --
+27:32
+so I see minus two, zero, and I see two, minus two.
+27:39
+So that wasn't magic. It had to happen. Let me, show you clearly why it happened.
+27:48
+OK, so that's -- this is what I'm interested in here.
+27:53
+And now let me, let me just, like, do it, do it for --
+27:59
+let's suppose we've, we've got to --
+28:04
+let's suppose we've got this system already in,
+28:11
+in rref form.
+28:18
+So my matrix R is -- what does it look like? OK, and I'll --
+28:25
+let me pretend that the pivot columns come first
+28:30
+and then whatever's in the free columns. And there might be some zero rows below.
+28:37
+There's a typical -- a pretty typical reduced row echelon form.
+28:45
+You see what's typical.
+28:51
+It's got -- this is r by r. This is r pivot rows.
+28:57
+This is r pivot columns.
+29:06
+And here are n-r free columns.
+29:16
+OK. Tell me what are the special solutions?
+29:21
+What are the -- what's x? If I want to solve R x equals zero --
+29:27
+in fact, let me -- I'm really going to, do the whole -- since these --
+29:36
+this is now block matrices, I might as well do all of the special solutions at once.
+29:41
+So I want to solve R x equals zero, and I'll have some special solutions.
+29:49
+Let me, actually -- can I do them all at once?
+29:54
+I'm going to create a null space matrix, OK.
+30:00
+A matrix. Its, its, its columns are the special --
+30:13
+the columns are the special solutions.
+30:19
+This is, I'm making it sound harder, it's going to be totally easy. N will be this null space matrix.
+30:25
+I want R N to be the zero matrix.
+30:31
+These columns of N are supposed to multipl- to get multiplied by R and give zero columns.
+30:37
+So what N will do the job? Let me put -- I'm going to put the identity in the free variable part
+30:45
+and then minus F will show up in the pivot variables, just
+30:54
+the way it did in that example. There we had the identity and F. Here -- in the special solution.
+31:02
+So these columns are -- there's the matrix of special solutions. And actually, there -- so there's a Matlab command
+31:09
+or a teaching code command, NULL -- N equal, so this is the --
+31:19
+produces the null basis, the null space matrix, NULL of A,
+31:24
+and there it is.
+31:30
+And how does that command actually work? It uses Matlab to compute R, then
+31:38
+it picks out the pivot variables, the free variables, puts, puts ones and zeros in for the free variables,
+31:47
+and copies out the pivot variables. It, it does back substitution, but back substitution
+31:54
+for this system is totally simple. What is this system?
+32:00
+R x equals zero. So this is R is I F, and x is the pivot variables
+32:11
+and the free variables, and it's supposed to give zero.
+32:18
+So what does that mean? That means that the pivot variables plus F
+32:24
+times the free variables give zero. So let me put F times the free variables on the other side.
+32:31
+I get minus F times the free variables.
+32:37
+There's my, equation, as simple as it can be.
+32:43
+That's what back substitution comes to when I've reduced and reduced and reduced this system
+32:49
+to the, to the best form, OK. And, then if the free variables, I
+32:56
+make this special choice of the identity, then the pivot variables are
+33:02
+minus F. OK, can I do, another example?
+33:08
+Could you do another example? Can I -- let me just take another matrix and, and let's go through this algorithm once more, OK.
+33:17
+Here we go. Here's a blackboard for another matrix, OK.
+33:25
+So I'll call the matrix A again, but let me make it --
+33:31
+yeah, how big shall we make it this time?
+33:36
+Why don't I do this? Just for the heck of it. Let me take the transpose of this A and see what happens to
+33:44
+that. Two four six eight and three six eight ten.
+33:55
+Before we do the calculations, tell me what's coming?
+34:06
+How many pivot variables do you expect here?
+34:12
+How many columns are going to have pivots? How many -- we have three columns in that matrix,
+34:22
+but are we going to, are we going to have three pivots? No, because this third columns is the sum of the first two
+34:31
+columns. I'm totally expecting, totally expecting that these will be
+34:38
+pivot columns -- because they're independent, but that this third guy,
+34:45
+the third column, which is dependent on the first two, is going to be a free column.
+34:52
+Elimination better discover that. And elimination will also straighten out
+34:58
+the rows, dependent rows and some independent rows.
+35:05
+What's the, what's the row reduced echelon form for this? Let's just do it, OK.
+35:11
+So, so that's the first pivot. Two times that away from that gives me a row of zeros.
+35:20
+Two times that away from that gives me a zero two two. And two times that away from that gives me a zero four four.
+35:28
+OK, first column is straight.
+35:35
+First variable is a pivot variable. No problem. On to the second column. I look at the second pivot, it's a zero.
+35:43
+I look below it. There's a two. OK, I do a row exchange.
+35:50
+So this zero is now there. I now have a perfectly good pivot, and I use it.
+35:58
+OK, and I subtract two of that row away from this row. All right if I do it like that?
+36:05
+I've got to the form U now. This was my A. Now there's my U. I can see now --
+36:17
+I have to stop, right? I would go on to the third column. I should have tried.
+36:22
+I quit, but without trying. I shouldn't have done that. On to the third column, look at the pivot position.
+36:28
+It's got a zero in it. Look below, all zeros. Now I'm entitled to stop, OK.
+36:35
+So the rank is two again.
+36:45
+What about the null space? How many special solutions are there this time?
+36:52
+How many special solutions for this matrix? I've got -- and which are the free variables and which are
+# Pivot Columns
+36:59
+the pivot variables and so on? Pivot columns, I've got two pivot columns,
+37:04
+and that's no accident. The number of pivot columns for a matrix A, that's
+37:11
+a great fact, that the number of pivot columns for A and A transpose are the same.
+37:19
+And then I have a free column. There's a free column. One free column, because the count is three minus two.
+37:30
+Three minus two gives me one free column.
+37:37
+OK, so now let me solve, what's in the null space.
+37:47
+OK, so how do I -- let's see. These vectors have length three.
+37:52
+They only have three components. I'm making too much space for the, to write x.
+37:58
+x has just got three components, and what are they?
+38:03
+I'm looking for the null space.
+38:09
+OK, so how do I start? I give the free variable some convenient value.
+38:17
+And what's that? I set it to one.
+38:23
+I set the free variable to one. If I set the free variable to zero and solve
+38:28
+for the pivot variables, I'll get all zeros: no progress. But by setting the free variable to one --
+38:36
+you see w- my two equations now are -- my equations are x1+ 2x2+ 3 x3 is zero,
+38:45
+that's my first equation. And my second equation is now 2x2+2x3 equals zero.
+38:51
+And, OK. So if x3 is one, then x2 is minus one.
+39:02
+And if x3 is one and x2 is minus one, then maybe x1
+39:07
+is minus one. And actually I go back to check now.
+39:14
+I don't, like -- I did a quick calculation mentally.
+39:19
+Can I mentally do a quick check? That matrix, that solution x says that minus this column minus this column plus this one
+# Null Space
+39:28
+is the zero column. And it is. Minus that minus that plus that is zero.
+39:35
+So that's in the null space. And now you can tell me what else is in the null space.
+39:40
+What's, what's the whole null space now? I multiply by C, right.
+39:46
+The whole null space is a line.
+39:51
+So that's the description. You know, if I ask you on a homework or a quiz or the final
+39:57
+what -- give me, describe, tell me the null space, find the null space of this matrix,
+40:04
+you can take those steps. And that's the answer I'm looking for.
+40:10
+And I'm looking for that C too, because that's telling me that you're remembering that it's a whole space and not
+40:18
+just one vector. Later I will ask you for a basis for the null space.
+40:23
+Then I just want this vector. But if I ask for the whole null space, then there's the whole line through that vector.
+# Natural Solution
+40:31
+OK, now one more natural thing to do with this example, right, is keep going to the reduced matrix, R.
+40:43
+So can I push onwards to R? That should be quick, but let's just practice.
+40:49
+Let me keep going to R. OK, so what do I do here? I subtract --
+40:55
+I clear out above the pivot, so I subtract that from that, that's one zero one is left, right?
+41:02
+When I subtracted this row from this it produced a zero above this pivot. And now I want that pivot to be a one.
+41:12
+So for the R matrix, I'll divide this equation by two,
+41:18
+and of course these zero, zeros are great, they don't change.
+41:23
+There's R. That's R. You see what R is?
+41:28
+You see the identity matrix sitting up here? You see the free part F, the F part here?
+41:36
+And you see the zeros below. This is I F zero zero.
+41:42
+And what's the x? The x has the identity --
+41:48
+well, it's only a single number one, but it's the identity matrix in the free, in the free part.
+41:56
+And what does it have in the pivot variables? What did back substitution give?
+42:03
+It gave minus these guys. You see that what this is is any multiple of --
+42:11
+this is the identity there, and this is minus F here.
+42:19
+This is our null space matrix N for this.
+42:24
+Our, our null space matrix is the guy whose columns are the special solutions.
+42:30
+So their free variables have the special values one and, pivot variables have minus F.
+42:39
+So do you see, though, how the minus F just automatically shows up in the special solutions.
+42:45
+That's it really. I don't think there's anything more I
+42:51
+can say about A x equals zero. There's more I can say about A x equal b,
+42:59
+but that'll be on Friday. OK, so that's, that's the null space.
+43:05
+Thanks. 

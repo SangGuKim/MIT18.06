@@ -1,0 +1,686 @@
+https://www.youtube.com/watch?v=Go2aLo7ZOlU
+
+# Introduction
+0:00
+Yes, OK, four, three, two, one, OK, I
+0:09
+see you guys are in a happy mood. I don't know if that means 18.06 is ending, or, the quiz was good.
+0:16
+Uh, my birthday conference was going on at the time of the quiz, and in the conference, of course,
+0:24
+everybody had to say nice things, but I was wondering, what would my 18.06
+0:30
+class be saying, because it was at the exactly the same time.
+0:36
+But, what I know from the grades so far, they're basically close to, and maybe slightly above the grades
+0:45
+that you got on quiz two. So, very satisfactory.
+0:52
+And, then we have a final exam coming up, and today's lecture, as I told you by email,
+1:00
+will be a first step in the review, and then on Wednesday I'll do all I can
+1:07
+in reviewing the whole course.
+1:13
+So my topic today is -- actually, this is a lecture I have never given before in this way,
+1:24
+and it will -- well, four subspaces, that's certainly fundamental, and you know that,
+1:32
+so I want to speak about left-inverses and right-inverses and then something called pseudo-inverses.
+1:39
+And pseudo-inverses, let me say right away, that comes in near the end of chapter seven,
+1:47
+and that would not be expected on the final. But you'll see that what I'm talking about
+1:54
+is really the basic stuff that, for an m-by-n matrix of rank r,
+2:01
+we're going back to the most fundamental picture in linear algebra.
+2:07
+Nobody could forget that picture, right? When you're my age, even, you'll remember the row space,
+2:15
+and the null space. Orthogonal complements over there, the column space
+2:21
+and the null space of A transpose column, orthogonal complements over here.
+2:26
+And I want to speak about inverses. OK. And I want to identify the different possibilities.
+2:33
+So first of all, when does a matrix have a just a perfect inverse, two-sided, you know,
+2:42
+so the two-sided inverse is what we just call inverse, right?
+2:51
+And, so that means that there's a matrix that
+2:57
+produces the identity, whether we write it on the left or on the right.
+3:03
+And just tell me, how are the numbers r,
+3:10
+the rank, n the number of columns, m the number of rows,
+3:16
+how are those numbers related when we have an invertible matrix? So this is the matrix which was --
+3:23
+chapter two was all about matrices like this, the beginning of the course, what was the relation of th-
+3:30
+of r, m, and n, for the nice case?
+3:36
+They're all the same, all equal. So this is the case when r=m=n.
+3:43
+Square matrix, full rank, period, just -- so I'll use the words full rank.
+3:50
+OK, good. Everybody knows that. OK.
+3:55
+Then chapter three. We began to deal with matrices that were not of full rank,
+4:03
+and they could have any rank, and we learned what the rank was.
+4:08
+And then we focused, if you remember on some cases like full column rank.
+4:17
+Now, can you remember what was the deal with full column rank? So, now, I think this is the case in which we
+4:25
+have a left-inverse, and I'll try to find it.
+# Full Column Rank
+4:32
+So we have a -- what was the situation there? It's the case of full column rank, and that means --
+4:43
+what does that mean about r? It equals, what's the deal with r, now,
+4:51
+if we have full column rank, I mean the columns are independent, but maybe not the rows.
+4:59
+So what is r equal to in this case? n. Thanks.
+5:05
+n. r=n. The n columns are independent, but probably, we have more rows.
+5:12
+What's the picture, and then what's the null space for this? So the n columns are independent,
+5:19
+what's the null space in this case?
+5:25
+So of course, you know what I'm asking. You're saying, why is this guy asking something, I know that--
+5:30
+I think about it in my sleep, right? So the null space of this matrix if the rank is
+5:36
+n, the null space is what vectors are in the null space?
+5:47
+Just the zero vector. Right? The columns are independent.
+5:53
+Independent columns.
+5:59
+No combination of the columns gives zero except that one. And what's my picture over, --
+6:06
+let me redraw my picture -- the row space is everything.
+6:14
+No.
+6:20
+Is that right? Let's see, I often get these turned around, right?
+6:26
+So what's the deal?
+6:31
+The columns are independent, right? So the rank should be the full number of columns, so what
+6:39
+does that tell us? There's no null space, right. OK. The row space is the whole thing.
+6:45
+Yes, I won't even draw the picture. And what was the deal with --
+6:51
+and these were very important in least squares problems
+6:56
+because -- So, what more is true here?
+7:06
+If we have full column rank, the null space is zero, we have independent columns, the unique --
+7:14
+so we have zero or one solutions to Ax=b.
+7:22
+There may not be any solutions, but if there's a solution,
+7:28
+there's only one solution because other solutions are found by adding on stuff from the null space,
+7:35
+and there's nobody there to add on. So the particular solution is the solution,
+7:43
+if there is a particular solution. But of course, the rows might not be -
+7:49
+are probably not independent -- and therefore, so right-hand sides won't end up with a zero equal zero after
+7:56
+elimination, so sometimes we may have no solution, or one solution.
+8:02
+OK. And what I want to say is that for this matrix A --
+8:10
+oh, yes, tell me something about A transpose A in this case. So this whole part of the board, now, is devoted to this case.
+8:20
+What's the deal with A transpose A? I've emphasized over and over how important that combination
+8:27
+is, for a rectangular matrix, A transpose A is the good thing to look at, and if the rank is n,
+8:37
+if the null space has only zero in it, then the same is true of A transpose A.
+8:43
+That's the beautiful fact, that if the rank of A is n, well,
+8:49
+we know this will be an n by n symmetric matrix, and it will be full rank. So this is invertible.
+8:55
+This matrix is invertible. That matrix is invertible. And now I want to show you that A itself has
+9:04
+a one-sided inverse. Here it is. The inverse of that, which exists, times A transpose,
+9:17
+there is a one-sided -- shall I call it A inverse? -- left of the matrix A.
+9:24
+Why do I say that? Because if I multiply this guy by A, what do I get?
+9:35
+What does that multiplication give? Of course, you know it instantly, because I just put the parentheses there,
+9:44
+I have A transpose A inverse times A transpose A so, of course, it's the identity. So it's a left inverse.
+9:52
+And this was the totally crucial case for least squares,
+9:58
+because you remember that least squares, the central equation of least squares had this matrix, A transpose A,
+10:06
+as its coefficient matrix. And in the case of full column rank,
+10:11
+that matrix is invertible, and we're go. So that's the case where there is a left-inverse.
+10:19
+So A does whatever it does, we can find a matrix that
+10:26
+brings it back to the identity. Now, is it true that, in the other order --
+10:33
+so A inverse left times A is the identity.
+10:42
+Right? This matrix is m by n. This matrix is n by m.
+10:49
+The identity matrix is n by n. All good. All good if you're n.
+10:56
+But if you try to put that matrix on the other side,
+11:02
+it would fail. If the full column rank -- if this is smaller than m,
+11:12
+the case where they're equals is the beautiful case, but that's all set. Now, we're looking at the case where
+11:18
+the columns are independent but the rows are not. So this is invertible, but what matrix is not
+11:25
+invertible? A A transpose is bad for this case.
+11:30
+A transpose A is good. So we can multiply on the left, everything good, we get the left inverse.
+11:39
+But it would not be a two-sided inverse. A rectangular matrix can't have a two-sided inverse,
+11:46
+because there's got to be some null space, right? If I have a matrix that's rectangular,
+11:53
+then either that matrix or its transpose
+11:58
+has some null space, because if n and m are different, then there's going to be some free variables around,
+12:06
+and we'll have some null space in that direction. OK, tell me the corresponding picture for the opposite case.
+12:17
+So now I'm going to ask you about right-inverses. A right-inverse.
+12:22
+And you can fill this all out, this
+# Full Row Rank
+12:28
+is going to be the case of full row rank.
+12:34
+And then r is equal to m, now, the m rows are independent,
+12:41
+but the columns are not. So what's the deal on that?
+12:47
+Well, just exactly the flip of this one. The null space of A transpose contains only zero,
+12:57
+because there are no combinations of the rows that give the zero row. We have independent rows.
+13:03
+13:08
+And in a minute, I'll give an example of all these. So, how many solutions to Ax=b in this case?
+13:17
+13:23
+The rows are independent. So we can always solve Ax=b.
+13:30
+Whenever elimination never produces a zero row, so we never get into that zero equal one problem,
+13:38
+so Ax=b always has a solution, but too many.
+13:43
+So there will be some null space, the null space of A --
+13:50
+what will be the dimension of A's null space? How many free variables have we got?
+13:58
+How many special solutions in that null space have we got? So how many free variables in this setup?
+14:06
+We've got n columns, so n variables,
+14:12
+and this tells us how many are pivot variables, that tells us how many pivots there are,
+14:19
+so there are n-m free variables. So there are infinitely many solutions to Ax=b.
+# Right Inverse
+14:27
+We have n-m free variables in this case.
+14:37
+OK. Now I wanted to ask about this idea of a right-inverse.
+14:45
+OK. So I'm going to have a matrix A, my matrix A, and now
+14:52
+there's going to be some inverse on the right that will give the identity matrix. So it will be A times A inverse on the right, will be I.
+15:05
+And can you tell me what, just by comparing
+15:12
+with what we had up there, what will be the right-inverse,
+15:18
+we even have a formula for it. There will be other -- actually, there are other left-inverses,
+15:24
+that's our favorite. There will be other right-inverses, but tell me our favorite here, what's the nice right-inverse?
+15:31
+The nice right-inverse will be, well, there we
+15:39
+had A transpose A was good, now it will be A A transpose that's good.
+15:46
+The good matrix, the good right -- the thing we can invert is A A transpose,
+15:53
+so now if I just do it that way, there sits the right-inverse.
+16:00
+You see how completely parallel it is to the one above?
+16:11
+Right. So that's the right-inverse. So that's the case when there is --
+16:20
+In terms of this picture, tell me what the null spaces are like so far for these three cases.
+16:29
+What about case one, where we had a two-sided inverse, full rank, everything great.
+16:36
+The null spaces were, like, gone, right? The null spaces were just the zero vectors.
+16:44
+Then I took case two, this null space was gone.
+16:49
+Case three, this null space was gone, and then case four is,
+16:58
+like, the most general case when this picture is all there --
+17:04
+when all the null spaces -- this has dimension r, of course,
+17:10
+this has dimension n-r, this has dimension r, this has dimension m-r, and the final case will be when r is
+17:26
+smaller than m and n. But can I just, before I leave here
+17:38
+look a little more at this one? At this case of full column rank?
+17:46
+So A inverse on the left, it has this left-inverse
+17:52
+to give the identity. I said if we multiply it in the other order, we wouldn't get the identity.
+17:57
+But then I just realized that I should ask you, what do we get? So if I put them in the other order --
+18:05
+if I continue this down below, but I write A times A inverse
+# Projection
+18:19
+left -- so there's A times the left-inverse, but it's not on the left any more. So it's not going to come out perfectly.
+18:26
+But everybody in this room ought to recognize that matrix,
+18:35
+right? Let's see, is that the guy we know?
+18:42
+Am I OK, here?
+18:51
+What is that matrix? P. Thanks. P. That matrix --
+18:59
+it's a projection. It's the projection onto the column space.
+19:07
+It's trying to be the identity matrix, right? A projection matrix tries to be the identity matrix,
+19:17
+but you've given it, an impossible job. So it's the identity matrix where it can be,
+19:25
+and elsewhere, it's the zero matrix. So this is P, right. A projection onto the column space.
+19:34
+And if I asked you this one, and put these in the opposite OK. order -- so this came from up here.
+19:41
+And similarly, if I try to put the right inverse on the left --
+19:48
+so that, like, came from above. This, coming from this side, what
+19:53
+happens if I try to put the right inverse on the left? Then I would have A transpose A, A transpose inverse A,
+20:05
+if this matrix is now on the left, what do you figure that matrix is? It's going to be a projection, too, right?
+20:17
+It looks very much like this guy, except the only difference is, A and A transpose
+20:22
+have been reversed. So this is a projection, this is another projection,
+20:27
+onto the row space.
+20:33
+Again, it's trying to be the identity, but there's only so much the matrix can do.
+20:39
+And this is the projection onto the column space. So let me now go back to the main picture
+20:50
+and tell you about the general case, the pseudo-inverse. These are cases we know.
+20:58
+So this was important review. You've got to know the business about these ranks,
+21:08
+and the free variables -- really, this is linear algebra coming together.
+21:14
+And, you know, one nice thing about teaching 18.06, It's not trivial.
+21:23
+But it's -- I don't know, somehow, it's nice when it comes out right.
+21:28
+I mean -- well, I shouldn't say anything bad about calculus, but I will. I mean, like, you know, you have formulas
+21:35
+for surface area, and other awful things and, you know,
+21:40
+they do their best in calculus, but it's not elegant.
+21:46
+And, linear algebra just is -- well, you know,
+21:52
+linear algebra is about the nice part of calculus, where everything's, like, flat, and, the formulas come out
+22:00
+right. And you can go into high dimensions where, in calculus, you're trying
+22:06
+to visualize these things, well, two or three dimensions is kind of the limit. But here, we don't --
+22:12
+you know, I've stopped doing two-by-twos, I'm just talking about the general case.
+22:18
+OK, now I really will speak about the general case here. What could be the inverse --
+22:27
+what's a kind of reasonable inverse for a matrix for the completely general matrix where
+22:34
+there's a rank r, but it's smaller than n, so there's some null space left, and it's smaller
+22:41
+than m, so a transpose has some null space, and it's those null spaces that are screwing up inverses,
+22:48
+right? Because if a matrix takes a vector to zero, well, there's no way an inverse can, like, bring it back
+23:01
+to life. My topic is now the pseudo-inverse, and let's just by a picture, see what's
+23:09
+the best inverse we could have? So, here's a vector x in the row space.
+23:15
+I multiply by A. Now, the one thing everybody knows is you take a vector,
+23:22
+you multiply by A, and you get an output, and where is that output?
+23:28
+Where is Ax? Always in the column space, right?
+23:35
+Ax is a combination of the columns. So Ax is somewhere here.
+23:42
+So I could take all the vectors in the row space. I could multiply them all by A.
+23:49
+I would get a bunch of vectors in the column space and what I think is, I'd get all the vectors in the column space
+23:59
+just right. I think that this connection between an x in the row space and an Ax in the column space, this
+24:07
+is one-to-one. We got a chance, because they have the same
+24:14
+dimension. That's an r-dimensional space, and that's an r-dimensional space.
+24:20
+And somehow, the matrix A -- it's got these null spaces hanging around,
+24:27
+where it's knocking vectors to And then it's got all the vectors in between, zero.
+24:33
+which is almost all vectors. Almost all vectors have a row space component and a null space
+24:39
+component. And it's killing the null space component. But if I look at the vectors that are in the row space,
+24:45
+with no null space component, just in the row space, then they all go into the column space,
+24:51
+so if I put another vector, let's say, y, in the row space, I positive that wherever Ay is, it won't hit Ax.
+25:02
+Do you see what I'm saying? Let's see why.
+25:09
+All right. So here's what I said. If x and y are in the row space, then A x
+# Pseudoinverse
+25:23
+is not the same as A y. They're both in the column space, of course,
+25:30
+but they're different.
+25:36
+That would be a perfect question on a final exam, because that's what I'm teaching you
+25:45
+in that material of chapter three and chapter four, especially chapter three.
+25:53
+If x and y are in the row space, then Ax is different from Ay. So what this means --
+26:01
+and we'll see why -- is that, in words, from the row space to the column space,
+26:09
+A is perfect, it's an invertible matrix. If we, like, limited it to those spaces.
+26:16
+And then, its inverse will be what I'll call the pseudo-inverse. So that's that the pseudo-inverse is.
+26:23
+It's the inverse -- so A goes this way, from x to y -- sorry,
+26:28
+x to A x, from y to A y, that's A, going that way.
+26:35
+Then in the other direction, anything in the column space comes from somebody in the row space,
+26:41
+and the reverse there is what I'll call the pseudo-inverse, and the accepted notation is A plus.
+26:51
+So y will be A plus x. I'm sorry. No, y will be A plus times whatever it started with, A y.
+27:05
+Do you see my picture there? Same, of course, for x and A x.
+27:11
+This way, A does it, the other way is the pseudo-inverse, and the pseudo-inverse just kills this stuff,
+27:18
+and the matrix just kills this stuff. So everything that's really serious here is going
+27:25
+on in the row space and the column space, and now, tell me --
+27:31
+this is the fundamental fact, that between those two r-dimensional spaces, our matrix is perfect.
+27:37
+Why?
+27:44
+Suppose they weren't. Why do I get into trouble? Suppose -- so, proof.
+27:51
+I haven't written down proof very much, but I'm going to use that word once.
+27:57
+Suppose they were the same. Suppose these are supposed to be two different vectors.
+28:07
+Maybe I'd better make the statement correctly. If x and y are different vectors in the row space --
+28:13
+maybe I'll better put if x is different from y,
+28:20
+both in the row space -- so I'm starting with two different vectors in the row space, I'm multiplying by A -- so these guys are in the column
+28:29
+space, everybody knows that, and the point is, they're different over there.
+28:36
+So, suppose they weren't. Suppose A x=A y.
+28:44
+Suppose, well, that's the same as saying A(x-y) is zero.
+28:54
+So what? So, what do I know now about (x-y),
+29:00
+what do I know about this vector? Well, I can see right away, what space is it in?
+29:07
+It's sitting in the null space, right? So it's in the null space.
+29:14
+But what else do I know about it? Here it was x in the row space, y in the row space,
+29:20
+what about x-y? It's also in the row space, right?
+29:29
+Heck, that thing is a vector space, and if the vector space is anything at all,
+29:35
+if x is in the row space, and y is in the row space, then the difference is also, so it's also in the row space.
+29:43
+So what?
+29:48
+Now I've got a vector x-y that's in the null space, and that's also in the row space, so what vector is it?
+29:56
+It's the zero vector. So I would conclude from that that x-y had to be the zero vector, x-y, so, in other words,
+30:07
+if I start from two different vectors, I get two different vectors. If these vectors are the same, then those vectors
+30:14
+had to be the same. That's like the algebra proof, which we understand completely
+30:21
+because we really understand these subspaces of what
+30:28
+I said in words, that a matrix A is really a nice, invertible mapping from row space to columns pace.
+30:37
+If the null spaces keep out of the way, then we have an inverse.
+30:43
+And that inverse is called the pseudo inverse, and it's a very, very, useful in application.
+30:51
+Statisticians discovered, oh boy, this is the thing that we needed all our lives,
+30:56
+and here it finally showed up, the pseudo-inverse is the right thing.
+31:02
+Why do statisticians need it? And because statisticians are like least-squares-happy.
+31:11
+I mean they're always doing least squares. And so this is their central linear regression.
+31:20
+Statisticians who may watch this on video, please forgive that description of your interests.
+31:28
+One of your interests is linear regression and this problem.
+31:35
+But this problem is only OK provided we have full column
+31:41
+rank. And statisticians have to worry all the time about, oh, God,
+31:46
+maybe we just repeated an experiment. You know, you're taking all these measurements,
+31:52
+maybe you just repeat them a few times. You know, maybe they're not independent. Well, in that case, that A transpose A matrix
+32:00
+that they depend on becomes singular. So then that's when they needed the pseudo-inverse,
+32:06
+it just arrived at the right moment, and it's the right quantity.
+32:13
+OK. So now that you know what the pseudo-inverse should do, let
+32:21
+me see what it is. Can we find it?
+# Finding the pseudoinverse
+32:27
+So this is my -- to complete the lecture is -- how do I find this pseudo-inverse A plus?
+32:42
+OK. OK. Well, here's one way.
+32:48
+Everything I do today is to try to review stuff.
+32:53
+One way would be to start from the SVD.
+33:00
+The Singular Value Decomposition. And you remember that that factored A into an orthogonal matrix times this diagonal matrix
+33:10
+times this orthogonal matrix. But what did that diagonal guy look like?
+33:16
+This diagonal guy, sigma, has some non-zeroes,
+33:25
+and you remember, they came from A transpose A, and A A transpose, these are the good guys, and then
+33:31
+some more zeroes, and all zeroes there, and all zeroes there.
+33:38
+So you can guess what the pseudo-inverse is, I just invert stuff that's nice to invert -- well,
+33:45
+what's the pseudo-inverse of this? That's what the problem comes down to.
+33:50
+What's the pseudo-inverse of this beautiful diagonal matrix? But it's got a null space, right?
+33:58
+What's the rank of this matrix? What's the rank of this diagonal matrix?
+34:06
+r, of course. It's got r non-zeroes, and then it's otherwise, zip. So it's got n columns, it's got m rows, and it's got rank r.
+34:21
+It's the best example, the simplest example we could ever have of our general setup.
+34:28
+OK? So what's the pseudo-inverse?
+34:36
+What's the matrix -- so I'll erase our columns, because right below it, I want to write the pseudo-inverse.
+34:42
+OK, you can make a pretty darn good guess.
+34:49
+If it was a proper diagonal matrix, invertible, if there weren't any zeroes down here, if it was sigma one
+34:57
+to sigma n, then everybody knows what the inverse would be, the inverse would be one over sigma one, down to one over s-
+35:08
+but of course, I'll have to stop at sigma r. And, it will be the rest, zeroes again, of course.
+35:17
+And now this one was m by n, and this one
+35:22
+is meant to have a slightly different, you know, transpose shape, n by m.
+35:29
+They both have that rank r.
+35:39
+My idea is that the pseudo-inverse is the best --
+35:45
+is the closest I can come to an inverse. So what is sigma times its pseudo-inverse?
+35:53
+Can you multiply sigma by its pseudo-inverse? Multiply that by that? What matrix do you get?
+35:59
+36:05
+They're diagonal. Rectangular, of course.
+36:10
+But of course, we're going to get ones, R ones,
+36:18
+and all the rest, zeroes. And the shape of that, this whole matrix will be m by
+36:24
+m. And suppose I did it in the other order.
+36:30
+Suppose I did sigma plus sigma. Why don't I do it right underneath?
+36:38
+in the opposite order? See, this matrix hasn't got a left-inverse, it hasn't got a right-inverse, but every matrix
+36:45
+has got a pseudo-inverse. If I do it in the order sigma plus sigma, what do I get?
+36:51
+Square matrix, this is m by n, this is m by m, my result is going to m by m -- is going to be n by n,
+37:01
+and what is it? Those are diagonal matrices, it's
+37:08
+going to be ones, and then zeroes.
+37:14
+It's not the same as that, it's a different size -- it's a projection.
+37:22
+One is a projection matrix onto the column space, and this one is the projection matrix onto the row space.
+37:30
+That's the best that pseudo-inverse can do. So what the pseudo-inverse does is,
+37:38
+if you multiply on the left, you don't get the identity, if you multiply on the right, you don't get the identity, what you get is the projection.
+37:46
+It brings you into the two good spaces, the row space
+37:51
+and column space. And it just wipes out the null space. So that's what the pseudo-inverse of this diagonal
+37:57
+one is, and then the pseudo-inverse of A itself --
+38:04
+this is perfectly invertible. What's the inverse of V transpose? Just another tiny bit of review.
+38:11
+That's an orthogonal matrix, and its inverse is V, good.
+38:18
+This guy has got all the trouble in it, all the null space is responsible for,
+38:25
+so it doesn't have a true inverse, it has a pseudo-inverse, and then the inverse of U
+38:32
+is U transpose, thanks.
+38:37
+Or, of course, I could write U inverse. So, that's the question of, how do you find the pseudo-inverse
+38:43
+-- so what statisticians do when they're in this --
+38:49
+so this is like the case of where least squares breaks down
+38:54
+because the rank is -- you don't have full rank, and the beauty of the singular value decomposition is,
+39:05
+it puts all the problems into this diagonal matrix where it's clear what to do.
+39:10
+It's the best inverse you could think of is clear. You see there could be other --
+39:16
+I mean, we could put some stuff down here, it would multiply these zeroes. It wouldn't have any effect, but then the good pseudo-inverse
+39:27
+is the one with no extra stuff, it's sort of, like,
+39:33
+as small as possible. It has to have those to produce the ones.
+39:41
+If it had other stuff, it would just be a larger matrix,
+39:46
+so this pseudo-inverse is kind of the minimal matrix that gives the best result.
+39:53
+Sigma sigma plus being r ones. SK.
+39:59
+so I guess I'm hoping -- pseudo-inverse, again, let me repeat what
+40:04
+I said at the very beginning. This pseudo-inverse, which appears
+40:11
+at the end, which is in section seven point four,
+40:17
+and probably I did more with it here than I did in the book.
+40:24
+The word pseudo-inverse will not appear on an exam in this course, but I think if you see this all will appear,
+40:34
+because this is all what the course was about, chapters one,
+40:40
+two, three, four -- but if you see all that, then you probably see,
+40:47
+well, OK, the general case had both null spaces around, and this is the natural thing to do.
+40:56
+So, this is one way to find the pseudo-inverse. Yes.
+41:03
+The point of a pseudo-inverse, of computing a pseudo-inverse is to get some factors where you can find
+41:10
+the pseudo-inverse quickly. And this is, like, the champion, because this
+41:15
+is where we can invert those, and those two, easily,
+41:20
+just by transposing, and we know what to do with a diagonal.
+41:26
+OK, that's as much review, maybe --
+41:33
+let's have a five-minute holiday in 18.06 and, I'll see you Wednesday, then, for the rest of this
+41:40
+course. Thanks. 

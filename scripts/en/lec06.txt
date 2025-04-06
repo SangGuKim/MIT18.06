@@ -1,0 +1,750 @@
+https://www.youtube.com/watch?v=8o5Cmfpeo6g
+
+# Introduction
+0:00
+0:09
+Okay. This is lecture six in linear algebra, and we're at the start of this new chapter, chapter three
+0:19
+in the text, which is really getting to the center of linear algebra.
+0:24
+And I had time to make a first start on it
+0:31
+at the end of lecture five. But now is lecture six is officially
+0:38
+the lecture on vector spaces and subspaces. And then especially -- there are two subspaces that
+0:47
+we're specially interested in. One is the column space of a matrix,
+0:52
+the other is the null space of the matrix. So, I got to tell you what those are.
+0:59
+Okay. So, first to remember from lecture five,
+1:05
+what is a vector space? It's a bunch of vectors that -- where I'm allowed --
+1:14
+where I can add -- I can add any two vectors in the space
+1:19
+and the answer stays in the space. Or I can multiply any vector in the space by any constant
+1:27
+and the result stays in the space. So that's -- in fact if I combine those two into one,
+1:34
+you can see that -- if I can add and I can multiply by numbers,
+1:40
+that really means that I can take linear combinations. So the quick way to say it is that all linear combinations,
+1:50
+C -- any multiple of V plus any multiple of W stay in the space.
+1:56
+So, can I give you examples that are vector spaces and also some examples that are not, to make that point clear?
+2:04
+So, suppose I'm in three dimensions.
+# Subspaces
+2:10
+Then one way to get us one space is the whole three dimensional
+2:16
+space. So the whole space R^3, three dimensional space,
+2:22
+would be a vector space, because if I have a couple of vectors I can add them and I'm certainly okay and they follow all
+2:30
+the rules. So R^3 is easy. Now I'm interested also in subspaces.
+2:39
+So there's this key word, subspaces. That's a space -- that's some vectors inside the given space,
+2:48
+inside R three that still make up a vector space of their own.
+2:53
+It's a vector space inside a vector space. And the simplest example was a plane.
+3:00
+So, like, can I just sketch it -- there is a plane.
+3:05
+It's got to go through the origin, and of course it goes infinitely far.
+3:10
+That's of that's a subspace now. Do you see that if I have two vectors on the plane
+3:18
+and I add them, the result stays in the plane. If I take a vector in the plane and I multiply by minus two,
+3:26
+I'm still in the plane. So that plane is a subspace. So let me just make that point.
+3:33
+Plane through zero, through that zero zero zero is a subspace.
+3:44
+Okay. And also, another subspace would be a line.
+3:51
+A line through zero zero zero -- yeah, the line has to go through the origin. All subspaces have got to contain the origin,
+3:59
+contain zero -- the zero vector. So this line is a subspace.
+4:07
+Really, if I want to say it really correctly,
+4:13
+I should say a subspace of R^3. That of R^3 was, like, understood there.
+4:23
+Now -- so let me call this plane P. And let me call this line L.
+4:30
+And let me ask you about other sets of vectors.
+4:40
+Suppose I took -- yeah -- so here's a first question. Suppose I take two subspaces, like P and L.
+4:50
+And I just put them together, take their union, take all the vectors --
+4:56
+so now you've got P and L in mind, here. So I have two subspaces.
+5:03
+I have two subspaces and, for example, P --
+5:09
+a plane and L a line. Okay. Now I want to ask you about the union of those.
+5:17
+So P union L. This is all vectors in P or L or both.
+5:29
+Is that a subspace?
+5:36
+Is this a subspace? This is or is not a subspace?
+5:48
+Because we're -- I just want to be sure that I've got the central idea.
+5:54
+Suppose I take the vectors in the plane and also the vectors on that line,
+6:03
+put them together, so I've got a bunch of vectors, is it a subspace? Can you give me, like, so the camera
+6:09
+can hear it or maybe the tape. Can you say yes or no?
+6:14
+Do I have a subspace if I put -- if I take all the vectors
+6:20
+on the plane plus all -- and all the ones on the line and just join them together -- but I'm not taking this guy that's --
+6:30
+actually, I'm not taking most of them, because most vectors are not on the line or the plane,
+6:35
+they're off somewhere else. Do I have a subspace? STUDENTS: No.
+6:40
+STRANG: Right. Thank you. No. Because -- why not? Because I can't add.
+6:47
+Because if I that requirement isn't satisfied. If I take one vector like this guy and another vector
+6:56
+that happens to come from L and add, I'm off somewhere else. You see that I've gone outside the union if I just add
+7:06
+something from P and something from L, then normally what'll happen is I'm outside the union --
+7:15
+and I don't have a subspace. So the correct answer is -- is not.
+7:21
+Okay. Now let me ask you about -- the other thing we do is take the intersection.
+7:28
+So what does intersection mean? Intersection means all vectors that are in both P and L.
+7:43
+Is this a subspace. Yeah, so I guess I want to go back up to the same question.
+7:49
+This is or is not a subspace? And you can answer me -- answer the question first for this
+7:56
+particular example, this picture I drew. What is P intersect L for this case?
+8:03
+STUDENT: It's only zero. STRANG: It's only zero. At least, sort of this was the artist's idea as he drew it
+8:11
+that, that that line L was not in the plane and, went off
+8:17
+somewhere else -- and then the only point that was in common was the zero vector.
+8:22
+Is the zero vector by itself a subspace? STUDENT: Yes. STRANG: Yes, absolutely. And what about, if I don't have this plane and this line
+8:34
+but any subspace and any other subspace? So now -- can I ask that question for any two subspaces?
+8:43
+So maybe I'll write it up here. If I'm strong enough.
+8:50
+Okay. So this is the general question. I have subspaces, say S and T.
+9:00
+And I want to ask you about their intersection S intersect
+9:08
+T and I want -- it is a subspace.
+9:17
+Do you see why? Do you see why if I take the vectors that are in both one-
+9:24
+th- that are in both of the subspaces -- so that's like a smaller set of vectors, probably,
+9:30
+because it's -- we've added requirements. It has to be in S and in T.
+9:36
+How do I know that's a subspace? Can we just think through that abstract stuff and then I get to the examples.
+9:43
+Okay. So why? Suppose I take a couple of vectors
+9:49
+that are in the intersection. Why is the sum also in the intersection?
+9:56
+Okay, so let me give a name to these vectors, say V and W. They're in the intersection.
+10:02
+So that means they're both in S. Also means they're both in T.
+10:08
+So what can I say about V plus W? Is it in S?
+10:14
+Yes. Right? If I take two vectors, V and W that are both in S,
+10:21
+then the sum is in S, because S was a subspace. And if they're both in T and I add them,
+10:27
+then the result is also in T, because T was a subspace. So the result V plus W is in the intersection.
+10:37
+It's in both and requirement one is satisfied.
+10:42
+Requirement two's the same. If I take a vector that's in both, I multiply by seven.
+10:49
+Seven times that vector is in S, because the vector was in S. Seven times that vector's in T because the original one was in
+10:57
+T. So seven times that vector is in the intersection. In other words, when you take the intersection of two
+# Column Space
+11:05
+subspaces, you get probably a smaller subspace, but it is a subspace. Okay.
+11:11
+So that's like sort of just emphasizing what
+11:17
+these two requirements mean. Again -- Let me circle those, because those are so important.
+11:24
+The sum and the scale of multiplication which combines
+11:30
+into linear combinations. That's what you have to do inside the subspace.
+11:37
+Okay. On to the column space. Okay. So my lecture last time started that and I want to continue it.
+11:46
+Okay. Column space of a matrix.
+11:53
+Of A. Okay. Can I take an example?
+11:59
+Say one two three four. One one one one.
+12:06
+Two three four five.
+12:11
+Okay. That's my matrix A.
+12:19
+So, it's got columns, three columns.
+12:25
+Those columns are vectors, so the column space of this A, of this A --
+12:31
+let's stay with this example for a while. The column space of this matrix is a subspace of R --
+# Subspace
+12:40
+R what? So what space are we in if I'm looking at the columns of this matrix?
+12:46
+R^4 , right? These are vectors in R^4, they're four dimensional
+12:52
+vectors. So it's this column space of A is a subspace of R^4 here,
+13:04
+because A was four by -- A is a four by three matrix.
+13:09
+This tells me how many rows there are, how many components in a column, and so we're in R^4.
+13:16
+Okay, now what's in that subspace? So the column space of A, it's a subspace of R^4.
+13:24
+I call it the column space of A, like that. So that's my little symbol for some subspace of R^4.
+13:34
+What's in that subspace? Well, that column certainly is.
+13:40
+One two three four. This column is in. This column is in, and what else?
+13:45
+So it's got the columns of A in it, but that's not enough, certainly.
+13:51
+Right? I don't have a subspace if I just put in three vectors. So how do I fill that out to be a subspace?
+13:59
+I take their linear combinations.
+14:06
+So the column space of A is all linear combinations --
+14:15
+combinations of the columns. And that does give me a subspace.
+14:22
+It does give me a vector space, because if I have one linear combination and I multiply by eleven,
+14:28
+I've got another linear combination. If I have a linear combination, I add to another linear combination
+14:33
+I get a third combination. So that -- this is like the smallest space --
+14:40
+like, it's got to have those three columns in it, and it has to have their combinations
+14:45
+and that's where we stop. Okay. Now I'm going to be interested in that space.
+14:54
+So I, like -- get some idea of what's in that space. How big is that space? Is that space the whole four dimensional space?
+15:02
+Or is it a subspace inside? Can you -- let me just see if we can get a yes or no answer
+15:13
+sometimes without being ready for the complete proof.
+15:19
+What do you think? Is the subspace that I'm talking about here,
+15:26
+the combinations of those three guys, does that fill the full four dimensional space?
+15:32
+Maybe yes or no on that one. No. No. Somehow our feeling is, and it happens
+15:39
+to be right, that if we start with three vectors and take their combinations, we can't get the whole four
+15:45
+dimensional space. Now -- so somehow we get a smaller space.
+15:52
+But how much smaller? That's going to come up here. That's not so immediate.
+16:00
+Let me first make this critical connection with --
+16:07
+with, linear equations, because behind our abstract definition,
+16:15
+we have a purpose. And that is to understand Ax=b. So suppose I make the connection --
+16:22
+w- w- does A x=b always have a solution for every b?
+16:33
+Have a solution for every right-hand side?
+16:47
+I guess that's going to be a yes or no question.
+16:53
+And then I'm going to ask which right-hand sides are okay?
+16:59
+That's really the question I'm after, is which right-hand sides (b) do make up --
+17:08
+you can see from the way I'm speaking what the question -- As it is. The answer is no.
+17:16
+A x=b does not have a solution for every b.
+17:21
+Why do I say no? Because A x=b is -- like, this is four equations,
+17:34
+and only three unknowns. Right?
+17:40
+X is -- let me right out that whole --
+17:46
+what the whole thing looks like. Yeah. Let me write out A x=b.
+17:54
+A x is -- these columns are one two three four.
+18:02
+One one one one and two three four five. Then x, of course, has three components, x1, x2, x3.
+18:12
+And I'm trying to get the -- hit the right-hand side, b1,b2,b3 and b4.
+18:19
+18:25
+So my first point is, I can't always do it.
+18:30
+In a way, that just says again what you told me five minutes ago --
+18:36
+that the combinations of these columns don't fill the whole four dimensional space.
+18:42
+There's going to be some vectors b, a lot of vectors b, that are not combinations of these three columns,
+18:50
+because the combinations of those columns are, like, going to be just a little plane or something inside --
+18:56
+inside R^4. Now, so and you see that I do have four equations and only
+19:03
+three unknowns. So, like anybody is going to say, no you dope,
+19:09
+you can't usually solve four equations with only three unknowns. But now I want to say sometimes you can.
+19:17
+For some right-hand sides, I can solve this. So that's the bunch of right-hand sides
+19:25
+that I'm interested in right now. Which right-hand sides allow me to solve this?
+19:34
+This is the question for today. It's going to have, like, a nice clear answer.
+19:40
+So my question is -- is which bs, which vectors b,
+19:50
+allow this system to be solved?
+19:59
+And I want to ask you -- so that's, like, gets two question marks to indicate
+20:08
+that's -- this is the important question. Okay, first, before we give a total answer,
+20:15
+give me just a partial answer. Tell me one right-hand side that I know
+20:20
+I can solve this thing for. So -- all zeroes. Okay. That's the, like, guaranteed.
+20:28
+If these were all zero, then I know I can solve it, let the x-s all be zero, no problem.
+20:35
+So that's always a -- okay. Okay. A x=0 I can always solve.
+20:42
+Now tell me another right-hand side, just a specific set of numbers for which I can solve these
+20:52
+three -- these four equations with only three unknowns, but if you give me a good right-hand side, I can do it.
+21:00
+So tell me one? STUDENT: 1 2 3 4. STRANG: 1 2 3 4? If I -- can I solve -- is that a good right-hand side?
+21:09
+Can you solve -- can you find a solution that --
+21:15
+X one plus X two plus two X three is one, two X one plus X two plus three X three is two and two more
+21:22
+equations -- so I'm asking you to solve in your head in --
+21:30
+within five seconds, four equations and three unknowns,
+21:35
+but you can do it, because the right-hand side is, like,
+21:41
+showing up here is -- it's one of the columns. So tell me what's the X that does solve it?
+21:48
+One zero zero. One zero zero solves it, because --
+21:55
+well, so you can multiply this out by rows, but oh God,
+22:01
+it's much nicer to say -- okay, this is one of this column, zero of this, zero of this, so it's one of that column,
+22:09
+which is exactly what we wanted. Okay. So there is a b that's okay.
+22:17
+Now tell me another B that's okay, another right-hand side that would be all right?
+22:23
+Well -- all ones?
+22:29
+Actually -- and then what's the solution in that case? 0 1 0, thanks.
+22:36
+And, in fact, it's much e- like, one way to do it is think of a solution first, right,
+22:44
+and then just see what b turns out to be.
+22:50
+What b turns out to be, right. Okay. So I think of a solution -- so I think of an x,
+22:58
+I think of any -- x1, x2, x3, I do this multiplication
+23:03
+and what have I got?
+23:09
+Now I'm ready to answer the big question. I can solve A x=b exactly when the right-hand side B is
+23:20
+a vector in the column space. Good.
+23:25
+I can solve A x=b when b is a combination of the columns,
+23:33
+when it's in the column space -- so let me write that answer down.
+23:39
+I can solve Ax=b exactly when B is in the column space.
+23:57
+Let me just say again why that is. Because it -- the column space by its definition contains all
+24:07
+the combinations. It contains all the Ax-s. The column space really consists of all vectors A times any X.
+24:17
+So those are the bs that I can deal with.
+24:22
+If b is a combination of the columns, then that combination tells me what X should be.
+24:32
+If b is not a combination of the columns, then there is no x. There's no way to solve A x equal b.
+24:38
+Okay. So the column space -- that's really why we're interested in this column
+24:45
+space, because it's the central guy. It says when we can solve, and that --
+24:56
+we got to understand this column space better.
+25:02
+Let's see. Do I want to think -- yeah, somehow -- oh, well, let's just --
+25:10
+as long as we've got it here, what do I get for this particular example? If I take combinations of this and this and this,
+25:24
+I'll tell you the question that's in my mind. It's not even proper to use this word yet,
+25:30
+but you'll know what it means. Are those three columns independent?
+25:38
+If I take the combinations of the three columns --
+25:44
+does each column contribute something new or now?
+25:50
+So that if I take the combinations of those three columns, do I, like, get some three dimensional subspace --
+25:57
+do I have three vectors that are, like, you know, independent, whatever that means?
+26:07
+Or do I -- is one of those columns, like, contributing nothing new -- So that actually only two of the columns
+26:15
+would have given the same column space? Yeah -- that's a good way to ask the question.
+26:21
+Finally I think of it. Can I throw away any columns -- and have the same column space?
+26:27
+STUDENT: Yes. STRANG: Yes. And which one do you suggest I throw away? STUDENT: Column three -- three.
+26:32
+STRANG: Well, three is the natural, like, guy to target. So if I -- and why?
+26:39
+Because -- what's so bad about three here?
+26:44
+Column three? It's the sum of these, right? So it's not -- if I'm taking -- if I have combinations of these
+26:52
+two and I put in this one, actually, I don't get anything more. So later on I will call these pivot columns.
+27:02
+And the third guy will not be a pivot column in this -- with those numbers.
+27:08
+Now actually -- honesty makes me ask you this question. Could I have thrown away column one?
+27:16
+Yes, I could. I could. So when I say pivot columns, my convention
+27:22
+is, okay, I'll keep the first ones as long as they're not dependent. So I keep this guy, he's fine, he's a line.
+27:30
+I keep the second guy. It's in a second direction. But the third one, which is in the same plane as the first two
+27:39
+gives me nothing new. It's dependent in the language that we will use
+27:44
+and I don't need it. Okay. So I would describe the column space of this matrix as a two
+27:53
+dimensional subspace of R^4.
+# Null Space
+27:58
+A two dimensional subspace of R^4. Okay. So you're seeing how these vector spaces work and you --
+28:05
+you're seeing that we -- some idea of dependence or independence is in our future.
+28:11
+Okay. Now I want to speak about another vector space, the null space.
+28:20
+So again I'm getting a little ahead because it's in section three point two, but that's okay.
+28:28
+All right. Now I'm ready for the null space. Let me keep the same matrix.
+28:33
+And this is going to be a different --
+28:39
+totally different subspace. Totally different. Okay.
+28:44
+Now -- so let me make space for it. Now -- here comes a completely different subspace,
+28:50
+the null space of A.
+29:00
+What's in it? It contains not right-hand sides b.
+29:10
+It contains x-s. It contains all x-s that solve --
+29:16
+this word null is going to -- I mean, that's the key word here, meaning zero.
+29:22
+So this contains -- this is all solutions x,
+29:30
+and of course x is our vectors, x1, x2 and x3,
+29:36
+to the equation A x=0.
+29:43
+Well, four equations, because we've got -- so, do you see what I'm doing?
+29:50
+I'm now saying, okay, columns were great, the column space we understood.
+29:56
+Now I'm interested in x-s. I'm not -- the only b I'm interested in now is the b
+30:02
+of all zeroes. The right-hand side is now zeroes. And I'm interested in solutions.
+30:08
+x-s. So t- where is this null space for this example?
+30:18
+These x-s are -- have three components. So the null space is a subspace --
+30:26
+we still have to show it is a subspace -- of R^3.
+30:31
+So this is -- and we will show -- these vectors x, this is in R^3, where the column space was
+30:46
+in R^4 in our example. For an m by n matrix, this is m and this is n,
+30:58
+because the number of columns, n, tells me how many unknowns, how many x-s multiply those columns, so it tells me
+31:05
+the big space, in this case R three that I'm in. Now tell me -- why don't we figure out what the null space
+31:14
+is for this example, just by looking at it.
+31:20
+I mean, that's the beauty of small examples, that my official way to find null spaces and column spaces
+31:30
+and get all the facts straight would be elimination,
+31:36
+and we'll do that. But with a small example, we can see that -- see what's going on without going through the mechanics
+31:43
+of elimination. So this null space --
+31:48
+so I'm talking about -- again, the null space, and let me copy again the matrix.
+31:56
+One two three four, one one one one and two three four five.
+32:04
+What's in the null space? So I'm taking A times x, so let me right it again,
+32:11
+and I want you to solve those four equations.
+32:19
+In fact, I want you to find all solutions to those four equations. Well, actually, just first of all find one.
+32:26
+Why should I ask you for all of them? Tell me one -- well, tell me one solution that y- you don't even have to look at the matrix to know one solution
+32:35
+to this set of equations. It is zero vector.
+32:41
+Whatever that matrix is, its null space contains zero --
+32:46
+because A times the zero vector sure gives the zero right-hand side. So the null space certainly contains zero.
+32:55
+A- so it's got a chance to be a vector space now, and it will turn out it is. Okay.
+33:00
+Tell me another solution. So this particular null space -- and of course I'm going to call
+33:07
+it N(A) for null space -- this contains-- well we've already located the zero
+33:17
+vector, and now you're going to tell me another vector that's in the null space, another solution, another x,
+33:24
+another -- you see what I'm asking you for is a combination of those columns.
+33:29
+That's what I'm always looking at combinations of columns, but now I'm looking at the weights, the coefficients
+33:40
+in the combination. So tell me a good set of numbers to put in there.
+33:46
+One one -- STUDENTS: Minus one. STRANG: One one minus one. Thanks.
+33:53
+One one minus one. So there's a vector that's in it.
+33:59
+Okay. But have I got a subspace at this point? Certainly not, right?
+34:04
+I've got just a couple of vectors. No way they make a subspace. Tell me -- actually, why don't I jump the whole way now?
+34:12
+Tell me -- well, tell me one more solution, one more X that would work.
+34:19
+Student: 2 2 -2. STRANG: 2 2 -2? Oh, well, tell me all of them, that would have been easier.
+34:27
+Tell me the whole lot, now. What is the null space for this matrix?
+34:34
+It's all vectors of the form -- what could this be? It could be one one minus one, it could be it could be any
+34:44
+number C, any number -- the same number again and --
+34:50
+STUDENTS: Minus. STRANG: Minus C. In other words -- actually, any multiple of this guy.
+34:59
+Oh, that's the perfect description, because now the zero vector's automatically included
+35:08
+because C could be zero. The vector I had is included, because C could be one. But now any vector.
+35:14
+And that's actually it.
+35:20
+And do I have a subspace? And what does it look like?
+35:26
+It's in -- how would you describe this, the null space, this -- all these vectors of this form C C minus C, like,
+35:35
+seven seven minus seven. Minus eleven minus eleven plus eleven.
+35:41
+What have I got here? If -- describe that whole null space of -- what --
+35:46
+if I drew it, what do I draw? A line, right?
+35:51
+The null space is a line. It's the line through -- in R^3 and the vector one one negative
+36:02
+one maybe goes down here, I don't know where it goes, say, down here. There's the vector one one negative one that you gave me.
+36:12
+And where is the vector C C negative C? It's on this line. Of course, there's zero zero zero that we had.
+36:19
+And what we've got is that whole -- oops -- that whole line, going both ways, through the origin.
+36:28
+The null space is a line in R^3.
+36:35
+Okay. For that example, we could find all the combinations
+36:43
+of the columns that gave zero at sight. Now, can I just take one more time,
+36:51
+to go back to the definition of subspace, vector space,
+36:57
+and ask you -- how do I know that the null space is a vector space?
+37:05
+How I entitled to use this word space? I'll never use that word space without meaning that the two
+37:13
+requirements are satisfied. Can we just check that they are?
+37:18
+So I'm going to check that -- can I just continue here? Check that -- that the solutions to A x=0 always give
+37:39
+a subspace. And, of course, the key word is that= "Space."
+37:47
+So what do I have to check?
+37:53
+I have to show that if I have one solution, call it x, and another solution, call it x*,
+38:01
+that their sum is also a solution, right? That's a requirement.
+38:07
+To use that word space, I have to say -- I have to convince myself that if A x is zero and also --
+38:18
+and A x* is zero, or maybe I should have said if A v is zero
+38:25
+and A w is zero, then what about v plus w? Shall I -- let me use those letters.
+38:32
+If A v is zero and A w is zero, then what -- if that and that,
+38:47
+then what's my point here? That A times (v+w) must be zero.
+38:55
+That says that if v is in the null space and w's in the null space, then their sum v+w is in the null space.
+39:03
+And of course, now that I've written it down, it's totally absurd, ridiculously simple --
+39:11
+because matrix multiplication allows me to separate that out
+39:17
+into A v plus A w. I shouldn't say absurdly simple.
+39:23
+That was a dumb thing to say. Could -- we've used, here, a basic law of matrix
+39:28
+multiplication. Actually, we've used it without proving it, but that's okay.
+39:34
+We only live so long, we just skip that proof.
+39:39
+I think it's called the distributive law that I can split these -- split this into two pieces.
+39:45
+But now you see the point, that A v is zero and A w is zero
+39:52
+so I have zero plus zero and I do get zero. It checks. And, similarly, I have to show that if A v is zero,
+40:02
+then A times any multiple, say 12v is also zero.
+40:10
+And how do I know that? Because I'm allowed to s- bring that twelve outside. A number, a scaler can move outside, so I have twelve A vs,
+40:20
+twelve zeroes -- I have zero. Okay. Just to -- it's really critical to understand the --
+# Vector Space
+40:33
+oh yeah. Here -- I was going to say, understand what's the point
+40:38
+of a vector space? Let me make that point by changing the right-hand side.
+40:44
+Oops. Okay. Let me change the right-hand side to one two three four. Oh, okay.
+40:51
+Why don't we do all of linear algebra in one lecture, then we -- okay. I would like to know the solutions to this equation.
+41:00
+For those four equations. So I have four equations.
+41:06
+I have only three unknowns, so if I don't have a pretty special right-hand side there won't be any solution at all.
+41:12
+But that is a very special right-hand side. And we know that there is a solution, one zero zero.
+41:21
+Were there any more solutions? And did they form a vector space?
+41:27
+Okay. So I'm asking two questions there. One is, do -- so my right-hand side now is not zero anymore.
+41:35
+I'm not looking at the null space because I changed from zeroes. So my first question is, do the solutions, if there are any
+41:45
+and there are, do they form a subspace? Let's answer that question first.
+41:53
+Yes or no. Do I get a subspace if I look at the solutions to --
+41:59
+let me go back to x1 x2 x3. I'm looking at all the x-s, at all those vectors in R^3 that
+42:08
+solve A x -b. The only thing I've changed is b isn't zero anymore.
+42:17
+Do the x-s, the solutions, form a vector space?
+42:25
+The solutions to this do not form a subspace.
+42:32
+The solutions don't, because -- how shall I see that?
+42:38
+The zero vector is not a solution, so I never even got started.
+42:43
+The zero vector doesn't solve this system. I can't -- solutions can't be a vector space.
+42:51
+Now what are they like? Well, we'll see this, but let's do it for this example.
+42:58
+So one zero zero was a solution. You saw that right away. Are there any other solutions?
+43:05
+Can you tell me a second solution to this system of equations?
+43:10
+STUDENTS: 0 -1 1 STRANG: 0 -1 1. Boy, that's -- 0 -1 1.
+43:19
+Yes. Because that says I take minus this column plus this one and sure enough.
+43:24
+That's right. So there are -- there's a bunch of solutions here.
+43:30
+But they're not a subspace.
+43:37
+I'll tell you what it's like. It's like a plane that doesn't go through the origin, or a line that doesn't go through the origin.
+43:43
+Maybe in this case it's a line that doesn't go through the origin, if I graft the solutions to A x equal B.
+43:50
+So you -- I think you've got the idea. Subspaces have to go through the origin.
+43:56
+If I'm looking at x-s, then they'd better solve Ax=0. In a way I've got --
+44:04
+my two subspaces that I -- talking about today are kind
+44:10
+of the two ways I can tell you what a -- about subspace.
+44:17
+If I want to tell you about the column space, I tell you a few columns and I say take their combinations.
+44:24
+Like I build up this subspace. I put in a few vectors, their combinations make a subspace.
+44:31
+Now, when I went to -- let me come back to the one that is a subspace here.
+44:40
+Here, when I talked about the null space, I didn't tell you what's in it.
+44:46
+We had to figure out what was in it. What I told you was the equations that I'm --
+44:53
+that has to be satisfied. You see those -- like, those are the two natural ways to tell you
+44:59
+what's in a subspace. I can either give you a few vectors and say fill it out,
+45:06
+take combinations -- or I can give you a system of equations, the requirements
+45:12
+that the x-s have to satisfy. And both of those ways produce subspaces
+45:20
+and they're the important ways to construct subspaces. Okay, so today's lecture actually got,
+45:29
+the essentials of three point two, the idea of the null space.
+45:35
+Now we have to tackle, Wednesday, the job of how do we actually get hold
+45:40
+of that subspace in an example that's bigger and we can't see it just by eye.
+45:45
+Okay. See you Wednesday.
+45:57
+Thanks.

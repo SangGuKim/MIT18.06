@@ -1,0 +1,790 @@
+https://www.youtube.com/watch?v=QVKj3LADCnA
+
+0:00
+2 times this equation, Okay.
+0:12
+This is it. The second lecture in linear algebra,
+0:17
+and I've put below my main topics for today.
+0:25
+I put right there a system of equations that's going to be our example to work with. But what are we going to do with it?
+0:35
+We're going to solve it. And the method of solution will not be determinants.
+0:41
+Determinants are something that will come later. The method we'll use is called elimination.
+0:47
+And it's the way every software package solves equations.
+0:53
+And elimination, well, if it succeeds, it gets the answer.
+1:03
+And normally it does succeed. If the matrix A that's coming into that system
+1:09
+is a good matrix, and I think this one is, then elimination will work. We'll get the answer in an efficient way.
+1:18
+But why don't we, as long as we're sort of seeing how elimination works -- it's always good to ask how could it
+1:25
+fail? So at the same time, we'll see how elimination decides whether the matrix is a good one
+1:32
+or has problems. Then to complete the answer, there's an obvious step of back substitution.
+1:40
+In fact, the idea of elimination is -- you would have thought of it, right?
+1:47
+I mean Gauss thought of it before we did, but only because he was born earlier.
+1:54
+It's a natural idea... and died earlier, too.
+2:00
+Okay, and you've seen the idea.
+2:07
+But now, the part that I want to show you is elimination expressed in matrix language, because the whole course --
+2:16
+all the key ideas get expressed as matrix operations, not as
+2:21
+words. And one of the operations, of course, that we'll meet
+2:27
+is how do we multiply matrices and why? Okay, so there's a system of equations.
+2:34
+Three equations and three unknowns. And there's the matrix, the three by three matrix --
+2:42
+so this is the system Ax = b.
+2:47
+This is our system to solve, Ax equal -- and the right-hand side is that vector 2, 12, 2.
+2:55
+Okay. Now, when I describe elimination --
+3:00
+it gets to be a pain to keep writing the equal signs and the pluses and so on.
+3:06
+It's that matrix that totally matters. Everything is in that matrix.
+3:12
+But behind it is those equations. So what does elimination do?
+3:17
+What's the first step of elimination?
+3:22
+We accept the first equation, it's okay. I'm going to multiply that equation by the right number,
+3:29
+the right multiplier and I'm going to subtract it from the second equation.
+3:36
+With what purpose? So that will decide what the multiplier should be.
+3:41
+Our purpose is to knock out the x part of equation two.
+3:50
+So our purpose is to eliminate x. So what do I multiply --
+3:57
+and again, I'll do it with this matrix, because I can do it short. What's the multiplier here?
+4:03
+What do I multiply -- equation one and subtract. Notice I'm saying that word subtract.
+4:08
+I'd like to stick to that convention. I'll do a subtraction.
+4:13
+First of all this is the key number that I'm starting with.
+4:19
+And that's called the pivot. I'll put a box around it and write its name down.
+4:25
+That's the first pivot. The first pivot.
+4:30
+Okay. So I'm going to use -- that's sort of like the key number in that equation.
+4:35
+And now what's the multiplier? So I'm going to -- my first row won't change, that's the pivot row.
+4:45
+But I'm going to use it -- and now, finally, let me ask you what the multiplier is.
+4:51
+Yes? 3 times that first equation will knock out that 3.
+4:58
+Okay. So what will it leave? So the multiplier is 3. 3 times that will make that 0.
+5:05
+That was our purpose. 3 2s away from the 8 will leave a 2 and three 1s away from 1
+5:11
+will leave a minus 2. And this guy didn't change.
+5:17
+Now the next step -- this is forward elimination and that Okay. step's completed.
+5:23
+Oh, well, you could say wait a minute, what about the right hand side? Shall I carry -- the right-hand side gets carried along.
+5:32
+Actually MatLab finishes up with the left side before -- and then just goes back to do the right side.
+5:38
+Maybe I'll be MatLab for a moment and do that. Okay.
+5:44
+I'm leaving a room for a column of b, the right-hand side. But I'll fill it in later.
+5:51
+Okay. Now the next step of elimination is what? Well, strictly speaking...
+5:56
+this position that I cleaned up was like the 2, 1 position,
+6:05
+row 2, column 1. So I got a 0 in the 2, 1 position.
+6:10
+I'll use 2,1 as the index of that step. The next step should be to finish the column
+6:17
+and get a 0 in that position. So the next step is really the 3,1 step, row three,
+6:24
+column one. But of course, I already have 0.
+6:30
+Okay. So the multiplier is 0. I take 0 of this equation away from this one and I'm all set.
+6:39
+So I won't repeat that, but there was a step there which, MatLab would have to look -- it would look at this number
+6:48
+and, do that step, unless you told it in advance that it was 0.
+6:53
+Okay. Now what? Now we can see the second pivot, which is what?
+7:00
+The second pivot -- see, we've eliminated -- x is now gone from this equation, right?
+7:06
+We're down to two equations in y and z.
+7:12
+And so now I just do it again. Like, everything's recursive at this -- this is like -- such a basic algorithm and you've seen it,
+7:20
+but carry me through one last step.
+7:25
+So this is still the first pivot. Now the second pivot is this guy, who has appeared there.
+7:32
+And what's the multiplier, the appropriate multiplier now? And what's my purpose?
+7:38
+Is it to wipe out the 3, 2 position, right?
+7:44
+This was the 2, 1 step. And now I'm going to take the 3, 2 step.
+7:53
+So this all stays the same, 1 2 1, 0 2 -1
+8:00
+and the pivots are there. Now I'm using this pivot, so what's the multiplier?
+8:05
+8:10
+this row, gets subtracted from this row and makes that a 0. So it's 0, 0 and is it a 5?
+8:20
+Yeah, I guess it's a 5, is that right? Because I have a one there and I'm
+8:26
+subtracting twice of twice this, so I think it's a 5 there.
+8:32
+There's the third pivot. So let me put a box around all three pivots.
+8:41
+Is there a -- oh, did I just invent a negative one?
+8:48
+I'm sorry that the tape can't, correct that as easily as I can.
+8:55
+Okay. Thank you very much.
+9:00
+You get an A in the course now. Is that correct?
+9:07
+Is it correct now? Okay. So the three pivots are there --
+9:15
+I know right away a lot about this matrix. This elimination step from A -- this matrix I'm going to call
+9:24
+U. U for upper triangular. So the whole purpose of elimination
+9:29
+was to get from A to U. And, literally, that's the most common calculation
+9:35
+in scientific computing. And people think of how could I do that faster? Because it's a major, major thing.
+9:44
+But we're doing it the straightforward way. We found three pivots, and by the way, I didn't say this,
+9:52
+pivots can't be 0. I don't accept 0 as a pivot.
+9:57
+And I didn't get 0. So this matrix is great. It gave me three pivots, I didn't
+10:03
+have to do anything special, I just followed the rules and, and the pivots are 1, 2 and 5.
+10:11
+By the way, just because I always anticipate stuff from a later day, if I wanted to know the determinant of this matrix
+10:20
+-- which I never do want to know, but I would just multiply the pivots. The determinant is 10.
+10:25
+So even things like the determinant are here.
+10:32
+Okay. Now -- oh, let me talk about failure for a moment,
+10:38
+and then -- and then come back to success.
+10:44
+How could this have failed? How could -- by fail, I mean to come up with three pivots.
+10:54
+I mean, there are a couple of points.
+11:00
+I would have already been in trouble if this very first number here was 0.
+11:06
+If it was a 0 there -- suppose that had been a 0, there were no Xs in that equation -- first equation.
+11:14
+Does that mean I can't solve the problem? Does that mean I quit? No.
+11:21
+What do I do? I switch rows. I exchange rows. So in case of a 0, I will not say 0 pivot.
+11:30
+I will never be heard to utter those words, 0 pivot. But if there's a 0 in the pivot position,
+11:37
+maybe I can say that, I would try to exchange for a lower equation and get a proper pivot up
+11:45
+there. Okay. Now, for example, this second pivot came out two.
+11:51
+Could it have come out 0? What -- actually, if I change that 8 a little bit,
+11:56
+I would have got a little trouble.
+12:01
+What should I change that 8 to so that I run into trouble?
+12:08
+A 6. If that had been a 6, then this would have been 0
+12:14
+and I couldn't have used that as the pivot. But I could have exchanged again.
+12:20
+In this case. In this case, because when can I get out of trouble?
+12:26
+I can get out of trouble if there's a non-0 below this troublesome 0.
+12:32
+And there is here. So I would be okay in this case. If this was a 6, I would survive by a row
+12:40
+exchange. Now -- of course, it might have happened that I couldn't do
+12:46
+the row, that -- that there was 0s below it, but here there wasn't. Now, I could also have got in trouble if this number 1 was
+12:55
+a little different. See, that 1 became a 5, I guess, by the end.
+13:02
+So can you see what number there would
+13:08
+have got me trouble that I really couldn't get out of?
+13:14
+Trouble that I couldn't get out of would mean if 0 is in the pivot position
+13:22
+and I've got no place to exchange. So there must be some number which if I had had here
+13:31
+it would have meant failure. Negative 4, good. If it was a negative 4 here -- if it happened to be a negative
+13:39
+4, I'll temporarily put it up here. If this had been a negative 4 z, then I
+13:47
+would have gone through the same steps. This would have been a minus 4, it still would have been a minus 4.
+13:53
+But at the last minute it would have become 0. And there wouldn't have been a third pivot.
+14:02
+The matrix would have not been invertible. Well, of course, the inverse of a matrix is coming next week,
+14:08
+but, you've heard these words before. So, that's how we identify failure.
+14:16
+There's temporary failure when we can do a row exchange -- and get out of it, or there's complete failure when we get
+14:24
+a 0 and -- and there's nothing below that we can use. Okay.
+14:29
+Let's stay with -- back to success now. In fact, I guess the next topic is back substitution.
+14:39
+So what's back substitution? Well, now I'd better bring the right-hand side in.
+14:46
+So what would MatLab do and what should we do?
+14:52
+Let me bring in the right-hand side as an extra column. So there comes B. So it's 2, 12, I would call this the augmented matrix.
+15:05
+"Augment" means you've tacked something on. I've tacked on this extra column.
+15:11
+Because, when I'm working with equations, I do the same thing to both sides.
+15:17
+So, at this step, I subtracted 2 of the first equation away from the second equation so that this augmented --
+15:26
+I even brought some colored chalk, but I don't know if it
+15:31
+shows up. So this is like the augmented -- no! Damn, circled the wrong thing.
+15:39
+Okay. Here is b. Okay, that's the extra column.
+15:46
+Okay. So what happened to that extra column, the right-hand side of the equations,
+15:51
+when I did the first step? So that was 3 of this away from this, so it took --
+15:57
+the 2 stayed the same, but three 2s got taken away from 12, leaving 6, and that 2 stayed the same.
+16:04
+So this is how it's looking halfway along. And let me just carry to the end.
+16:11
+The 2 and the 6 stay the same, but --
+16:16
+what do I have here? Oh, gosh.
+16:23
+Help me out, now. What -- so now I'm -- This is still like forward elimination.
+16:29
+I got to this point, which I think is right, and now what did I do at this step? I multiplied that pivot by 2 or that whole equation by 2
+16:38
+and subtracted from that, so I think I take two 6s, which is 12, away from the 2.
+16:43
+Do you think minus 10 is my final right-hand side --
+16:49
+the right-hand side that goes with U, and let me call that once and forever the vector c.
+16:56
+So c is what happens to b, and U is what happens to A.
+17:04
+Okay. There you've seen elimination clean. Okay.
+17:11
+Oh, what's back substitution? So what are my final equations, then?
+17:16
+Can I copy these equations? x+2y+z=2 is still there and 2y-2z=6 is there, and 5z=-10.
+17:34
+Okay. Those are the equations that these numbers
+17:40
+are telling me about. Those are the equations U x equals c.
+17:46
+Okay, how do I solve them? What one do I solve for first?
+17:52
+z. I see immediately that the correct value of z is negative
+17:59
+And what do I do next? I go back upwards. I now know z here.
+18:07
+So, if z is negative 2, that's 4 there, is that right?
+18:12
+And so 2 y plus a 4 is 6, maybe y is 1.
+18:17
+Going -- this is back substitution. We're doing it on the fly because it's so easy.
+18:23
+And then x is -- so x -- 2y is 2 minus 2, maybe x is 2?
+18:31
+18:38
+So you see what back substitution is. It's the simple step solving the equations in reverse order
+18:46
+because the system is triangular. Okay. Good.
+18:52
+So that's elimination and back substitution, and I kept the right-hand side along.
+18:57
+Okay, now what do I -- that, like, is first piece of the
+19:04
+lecture. What's the second piece? Matrices are going to get in.
+19:11
+So I wrote stuff with x, y-s and z-s in there, then I really,
+19:17
+got the right shorthand, just writing the matrix entries,
+19:24
+and now I want to write the operations that I did in matrices, right?
+19:32
+I've carried the matrices along, but I haven't said the operation those elimination steps,
+19:42
+I now want to express as matrices. Okay. Here they come.
+19:49
+So now this is elimination matrices.
+19:55
+Okay. Let me take that first step, which took me from 1 2 1 3 8 1
+20:02
+0 4 1.
+20:09
+I want to operate on that -- I want to do elimination on that.
+20:16
+Okay. Okay, now I'm remembering a point I want to single out as especially important.
+20:29
+Let me move the board up for that.
+20:36
+Because when we do matrix operations, we've got to, like, be able to see the big picture.
+20:41
+Okay. Last time, I spoke about the big picture of -- when I multiply a matrix by a right-hand side.
+20:50
+If I have some matrix there and I multiply it by 3 4 5, let's say --
+20:55
+so here's a matrix -- what did I say -- well, I guess I only said it
+21:02
+on the videotape, but -- do you remember how I look at that matrix multiplication?
+21:08
+The result of multiplying a matrix by some vector is a combination of the columns of the matrix.
+21:21
+It's 3 times the first column. It's 3 times column one plus 4 times column two plus 5 times
+21:33
+column three.
+21:39
+Okay. I'm going to come back to that multiple times. What I wanted to do now was to emphasize the parallel thing
+21:51
+with rows. Why? Because all our operations here for this two weeks
+21:59
+of the course are row operations. So this isn't what I need for row operations.
+22:10
+Let me do a row operation. Suppose I have my matrix again and suppose I multiply
+22:20
+on the left by some -- let's say 1 2 7.
+22:28
+Again, I'm just, like, saying what the result is.
+22:33
+And then we'll say how matrix multiplication works and we'll see that it's true.
+22:40
+Okay. But maybe already I'm making --
+22:45
+I'm sort of bringing up -- the central idea of linear algebra is how these matrices work by rows as well as by columns.
+22:55
+Okay. How does it work by rows? What -- so that's a row vector.
+23:05
+I could say that's a one by three matrix, a row vector multiplying a three by three matrix.
+23:11
+What's the output?
+23:17
+What's the product of a row times a matrix?
+23:23
+And -- okay, it's a row. A row -- a column --
+23:29
+I'm sorry. A matrix times a column is a column. So matrix times a -- yeah.
+23:35
+Matrix times a column is a column.
+23:41
+And we know what column it is. Over here, I'm doing a row times a matrix.
+23:47
+And what's the answer? It's one of that first row, so it's 1 times --
+23:53
+1 times row one, plus 2 times row two plus 7 times row three.
+24:05
+When -- as we do matrix multiplication, keep your eye on what it's doing with whole vectors.
+24:13
+And what it's doing -- what it's doing in this case is it's combining the rows.
+24:20
+And we have a combination, a linear combination of the rows. Okay, I want to use that.
+24:26
+24:33
+Okay, so my question is what's the matrix that does this first
+24:38
+step, that takes -- subtracts 3 of equation one from equation
+24:44
+two? That's what I want to do. So this is going to be a matrix that's going to subtract 3 times row one from row two,
+25:03
+and leaves the other rows the same. Just in -- I mean, the answer is going to be that.
+25:09
+So whatever matrix this is -- and you're going to, like, tell me what matrix will do it,
+25:15
+it's the matrix that leaves the first row unchanged, leaves the last row unchanged, but takes 3 of these
+25:23
+away from this so it puts a 0 there, a 2 there and a minus 2. Good.
+25:29
+What matrix will do it? It's these. It should be a pretty simple matrix,
+25:35
+because we're doing a very simple step. We're just doing this step that changes row two.
+25:43
+So actually, row one is not changing. So tell me how the matrix should begin.
+25:51
+One -- the first row of the matrix will be 1 0 0,
+26:01
+because that's just the right thing that takes one of that row and none of the other rows, and that's what we want.
+26:08
+What's the last row of the matrix? 0 0 1, because that takes one of the third row
+26:17
+and none of the other rows, that's great. Okay. Now, suppose I didn't want to do anything at all.
+26:24
+Suppose my row -- well, I guess maybe I had a case here when I already had a 0 and, didn't have to do anything.
+26:33
+What matrix does nothing, like, just leaves you where you were?
+26:40
+If I put in -- if I put in 0 1 0, that would be -- that would be --
+26:49
+that's the matrix -- what's the name of that matrix? The identity matrix, right.
+26:55
+So it does absolutely nothing. It just multiplies everything and leaves it where it is. It's like a one, like the number one, for matrices.
+27:03
+But that's not what we want, because we want to change this row to -- so what's the correct --
+27:11
+what should I put in here now to do it right?
+27:16
+I want to get -- what do I want? What I -- I'm after -- I want 3 of row one to get subtracted
+27:24
+off. So what's the right matrix, finish that matrix for me.
+27:32
+Negative 3 goes here? And what goes here? That 1.
+27:38
+And what goes here? The 0. That's the good matrix. That's the matrix that takes minus 3
+27:46
+of row one plus the row two and gives the new row 2. Should we just, like, check some particular
+27:57
+entry? How do I check a particular entry of a matrix in matrix multiplication?
+28:03
+Like, suppose I wanted to check the entry here that's in row
+28:09
+two, column three. So where does the entry in row two, column three come from?
+28:16
+I would look at row two of this guy and column three of this one to get that number.
+28:26
+That number comes from the second row and the third column and I just take this dot product minus 3 --
+28:34
+I'm multiplying -- minus 3 plus 1 and 0 gives the minus 2.
+28:39
+Yeah. It works. So we got various ways to multiply matrices now.
+28:46
+We're sort of, like -- informally. We've got by columns, we've got -- well,
+28:52
+we will have by columns, by rows, by each entry at a time. But it's good to see that matrix multiplication when one
+29:01
+of the matrices is so simple. So this guy is our elementary matrix.
+29:08
+Let's call it E for elementary or elimination. And let me put the indexes 2 1, because it's the matrix that we
+29:18
+needed to fix the 2 1 position. It's the matrix that we needed to get this 2 1
+29:25
+position to be Okay. Good enough. So what do I do next?
+29:32
+I need another matrix, right? I need to -- there's another step here.
+29:39
+And I want to express the whole elimination process in matrix language.
+29:46
+So tell me what -- so next step, step two, which was what?
+29:54
+Subtract -- what was -- what was the actual step that we did?
+29:59
+I think I subtracted -- do you remember? I had a 2 in the pivot and a 4 below it,
+30:06
+so I subtracted two times -- times row two from row three.
+30:16
+From row three. Tell me the matrix that will do that.
+30:23
+And tell me its name. Okay, it's going to be E, for elementary or elimination
+30:31
+matrix and what's the index number that I used to tell me what E --
+30:38
+3, 2, right? Because it's fixing this 3 2 position.
+30:43
+And what's the matrix, now? Okay, you remember -- so E 3 2 is supposed to multiply my guy
+30:52
+that I have and it's supposed to produce the right result,
+30:58
+which was -- it leaves -- it's supposed to leave the first row, it's supposed to leave the second row and it's supposed
+31:05
+to straighten out that third row to this.
+31:10
+And what's the matrix that does that?
+31:15
+1 0 0, right? Because we don't change the first row and the next row
+31:21
+we don't change either, and the last row is the one we do change.
+31:27
+And what do I do? Let's see, I subtract two times --
+31:33
+so what's this row? What's this here? 0, right, because the first row's not involved.
+31:41
+It's just in the 3 2 position, isn't it? This the key number is this minus the multiplier that goes
+31:49
+-- sitting there in that 3 2 position. Is it a minus 2 to subtract 2 and then this is a 1 so that --
+31:59
+the overall effect is to take minus 2 of this row plus 1 of
+32:06
+that. Okay. So, I've now given you the pieces, the elimination
+32:15
+matrices, the elementary matrices that take each step.
+32:21
+So now what? Now the next point in the lecture
+32:27
+is to put those steps together into a matrix that does it all and see how it all happens.
+32:34
+So now I'm going to express the whole -- everything we did today so far on A was to start with A,
+32:46
+we multiplied it by E 2 1, that was the first step --
+32:53
+and then we multiplied that result by E 3 2 and that led us
+33:01
+to this thing and what was that matrix? U.
+33:10
+You see why I like matrix notation, because there in, like, little space --
+33:18
+a few bits when its compressed on the web -- is everything -- is this whole lecture.
+33:25
+Okay. Now there -- there are important facts about matrix
+33:33
+multiplication. And we're close to maybe the most important.
+33:40
+And that is this. Suppose I ask you this question. Suppose I start with a matrix A and I
+33:49
+want to end with a matrix U and I want to say what matrix does the whole job?
+33:55
+What matrix takes me from A to U, using the letters I've got?
+34:05
+And the answer is simple. I'm not asking this as -- but it's highly important.
+34:13
+How would I create the matrix that
+34:19
+does the whole job at once, that does all of elimination in one shot?
+34:24
+It would be -- I would just put these together, right? In other words, this is the thing I'm struggling to say.
+34:34
+I can move those parentheses. If I keep the matrices in order --
+34:41
+I can't mess around with the order of the matrices, but I can change the order that I do the multiplications.
+34:49
+I can multiply these two first --
+34:55
+in other words, you see what those parentheses are doing? It's saying -- multiply the Es first and that gives you
+35:04
+the matrix that does everything at once. Okay. So this fact, that this is automatically the same as this
+35:13
+-- for every matrix multiplication, which I'm conscious of still
+35:20
+not telling you in every detail, but, like, you're seeing how it works -- and this is highly important --
+35:27
+and maybe tell me the long word that describes this law for matrices, that you can move the parentheses?
+35:37
+It's called the associative law. I think you can now forget that.
+35:45
+But don't forget the law. I mean, like, forget the word associative. I don't know. But don't forget the law.
+35:51
+Because actually, we'll see so many steps in linear algebra,
+35:59
+so many proofs, even, of main fact come from just moving the parentheses.
+36:05
+And it's not that easy to prove that this is correct,
+36:15
+you have to go into the gory details of matrix multiplication, do it both ways and see
+36:20
+that you come out the same. Maybe I'll leave the author to do that.
+36:27
+Okay. So there we go.
+36:34
+So there's a single matrix, I could call it E --
+36:40
+while we're talking about these matrices, tell me one other --
+36:45
+there's another type of elementary matrix, and we already said why we might need it.
+36:52
+We didn't need it in this case. But it's the matrix that exchanges two rows.
+36:58
+It's called a permutation matrix. Can you just, like, tell me what that would So I'm just -- like,
+37:06
+this is a slight digression and be? we'll -- yes, so let me get some -- let me figure out where I'm going
+37:12
+to put a permutation matrix. You'll see I'm always squeezing stuff in.
+37:19
+So permutation. Or, in fact this one you'll, like, exchange rows --
+37:33
+shall I exchange rows one and two, just to make life easy? So if I had my matrix -- no, let -- let me just do two by two.
+37:41
+|a b; c d|. Suppose I want to find the matrix that exchanges
+37:49
+those rows.
+37:55
+What is it? So the matrix that exchanges those rows --
+38:01
+the row I want is c d and it's there. So I better take one of it.
+38:07
+And the row I want here is up top, so I'll take one of that. So actually, I'm just --
+38:13
+the easy way -- this is my matrix that I'll call P, for permutation.
+38:21
+It's the matrix -- actually, the easy way to find it is just do
+38:26
+the thing to the identity matrix. Exchange the rows of the identity matrix
+38:32
+and then that's the matrix that will do row exchanges for you.
+38:38
+Suppose I wanted to exchange columns instead. Columns have hardly got into today's lecture,
+38:45
+but they certainly are going to be around. How could I -- if I started with this matrix |a b; c d|
+38:53
+then I wouldn't -- I'm not even going to write this down, I'm just going to ask you, because in elimination, we're
+39:03
+doing rows. But suppose we wanted to exchange the columns of a matrix.
+39:10
+How would I do that?
+39:15
+What matrix multiplication would do that job? Actually, why not? I'll write it down.
+39:22
+So this is -- I'll write it under here and then hide it again.
+39:28
+Okay. Suppose I had my matrix |a b; c d| and I want to get to a c over here and b d here.
+39:38
+39:44
+What matrix does that job?
+39:52
+Can I multiply -- can I cook up some matrix that produces that
+39:58
+answer? You can see from where I put my hand I was really
+40:04
+asking can I put a matrix here on the left that
+40:09
+will exchange columns? And the answer is no.
+40:16
+I'm just bringing out again this point that when I multiply on the left, I'm doing row operations.
+40:22
+So if I want to do a column operation, where do I put that permutation matrix?
+40:29
+On the right. If I put it here, where I just barely left room for it --
+40:35
+so I'll exchange the two columns of the identity.
+40:40
+Then it comes out right, because now I'm multiplying a column at a time.
+40:45
+This is the first column and says take one -- take none of that column, one of this one and then you
+40:52
+got it. Over here, take one of this one, none of this one and you've got a c.
+40:58
+So, in short, to do column operations, the matrix multiplies on the right.
+41:04
+To do row operations, it multiplies on the left. Okay, okay, and it's row operations that we're really
+41:11
+doing. Okay.
+41:18
+And of course, I mentioned in passing, but I better say it very clearly that you can't exchange
+41:30
+the orders of matrices. And that's just the point I was making again here. A times B is not the same as B times A.
+41:39
+You have to keep these matrices in their Gauss given order
+41:46
+here, right? But you can move the parentheses,
+41:52
+so that, in other words, the commutative law, which would allow you to take it in the other order is false.
+42:03
+So we have to keep it in that order. Okay. So what next?
+42:10
+I could do this multiplication.
+42:16
+I could do E 32. So let me come back to see what that was.
+42:24
+Here was E 2 1. And here is E 3 2.
+42:33
+And if I multiply those two matrices together --
+42:39
+E 3 2 and then E 2 1, I'll get a single matrix that does elimination.
+42:49
+I don't want to do it that -- if I do that multiplication --
+42:55
+there -- there's a better way to do this.
+43:00
+And so in this last few minutes of today's lecture, can I anticipate that better way?
+43:08
+The better way is to think not how do I get from A to U,
+43:15
+but how do I get from U back to A?
+43:20
+So reversing steps is going to come in. Inverse -- I'll use the word inverse here.
+43:28
+Okay. So let me make the first step at what's the inverse matrix?
+43:37
+All the matrices you've seen on this board have inverses.
+43:43
+I didn't write any bad matrices down. We spoke about possible failure, and for a moment,
+43:50
+we put in a matrix that would fail. But right now, all these matrices are good,
+43:56
+they're all invertible. And let's take the inverse -- well, let me say first what does the inverse mean and find it?
+44:04
+Okay. So we're getting a little leg up on inverses.
+44:10
+Okay, so this is the final moments of today.
+44:16
+Sorry, he's still there.
+44:22
+Okay. Inverses.
+44:31
+Okay, and I'm just going to take one example and then we're done. The example I'll take will be that E. So my matrix
+44:39
+is 1 0 0 minus 3 1 0 0 0 1.
+44:45
+And I want to find the matrix that undoes that step.
+44:55
+So what was that step? The step was subtract 3 times row one from row two.
+45:03
+So what matrix will get me back?
+45:10
+What matrix will bring back -- you know, if I started with a 2 12 2 and I changed it to a 2 6
+45:19
+2 because of this guy, I want to get back to the 2 12 I want
+45:25
+to find the matrix which -- which undoes elimination, the matrix which multiplies this to give the identity.
+45:33
+45:38
+And you can tell me what I should do in words first, and then we'll write down the matrix that does it.
+45:45
+If this step subtracted 3 times row 1 from row 2, what's the inverse step?
+45:51
+I add 3 times row one to row two, right?
+46:02
+I add it back. The -- what I subtracted away, I add back. So the inverse matrix in this case is --
+46:08
+I now want to add 3 times row one to row two, so I won't change row one, I won't change row three
+46:17
+and I'll add 3 times row one to row two.
+46:23
+That's a case where the inverse is clear. It's clear in words what to do, because what this did
+46:33
+was simple to express. It just changed row two by subtracting 3 of row one.
+46:43
+So to invert it, I go that way. And if you -- if we do that calculation, 3 times this row plus 1 times this row,
+46:51
+comes out the right row of the identity. Okay, so inverses are an --
+46:57
+so if this matrix was E and this matrix is I for identity, then
+47:05
+what's the notation for this guy? E to the minus one.
+47:11
+E inverse. Okay. Let's stop there for today.
+47:16
+That's a little jump on what's coming on Monday. So, see you Monday.
+47:23

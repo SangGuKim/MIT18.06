@@ -1,0 +1,775 @@
+https://www.youtube.com/watch?v=srxexLishgY
+
+0:00
+0:07
+OK, this lecture is like the beginning of the second half of this is to prove.
+0:13
+this course because up to now we paid a lot of attention
+0:18
+to rectangular matrices. Now, concentrating on square matrices,
+0:27
+so we're at two big topics. The determinant of a square matrix,
+0:32
+so this is the first lecture in that new chapter on determinants, and the reason, the big reason
+0:38
+we need the determinants is for the Eigen values. So this is really determinants and Eigen values,
+0:46
+the next big, big chunk of 18.06. OK, so the determinant is a number associated
+0:57
+with every square matrix, so every square matrix has this number associated with called the, its determinant.
+1:07
+I'll often write it as D E T A or often also I'll write it as,
+1:15
+A with vertical bars, so that's going to mean the determinant of the matrix.
+1:21
+That's going to mean this one, like, magic number.
+1:26
+Well, one number can't tell you what the whole matrix was.
+1:32
+But this one number, just packs in as much information as possible into a single number,
+1:39
+and of course the one fact that you've seen before and we have to see it again is the matrix
+1:48
+is invertible when the determinant is not zero.
+1:53
+The matrix is singular when the determinant is zero. So the determinant will be a test for invertibility,
+2:03
+but the determinant's got a lot more to it than that, so let me start.
+2:08
+OK, now the question is how to start. Do I give you a big formula for the determinant,
+2:14
+all in one gulp? I don't think so! That big formula has got too much packed in it.
+2:21
+I would rather start with three properties of the determinant,
+2:28
+three properties that it has. And let me tell you property one.
+2:33
+The determinant of the identity is one.
+2:39
+OK. I... I wish the other two properties were as easy to tell you as that.
+2:46
+But actually the second property is pretty straightforward too, and then once we get the third we will actually
+2:56
+have the determinant. Those three properties define the determinant and we can --
+3:02
+then we can figure out, well, what is the determinant?
+3:13
+What's a formula for it? Now, the second property is what happens if you
+3:22
+exchange two rows of a matrix. What happens to the determinant?
+3:27
+So, property two is exchange rows, reverse the sign of the determinant.
+3:46
+3:51
+A lot of plus and minus signs. I even wrote here, "plus and minus signs," because this is, like, that's what
+3:57
+you have to pay attention to in the formulas and properties of determinants.
+4:03
+So that -- you see what I mean by a property here?
+4:08
+I haven't yet told you what the determinant is, but whatever it is, if I exchange
+4:13
+two rows to get a different matrix that reverses the sign of the determinant.
+4:20
+And so now, actually, what matrices do we now know the determinant of?
+4:28
+From one and two, I now know the determinant. Well, I certainly know the determinant of the identity
+4:34
+matrix and now I know the determinant of every other matrix that comes from row exchanges
+4:41
+from the identities still. So what matrices have I gotten at this point?
+4:48
+The permutations, right. At this point I know every permutation matrix,
+4:55
+so now I'm saying the determinant of a permutation matrix is one or minus one.
+5:03
+One or minus one, depending whether the number of exchanges
+5:09
+was even or the number of exchanges was odd.
+5:16
+So this is the determinant of a permutation. Now, P is back to standing for permutation.
+5:22
+OK. if I could carry on this board, I could, like,
+5:28
+do the two-by-two's. So, property one tells me that this two-by-two matrix.
+5:34
+Oh, I better write absolute -- I mean, I'd better write vertical bars, not brackets,
+5:41
+for that determinant. Property one said, in the two-by-two case,
+5:46
+that this matrix has determinant one. Property two tells me that this matrix has determinant --
+5:59
+what? Negative one. This is, like, two-by-twos.
+6:04
+Now, I finally want to get -- well, ultimately I want to get to,
+6:10
+the formula that we all know. Let me put that way over here, that the determinant
+6:16
+of a general two-by-two is ad-bc.
+6:23
+OK. I'm going to leave that up, like, as the two by two case I'm down to the product of the diagonal and if I transpose, that we already know, so that every property, I can, like, check that it's correct for two-by-twos.
+6:44
+But the whole point of these properties is that they're going to give me a formula for n-by-n.
+6:51
+That's the whole point. They're going to give me this number that's
+6:57
+a test for invertibility and other great properties for any size matrix.
+7:02
+OK, now you see I'm like, slowing down because property
+7:08
+three is the key property. Property three is the key property and can I somehow
+7:17
+describe it -- maybe I'll separate it into 3A I said that if you do a row exchange, the determinant and 3B.
+7:26
+Property 3A says that if I multiply one of the rows, say the first row, by a number T --
+7:40
+I'm going to erase that. That's, like, what I'm headed for but I'm not there yet.
+7:46
+It's the one we know and you'll see that it's checked out by each property.
+7:54
+OK, so this is for any matrix.
+8:00
+For any matrix, if I multiply one row by T and leave the other row or other n-1 rows alone,
+8:08
+what happens to the determinant? The factor T comes out.
+8:15
+It's T times this determinant.
+8:22
+That's not hard. I shouldn't have made a big deal out of property 3A, and 3B is that, if is, is if I keep --
+8:29
+I'm always keeping this second row the same, or that last n-1 rows are all staying the same.
+8:37
+I'm just working -- I'm just looking inside the first row and if I have
+8:43
+an a+a' there and a b+b' there --
+8:53
+sorry, I didn't. Ahh. Why don't -- I'll use an eraser, do it right.
+8:59
+b+b' there. You see what I'm doing? This property and this property are about linear combinations,
+9:06
+of the first row only, leaving the other rows unchanged.
+9:13
+They'll copy along. Then, then I get the sum -- this breaks up into the sum of this
+9:20
+determinant and this one.
+9:32
+I'm putting up formulas. Maybe I can try to say it in words. The determinant is a linear function.
+9:41
+It behaves like a linear function of first row
+9:48
+if all the other rows stay the same. I not saying that --
+9:54
+let me emphasize. I not saying that the determinant of A plus B
+10:00
+is determinant of A plus determinant of B.
+10:07
+I not saying that. I'd better -- can I -- how do I get it onto tape that I'm not saying that?
+10:15
+You see, this would allow all the rows -- you know,
+10:22
+A to have a bunch of rows, B to have a bunch of rows. That's not the linearity I'm after.
+10:29
+I'm only after linearity in each row. Linear for each row.
+10:38
+Well, you may say I only talked about the first row,
+10:44
+but I claim it's also linear in the second row, if I had this -- but not, I can't, I can't have
+10:53
+a combination in both first and second. If I had a combination in the second row,
+10:58
+then I could use rule two to put it up in the first row,
+11:04
+use my property and then use rule two again to put it back,
+11:09
+so each row is OK, not only the first row, but each row separately.
+11:17
+OK, those are the three properties, and from those properties, so that's
+11:23
+properties one, two, three. From those, I want to get all --
+11:31
+I'm going to learn a lot more about the determinant. Let me take an example.
+11:38
+What would I like to learn? I would like to learn that -- so here's our property four.
+11:43
+Let me use the same numbering as here. Property four is if two rows are equal, the determinant is zero.
+11:58
+OK, so property four. Two equal rows lead to determinant equals zero.
+12:13
+Right. Now, of course I can -- in the two-by-two case I can check,
+12:19
+sure, the determinant of ab ab comes out zero. But I want to see why it's true for n-by-n.
+12:28
+Suppose row one equals row three for a seven-by-seven matrix.
+12:36
+So two rows are the same in a big matrix. And all I have to work with is these properties.
+12:43
+The exchange property, which flips the sign, and the linearity property which works in each row separately.
+12:53
+OK, can you see the reason? How do I get this one out of properties one, two, three?
+13:02
+Because -- that's all I have to work with. Everything has to come from properties one, two, three.
+13:07
+OK, so suppose I have a matrix, and two rows are even.
+13:14
+How do I see that its determinant has to be zero from these properties?
+13:22
+I do an exchange. Property two is just set up for this.
+13:27
+Use property two. Use exchange -- exchange rows.
+13:33
+Exchange those rows, and I get the same matrix.
+13:40
+Of course, because those rows were equal.
+13:47
+So the determinant didn't change. But on the other hand, property two says that the sign did change.
+13:56
+So the -- so I, I have a determinant whose sign doesn't change and does change, and the only possibility then
+14:03
+is that the determinant is zero. You see the reasoning there?
+14:08
+Straightforward. Property two just told us, hey, if we've got two equal rows we.
+14:15
+we've got a zero determinant. And of course in our minds, that matches the fact
+14:22
+that if I have two equal rows the matrix isn't invertible. If I have two equal rows, I know that the rank
+14:29
+is less changes sign. than n. OK, ready for property five.
+14:34
+Now, property five you'll recognize as P. It says that the elimination step that I'm always doing,
+14:45
+or U and U transposed, when they're triangular,4 subtract
+14:51
+a multiple, subtract some multiple l times row one from
+15:00
+another row, row k, let's say.
+15:07
+You remember why I did that. In elimination I'm always choosing this multiplier so as
+15:14
+to produce zero in that position. What I -- way, way back in property two,4
+15:21
+Or row I from row k, maybe I should just make very clear that there's nothing special about row one
+15:28
+here. OK, so that, you can see why I want that who cares?
+15:34
+one, because that will allow me to start with this full matrix whose determinant I don't know,
+15:40
+and I can do elimination and clean it out. I can get zeroes below the diagonal
+15:47
+by these elimination steps and the point is that the determinant, the determinant doesn't change.
+15:58
+16:10
+So all those steps of elimination are OK not changing the determinant. In our language in the early chapter the determinant of A is
+16:18
+So if I do seven row exchanges, the determinant changes sign, going to be the same as the determinant of U,
+16:23
+the upper triangular one. It just has the pivots on the diagonal. That's why we'll want this property.
+16:29
+OK, do you see where that property's coming from?
+16:34
+Let me do the two-by-two case. Let me do the two-by-two case here.
+16:39
+So, I'll keep property five going along. So what I doing?
+16:45
+I'm going to keep -- I'm going to have ab cd, but I'm going
+16:52
+to subtract l times the first row from the second row. And that's the determinant and of
+17:03
+OK, that's not -- I didn't put in every comma and, course I can multiply that out and figure out, sure enough, ad-bc
+17:10
+is there and this minus ALB plus ALB cancels out,
+17:17
+but I just cheated, right? I've got to use the properties. So what property? Well, of course, this is a com --
+17:24
+I'm keeping the first row the same and the second row has a c and a d, and then there's
+17:31
+the determinant of the A and the B, and the minus LA, and the minus LB.
+17:37
+So what property was that?
+17:44
+3B. I kept one row the same and I had
+17:49
+a combination in the second, in the other row, and I just separated it out.
+17:56
+OK, so that's property 3. That's by number 3, 3B if you like.
+18:03
+OK, now use 3A. How do you use 3A, which says I can factor out an l,
+18:10
+I can factor out a minus l here. I can factor a minus l out from this row, no problem.
+18:17
+That was 3A. So now I've used property three and now I'm ready for the kill.
+18:25
+Property four says that this determinant is zero,
+18:32
+has two equal rows. You see how that would always work?
+18:37
+I subtract a multiple of one row from another one. It gives me a combination in row k of the old row and l times
+18:46
+this copy of the higher row, and then if -- since I have two equal rows, that's zero,
+18:53
+so the determinant after elimination is the same as before. Good.
+18:59
+OK. Now, let's see -- if I rescue my glasses, I can see what's property six.
+19:07
+Oh, six is easy, plenty of space. Row of zeroes leads to determinant of A equals zero.
+19:22
+A complete row of zeroes.
+19:28
+So I'm again, this is like, something I'll use in the singular case.
+19:34
+Actually, you can look ahead to why I need these properties. So I'm going to use property five, the elimination,
+19:42
+use this stuff to say that this determinant is the same as that determinant and I'll produce a zero there.
+19:49
+But what if I also produce a zero there? What if elimination gives a row of zeroes?
+19:54
+That, that used to be my test for, mmm, singular, not invertible, rank two -- rank less than N,
+20:03
+and now I'm seeing it's also gives determinant zero. How do I get that one from the previous properties?
+20:12
+'Cause I -- this is not a new law, this has got to come from the old ones. So what shall I do?
+20:20
+Yeah, use -- that's brilliant. If you use 3A with T equals zero.
+20:26
+Right. So I have this zero zero cd, and I'm
+20:32
+trying to show that that determinant is zero. triangular matrices, l and l transposed, OK, so the zero is the same is -- five,
+20:41
+can I take T equals five, just to, like, pin it down? I'll multiply this row by five.
+20:48
+Five, well then, five of this should -- if I, if there's a factor five in that, you see what --
+21:01
+so this is property 3A, with taking T as five. If I multiply a row by five, out comes a five.
+21:08
+So why I doing this?
+21:14
+Oh, because that's still zero zero, right? So that's this determinant equals
+21:21
+five times this determinant, and the determinant has to be zero.
+21:28
+I think I didn't do that the very best way.
+21:34
+You were, yeah, you had the idea better. Multiply, yeah, take T equals zero.
+21:40
+Was that your idea? Take T equals zero in rule 3B.
+21:46
+If T is zero in rule 3B, and I bring the camera back to rule
+21:51
+3B -- sorry. If T is zero, then I have a zero zero there
+22:01
+and the determinant is zero. OK, one way or another, a row of zeroes means zero determinant.
+22:08
+OK, now I have to get serious.
+22:14
+The next properties are the ones that we're building up to.
+22:20
+OK, so I can do elimination. I can reduce to a triangular matrix
+22:26
+and now what's the determinant of that triangular matrix? OK, so they had to wait until the last minute.
+22:34
+Suppose, suppose I -- all right, rule seven. So suppose my matrix is now triangular.
+22:42
+So it's got -- so I even give these the names of the pivots, d1, d2, to dn,
+22:48
+and stuff is up here, I don't know what that is,
+22:54
+but what I do know is this is all zeroes. That's all zeroes, and I would like to know the determinant,
+23:04
+because elimination will get me to this. So once I'm here, what's the determinant then?
+23:11
+Let me use an eraser to get those, get that vertical bar again, so that I'm taking the determinant of U so that, so,
+23:22
+what is the determinant of an upper triangular matrix?
+23:28
+Do you know the answer?
+23:36
+It's just the product of the d's. for it. The -- these things that I don't even put in letters
+23:44
+for, because they don't matter, the determinant is d1 times d2
+23:53
+times dn. If I have a triangular matrix, then the diagonal
+24:02
+is all I have to work with. And that's, that's telling us then. We now have the way that MATLAB, any reasonable software,
+24:15
+would compute a determinant. If I have a matrix of size a hundred,
+24:20
+the way I would actually compute its determinant would be elimination, make it triangular, multiply the pivots together,
+24:27
+but it -- would it be possible t- to produce the same matrix the product of the pivots,
+24:33
+the product of pivots. Now, there's always in determinants a plus or minus
+24:39
+and cross every T in that proof, but that's really
+24:44
+the sign to remember. Where -- where does that come into this rule?
+24:51
+Could it be, could the determinant be minus the product of the pivots?
+24:58
+The determinant is d1, d2, to dn. No doubt about that. But to get to this triangular form,
+25:05
+we may have had to do a row exchange, so, so this --
+25:12
+it's the product of the pivots if there were no row exchanges. If, if SLU code, the simple LU code,
+25:19
+the square LU went right through. If we had to do some row exchanges, then we've got to watch plus or minus.
+25:26
+OK, but though -- this law is simply that. OK, how do I prove that?
+25:33
+Let's see, let me suppose that d's are not zeroes.
+25:42
+The pivots are not zeroes. And tell me, how do I show that none of this upper stuff
+25:50
+makes any difference? How do I get zeroes there?
+25:56
+By elimination, right? I just multiply this row by the right number,
+26:01
+subtract from that row, kills that. I multiply this row by the right number, kills that,
+26:09
+by the right number, kills that. Now, you kill every one of these off-diagonal terms, no problem
+26:15
+and I'm just left with the diagonal. Well, strictly speaking, I still have
+26:22
+to figure out why is, for a diagonal matrix now, why is that the right determinant?
+26:28
+I mean, we sure hope it is, but why?
+26:37
+I have to go back to properties one, two, three. Why is -- now that the matrix is suddenly diagonal,
+26:46
+how do I know that the determinant is just a product of That's my proof, really, that once I've got those diagonal entries?
+26:53
+Well, what I going to use? I'm going to use property 3A, is that right? I'll factor this, I'll factor this,
+27:01
+I'll factor that d1 out and have one and have the first row will be that.
+27:07
+And then I'll factor out the d2, shall I shall I put the d2 here, and the second row
+27:13
+will look like that, and so on. So I've factored out all the d's and what I left with?
+27:20
+The identity. And what rule do I finally get to use? Rule one.
+27:26
+Finally, this is the point where rule one finally chips in and says that this determinant is one,
+27:33
+so it's the product of the d's. So this was rules five, to do elimination,
+27:40
+3A to factor out the D's, and, and our best friend, rule one.
+27:48
+And possibly rule two, the exchanges may have been needed also.
+27:53
+OK. Now I guess I have to consider also the case if some d is
+28:01
+zero, because I was assuming I could use the d's to clean out
+28:06
+and make a diagonal, but what if -- what if one of those diagonal entries is zero?
+28:13
+Well, then with elimination we know that we can get a row of zeroes, and for a row
+28:21
+of zeroes I'm using rule six, the determinant is zero, and that's right. So I can check the singular case.
+28:28
+In fact, I can now get to the key point that determinant of A
+28:36
+is zero, exactly when, exactly when A is singular.
+28:44
+And otherwise is not singular, so that the determinant
+28:52
+is a fair test for invertibility or non-invertibility.
+28:58
+So, I must be close to that because I can take any matrix and get there.
+29:05
+Do I -- did I have anything to say? The, the proofs, it starts by saying by elimination
+29:12
+go from A to U. Oh, yeah. Actually looks to me like I don't -- haven't said anything brand-new here, that, that really,
+29:22
+I've got this, because let's just remember the
+29:28
+By elimination, I can go from the original A to reason.
+29:37
+Well, OK, now suppose the matrix is U. singular.
+29:43
+If the matrix is singular, what happens? Then by elimination I get a row of zeroes
+29:50
+and therefore the determinant is zero. And if the matrix is not singular, I don't get zero,
+29:59
+so maybe -- do you want me to put this, like, in two parts? The determinant of A is not zero when A is invertible.
+30:10
+30:15
+Because I've already -- in chapter two we figured out when is the matrix invertible.
+30:23
+It's invertible when elimination produces a full set of pivots and now, and we now, we know the determinant is the product
+30:31
+of those non-zero numbers. So those are the two cases. If it's singular, I go to a row of zeroes.
+30:39
+If it's invertible, I go to U and then to the diagonal D,
+30:49
+and then which -- and then to d1, d2, up to dn.
+30:57
+As the formula -- so we have a formula now.
+31:02
+We have a formula for the determinant and it's actually a very much more practical
+31:08
+formula than the but they didn't matter anyway. ad-bc formula. Is it correct, maybe you should just -- let's just check that.
+31:18
+Two-by-two. What are the pivots of a two-by-two matrix?
+31:23
+What does elimination do with a two-by-two matrix? It -- there's the first pivot, fine.
+31:30
+What's the second pivot? We subtract, so I'm putting it in this upper triangular form.
+31:38
+What do I -- my multiplier is c over a, right?
+31:44
+I multiply that row by c over a and I subtract to get that zero, and here I
+31:50
+have d minus c over a times b.
+31:58
+That's the elimination on a two-by-two. So I've finally discovered that the determinant of this matrix
+32:07
+-- I've got it from the properties, not by knowing the answer from last year, that the determinant of this two-by-two
+32:18
+is the product of A times that, and of course when I multiply A by that, the product of that and that
+32:26
+is ad minus, the a is canceled, bc.
+32:34
+So that's great, provided a isn't zero. because all math professors watching this will be waiting If a was zero, that step wasn't allowed, with seven row
+32:42
+exchanges and with ten row exchanges? zero wasn't a pivot. So that's what I -- I've covered all the bases.
+32:48
+I have to -- if a is zero, then I have to do the exchange, and if the exchange doesn't work, it's because a is proof.
+32:56
+singular. OK, those are --
+33:03
+those are the direct properties of the determinant. And now, finally, I've got two more, nine and ten.
+33:11
+And that's -- I think you can... Like, the ones we've got here are
+33:25
+totally connected with our elimination process and whether pivots are available and whether we
+33:35
+get a row of zeroes. I think all that you can swallow in one shot.
+33:40
+Let me tell you properties nine and ten.
+33:46
+They're quick to write down. They're very, very useful.
+33:53
+So I'll just write them down and use them. Property nine says that the determinant of a product --
+34:01
+if I That's the, like, concrete proof that, multiply two matrices.
+34:07
+So if I multiply two matrices, A and B, that the determinant of the product
+34:14
+is determinant of A times determinant of B, and for me
+34:26
+that one is like, that's a very valuable property,
+34:31
+and it's sort of like partly coming out of the blue, because we haven't been multiplying matrices
+34:37
+and here suddenly this determinant has this multiplying property.
+34:44
+Remember, it didn't have the linear property, it didn't have the adding property. The determinant of A plus B is not
+34:52
+the sum of the determinants, but the determinant of A times B is the product, is the product of the determinants.
+35:01
+OK, so for example, what's the determinant of A inverse?
+35:06
+35:12
+Using that property nine.
+35:19
+Let me, let me put that under here because the camera is happier if it can focus on both at once.
+35:27
+So let me put it underneath. The determinant of A inverse, because property ten
+35:34
+will come in that space.
+35:40
+What does this tell me about A inverse, its determinant? OK, well, what do I know about A inverse?
+35:47
+I know that A inverse times A is odd.
+35:54
+So what I going to do? I'm going to take determinants of both sides.
+36:02
+The determinant of I is one, and what's the determinant of A inverse A?
+36:10
+That's a product of two matrices, A and B. So it's the product of the determinant,
+36:15
+so what I learning? I'm learning that the determinant of A inverse times the determinant of A
+36:24
+is the determinant of I, that's this one. Again, I happily use property one.
+36:31
+OK, so that tells me that the determinant of A inverse is one over.
+36:37
+Here's my -- here's my conclusion -- is one over the determinant of A.
+36:53
+I guess that that -- I, I always try to think, well, do we know some cases of that?
+36:59
+Of course, we know it's right already if A is diagonal. If A is a diagonal matrix, then its determinant
+37:09
+is just a product of those numbers. So if A is, for example, two-three,
+37:14
+then we know that A-inverse is one-half one-third,
+37:20
+and sure enough, that has determinant six,
+37:26
+and that has determinant one-sixth. And our rule checks.
+37:32
+So somehow this proof, this property has to --
+37:39
+somehow the proof of that property -- if we can boil it down to diagonal matrices then we can
+37:45
+read it off, whether it's A and A-inverse, or two different diagonal matrices A and B.
+37:52
+For diagonal -- so what I saying? I'm saying for a diagonal matrices, check.
+37:59
+But we'd have to do elimination steps, we'd have to patiently do the, the, argument
+38:08
+if we want to use these previous properties to get it for other matrices. And it also tells me -- what, just let's, see what else
+38:18
+it's telling me. What's the determinant of, of A-squared? If I take a matrix and square it?
+38:26
+Then the determinant just got squared. Right? The determinant of A-squared is the determinant
+38:34
+of A times the determinant of A. So if I square the matrix, I square the determinant. If I double the matrix, what do I do to the non-zeroes flipped
+38:43
+to the other side of the diagonal, determinant? Think about that one. If I double the matrix, what -- so the determinant of A,
+38:52
+since I'm writing down, like, facts that follow, the determinant of A-squared is the determinant of A,
+39:02
+all squared. The determinant of 2A is what?
+39:09
+That's A plus A.
+39:16
+But wait, er, I don't want the answer to determinant of A here.
+39:22
+That's wrong. It's not two determinant of A, What is it? OK, one more coming, which I I have to make,
+39:28
+what's the number that I have to multiply determinant of A by if I double the whole matrix, if I
+39:34
+double every entry in the matrix? What happens to the determinant? If that were possible, that would be a bad thing,
+39:41
+Supposed it's an n-by-n matrix. that gets -- get down to triangular Two to the n, right.
+39:46
+Two to the nth. Now, why is it two to the nth, and not just two?
+39:54
+So why is it two to the nth? Because I'm factoring out two from every row.
+40:02
+There's a factor -- this has a factor two in every row, so I can factor two out of the first row.
+40:08
+I factor a different two out of the second row, a different two out of the nth row, so I've got all those twos coming out.
+40:15
+So it's like volume, really, and that's one of the great applications of determinants.
+40:23
+If I -- if I have a box and I double all the sides,
+40:30
+I multiply the volume by two to the nth. If it's a box in three dimensions,
+40:38
+I multiply the volume by 8.
+40:43
+So this is rule 3A here. This is rule nine.
+40:49
+And notice the way this rule sort of checks out with
+40:55
+the singular/non-singular stuff, that if A is invertible,
+41:02
+what does that mean about its determinant? It's not zero, and therefore this makes sense.
+41:08
+The case when determinant of A is zero, that's the case where my formula doesn't work anymore.
+41:19
+If determinant of A is zero, this is ridiculous, and that's ridiculous.
+41:25
+A-inverse doesn't exist, and one over zero doesn't make sense.
+41:31
+So don't miss this property. It's sort of, like, amazing that it can...
+41:38
+And the tenth property is equally simple to state,
+41:44
+that the determinant of A transposed equals the determinant of A.
+41:57
+And of course, let's just check it on the ab cd guy.
+42:03
+We could check that sure enough, that's ab cd, it works.
+42:09
+It's ad - bc, it's ad - bc, sure enough. So that transposing did not change the determinant.
+42:19
+But what it does change is --
+42:24
+well, what it does is it lists, so all -- I've been working with rows.
+42:31
+If a row is all zeroes, the determinant is zero. But now, with rule ten, I know what to do
+42:40
+is a column is all zero. If a column is all zero, what's the determinant?
+42:46
+Zero, again. So, like all those properties about rows, exchanging two rows
+42:53
+reverses the sign. Now, exchanging two columns reverses the sign, because I can always, if I
+43:00
+want to see why, I can transpose, those columns become rows, I do the exchange, I transpose back.
+43:08
+And I've done a column operation. So, in, in conclusion, there was nothing special about row one,
+43:17
+'cause I could exchange rows, and now there's nothing special about rows that isn't equally true for columns
+43:25
+because this is the same. OK. And again, maybe I won't --
+43:32
+oh, let's see. Do we...? Maybe it's worth seeing a quick proof of this number ten,
+43:37
+quick, quick, er, proof of number ten.
+43:44
+Er, let me take the -- this is number ten. A transposed equals A.
+43:51
+Determinate of A transposed equals determinate of A.
+43:56
+That's what I should have said. OK. So, let's just, er.
+44:07
+A typical matrix A, if I use elimination, this factors into LU.
+44:16
+And the transpose is U transpose, l transpose.
+44:21
+Er... let me.
+44:29
+So this is proof, this is proof number ten, using --
+44:36
+well, I don't know which ones I'll use, so I'll put 'em all in, one to nine.
+44:42
+OK. I'm going to prove number ten by using one to nine. I won't cover every case, but I'll cover almost every
+44:50
+case. So in almost every case, A can factor into LU, and A transposed can factor into that.
+44:57
+Now, what do I do next? So I want to prove that these are the same.
+45:03
+I see a product here. So I use rule nine.
+45:09
+So, now what I want to prove is, so now I know that this is LU,
+45:14
+this is U transposed and l transposed. Now, just for a practice, what are all those determinants?
+45:24
+So this is, this is, this is prove this, prove this, prove this, and now I'm ready to do it.
+45:32
+What's the determinant of l? You remember what l is, it's this lower triangular matrix
+45:40
+with ones on the diagonals. So what is the determinant of that guy? I- It's one.
+45:48
+Any time I have this triangular matrix, I can get rid of all the non-zeroes,
+46:00
+down to the diagonal case.
+46:07
+The determinate of l is one. How about the determinant of l transposed?
+46:21
+That's triangular also, right? Still got those ones on the diagonal,
+46:28
+it's just the matrices and then get down to diagonal matrices.
+46:59
+right? If If I could -- why would it be bad?
+47:09
+My whole lecture would die, right? Because rule two said that if you do seven row exchanges,
+47:37
+then the sign of the determinant reverses.
+47:47
+But if you do ten row exchanges, the sign of the determinant
+47:56
+stays the same, because minus one ten times is plus one.
+48:02
+OK, so there's a hidden fact here, that every --
+48:16
+like, every permutation, the permutations are either odd or even.
+48:23
+I could get the permutation with seven row exchanges, then I could probably get it with twenty-one, or twenty-three, or a hundred and one,
+48:31
+if it's an odd one. Or an even number of permutations, so, but that's the key fact that just takes
+48:39
+another little algebraic trick to see, and that means that the determinant is well-defined
+48:45
+by properties one, two, three and it's got properties four to ten. OK, that's today and I'll try to get the homework for next Wednesday onto the web this afternoon. Thanks. 

@@ -1,0 +1,807 @@
+https://www.youtube.com/watch?v=0MtwqhIwdrI
+
+0:00
+0:07
+OK, here's the last lecture in the chapter on orthogonality.
+0:12
+So we met orthogonal vectors, two vectors, we met orthogonal subspaces, like the row space and null
+0:22
+space. Now today we meet an orthogonal basis,
+0:28
+and an orthogonal matrix. So we really -- this chapter cleans up orthogonality.
+0:36
+And really I want -- I should use the word orthonormal.
+0:43
+Orthogonal is -- so my vectors are q1,q2 up to qn --
+0:51
+I use the letter "q", here, to remind me, I'm talking about orthogonal things, not just any vectors,
+1:01
+but orthogonal ones. So what does that mean? That means that every q is orthogonal to every other q.
+1:08
+It's a natural idea, to have a basis that's
+1:13
+headed off at ninety-degree angles, the inner products are all zero.
+1:19
+Of course if q is -- certainly qi is not orthogonal to itself.
+1:26
+But there we'll make the best choice again, make it a unit vector. Then qi transpose qi is one, for a unit vector.
+1:35
+The length squared is one. And that's what I would use the word normal.
+1:41
+So for this part, normalized, unit length for this part.
+1:48
+OK. So first part of the lecture is how
+1:55
+does having an orthonormal basis make things nice? It certainly does.
+2:00
+It makes all the calculations better, a whole lot of numerical linear algebra is built around working with orthonormal vectors,
+2:10
+because they never get out of hand, they never overflow or underflow.
+2:16
+And I'll put them into a matrix Q, and then the second part of the lecture
+2:22
+will be suppose my basis, my columns of A are not orthonormal.
+2:28
+How do I make them so? And the two names associated with that simple idea
+2:35
+are Graham and Schmidt. So the first part is we've got a basis like this.
+2:43
+Let's put those into the columns of a matrix.
+2:48
+So a matrix Q that has --
+2:53
+I'll put these orthonormal vectors, q1 will be the first column, qn will be the n-th column.
+3:04
+And I want to say, I want to write this property,
+3:09
+qi transpose qj being zero, I want to put that in a matrix form.
+3:17
+And just the right thing is to look at Q transpose Q.
+3:23
+So this chapter has been looking at A transpose A. So it's natural to look at Q transpose Q.
+3:30
+And the beauty is it comes out perfectly. Because Q transpose has these vectors in its rows,
+3:38
+the first row is q1 transpose, the nth row is qn transpose.
+3:45
+So that's Q transpose. And now I want to multiply by Q.
+3:51
+That has q1 along to qn in the columns.
+3:56
+That's Q. And what do I get?
+4:01
+You really -- this is the first simplest most basic fact, that how do orthonormal vectors, orthonormal columns
+4:10
+in a matrix, what happens if I compute Q transpose Q?
+4:17
+Do you see it? If I take the first row times the first column,
+4:23
+what do I get? A one. If I take the first row times the second column,
+4:29
+what do I get? Zero. That's the orthogonality. The first row times the last column is zero.
+4:37
+And so I'm getting ones on the diagonal and I'm getting zeroes everywhere else.
+4:43
+I'm getting the identity matrix. You see how that's -- it's just like the right calculation
+4:50
+to do. If you have orthonormal columns, and the matrix doesn't have to be square here.
+4:59
+We might have just two columns. And they might have four, lots of components.
+5:05
+So but they're orthonormal, and when we do Q transpose times Q,
+5:13
+that Q transpose times Q or A transpose A just asks for all those dot products.
+5:22
+Rows times columns. And in this orthonormal case, we get the best possible answer,
+5:29
+the identity. OK, so this is -- so I mean now we have a new bunch of important matrices.
+5:39
+What have we seen previously? We've seen in the distant past we had triangular matrices, diagonal matrices, permutation
+5:48
+matrices, that was early chapters, then we had row echelon forms, then in this chapter
+5:59
+we've already seen projection matrices, and now we're seeing this new class of matrices
+6:08
+with orthonormal columns. That's a very long expression. I sorry that I can't just call them orthogonal matrices.
+6:19
+But that word orthogonal matrices -- or maybe I should be able to call it orthonormal matrices,
+6:25
+why don't we call it orthonormal -- I mean that would be an absolutely perfect name.
+6:31
+For Q, call it an orthonormal matrix because its columns are orthonormal.
+6:36
+OK, but the convention is that we only use that name
+6:42
+orthogonal matrix, we only use this -- this word orthogonal, we don't even
+6:49
+say orthonormal for some unknown reason, matrix when it's square.
+6:59
+So in the case when this is a square matrix, that's the case
+7:04
+we call it an orthogonal matrix. And what's special about the case when it's square?
+7:12
+When it's a square matrix, we've got its inverse, so --
+7:19
+so in the case if Q is square, then Q transpose Q equals I
+7:33
+tells us -- let me write that underneath -- tells us that Q transpose is Q inverse.
+7:47
+There we have the easy to remember property for a square matrix with orthonormal columns.
+7:57
+That -- I need to write some examples down. Let's see.
+8:04
+Some examples like if I take any -- so examples, let's do some examples.
+8:12
+Any permutation matrix, let me take just some random permutation matrix.
+8:17
+Permutation Q equals let's say oh, make it three by three,
+8:23
+say zero, zero, one, one, zero, zero, zero, one, zero.
+8:30
+OK.
+8:36
+That certainly has unit vectors in its columns.
+8:41
+Those vectors are certainly perpendicular to each other. And if I -- and so that's it.
+8:48
+That makes it a Q. And -- if I took its transpose, if I multiplied by Q transpose,
+8:56
+shall I do that -- and let me stick in Q transpose here. Just to do that multiplication once more,
+9:02
+transpose it'll put the -- make that into a column, make that into a column,
+9:08
+make that into a column. And the transpose is also --
+9:14
+another Q. Another orthonormal matrix. And when I multiply that product I get I. OK,
+9:22
+so there's an example. And actually there's a second example. But those are real easy examples, right,
+9:29
+I mean to get orthogonal columns by just
+9:34
+putting ones in different places is like too easy.
+9:40
+So let me keep going with examples. So here's another simple example.
+9:46
+Cos theta sine theta, there's a unit vector, oh, let me even take it, well, yeah.
+9:53
+Cos theta sine theta and now the other way I want sine theta cos theta.
+10:01
+But I want the inner product to be zero. And if I put a minus there, it'll do it.
+10:09
+So that's -- unit vector, that's a unit vector. And if I take the dot product, I get minus plus zero.
+10:19
+OK. For example Q equals say one, one, one, minus one,
+10:27
+is that an orthogonal matrix?
+10:33
+I've got orthogonal columns there, but it's not quite an orthogonal matrix. How shall I fix it to be an orthogonal matrix?
+10:43
+Well, what's the length of those column vectors, the dot product with themselves is -- right now it's two,
+10:51
+right, the -- the length squared. The length squared would be one plus one would be two,
+10:57
+the length would be square root of two, so I better divide by square root of two.
+11:02
+OK. So there's a -- there now I have got an orthogonal matrix,
+11:08
+in fact, it's this one -- when theta is pi over four.
+11:13
+The cosines and well almost, I guess the minus sine is down there, so maybe, I
+11:19
+don't know, maybe minus pi over four or something. OK.
+11:26
+Let me do one final example, just to show that you can get bigger ones.
+11:32
+Q equals let me take that matrix up in the corner
+11:38
+and I'll sort of repeat that pattern, repeat it again, and then minus it down here.
+11:51
+That's one of the world's favorite orthogonal matrices.
+11:57
+I hope I got it right, is -- can you see whether -- if I take the inner product of one column with another one,
+12:05
+let's see, if I take the inner product of that column with that I have two minuses and two pluses,
+12:11
+that's good. When I take the inner product of that with that I have a plus and a minus, a minus and a plus.
+12:17
+Good. I think it all works out. And what do I have to divide by now? To make those into unit vectors.
+12:27
+Right now the vector one, one, one, one has length two.
+12:34
+Square root of four. So I have to divide by two to make it unit vector,
+12:39
+so there's another. That's my entire array of simple examples.
+12:49
+This construction is named after a guy called Adhemar and we
+12:56
+know how to do it for two, four, sixteen,
+13:02
+sixty-four and so on, but we -- nobody knows exactly which size
+13:10
+matrices have -- which size -- which sizes allow orthogonal matrices of ones
+13:18
+and minus ones. So Adhemar matrix is an orthogonal matrix that's got
+13:24
+ones and minus ones, and a lot of ones -- some we know,
+13:30
+some other sizes, there couldn't be a five by five I think. But there are some sizes that nobody
+13:35
+yet knows whether there could be or can't be a matrix like that.
+13:42
+OK. You see those orthogonal matrices.
+13:47
+Now let me ask what -- why is it good to have orthogonal
+13:54
+matrices? What calculation is made easy? If I have an orthogonal matrix.
+14:02
+And -- let me remember that the matrix could be rectangular. Shall I put down --
+14:07
+I better put a rectangular example down. So the -- these were all square examples.
+14:13
+Can I put down just -- a rectangular one just to be sure that we realize that this is possible.
+14:22
+let's help me out. Let's see, if I put like a one, two, two and a minus two,
+14:33
+minus one, two.
+14:40
+That's -- a matrix -- oh its columns aren't normalized yet. I always have to remember to do that.
+14:47
+I always do that last because it's easy to do. What's the length of those columns?
+14:53
+So if I wanted them -- if I wanted them to be length one, I should divide by their length, which is --
+14:59
+so I'd look at one squared plus two squared plus two squared, that's one and four and four is nine,
+15:06
+so I take the square root and I need to divide by three. OK.
+15:11
+So there is -- well, without that, I've got one orthonormal vector.
+15:21
+I mean just one unit vector. Now put that guy in. Now I have a basis for the column
+15:29
+space for a two-dimensional space, an orthonormal basis,
+15:34
+right? These two columns are orthonormal, they would be an orthonormal basis
+15:40
+for this two-dimensional space that they span. Orthonormal vectors by the way have got to be independent.
+15:48
+It's easy to show that orthonormal vectors since they're headed off all at ninety degrees
+15:55
+there's no combination that gives zero. Now if I wanted to create now a third one,
+16:06
+I could either just put in some third vector that was
+16:13
+independent and go to this Graham-Schmidt calculation that
+16:18
+I'm going to explain, or I could be inspired and say look, that -- with that pattern, why not put a one in there,
+16:26
+and a two in there, and a two in there, and try to fix up the signs so that they worked.
+16:36
+Hmm. I don't know if I've done this too brilliantly. Let's see, what signs, that's minus,
+16:43
+maybe I'd make a minus sign there, how would that be?
+16:49
+Yeah, maybe that works. I think that those three columns are orthonormal and they --
+17:00
+the beauty of this -- this is the last example I'll probably find where there's no square root, the --
+17:08
+the punishing thing in Graham-Schmidt, maybe we better know that in advance,
+17:14
+is that because I want these vectors to be unit vectors,
+17:19
+I'm always running into square roots. I'm always dividing by lengths. And those lengths are square roots.
+17:26
+So you'll see as soon as I do a Graham-Schmidt example, square roots are going to show up.
+17:32
+But here are some examples where we did it without any square root. OK.
+17:38
+So -- so great. Now next question is what's the good of having a Q?
+17:50
+What formulas become easier? Suppose I want to project, so suppose Q --
+17:57
+suppose Q has orthonormal columns.
+18:03
+I'm using the letter Q to mean this, I'll write it this one more time, but I always mean when I write a Q,
+18:12
+I always mean that it has orthonormal columns. So suppose I want to project onto its column space.
+18:31
+So what's the projection matrix? What's the projection matrix is I project onto a column space?
+18:40
+OK, that gives me a chance to review the projection section,
+18:46
+including that big formula, which used to be -- those four As in a row, but now it's
+18:53
+got Qs, because I'm projecting onto the column space of Q, so do you remember what it was?
+18:58
+It's Q Q transpose Q inverse Q transpose.
+19:08
+That's my four Qs in a row. But what's good here?
+19:16
+What -- what makes this formula nice if I'm projecting onto a column space when I have orthonormal basis for that
+19:24
+space? What makes it nice is this is the identity. I don't have to do any inversion.
+19:31
+I just get Q Q transpose.
+19:40
+So Q Q transpose is a projection matrix. Oh, I can't help --
+19:45
+I can't resist just checking the properties, what are the properties of a projection matrix?
+19:52
+There are two properties to know for any projection matrix. And I'm saying that this is the right projection
+20:00
+matrix when we've got this orthonormal basis in the columns.
+20:06
+OK. So there's the projection matrix. Suppose the matrix is square.
+20:13
+First just tell me first this extreme case. If my matrix is square and it's got these orthonormal columns,
+20:22
+then what's the column space? If I have a square matrix and I have independent columns,
+20:31
+and even orthonormal columns, then the column space is the whole space, right?
+20:37
+And what's the projection matrix onto the whole space? The identity matrix.
+20:43
+If I'm projecting in the whole space, every vector B is right where it's supposed to be
+20:49
+and I don't have to move it by projection. So this would be --
+20:57
+I'll put in parentheses this is I if Q is square.
+21:07
+Well that we said that already. If Q is square, that's the case where Q transpose is Q inverse,
+21:14
+we can put it on the right, we can put it on the left, we always get the identity matrix, if it's square.
+21:23
+But if it's not a square matrix then it's not --
+21:29
+we don't get the identity matrix. We have Q Q transpose, and just again
+21:37
+what are those two properties of a projection matrix? First of all, it's symmetric.
+21:44
+OK, no problem, that's certainly a symmetric So what's that second property of a projection?
+21:50
+matrix. That if you project and project again you don't move the second time. So the other property of a projection matrix
+21:58
+should be that Q Q transpose twice
+22:04
+should be the same as Q Q transpose once.
+22:09
+That's projection matrices. And that property better fall out right away because from the fact we
+22:18
+know about orthonormal matrices, Q transpose Q is I. OK,
+22:24
+you see it. In the middle here is sitting Q Q t- Q transpose Q, sorry,
+22:30
+that's what I meant to say, Q transpose Q is I. So that's sitting right in the middle, that cancels out,
+22:37
+to give the identity, we're left with one Q Q transpose, and we're all set.
+22:43
+OK. So this is the projection matrix --
+22:48
+all the equation -- all the messy equations of this chapter
+22:54
+become trivial when our matrix -- when we have this orthonormal basis.
+23:02
+I mean what do I mean by all the equations? Well, the most important equation was the normal equation, do you remember old A transpose
+23:10
+A x hat equals A transpose b? But now -- now A is Q.
+23:22
+Now I'm thinking I have Q transpose Q X hat
+23:28
+equals Q transpose b. And what's good about that?
+23:37
+What's good is that matrix on the left side is the identity.
+23:42
+The matrix on the left is the identity, Q transpose Q, normally it isn't, normally it's that matrix of inner products
+23:49
+and you've to compute all those dopey inner products and -- and -- and solve the system.
+23:56
+Here the inner products are all one or zero. This is the identity matrix.
+24:01
+It's gone. And there's the answer. There's no inversion involved.
+24:09
+Each component of x is a Q times b.
+24:15
+What that equation is saying is that the i-th component is
+24:21
+the i-th basis vector times b.
+24:26
+That's -- probably the most important formula in some major
+24:34
+parts of mathematics, that if we have orthonormal basis,
+24:40
+then the component in the -- in the i-th, along the i-th --
+24:47
+the projection on the i-th basis vector is just qi transpose b.
+24:54
+That number x that we look for is just a dot product.
+25:00
+OK. OK, so I'm ready now for the sort of like second half
+25:10
+of the lecture. Where we don't start with an orthogonal matrix,
+25:16
+orthonormal vectors. We just start with independent vectors
+25:21
+and we want to make them orthonormal. So I'm going to -- can I do that now?
+25:27
+Now here comes Graham-Schmidt. So -- Graham-Schmidt.
+25:39
+So this is a calculation, I won't say -- I can't quite say it's like elimination, because it's
+25:53
+different, our goal isn't triangular anymore. With elimination our goal was make the matrix triangular.
+26:00
+Now our goal is make the matrix orthogonal. Make those columns orthonormal.
+26:07
+So let me start with two columns. So I start with vectors a and b.
+26:16
+And they're just like -- here, let me draw them. Here's a.
+26:22
+Here's b. For example. A isn't specially horizontal, wasn't
+26:29
+meant to be, just a is one vector, b is another. I want to produce those two vectors,
+26:38
+they might be in twelve-dimensional space, or they might be in two-dimensional space.
+26:43
+They're independent, anyway. So I better be sure I say that.
+26:49
+I start with independent vectors.
+26:54
+And I want to produce out of that q 1 and q2, I want to produce orthonormal vectors.
+27:03
+And Graham and Schmidt tell me how.
+27:09
+OK. Well, actually you could tell me how, we don't need -- frankly, I don't know -- there's only one idea here,
+27:17
+if Graham had the idea, I don't know what Schmidt did.
+27:24
+But OK. So you'll see it. We don't need either of them, actually.
+27:31
+OK, so what I going to do. I'll take that -- this first guy. OK.
+27:37
+Well, he's fine.
+27:43
+That direction is fine except -- yeah, I'll say OK, I'll settle for that direction.
+27:50
+So I'm going to -- I'm going to get, so what I going to -- my goal is I'm going to get orthogonal vectors
+27:59
+and I'll call those capital A and B. So that's the key step is to get from any two vectors
+28:07
+to two orthogonal vectors. And then at the end, no problem, I'll get orthonormal vectors,
+28:14
+how will -- what will those will be my qs, q1 and q2,
+28:20
+and what will they be?
+28:25
+Once I've got A and B orthogonal, well, look, it's no big deal -- maybe that's what Schmidt did, he,
+28:35
+brilliant Schmidt, thought OK, divide by the length, all right. That's Schmidt's contribution.
+28:45
+OK.
+28:51
+But Graham had a little more thinking to do, right? We haven't done Graham's part.
+28:58
+This part except OK, I'm happy with A, A can be A. That first direction is fine.
+29:07
+Why should -- no complaint about that. The trouble is the second direction is not fine.
+29:13
+Because it's not orthogonal to the first. I'm looking for a vector that's -- starts with B,
+29:23
+but makes it orthogonal to A.
+29:29
+What's the vector? How do I do that? How do I produce from this vector
+29:35
+a piece that's orthogonal to this one?
+29:41
+And the -- remember these vectors might be in two dimensions or they might be in twelve dimensions.
+29:48
+I'm just looking for the idea. So what's the idea?
+29:53
+Where did we have orthogonal -- a vector showing up that was orthogonal to this guy?
+30:01
+Well, that was the first basic calculation of the whole chapter. We -- we did a projection and the projection gave us this
+30:10
+part, which was the part in the A direction.
+30:15
+Now, the part we want is the other part, the e part. This part.
+30:21
+This is going to be our -- that guy is that guy. This is our vector B. That gives us that ninety-degree angle.
+30:31
+So B is you could say -- B is really what we previously called e.
+30:37
+The error vector. And what is it?
+30:42
+I mean what do I -- what is B here? A is A, no problem. B is --
+30:52
+OK, what's this error piece? Do you remember? It's I start with the original B and I take away what?
+31:04
+Its projection, this P. This -- the vector B, this error vector, is the original vector removing
+31:12
+the projection. So instead of wanting the projection, now that's what I want to throw away.
+31:20
+I want to get the part that's perpendicular. And there will be a perpendicular part, it won't be zero.
+31:28
+Because these vectors were independent, so B -- if B was along the direction of A,
+31:34
+then if the original B and A were in the same direction, then I'm -- I've only got one direction.
+31:40
+But here they're in two independent directions and all I'm doing is getting that guy.
+31:46
+So what's its formula? What's the formula for that if --
+31:53
+I want to subtract the projection, so do you remember the projection? It's some multiple of A and what's that multiple?
+32:03
+It's -- it's that thing we called x in the very very first lecture on this chapter.
+32:10
+There's an A transpose A in the bottom
+32:16
+and there's an A transpose B, isn't that it?
+32:29
+I think that's Graham's formula. Or Graham-Schmidt. No, that's Graham. Schmidt has got to divide the whole thing by the length,
+32:38
+so he -- his formula makes a mess which I'm not willing to write down.
+32:43
+So let's just see that what I saying here? I'm saying that this vector is perpendicular to A.
+32:51
+That these are orthogonal. A is perpendicular to B.
+32:56
+Can you check that? How do you see that yes, of course, we -- our picture is telling us, yes, we did it right.
+33:04
+How would I check that this matrix is perpendicular to A?
+33:11
+I would multiply by A transpose and I better get zero, right?
+33:16
+I should check that. A transpose B should come out zero.
+33:22
+So this is A transpose times -- now what did we say B was? We start with the original B, and we take away
+33:30
+this projection, and that should come out zero.
+33:38
+Well, here we get an A transpose B minus -- and here is another A transpose B, and the --
+33:46
+and it's an A transpose A over A transpose A, a one, those cancel, and we do get zero.
+33:53
+Right. Now I guess I can do numbers in there.
+34:05
+But I have to take a third vector to be sure we've got this system down.
+34:13
+So now I have to say if I have independent vectors A, B and C,
+34:20
+I'm looking for orthogonal vectors A, B and capital C,
+34:25
+and then of course the third guy will just be C over its length, the unit vector.
+34:35
+So this is now the problem. I got B here.
+34:42
+I got A very easily. And now -- if you see the idea, we could figure out a formula
+34:52
+for C. So now that -- so this is like a typical homework quiz
+35:01
+problem. I give you two vectors, you do this, I give you three vectors,
+35:07
+and you have to make them orthonormal. So you do this again, the first vector's fine,
+35:13
+the second vector is perpendicular to the first, and now I need a third vector that's
+35:19
+perpendicular to the first one and the second one. Right?
+35:25
+Tthis is the end of a -- the lecture is to find this guy. Find this vector -- this vector C, that's perpendicular we n-
+35:33
+at this point we know A and B.
+35:39
+But C, the little c that we're given, is off in some --
+35:44
+it's got to come out of the blackboard to be independent, so -- so can I sort of draw off -- off comes a c somewhere.
+35:52
+I don't know, where I going to put the darn thing? Maybe I'll put it off, oh, I don't know,
+35:59
+like that somehow, C, little c.
+36:05
+And I already know that perpendicular direction, that one and that one.
+36:10
+So now what's the idea? Give me the Graham-Schmidt formula for C.
+36:17
+What is this C here? Equals what?
+36:27
+What I going to do? I'll start with the given one. As before.
+36:32
+Right? I start with the vector I'm given. And what do I do with it?
+36:38
+I want to remove out of it, I want to subtract off, so I'll put a minus sign in, I want to subtract off
+36:46
+its components in the A, capital A and capital B directions.
+36:53
+I just want to get those out of there. Well, I know how to do that. I did it with B.
+36:58
+So I'll just -- so let me take away -- what if I do this?
+37:07
+What have I done? I've got little c and what have I subtracted from it?
+37:16
+Its component, its projection if you like, in the A direction.
+37:25
+And now I've got to subtract off its component B transpose
+37:30
+C over B transpose B, that multiple of B, is its component in the B direction.
+37:40
+And that gives me the vector capital C that if anything is
+37:47
+-- if there's any justice, this C should be perpendicular to A
+37:54
+and it should be perpendicular to B. And the only thing it's -- hasn't got is unit vector,
+38:02
+so we divide by its length to get that too.
+38:08
+OK. Let me do an example.
+38:14
+Can I -- I'll make my life easy, I'll just take two vectors.
+38:20
+So let me do a numerical example. If I'll give you two vectors, you
+38:26
+give me back the Graham-Schmidt orthonormal basis, and we'll see how to express that in matrix form.
+38:35
+OK. So let me give you the two vectors.
+38:41
+So I'll take the vector A equals let's say one, one, one,
+38:46
+why not? And B equals let's say one, zero, two, OK?
+39:02
+I didn't want to cheat and make them orthogonal in the first place because then Graham-Schmidt wouldn't be needed.
+39:08
+OK. So those are not orthogonal. So what is capital A? Well that's the same as big A.
+39:14
+That was fine. What's B? So B is this b -- is the original B,
+39:21
+and then I subtract off some multiple of the A.
+39:29
+And what's the multiple? What goes in here?
+39:36
+B -- here's the A -- this is the -- this is the little b, this is the big A, also the little a, and I want
+39:45
+to multiply it by that right -- that right ratio, which has A transpose A, here's my ratio.
+39:53
+I'm just doing this. So it's A transpose B, what is A transpose B,
+40:00
+it looks like three. And what is A -- oh, my --
+40:06
+what's A transpose A? Three. I'm sorry.
+40:12
+I didn't know that was going to happen. OK. But it happened. Why should we knock it?
+40:18
+OK. So do you see it all right? That's A transpose B, there's A transpose A, that's
+40:25
+the fraction, so I take this away, and I get one take away one is a zero, zero minus this one
+40:33
+is a minus one, and two minus the one is a one.
+40:39
+OK. And what's this vector that we finally found? This is B.
+40:47
+And how do I know it's right? How do I know I've got a vector I want?
+40:54
+I check that B is perpendicular to -- that A and B are perpendicular.
+40:59
+That A is perpendicular to B. Just look at that. That one -- the dot product of that with that is zero.
+41:06
+OK. So now what is my q1 and q2?
+41:14
+Why don't I put them in a matrix? Of course. Since I'm always putting these -- so the Q,
+41:20
+I'll put the q1 and the q2 in a matrix. And what are they?
+41:29
+Now when I'm writing q-s I'm supposed to make things normalized. I'm supposed to make things unit vectors.
+41:36
+So I'm going to take that A but I'm going to divide it by square root of three.
+41:46
+And I'm going to take this B but I'm going to divide it by square root of two
+41:53
+to make it a unit vector, and there is my matrix.
+42:01
+That's my matrix with orthonormal columns coming from Graham-Schmidt and it sort of it --
+42:08
+it came from the original one, one, one, one, zero, two,
+42:14
+right? That was my original guys.
+42:20
+These were the two I started with. These are the two that I'm happy to end with.
+42:25
+Because those are orthonormal. So that's what Graham-Schmidt did.
+42:33
+It -- well, tell me about the column spaces of these matrices.
+42:40
+How is the column space of Q related to the column space of A? So I'm always asking you things like this,
+42:47
+and that makes you think, OK, the column space is all combinations of the columns, it's that plane,
+42:54
+right? I've got two vectors in three-dimensional space, their column space is a plane, the column space of this matrix
+43:03
+is a plane, what's the relation between the planes? Between the two column spaces?
+43:12
+They're one and the same, right? It's the same column space.
+43:17
+All I'm taking is here this B thing that I computed,
+43:23
+this B thing that I computed is a combination of B and A,
+43:30
+and A was little A, so I'm always working here with this in the same space.
+43:36
+I'm just like getting ninety-degree angles in there.
+43:42
+Where my original column space had a perfectly good basis, but it wasn't as good as this basis,
+43:50
+because it wasn't orthonormal. Now this one is orthonormal, and I have a basis then that --
+43:59
+so now projections, all the calculations I would ever want to do are -- are a cinch with this orthonormal basis.
+44:09
+One final point. One final point in this chapter.
+44:17
+And it's -- just like elimination. We learned how to do elimination,
+44:23
+we know all the steps, we can do it. But then I came back to it and said look at it as a matrix
+44:34
+in matrix language and elimination gave me --
+44:40
+what was elimination in matrix language? I'll just put it up there. A was LU.
+44:46
+That was matrix, that was elimination. Now, I want to do the same for Graham-Schmidt.
+44:53
+Everybody who works in linear algebra isn't going to write out the columns
+44:58
+are orthogonal, or orthonormal. And isn't going to write out these formulas.
+45:04
+They're going to write out the connection between the matrix A and the matrix Q.
+45:11
+And the two matrices have the same column space, but there's some -- some matrix is taking the --
+45:17
+and I'm going to call it R, so A equals QR is the magic formula
+45:25
+here. It's the expression of Graham-Schmidt.
+45:32
+And I'll -- let me just capture that.
+45:38
+So that's the -- my final step then is A equal QR. Maybe I can squeeze it in here.
+45:47
+So A has columns, let's say a1 and a2.
+45:55
+Let me suppose n is two, just two vectors. OK. So that's some combination of q1 and q2.
+46:06
+And times some matrix R.
+46:13
+They have the same column space. This is just -- this matrix just includes in it whatever these
+46:20
+numbers like three over three and one over square root of three and one over square root of two, probably that's what it's got.
+46:28
+One over square root of three, one over square root of two, something there, but actually it's got a zero there.
+46:37
+So the main point about this A equal QR is this R
+46:45
+turns out to be upper triangular. It turns out that this zero is upper triangular.
+46:53
+We could see why. Let me see, I can put in general formulas for what these
+47:00
+This I think in here should be the inner product of a1 with q1. are.
+47:08
+And this one should be the -- the inner product of a1 with q2.
+47:16
+And that's what I believe is zero.
+47:21
+This will be something here, and this will be something here with inner -- a1 transpose q2, sorry a2 transpose q1 and a2
+47:33
+transpose q2. But why is that guy zero?
+47:40
+Why is a1 q2 zero? That's the key to this being -- this R here being upper
+47:47
+triangular. You know why a1q2 is zero, because a1 --
+47:55
+that was my -- this was really a and b here.
+48:00
+This was really a and b. So this is a transpose q2.
+48:05
+And the whole point of Graham-Schmidt was that we constructed these later q-s to be perpendicular to the earlier
+48:14
+vectors, to the earlier -- all the earlier vectors. So that's why we get a triangular matrix.
+48:23
+The -- result is extremely satisfactory.
+48:32
+That if I have a matrix with independent columns, the Graham-Schmidt produces a matrix
+48:40
+with orthonormal columns, and the connection between those is a triangular matrix.
+48:48
+That last point, that the connection is a triangular matrix, please look in the book, you
+48:53
+have to see that one more time. OK. Thanks, that's great.

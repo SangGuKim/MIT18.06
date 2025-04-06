@@ -1,0 +1,792 @@
+https://www.youtube.com/watch?v=HgC1l_6ySkc
+
+# Intro
+0:00
+0:07
+OK, here we go with, quiz review for the third quiz that's
+0:13
+coming on Friday. So, one key point is that the quiz
+0:19
+covers through chapter six.
+0:25
+Chapter seven on linear transformations will appear on the final exam, but not on the quiz.
+0:31
+So I won't review linear transformations today, but they'll come into the full course review on the very
+0:39
+last lecture. So today, I'm reviewing chapter six, and I'm going to take some old exams,
+0:46
+and I'm always ready to answer questions. And I thought, kind of help our memories if I write down
+0:54
+the main topics in chapter six.
+1:00
+So, already, on the previous quiz, we knew how to find eigenvalues and eigenvectors.
+1:07
+Well, we knew how to find them by that determinant of A minus
+1:13
+lambda I equals zero. But, of course, there could be shortcuts. There could be, like, useful information
+1:20
+about the eigenvalues that we can speed things up with.
+1:27
+OK. Then, the new stuff starts out with a differential equation,
+1:32
+so I'll do a problem. I'll do a differential equation problem first.
+1:39
+What's special about symmetric matrices? Can we just say that in words?
+1:46
+I'd better write it down, though. What's special about symmetric matrices? Their eigenvalues are real.
+1:56
+The eigenvalues of a symmetric matrix always come out real, and there always are enough eigenvectors.
+2:04
+Even if there are repeated eigenvalues, there are enough eigenvectors, and we
+2:09
+can choose those eigenvectors to be orthogonal. So if A equals A transposed, the big fact
+2:16
+will be that we can diagonalize it,
+2:22
+and those eigenvector matrix, with the eigenvectors
+2:28
+in the column, can be an orthogonal matrix. So we get a Q lambda Q transpose.
+2:36
+That, in three symbols, expresses a wonderful fact,
+2:43
+a fundamental fact for symmetric matrices. OK. Then, we went beyond that fact to ask
+2:49
+about positive definite matrices, when the eigenvalues were positive. I'll do an example of that.
+2:55
+Now we've left symmetry.
+3:01
+Similar matrices are any square matrices, but two matrices are similar if they're related that way.
+3:10
+And what's the key point about similar matrices? Somehow, those matrices are representing
+3:16
+the same thing in different basis, in chapter seven language.
+3:21
+In chapter six language, what's up with these similar matrices?
+3:29
+What's the key fact, the key positive fact about similar matrices? They have the same eigenvalues.
+3:37
+Same eigenvalues. So if one of them grows, the other one grows.
+3:42
+If one of them decays to zero, the other one decays to zero.
+3:50
+Powers of A will look like powers of B, because powers of A and powers of B
+3:55
+only differ by an M inverse and an M way on the outside. So if these are similar, then B to the k-th power
+4:05
+is M inverse A to the k-th power M. And that's why I say, eh, this M, it
+4:12
+does change the eigenvectors, but it doesn't change the eigenvalues. So same lambdas.
+4:21
+And then, finally, I've got to review the point about the SVD, the Singular Value Decomposition.
+4:30
+OK. So that's what this quiz has got to cover, and now I'll just take problems from earlier exams,
+4:37
+starting with a differential equation. OK. And always ready for questions.
+4:43
+So here is an exam from about the year zero, and it has a three by three.
+4:53
+So that was -- but it's a pretty special-looking matrix,
+4:59
+it's got zeroes on the diagonal, it's got minus ones above, and it's got plus ones like that.
+5:08
+So that's the matrix A. OK. Step one is, well, I want to solve that
+5:16
+equation. I want to find the general solution. I haven't given you a u(0) here, so I'm
+5:22
+looking for the general solution, so now what's the form of the general solution?
+5:28
+With three arbitrary constants going to be inside it, because those will be used
+5:33
+to match the initial condition. So the general form is u at time t
+5:39
+is some multiple of the first special solution.
+5:45
+The first special solution will be growing like the eigenvalue, and it's the eigenvector.
+5:51
+So that's a pure exponential solution, just staying with that eigenvector.
+5:58
+Of course, I haven't found, yet, the eigenvalues and eigenvectors. That's, normally, the first job.
+6:04
+Now, there will be second one, growing like e to the lambda two, and a third one growing like e
+6:13
+to the lambda three. So we're all done --
+6:18
+well, we haven't done anything yet, actually. I've got to find the eigenvalues and eigenvectors,
+6:25
+and then I would match u(0) by choosing the right three constants.
+6:31
+OK. So now I ask -- ask you about the eigenvalues and eigenvectors, and you look at this matrix and what do you
+6:38
+see in that matrix? Um, well, I guess we might ask ourselves right away,
+6:47
+is it singular? Is it singular? Because, if so, then we really have a head start,
+6:54
+we know one of the eigenvalues is zero. Is that matrix singular?
+7:01
+Eh, I don't know, do you take the determinant to find out? Or maybe you look at the first row and third row
+7:08
+and say, hey, the first row and third row are just opposite signs, they're linear-dependent?
+7:15
+The first column and third column are dependent -- it's singular. So one eigenvalue is zero.
+7:22
+Let's make that lambda one. Lambda one, then, will be zero. OK. Now we've got a couple of other eigenvalues to find,
+7:30
+and, I suppose the simplest way is to look at A minus lambda I So let
+7:36
+me just put minus lambda in here, minus ones above,
+7:43
+ones below. But, actually, before I do it, that matrix
+7:51
+is not symmetric, for sure, right? In fact, it's the very opposite of symmetric.
+7:57
+That matrix A transpose, how is A transpose connected to A?
+8:02
+It's negative A. It's an anti-symmetric matrix, skew-symmetric matrix.
+8:07
+And we've met, maybe, a two-by-two example of skew-symmetric matrices, and let
+8:14
+me just say, what's the deal with their eigenvalues? They're pure imaginary.
+8:21
+They'll be on the imaginary axis, there be some multiple of I if it's
+8:26
+an anti-symmetric, skew-symmetric matrix. So I'm looking for multiples of I, and of course, that's zero times I,
+8:33
+that's on the imaginary axis, but maybe I just do it out, here. Lambda cubed.
+8:39
+well, maybe that's minus lambda cubed, and then a zero and a zero. Zero, and then maybe I have a plus a lambda,
+8:47
+and another plus lambda, but those go with a minus sign. Am I getting minus two lambda equals zero?
+8:55
+So. So I'm solving lambda cube plus two lambda equals zero.
+9:04
+So one root factors out lambda, and the the rest is lambda squared plus two.
+9:11
+OK. This is going the way we expect, right? Because this gives the root lambda equals zero, and gives
+9:22
+the other two roots, which are lambda equal what?
+9:27
+The solutions of when is lambda squared plus two equals zero then the eigenvalues those guys, what
+9:36
+are they? They're a multiple of i, they're just square root of two i.
+9:42
+When I set this equals to zero, I have lambda squared equal to minus two, right?
+9:48
+To make that zero? And the roots are square root of two i
+9:54
+and minus the square root of two i. So now I know what those are.
+9:59
+I'll put those in, now. Either the zero t is just a one. That's just a one.
+10:06
+This is square root of two I and this is minus
+10:13
+square root of two I. So, is the solution decaying to zero?
+10:22
+Is this a completely stable problem where the solution is going to zero?
+10:28
+No. In fact, all these things are staying the same size.
+10:34
+This thing is getting multiplied by this number. e to the I something t, that's a number that has magnitude one,
+10:46
+and sort of wanders around the unit circle. Same for this. So that the solution doesn't blow up, and it doesn't go to
+10:55
+zero. OK. And to find out what it actually is, we would have to plug in initial conditions.
+11:02
+But actually, the next question I ask is, when does the solution return to its initial value?
+11:12
+I won't even say what's the initial value. This is a case in which I think this solution is
+11:22
+periodic after. At t equals zero, it starts with c1, c2, and c3,
+11:31
+and then at some value of t, it comes back to that. So that's a very special question,
+11:38
+Well, let's just take three seconds, because that special question isn't likely to be on the quiz.
+11:44
+But it comes back to the start, when?
+11:49
+Well, whenever we have e to the two pi i, that's one,
+11:55
+and we've come back again. So it comes back to the start. It's periodic, when this square root of two i --
+12:07
+shall I call it capital T, for the period? For that particular T, if that equals two pi i, then e
+12:17
+to this thing is one, and we've come around again. So the period is T is determined here, cancel the i-s,
+12:26
+and T is pi times the square root of two. So that's pretty neat.
+12:32
+We get all the information about all solutions, we haven't fixed on only one particular solution,
+12:39
+but it comes around again. So this was probably my first chance to say something about the whole family
+12:46
+of anti-symmetric, skew-symmetric matrices. OK. And then, finally, I asked, take two eigenvectors (again,
+12:56
+I haven't computed the eigenvectors) and it turns out they're orthogonal.
+13:02
+They're orthogonal. The eigenvectors of a symmetric matrix, or a skew-symmetric matrix, are always orthogonal.
+13:10
+I guess may conscience makes me tell you,
+13:18
+what are all the matrices that have orthogonal eigenvectors?
+13:23
+And symmetric is the most important class, so that's the one we've spoken about. But let me just put that little fact down, here.
+13:32
+Orthogonal x-s. eigenvectors.
+13:41
+A matrix has orthogonal eigenvectors, the exact condition -- it's quite beautiful that I can tell
+13:47
+you exactly when that happens. It happens when A times A transpose equals A transpose
+13:55
+times A. Any time that's the condition for orthogonal eigenvectors.
+14:03
+And because we're interested in special families of vectors,
+14:09
+tell me some special families that fit. This is the whole requirement.
+14:15
+That's a pretty special requirement most matrices have.
+14:21
+So the average three-by-three matrix has three eigenvectors, but not orthogonal.
+14:26
+But if it happens to commute with its transpose, then, wonderfully, the eigenvectors are orthogonal.
+14:34
+Now, do you see how symmetric matrices pass this test?
+14:39
+Of course. If A transpose equals A, then both sides are A squared, we've got it.
+14:45
+How do anti-symmetric matrices pass this test? If A transpose equals minus A, then we've
+14:54
+got it again, because we've got minus A squared on both sides. So that's another group.
+15:00
+And finally, let me ask you about our other favorite family, orthogonal matrices.
+15:06
+Do orthogonal matrices pass this test, if A is a Q, do they pass the test for orthogonal eigenvectors.
+15:14
+Well, if A is Q, an orthogonal matrix, what is Q transpose Q?
+15:22
+It's I. And what is Q Q transpose? It's I, we're talking square matrices here.
+15:28
+So yes, it passes the test. So the special cases are symmetric, anti-symmetric
+15:36
+(I'll say skew-symmetric,) and orthogonal. Those are the three important special classes
+15:44
+that are in this family. OK. That's like a comment that, could have been made back in,
+15:52
+section six point four. OK, I can pursue the differential equations, also
+# Differential Equations
+16:04
+this question, didn't ask you to tell me, how would I find this matrix exponential, e to the At?
+16:13
+So can I erase this? I'll just stay with this same...
+16:19
+how would I find e to the At? Because, how does that come in?
+16:27
+That's the key matrix for a differential equation, because the solution is --
+16:32
+the solution is u(t) is e^(At) u(0).
+16:38
+So this is like the fundamental matrix that multiplies the given function and gives the answer.
+16:48
+And how would we compute it if we wanted that?
+16:53
+We don't always have to find e to the At, because I can go directly to the answer without any e to the At-s,
+17:00
+but hiding here is an e to the At, and how would I compute it?
+17:06
+Well, if A is diagonalizable.
+17:12
+So I'm now going to put in my usual if A can be diagonalized
+17:21
+(and everybody remember that there is an if there, because it might not have enough eigenvectors)
+17:28
+this example does have enough, random matrices have enough. So if we can diagonalize, then we get a nice formula for this,
+17:36
+because an S comes way out at the beginning, and S inverse comes way out at the end,
+17:42
+and we only have to take the exponential of lambda. And that's just a diagonal matrix,
+17:49
+so that's just e the lambda one t, these guys are showing up, now, in e to the lambda nt.
+18:00
+OK? That's a really quick review of that formula.
+18:06
+It's something we can compute it quickly if we have done the S and lambda part.
+18:11
+If we know S and lambda, then it's not hard to take that step.
+18:17
+OK, that's some comments on differential equations. I would like to go on to a next question that I started here.
+18:28
+And it's, got several parts, and I can just read it out.
+18:33
+What we're given is a three-by-three matrix, and we're told its eigenvalues, except one of these
+18:41
+is, like, we don't know, and we're told the eigenvectors.
+18:47
+And I want to ask you about the matrix. OK. So, first question.
+# Diagonalizable
+18:54
+Is the matrix diagonalizable? And I really mean for which c, because I
+19:03
+don't know c, so my questions will all be, for which is there a condition on c, does one c work.
+19:12
+But your answer should tell me all the c-s that work. I'm not asking for you to tell me, well, c equal four,
+19:21
+yes, that checks out. I want to know all the c-s that make it diagonalizable.
+19:27
+19:34
+OK? What's the real on diagonalizable? We need enough eigenvectors, right?
+19:42
+We don't care what those eigenvalues are, it's eigenvectors that count for diagonalizable, and we need three independent ones,
+19:49
+and are those three guys independent? Yes. Actually, let's look at them for a moment.
+19:56
+What do you see about those three vectors right away? They're more than independent.
+20:04
+Can you see why those three got chosen?
+20:09
+Because it will come up in the next part, they're orthogonal.
+# Symmetric
+20:15
+Those eigenvectors are orthogonal. They're certainly independent. So the answer to diagonalizable is, yes, all c, all c.
+20:28
+Doesn't matter. c could be a repeated guy, but we've got enough eigenvectors, so that's what we care about.
+20:33
+OK, second question. For which values of c is it symmetric?
+20:40
+OK, what's the answer to that one?
+20:46
+If we know the same setup if we know that much about it,
+20:53
+we know those eigenvectors, and we've noticed they're orthogonal, then which c-s will work?
+21:02
+So the eigenvalues of that symmetric matrix have to be real.
+21:08
+So all real c. If c was i, the matrix wouldn't have been symmetric.
+21:17
+But if c is a real number, then we've got real eigenvalues,
+21:24
+we've got orthogonal eigenvectors, that matrix is symmetric. OK, positive definite. OK, now this is a sub-case of symmetric,
+21:40
+so we need c to be real, so we've got a symmetric matrix,
+21:45
+but we also want the thing to be positive definite. Now, we're looking at eigenvalues,
+21:52
+we've got a lot of tests for positive definite, but eigenvalues, if we know them, is certainly a good, quick, clean test.
+22:01
+Could this matrix be positive definite? No.
+22:06
+No, because it's got an eigenvalue zero. It could be positive semi-definite,
+22:12
+you know, like consolation prize, if c was greater or equal to zero,
+22:19
+it would be positive semi-definite. But it's not, no.
+22:25
+Semi-definite, if I put that comment in, semi-definite,
+22:30
+that the condition would be c greater or equal to zero. That would be all right.
+22:36
+OK. Next part. Is it a Markov matrix?
+22:44
+Hm. Could this matrix be, if I choose the number c correctly,
+22:50
+a Markov matrix?
+22:58
+Well, what do we know about Markov matrices? Mainly, we know something about their eigenvalues.
+23:05
+One eigenvalue is always one, and the other eigenvalues
+23:10
+are smaller. Not larger. So an eigenvalue two can't happen.
+23:17
+So the answer is, no, not a ma- that's never a Markov matrix. OK?
+23:22
+And finally, could one half of A be a projection matrix?
+23:29
+So could it- could this -- eh-eh could this be twice a projection matrix? So let me write it this way.
+23:35
+Could A over two be a projection matrix?
+23:44
+OK, what are projection matrices? They're real. I mean, th- they're symmetric, so their eigenvalues are real.
+23:53
+But more than that, we know what those eigenvalues have to be. What do the eigenvalues of a projection matrix have to be?
+24:01
+See, that any nice matrix we've got an idea about its eigenvalues.
+24:08
+So the eigenvalues of projection matrices are zero and one.
+24:13
+Zero and one, only. Because P squared equals P, let me call this matrix P,
+24:21
+so P squared equals P, so lambda squared equals lambda, because eigenvalues of P squared are lambda squared,
+24:30
+and we must have that, so lambda equals zero or one.
+24:37
+OK. Now what value of c will work there? So, then, there are some value that will work,
+24:48
+and what will work? c equals zero will work, or what else will work?
+24:56
+c equal to two.
+25:02
+Because if c is two, then when we divide by two, this Eigenvalue of two will drop to one,
+25:09
+and so will the other one, so, or c equal to two. OK, those are the guys that will work,
+25:15
+and it was the fact that those eigenvectors were orthogonal,
+25:21
+the fact that those eigenvectors were orthogonal carried us a lot of the way, here.
+25:26
+If they weren't orthogonal, then symmetric would have been dead, positive definite would have been dead,
+25:31
+projection would have been dead. But those eigenvectors were orthogonal,
+25:37
+so it came down to the eigenvalues. OK, that was like a chance to review a lot of this chapter.
+25:45
+25:50
+Shall I jump to the singular value decomposition,
+25:56
+then, as the third, topic for, for the review?
+26:04
+OK, so I'm going to. jump to this. OK.
+# SVD
+26:13
+So this is the singular value decomposition, known to everybody as the SVD.
+26:21
+And that's a factorization of A into orthogonal times
+26:27
+diagonal times orthogonal.
+26:33
+And we always call those U and sigma and V transpose.
+26:41
+OK. And the key to that --
+26:46
+this is for every matrix, every A, every A. Rectangular, doesn't matter, whatever,
+26:54
+has this decomposition. So it's really important. And the key to it is to look at things like A transpose A.
+27:04
+Can we remember what happens with A transpose A? If I just transpose that I get V sigma transpose U
+27:11
+transpose, that's multiplying A, which is U, sigma V transpose, and the result is V on the outside,
+27:24
+s- U transpose U is the identity, because it's an orthogonal matrix.
+27:30
+So I'm just left with sigma transpose sigma in the middle, that's a diagonal, possibly
+27:39
+rectangular diagonal by its transpose, so the result, this is orthogonal, diagonal, orthogonal.
+27:46
+So, I guess, actually, this is the SVD for A transpose A.
+27:55
+Here I see orthogonal, diagonal, and orthogonal. Great. But a little more is happening.
+28:07
+For A transpose A, the difference is, the orthogonal guys are the same.
+28:13
+It's V and V transpose. What I seeing here? I'm seeing the factorization for a symmetric matrix.
+28:21
+This thing is symmetric. So in a symmetric case, U is the same as V.
+28:30
+U is the same as V for this symmetric matrix, and, of course, we see it happening. OK. So that tells us, right away, what V is.
+28:39
+V is the eigenvector matrix for A transpose A.
+28:49
+OK. Now, if you were here when I lectured about this topic, when
+28:57
+I gave the topic on singular value decompositions, you'll remember that I got into trouble.
+29:03
+I'm sorry to remember that myself, but it happened.
+29:09
+OK. How did it happen? I was in great shape for a while, cruising along.
+29:16
+So I found the eigenvectors for A transpose A. Good. I found the singular values, what were they?
+29:24
+What were the singular values? The singular value number i, or --
+29:32
+these are the guys in sigma -- this is diagonal with the number sigma in it.
+29:39
+This diagonal is sigma one, sigma two, up to the rank, sigma r, those are the non-zero ones.
+29:46
+So I found those, and what are they?
+29:51
+Remind me about that? Well, here, I'm seeing them squared, so their squares are
+29:59
+the eigenvalues of A transpose A. Good.
+30:04
+So I just take the square root, if I want the eigenvalues of A transpose --
+30:10
+If I want the sigmas and I know these, I take the square root, the positive square root. OK.
+# Finding you
+30:16
+Where did I run into trouble? Well, then, my final step was to find U.
+30:25
+And I didn't read the book. So, I did something that was practically right, but --
+30:35
+well, I guess practically right is not quite the same. OK, so I thought, OK, I'll look at A A transpose.
+30:44
+What happened when I looked at A A transpose? Let me just put it here, and then I can feel it.
+30:51
+OK, so here's A A transpose.
+30:57
+So that's U sigma V transpose, that's A, and then the transpose is V sigma transpose,
+31:05
+U sigma transpose. Fine. And then, in the middle is the identity again,
+31:10
+so it looks great. U sigma sigma transpose, U transpose.
+31:17
+Fine. All good, and now these columns of U
+31:26
+are the eigenvectors, that's U is the eigenvector matrix for this guy.
+31:33
+That was correct, so I did that fine. Where did something go wrong?
+31:38
+A sign went wrong. A sign went wrong because -- and now -- now I see, actually,
+31:44
+somebody told me right after class, we can't tell from this description which sign to give
+31:53
+the eigenvectors. If these are the eigenvectors of this matrix,
+32:00
+well, if you give me an eigenvector and I change all its signs, we've still got another eigenvector.
+32:06
+So what I wasn't able to determine (and I had a fifty-fifty change and life let me down,)
+32:13
+the signs I just happened to pick for the eigenvectors, one of them
+32:19
+I should have reversed the sign. So, from this, I can't tell whether the eigenvector
+32:27
+or its negative is the right one to use in there. So the right way to do it is to, having
+32:34
+settled on the signs, the Vs also, I don't know which sign to choose, but I choose one.
+32:42
+I choose one. And then, instead, I should have used
+32:50
+the one that tells me what sign to choose, the rule that A times a V is sigma times the U.
+33:02
+So, having decided on the V, I multiply by A, I'll notice the factor sigma coming out,
+33:09
+and there will be a unit vector there, and I now know exactly what it is,
+33:17
+and not only up to a change of sign. So that's the good and, of course,
+33:22
+this is the main point about the SVD. That's the point that we've diagonalized,
+33:28
+that's A times the matrix of Vs equals U times the diagonal matrix of sigmas.
+33:37
+That's the same as that. OK. So that's, like, correcting the wrong sign
+33:47
+from that earlier lecture. And that would complete that, so that's how you would compute
+33:52
+the SVD. Now, on the quiz, I going to ask -- well, maybe on the final.
+33:58
+So we've got quiz and final ahead. Sometimes, you might be asked to find the SVD if I give you
+34:05
+the matrix -- let me come back, now, to the main board --
+# Finding SVD
+34:10
+or, I might give you the pieces.
+34:17
+And I might ask you something about the matrix. For example, suppose I ask you, oh, let's say,
+34:31
+if I tell you what sigma is --
+34:36
+OK. Let's take one example. Suppose sigma is --
+34:43
+so all that's how we would compute them. But now, suppose I give you these. Suppose I give you sigma is, say, three two.
+34:52
+And I tell you that U has a couple of columns,
+35:02
+and V has a couple of columns.
+35:07
+OK. Those are orthogonal columns, of course, because U and V are orthogonal.
+35:14
+I'm just sort of, like, getting you to think about the SVD, because we only had that one lecture about it, and one homework,
+35:22
+and, what kind of a matrix have I got here?
+35:28
+What do I know about this matrix? All I really know right now is that its singular values,
+35:35
+those sigmas are three and two, and the only thing interesting that I can see in that is that they're not zero.
+35:43
+I know that this matrix is non-singular, right?
+35:48
+That's invertible, I don't have any zero eigenvalues, and zero singular values, that's invertible,
+35:54
+there's a typical SVD for a nice two-by-two non-singular
+36:02
+invertible good matrix. If I actually gave you a matrix, then you'd
+36:07
+have to find the Us and the Vs as we just spoke. But, there. Now, what if the two wasn't a two but it was --
+36:16
+well, let me make an extreme case, here -- suppose it was minus five.
+36:23
+That's wrong, right away. That's not a singular value decomposition, right?
+36:28
+The singular values are not negative. So that's not a singular value decomposition, and forget it.
+36:36
+OK. So let me ask you about that one. What can you tell me about that matrix?
+36:42
+It's singular, right?
+36:47
+It's got a singular matrix there in the middle, and, let's see, so, OK, it's singular,
+36:56
+maybe you can tell me, its rank?
+37:01
+What's the rank of A? It's clearly -- somebody just say it --
+37:08
+one, thanks. The rank is one, so the null space,
+37:15
+what's the dimension of the null space? One. Right?
+37:20
+We've got a two-by-two matrix of rank one, so of all that stuff from the beginning of the course
+37:26
+is still with us. The dimensions of those fundamental spaces
+37:32
+is still central, and a basis for them. Now, can you tell me a vector that's in the null space?
+37:40
+And then that will be my last point to make about the SVD.
+37:47
+Can you tell me a vector that's in the null space?
+37:54
+So what would I multiply by and get zero, here?
+38:00
+I think the answer is probably v2. I think probably v2 is in the null space,
+38:07
+because I think that must be the eigenvector going with this zero eigenvalue.
+38:14
+Yes. Have a look at that. And I could ask you the null space of A transpose.
+38:21
+And I could ask you the column space. All that stuff. Everything is sitting there in the SVD.
+38:27
+The SVD takes a little more time to compute, but it displays all the good stuff about a matrix.
+38:36
+OK. Any question about the SVD? Let me keep going with further topics.
+38:47
+Now, let's see. Similar matrices we've talked about, let me see if I've got another, --
+38:55
+OK. Here's a true false, so we can do that, easily.
+# Eigenvalues
+39:04
+So. Question, A given.
+39:10
+A is symmetric and orthogonal.
+39:17
+OK.
+39:26
+So beautiful matrices like that don't come along every day. But what can we say first about its eigenvalues?
+39:36
+Actually, of course. Here are our two most important classes of matrices,
+39:41
+and we're looking at the intersection. So those really are neat matrices,
+39:48
+and what can you tell me about what could the possible eigenvalues be? Eigenvalues can be what?
+39:57
+What do I know about the eigenvalues of a symmetric matrix? Lambda is real.
+40:04
+What do I know about the eigenvalues of an orthogonal matrix?
+40:10
+Ha. Maybe nothing. But, no, that can't be.
+40:15
+What do I know about the eigenvalues of an orthogonal matrix? Well, what feels right?
+40:22
+Basing mathematics on just a little gut instinct here, the eigenvalues of an orthogonal matrix
+40:29
+ought to have magnitude one. Orthogonal matrices are like rotations,
+40:36
+they're not changing the length, so orthogonal, the eigenvalues are one.
+40:41
+Let me just show you why.
+40:50
+So the matrix, can I call it Q for orthogonal Why? for the moment?
+40:55
+If I look at Q x equal lambda x, how do I see that this thing has magnitude one?
+41:03
+I take the length of both sides. This is taking lengths, taking lengths,
+41:08
+this is whatever the magnitude is times the length of x. And what's the length of Q x if Q is an orthogonal matrix?
+41:18
+This is something you should know. It's the same as the length of x. Orthogonal matrices don't change lengths.
+41:26
+So lambda has to be one. Right. OK.
+41:31
+That's worth committing to memory, that could show up again.
+41:36
+OK. So what's the answer now to this question, what can the eigenvalues be?
+41:42
+There's only two possibilities, and they are one and the other one, the other possibility
+41:55
+is negative one, right, because these have the right magnitude,
+42:00
+and they're real. OK. TK. true -- OK.
+42:07
+True or false? A is sure to be positive definite.
+42:12
+Well, this is a great matrix, but is it sure to be positive definite? No. If it could have an eigenvalue minus one,
+42:19
+it wouldn't be positive definite. True or false, it has no repeated eigenvalues.
+42:27
+That's false, too. In fact, it's going to have repeated eigenvalues if it's as big as three by three,
+42:33
+one of these c- one of these, at least, will have to get repeated. Sure. So it's got repeated eigenvalues, but,
+42:40
+is it diagonalizable? It's got these many, many, repeated eigenvalues.
+42:45
+If it's fifty by fifty, it's certainly got a lot of repetitions. Is it diagonalizable?
+42:51
+Yes. All symmetric matrices, all orthogonal matrices can be diagonalized.
+42:57
+And, in fact, the eigenvectors can even be chosen orthogonal.
+43:02
+So it could be, sort of, like, diagonalized the best way with a Q, and not just any old S.
+43:09
+OK. Is it non-singular? Is a symmetric orthogonal matrix non-singular?
+43:15
+Orthogonal matrices are always non-singular.
+43:21
+Sure. And, obviously, we don't have any zero Eigenvalues.
+43:26
+Is it sure to be diagonalizable? Yes. Now, here's a final step -- show that one-half of A plus I is A
+43:41
+-- that is, prove one-half of A plus I is a projection matrix.
+43:51
+43:58
+OK?
+44:04
+Let's see. What do I do?
+44:09
+I could see two ways to do this. I could check the properties of a projection matrix, which
+44:14
+are what? A projection matrix is symmetric. Well, that's certainly symmetric, because A is.
+44:21
+And what's the other property? I should square it, and hopefully get the same thing back.
+44:27
+So can I do that, square and see if I get the same thing back? So if I square it, I'll get one-quarter of A squared
+44:37
+plus two A plus I, right? And the question is, does that agree with p- the thing itself?
+44:48
+One-half A plus I.
+44:53
+Hm. I guess I'd like to know something about A squared.
+45:02
+What is A squared? That's our problem. What is A squared?
+45:11
+If A is symmetric and orthogonal, A is symmetric and orthogonal.
+45:17
+This is what we're given, right?
+45:23
+It's symmetric, and it's orthogonal. So what's A squared?
+45:31
+I. A squared is I, because A times A --
+45:36
+if A equals its own inverse, so A times A is the same as A
+45:42
+times A inverse, which is I. So this A squared here is I.
+45:52
+And now we've got it. We've got two identities over four, that's good,
+45:57
+and we've got two As over four, that's good. OK. So it turned out to be a projection matrix safely.
+46:05
+And we could also have said, well, what are the eigenvalues of this thing?
+46:11
+What are the eigenvalues of a half A plus I? If the eigenvalues of A are one and minus one,
+46:17
+what are the eigenvalues of A plus I? Just stay with it these last thirty seconds here.
+46:25
+What if I know these eigenvalues of A, and I add the identity, the eigenvalues
+46:31
+of A plus I are zero and two. And then when I divide by two, the eigenvalues are zero and
+46:39
+one. So it's symmetric, it's got the right eigenvalues, it's a projection matrix.
+46:45
+OK, you're seeing a lot of stuff about eigenvalues, and special matrices, and that's what the quiz is about.
+46:54
+OK, so good luck on the quiz. 

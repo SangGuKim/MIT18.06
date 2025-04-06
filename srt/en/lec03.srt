@@ -1,0 +1,1528 @@
+1
+00:00:08,000 --> 00:00:10,000
+I've been multiplying matrices already,
+
+2
+00:00:13,000 --> 00:00:17,800
+but certainly time for me to discuss the rules for matrix multiplication.
+
+3
+00:00:19,000 --> 00:00:23,800
+And the interesting part is the many ways you can do it,
+
+4
+00:00:24,000 --> 00:00:31,199
+and they all give the same answer. And they're all important. So matrix multiplication, and then, come inverses.
+
+5
+00:00:33,000 --> 00:00:37,799
+So we mentioned the inverse of a matrix. That's a big deal.
+
+6
+00:00:39,000 --> 00:00:47,000
+Lots to do about inverses and how to find them. Okay, so I'll begin with how to multiply two matrices.
+
+7
+00:00:48,000 --> 00:00:52,399
+First way, okay, so suppose I have a matrix A multiplying
+
+8
+00:00:57,000 --> 00:01:01,000
+a matrix B and -- giving me a result --
+
+9
+00:01:03,000 --> 00:01:07,000
+well, I could call it C. A times B. Okay.
+
+10
+00:01:10,000 --> 00:01:14,000
+So, let me just review the rule for this entry.
+
+11
+00:01:18,000 --> 00:01:24,000
+That's the entry in row i and column j. So that's the i j entry.
+
+12
+00:01:24,000 --> 00:01:30,000
+Right there is C i j. We always write the row number and then the column number.
+
+13
+00:01:30,000 --> 00:01:37,000
+So I might -- I might -- maybe I take it C 3 4, just to make it specific.
+
+14
+00:01:37,000 --> 00:01:45,000
+So instead of i j, let me use numbers. C 3 4. So where does that come from, the three four entry?
+
+15
+00:01:45,000 --> 00:01:49,400
+It comes from row three, here, row three and column four,
+
+16
+00:01:53,000 --> 00:02:01,000
+as you know. Column four. And can I just write down, or can we write down the formula for it?
+
+17
+00:02:05,000 --> 00:02:15,000
+If we look at the whole row and the whole column, the quick way for me to say it is row three of A --
+
+18
+00:02:15,000 --> 00:02:22,599
+I could use a dot for dot product. I won't often use that, actually. Dot column four of B.
+
+19
+00:02:25,000 --> 00:02:30,599
+But this gives us a chance to just, like, use a little matrix notation.
+
+20
+00:02:31,000 --> 00:02:35,400
+What are the entries? What's this first entry in row three?
+
+21
+00:02:38,000 --> 00:02:44,800
+That number that's sitting right there is... A, so it's got two indices and what are they?
+
+22
+00:02:46,000 --> 00:02:54,000
+3 1. So there's an a 3 1 there. Now what's the first guy at the top of column four?
+
+23
+00:02:56,000 --> 00:02:59,599
+So what's sitting up there? B 1 4, right.
+
+24
+00:03:01,000 --> 00:03:06,599
+So that this dot product starts with A 3 1 times B 1 4.
+
+25
+00:03:09,000 --> 00:03:18,599
+And then what's the next -- so this is like I'm accumulating this sum, then comes the next guy, A 3 2, second column,
+
+26
+00:03:20,000 --> 00:03:27,199
+times B 2 4, second row. So it's b A 3 2, B 2 4 and so on.
+
+27
+00:03:31,000 --> 00:03:36,199
+Just practice with indices. Oh, let me even practice with a summation formula.
+
+28
+00:03:39,000 --> 00:03:43,800
+So this is -- most of the course, I use whole vectors.
+
+29
+00:03:44,000 --> 00:03:51,199
+I very seldom, get down to the details of these particular entries, but here we'd better do it.
+
+30
+00:03:53,000 --> 00:04:00,199
+So it's some kind of a sum, right? Of things in row three, column K shall I say?
+
+31
+00:04:03,000 --> 00:04:05,800
+Times things in row K, column four.
+
+32
+00:04:09,000 --> 00:04:17,000
+Do you see that that's what we're seeing here? This is K is one, here K is two, on along --
+
+33
+00:04:17,000 --> 00:04:24,199
+so the sum goes all the way along the row and down the column, say, one to N.
+
+34
+00:04:25,000 --> 00:04:32,600
+So that's what the C three four entry looks like. A sum of a three K b K four.
+
+35
+00:04:34,000 --> 00:04:40,800
+Just takes a little practice to do that. Okay. And -- well, maybe I should say --
+
+36
+00:04:42,000 --> 00:04:48,000
+when are we allowed to multiply these matrices? What are the shapes of these things?
+
+37
+00:04:48,000 --> 00:04:53,600
+The shapes are -- if we allow them to be not necessarily square matrices.
+
+38
+00:04:54,000 --> 00:05:01,000
+If they're square, they've got to be the same size. If they're rectangular, they're not the same size.
+
+39
+00:05:01,000 --> 00:05:07,800
+If they're rectangular, this might be -- well, I always think of A as m by n.
+
+40
+00:05:08,000 --> 00:05:12,000
+m rows, n columns. So that sum goes to n.
+
+41
+00:05:13,000 --> 00:05:18,199
+Now what's the point -- how many rows does B have to have?
+
+42
+00:05:19,000 --> 00:05:25,000
+n. The number of rows in B, the number of guys that we meet coming down has to match the number of ones
+
+43
+00:05:25,000 --> 00:05:29,000
+across. So B will have to be n by something.
+
+44
+00:05:30,000 --> 00:05:36,000
+Whatever. P. So the number of columns here has to match the number of rows
+
+45
+00:05:39,000 --> 00:05:45,000
+there, and then what's the result? What's the shape of the result? What's the shape of C, the output?
+
+46
+00:05:45,000 --> 00:05:49,800
+Well, it's got these same m rows -- it's got m rows.
+
+47
+00:05:51,000 --> 00:05:54,600
+And how many columns? P. m by P. Okay.
+
+48
+00:05:58,000 --> 00:06:04,800
+So there are m times P little numbers in there, entries, and each one, looks like that.
+
+49
+00:06:05,000 --> 00:06:10,600
+Okay. So that's the standard rule. That's the way people think of multiplying matrices.
+
+50
+00:06:11,000 --> 00:06:12,600
+I do it too.
+
+51
+00:06:17,000 --> 00:06:22,600
+But I want to talk about other ways to look at that same calculation,
+
+52
+00:06:24,000 --> 00:06:26,800
+looking at whole columns and whole rows.
+
+53
+00:06:30,000 --> 00:06:35,000
+Okay. So can I do A B C again? A B equaling C again?
+
+54
+00:06:35,000 --> 00:06:37,000
+But now, tell me about...
+
+55
+00:06:42,000 --> 00:06:47,600
+I'll put it up here. So here goes A, again, times B producing C.
+
+56
+00:06:58,000 --> 00:07:05,600
+And again, this is m by n. This is n by P and this is m by P. Okay.
+
+57
+00:07:06,000 --> 00:07:12,000
+Now I want to look at whole columns. I want to look at the columns of --
+
+58
+00:07:12,000 --> 00:07:18,800
+here's the second way to multiply matrices. Because I'm going to build on what I know already.
+
+59
+00:07:19,000 --> 00:07:26,600
+How do I multiply a matrix by a column? I know how to multiply this matrix by that column.
+
+60
+00:07:27,000 --> 00:07:29,399
+Shall I call that column one?
+
+61
+00:07:33,000 --> 00:07:36,199
+That tells me column one of the answer.
+
+62
+00:07:38,000 --> 00:07:44,399
+The matrix times the first column is that first column. Because none of this stuff entered
+
+63
+00:07:45,000 --> 00:07:51,000
+that part of the answer. The matrix times the second column is the second column of the answer.
+
+64
+00:07:51,000 --> 00:07:56,600
+Do you see what I'm saying? That I could think of multiplying a matrix
+
+65
+00:07:57,000 --> 00:08:05,800
+by a vector, which I already knew how to do, and I can think of just P columns sitting side by side,
+
+66
+00:08:08,000 --> 00:08:14,399
+just like resting next to each other. And I multiply A times each one of those.
+
+67
+00:08:15,000 --> 00:08:21,000
+And I get the P columns of the answer. Do you see this as -- this is quite nice,
+
+68
+00:08:21,000 --> 00:08:24,600
+to be able to think, okay, matrix multiplication works
+
+69
+00:08:27,000 --> 00:08:35,000
+so that I can just think of having several columns, multiplying by A and getting the columns of the answer.
+
+70
+00:08:35,000 --> 00:08:39,399
+So, like, here's column one shall I call that column one?
+
+71
+00:08:43,000 --> 00:08:47,000
+And what's going in there is A times column one.
+
+72
+00:08:53,000 --> 00:08:58,000
+Okay. So that's the picture a column at a time. So what does that tell me?
+
+73
+00:08:58,000 --> 00:09:03,600
+What does that tell me about these columns? These columns of C are combinations,
+
+74
+00:09:09,000 --> 00:09:12,600
+because we've seen that before, of columns of A.
+
+75
+00:09:23,000 --> 00:09:29,799
+Every one of these comes from A times this, and A times a vector is a combination
+
+76
+00:09:30,000 --> 00:09:36,799
+of the columns of A. And it makes sense, because the columns of A have length m
+
+77
+00:09:40,000 --> 00:09:46,399
+and the columns of C have length m. And every column of C is some combination
+
+78
+00:09:48,000 --> 00:09:53,000
+of the columns of A. And it's these numbers in here that tell me what combination it is.
+
+79
+00:09:53,000 --> 00:09:58,200
+Do you see that? That in that answer, C, I'm seeing stuff that's
+
+80
+00:10:01,000 --> 00:10:07,000
+combinations of these columns. Now, suppose I look at it -- that's two ways now.
+
+81
+00:10:09,000 --> 00:10:15,399
+The third way is look at it by rows. So now let me change to rows.
+
+82
+00:10:17,000 --> 00:10:21,799
+Okay. So now I can think of a row of A --
+
+83
+00:10:23,000 --> 00:10:28,200
+a row of A multiplying all these rows here and producing a row
+
+84
+00:10:29,000 --> 00:10:33,799
+of the product. So this row takes a combination of these rows
+
+85
+00:10:36,000 --> 00:10:41,200
+and that's the answer. So these rows of C are combinations of what?
+
+86
+00:10:50,000 --> 00:10:58,000
+Tell me how to finish that. The rows of C, when I have a matrix B, it's got its rows
+
+87
+00:11:01,000 --> 00:11:06,000
+and I multiply by A, and what does that do? It mixes the rows up.
+
+88
+00:11:06,000 --> 00:11:09,600
+It creates combinations of the rows of B, thanks.
+
+89
+00:11:13,000 --> 00:11:18,200
+Rows of B. That's what I wanted to see, that this answer --
+
+90
+00:11:24,000 --> 00:11:31,000
+I can see where the pieces are coming from. The rows in the answer are coming as combinations of these
+
+91
+00:11:31,000 --> 00:11:35,799
+rows. The columns in the answer are coming as combinations of those
+
+92
+00:11:37,000 --> 00:11:43,000
+columns. And so that's three ways. Now you can say, okay, what's the fourth way?
+
+93
+00:11:44,000 --> 00:11:49,600
+The fourth way -- so that's -- now we've got, like, the regular way,
+
+94
+00:11:52,000 --> 00:11:55,200
+the column way, the row way and --
+
+95
+00:11:58,000 --> 00:12:01,200
+what's left? The one that I can --
+
+96
+00:12:06,000 --> 00:12:08,799
+well, one way is columns times rows.
+
+97
+00:12:12,000 --> 00:12:18,399
+What happens if I multiply -- So this was row times column, it gave a number.
+
+98
+00:12:21,000 --> 00:12:30,200
+Okay. Now I want to ask you about column times row. If I multiply a column of A times a row of B,
+
+99
+00:12:37,000 --> 00:12:43,000
+what shape I ending up with? So if I take a column times a row,
+
+100
+00:12:43,000 --> 00:12:52,000
+that's definitely different from taking a row times a column. So a column of A was -- what's the shape of a column of A?
+
+101
+00:12:52,000 --> 00:12:56,000
+m by one. A column of A is a column.
+
+102
+00:12:59,000 --> 00:13:04,000
+It's got m entries and one column. And what's a row of B?
+
+103
+00:13:04,000 --> 00:13:06,799
+It's got one row and P columns.
+
+104
+00:13:10,000 --> 00:13:16,000
+So what's the shape -- what do I get if I multiply a column by a row?
+
+105
+00:13:16,000 --> 00:13:23,600
+I get a big matrix. I get a full-sized matrix. If I multiply a column by a row --
+
+106
+00:13:25,000 --> 00:13:32,200
+should we just do one? Let me take the column two three four times the row one six.
+
+107
+00:13:34,000 --> 00:13:35,600
+That product there --
+
+108
+00:13:40,000 --> 00:13:46,000
+I mean, when I'm just following the rules of matrix multiplication, those rules are just looking like --
+
+109
+00:13:46,000 --> 00:13:50,000
+kind of petite, kind of small, because the rows here
+
+110
+00:13:51,000 --> 00:13:56,000
+are so short and the columns there are so short, but they're the same length, one entry.
+
+111
+00:13:56,000 --> 00:14:02,799
+So what's the answer? What's the answer if I do two three four times one six, just
+
+112
+00:14:03,000 --> 00:14:07,000
+for practice? Well, what's the first row of the answer?
+
+113
+00:14:09,000 --> 00:14:13,799
+Two twelve. And the second row of the answer is three eighteen.
+
+114
+00:14:16,000 --> 00:14:20,399
+And the third row of the answer is four twenty four.
+
+115
+00:14:24,000 --> 00:14:26,399
+That's a very special matrix, there.
+
+116
+00:14:29,000 --> 00:14:35,399
+Very special matrix. What can you tell me about its columns, the columns of that matrix?
+
+117
+00:14:37,000 --> 00:14:41,399
+They're multiples of this guy, right? They're multiples of that one.
+
+118
+00:14:42,000 --> 00:14:50,000
+Which follows our rule. We said that the columns of the answer were combinations, but there's only -- to take a combination of one guy,
+
+119
+00:14:50,000 --> 00:14:55,000
+it's just a multiple. The rows of the answer, what can you tell me about those three rows?
+
+120
+00:14:55,000 --> 00:14:57,399
+They're all multiples of this row.
+
+121
+00:15:01,000 --> 00:15:06,000
+They're all multiples of one six, as we expected. But I'm getting a full-sized matrix.
+
+122
+00:15:06,000 --> 00:15:10,399
+And now, just to complete this thought, if I have --
+
+123
+00:15:15,000 --> 00:15:17,799
+let me write down the fourth way.
+
+124
+00:15:21,000 --> 00:15:26,200
+A B is a sum of columns of A times rows of B.
+
+125
+00:15:35,000 --> 00:15:39,399
+So that, for example, if my matrix was two three four
+
+126
+00:15:40,000 --> 00:15:43,600
+and then had another column, say, seven eight nine,
+
+127
+00:15:47,000 --> 00:15:52,200
+and my matrix here has -- say, started with one six and then
+
+128
+00:15:53,000 --> 00:15:56,200
+had another column like zero zero, then --
+
+129
+00:16:00,000 --> 00:16:06,000
+here's the fourth way, okay? I've got two columns there, I've got two rows there.
+
+130
+00:16:07,000 --> 00:16:12,600
+So the beautiful rule is -- see, the whole thing by columns and rows
+
+131
+00:16:13,000 --> 00:16:17,799
+is that I can take the first column times the first row
+
+132
+00:16:19,000 --> 00:16:22,600
+and add the second column times the second row.
+
+133
+00:16:32,000 --> 00:16:37,200
+So that's the fourth way -- that I can take columns times rows,
+
+134
+00:16:38,000 --> 00:16:44,000
+first column times first row, second column times second row and add. Actually, what will I get?
+
+135
+00:16:44,000 --> 00:16:47,600
+What will the answer be for that matrix multiplication?
+
+136
+00:16:49,000 --> 00:16:56,000
+Well, this one it's just going to give us zero, so in fact I'm back to this -- that's the answer,
+
+137
+00:16:56,000 --> 00:17:01,600
+for that matrix multiplication. I'm happy to put up here these facts about matrix
+
+138
+00:17:05,000 --> 00:17:10,599
+multiplication, because it gives me a chance to write down special matrices like this.
+
+139
+00:17:12,000 --> 00:17:17,200
+This is a special matrix. All those rows lie on the same line.
+
+140
+00:17:18,000 --> 00:17:25,000
+All those rows lie on the line through one six. If I draw a picture of all these row vectors,
+
+141
+00:17:25,000 --> 00:17:30,000
+they're all the same direction. If I draw a picture of these two column vectors,
+
+142
+00:17:30,000 --> 00:17:34,400
+they're in the same direction. Later, I would use this language.
+
+143
+00:17:37,000 --> 00:17:44,000
+Not too much later, either. I would say the row space, which is like all the combinations of the rows,
+
+144
+00:17:44,000 --> 00:17:51,000
+is just a line for this matrix. The row space is the line through the vector one six.
+
+145
+00:17:51,000 --> 00:17:57,000
+All the rows lie on that line. And the column space is also a line.
+
+146
+00:17:57,000 --> 00:18:02,000
+All the columns lie on the line through the vector two three four.
+
+147
+00:18:02,000 --> 00:18:07,599
+So this is like a really minimal matrix. And it's because of these ones.
+
+148
+00:18:10,000 --> 00:18:12,400
+Okay. So that's a third way.
+
+149
+00:18:18,000 --> 00:18:24,400
+Now I want to say one more thing about matrix multiplication while we're on the subject.
+
+150
+00:18:26,000 --> 00:18:32,400
+And it's this. You could also multiply -- You could also cut the matrix into blocks
+
+151
+00:18:34,000 --> 00:18:40,799
+and do the multiplication by blocks. Yet that's actually so, useful that I want to mention it.
+
+152
+00:18:46,000 --> 00:18:52,400
+Block multiplication. So I could take my matrix A and I could chop it up, like,
+
+153
+00:18:54,000 --> 00:18:59,000
+maybe just for simplicity, let me chop it into two -- into four square blocks.
+
+154
+00:18:59,000 --> 00:19:05,799
+Suppose it's square. Let's just take a nice case. And B, suppose it's square also, same size.
+
+155
+00:19:07,000 --> 00:19:10,599
+So these sizes don't have to be the same.
+
+156
+00:19:13,000 --> 00:19:18,000
+What they have to do is match properly. Here they certainly will match.
+
+157
+00:19:18,000 --> 00:19:24,000
+So here's the rule for block multiplication, that if this has blocks like, A --
+
+158
+00:19:28,000 --> 00:19:32,000
+so maybe A1, A2, A3, A4 are the blocks here,
+
+159
+00:19:34,000 --> 00:19:40,000
+and these blocks are B1, B2,3 and B4? Then the answer I can find block.
+
+160
+00:19:44,000 --> 00:19:51,000
+And if you tell me what's in that block, then I'm going to be quiet about matrix multiplication for the rest of the day.
+
+161
+00:19:51,000 --> 00:19:57,000
+What goes into that block? You see, these might be -- this matrix might be --
+
+162
+00:19:57,000 --> 00:20:06,000
+these matrices might be, like, twenty by twenty with blocks that are ten by ten, to take the easy case where all the blocks
+
+163
+00:20:06,000 --> 00:20:12,000
+are the same shape. And the point is that I could multiply those by blocks.
+
+164
+00:20:13,000 --> 00:20:17,400
+And what goes in here? What's that block in the answer?
+
+165
+00:20:20,000 --> 00:20:26,000
+A1 B1, that's a matrix times a matrix, it's the right size, ten by ten.
+
+166
+00:20:28,000 --> 00:20:31,200
+Any more? Plus, what else goes in there?
+
+167
+00:20:36,000 --> 00:20:40,400
+A2 B3, right? It's just like block rows times block columns.
+
+168
+00:20:45,000 --> 00:20:49,799
+Nobody, I think, not even Gauss could see instantly that it works.
+
+169
+00:20:51,000 --> 00:20:57,000
+But somehow, if we check it through, all five ways we're doing the same multiplications.
+
+170
+00:20:58,000 --> 00:21:03,200
+So this familiar multiplication is what we're really doing when we do it
+
+171
+00:21:04,000 --> 00:21:08,400
+by columns, by rows by columns times rows and by blocks.
+
+172
+00:21:10,000 --> 00:21:15,200
+Okay. I just have to, like, get the rules straight for matrix multiplication.
+
+173
+00:21:16,000 --> 00:21:17,500
+Okay.
+
+174
+00:21:22,000 --> 00:21:26,799
+All right, I'm ready for the second topic, which is inverses. Okay.
+
+175
+00:21:28,000 --> 00:21:29,500
+Ready for inverses.
+
+176
+00:21:34,000 --> 00:21:37,599
+And let me do it for square matrices first.
+
+177
+00:21:44,000 --> 00:21:47,200
+Okay. So I've got a square matrix A.
+
+178
+00:21:52,000 --> 00:22:01,000
+And it may or may not have an inverse, right? Not all matrices have inverses. In fact, that's the most important question you can ask
+
+179
+00:22:01,000 --> 00:22:07,799
+about the matrix, is if it's -- if you know it's square, is it invertible or not?
+
+180
+00:22:08,000 --> 00:22:14,400
+If it is invertible, then there is some other matrix, shall I call it A inverse?
+
+181
+00:22:15,000 --> 00:22:18,599
+And what's the -- if A inverse exists --
+
+182
+00:22:21,000 --> 00:22:27,799
+there's a big "if" here. If this matrix exists, and it'll be really central to figure out
+
+183
+00:22:34,000 --> 00:22:40,000
+when does it exist? And then if it does exist, how would you find it?
+
+184
+00:22:40,000 --> 00:22:43,599
+But what's the equation here that I haven't --
+
+185
+00:22:45,000 --> 00:22:51,000
+that I have to finish now? This matrix, if it exists multiplies A and produces,
+
+186
+00:22:53,000 --> 00:22:54,599
+I think, the identity.
+
+187
+00:23:10,000 --> 00:23:16,799
+But a real -- an inverse for a square matrix could be on the right as well
+
+188
+00:23:17,000 --> 00:23:20,200
+-- this is true, too, that it's --
+
+189
+00:23:25,000 --> 00:23:31,000
+if I have a -- yeah in fact, this is not -- this is probably the --
+
+190
+00:23:31,000 --> 00:23:35,400
+this is something that's not easy to prove, but it works.
+
+191
+00:23:38,000 --> 00:23:43,000
+That a left -- square matrices, a left inverse is also a right
+
+192
+00:23:43,000 --> 00:23:48,599
+inverse. If I can find a matrix on the left that gets the identity,
+
+193
+00:23:49,000 --> 00:23:56,599
+then also that matrix on the right will produce that identity. For rectangular matrices, we'll see a left inverse
+
+194
+00:23:57,000 --> 00:24:03,000
+that isn't a right inverse. In fact, the shapes wouldn't allow it. But for square matrices, the shapes
+
+195
+00:24:03,000 --> 00:24:07,000
+allow it and it happens, if A has an inverse.
+
+196
+00:24:09,000 --> 00:24:16,200
+Okay, so give me some cases -- let's see. I hate to be negative here, but let's talk
+
+197
+00:24:17,000 --> 00:24:23,400
+about the case with no inverse. So -- these matrices are called invertible or non-singular --
+
+198
+00:24:36,000 --> 00:24:44,000
+those are the good ones. And we want to be able to identify how -- if we're given a matrix, has it got an inverse?
+
+199
+00:24:44,000 --> 00:24:46,799
+Can I talk about the singular case?
+
+200
+00:24:52,000 --> 00:24:53,500
+No inverse.
+
+201
+00:24:57,000 --> 00:25:00,200
+All right. Best to start with an example.
+
+202
+00:25:02,000 --> 00:25:09,000
+Tell me an example -- let's get an example up here. Let's make it two by two --
+
+203
+00:25:09,000 --> 00:25:14,200
+of a matrix that has not got an inverse. And let's see why.
+
+204
+00:25:16,000 --> 00:25:20,000
+Let me write one up. No inverse. Let's see why.
+
+205
+00:25:22,000 --> 00:25:25,599
+Let me write up -- one three two six.
+
+206
+00:25:30,000 --> 00:25:32,799
+Why does that matrix have no inverse?
+
+207
+00:25:37,000 --> 00:25:39,400
+You could answer that various ways.
+
+208
+00:25:43,000 --> 00:25:44,599
+Give me one reason.
+
+209
+00:25:48,000 --> 00:25:55,599
+Well, you could -- if you know about determinants, which you're not supposed to, you could take its determinant
+
+210
+00:25:57,000 --> 00:25:59,799
+and you would get -- Zero. Okay.
+
+211
+00:26:03,000 --> 00:26:07,000
+Now -- all right. Let me ask you other reasons.
+
+212
+00:26:10,000 --> 00:26:14,400
+I mean, as for other reasons that that matrix isn't invertible.
+
+213
+00:26:15,000 --> 00:26:18,200
+Here, I could use what I'm saying here.
+
+214
+00:26:24,000 --> 00:26:27,200
+Suppose A times other matrix gave the identity.
+
+215
+00:26:32,000 --> 00:26:36,000
+Why is that not possible? Because -- oh, yeah --
+
+216
+00:26:39,000 --> 00:26:46,000
+I'm thinking about columns here. If I multiply this matrix A by some other matrix, then the --
+
+217
+00:26:46,000 --> 00:26:53,200
+the result -- what can you tell me about the columns? They're all multiples of those columns, right?
+
+218
+00:26:55,000 --> 00:27:02,200
+If I multiply A by another matrix that -- the product has columns that come from those columns.
+
+219
+00:27:04,000 --> 00:27:11,000
+So can I get the identity matrix? No way. The columns of the identity matrix, like one zero --
+
+220
+00:27:11,000 --> 00:27:19,000
+it's not a combination of those columns, because those two columns lie on the -- both lie on the same line.
+
+221
+00:27:19,000 --> 00:27:24,000
+Every combination is just going to be on that line and I can't get one zero.
+
+222
+00:27:24,000 --> 00:27:28,799
+So, do you see that sort of column picture of the matrix
+
+223
+00:27:33,000 --> 00:27:39,000
+not being invertible. In fact, here's another reason. This is even a more important reason.
+
+224
+00:27:40,000 --> 00:27:47,000
+Well, how can I say more important? All those are important. This is another way to see it.
+
+225
+00:27:47,000 --> 00:27:52,599
+A matrix has no inverse -- yeah -- here -- now this is important.
+
+226
+00:27:55,000 --> 00:28:03,400
+A matrix has no -- a square matrix won't have an inverse if there's no inverse because I can solve --
+
+227
+00:28:07,000 --> 00:28:12,599
+I can find an X of -- a vector X with A times --
+
+228
+00:28:20,000 --> 00:28:22,400
+this A times X giving zero.
+
+229
+00:28:27,000 --> 00:28:32,200
+This is the reason I like best. That matrix won't have an inverse.
+
+230
+00:28:33,000 --> 00:28:37,000
+Can you -- well, let me change I to U.
+
+231
+00:28:40,000 --> 00:28:44,799
+So tell me a vector X that, solves A X equals zero.
+
+232
+00:28:46,000 --> 00:28:53,000
+I mean, this is, like, the key equation. In mathematics, all the key equations have zero on the right-hand side.
+
+233
+00:28:53,000 --> 00:29:01,000
+So what's the X? Tell me an X here -- so now I'm going to put -- slip in the X that you tell me
+
+234
+00:29:01,000 --> 00:29:05,799
+and I'm going to get zero. What X would do that job?
+
+235
+00:29:09,000 --> 00:29:18,000
+Three and negative one? Is that the one you picked, or -- yeah. Or another -- well, if you picked zero with zero,
+
+236
+00:29:18,000 --> 00:29:25,200
+I'm not so excited, right? Because that would always work. So it's really the fact that this vector
+
+237
+00:29:26,000 --> 00:29:32,000
+isn't zero that's important. It's a non-zero vector and three negative one would do it.
+
+238
+00:29:33,000 --> 00:29:38,000
+That just says three of this column minus one of that column is the zero column.
+
+239
+00:29:38,000 --> 00:29:42,000
+Okay. So now I know that A couldn't be invertible.
+
+240
+00:29:46,000 --> 00:29:52,000
+But what's the reasoning? If A X is zero, suppose I multiplied by A inverse.
+
+241
+00:29:54,000 --> 00:30:00,400
+Yeah, well here's the reason. Here -- this is why this spells disaster for an inverse.
+
+242
+00:30:02,000 --> 00:30:08,799
+The matrix can't have an inverse if some combination of the columns gives z- it gives nothing.
+
+243
+00:30:09,000 --> 00:30:16,599
+Because, I could take A X equals zero, I could multiply by A inverse and what would I discover?
+
+244
+00:30:21,000 --> 00:30:26,000
+Suppose I take that equation and I multiply by -- if A inverse existed, which of course I'm going to come
+
+245
+00:30:26,000 --> 00:30:33,000
+to the conclusion it can't because if it existed, if there was an A inverse to this dopey matrix,
+
+246
+00:30:33,000 --> 00:30:39,000
+I would multiply that equation by that inverse and I would discover X is zero.
+
+247
+00:30:42,000 --> 00:30:48,000
+If I multiply A by A inverse on the left, I get X. If I multiply by A inverse on the right, I get zero.
+
+248
+00:30:48,000 --> 00:30:54,000
+So I would discover X was zero. But it -- X is not zero. X -- this guy wasn't zero.
+
+249
+00:30:54,000 --> 00:31:01,599
+There it is. It's three minus one. So, conclusion -- only, it takes us some time to really work
+
+250
+00:31:06,000 --> 00:31:10,400
+with that conclusion -- our conclusion will be that non-invertible matrices,
+
+251
+00:31:14,000 --> 00:31:16,799
+singular matrices, some combinations of their columns
+
+252
+00:31:19,000 --> 00:31:23,799
+gives the zero column. They they take some vector X into zero.
+
+253
+00:31:26,000 --> 00:31:31,599
+And there's no way A inverse can recover, right? That's what this equation says.
+
+254
+00:31:32,000 --> 00:31:37,599
+This equation says I take this vector X and multiplying by A gives zero.
+
+255
+00:31:39,000 --> 00:31:44,000
+But then when I multiply by A inverse, I can never escape from zero.
+
+256
+00:31:44,000 --> 00:31:49,599
+So there couldn't be an A inverse. Where here -- okay, now fix --
+
+257
+00:31:51,000 --> 00:31:56,599
+all right. Now let me take -- all right, back to the positive side.
+
+258
+00:31:57,000 --> 00:32:02,599
+Let's take a matrix that does have an inverse. And why not invert it?
+
+259
+00:32:03,000 --> 00:32:09,000
+Okay. Can I -- so let me take on this third board a matrix -- shall I fix that up a little?
+
+260
+00:32:09,000 --> 00:32:12,599
+Tell me a matrix that has got an inverse.
+
+261
+00:32:15,000 --> 00:32:20,200
+Well, let me say one three two -- what shall I put there?
+
+262
+00:32:22,000 --> 00:32:25,599
+Well, don't put six, I guess is -- right?
+
+263
+00:32:28,000 --> 00:32:30,000
+Do I any favorites here?
+
+264
+00:32:35,000 --> 00:32:36,500
+One? Or eight?
+
+265
+00:32:41,000 --> 00:32:47,400
+I don't care. What, seven? Seven. Okay. Seven is a lucky number. All right, seven, okay.
+
+266
+00:32:48,000 --> 00:32:57,000
+Okay. So -- now what's our idea? We believe that this matrix is invertible. Those who like determinants have quickly taken its determinant
+
+267
+00:32:57,000 --> 00:33:02,200
+and found it wasn't zero. Those who like columns, and probably that --
+
+268
+00:33:04,000 --> 00:33:11,000
+that department is not totally popular yet -- but those who like columns will look at those two columns
+
+269
+00:33:11,000 --> 00:33:16,200
+and say, hey, they point in different directions. So I can get anything.
+
+270
+00:33:18,000 --> 00:33:24,000
+Now, let me see, what do I mean? How I going to computer A inverse? So A inverse --
+
+271
+00:33:24,000 --> 00:33:32,000
+here's A inverse, now, and I have to find it. And what do I get when I do this multiplication?
+
+272
+00:33:33,000 --> 00:33:34,500
+The identity.
+
+273
+00:33:40,000 --> 00:33:48,000
+You know, forgive me for taking two by two-s, but -- lt's good to keep the computations manageable and let
+
+274
+00:33:49,000 --> 00:33:53,400
+the ideas come out. Okay, now what's the idea I want?
+
+275
+00:33:55,000 --> 00:34:03,400
+I'm looking for this matrix A inverse, how I going to find it? Right now, I've got four numbers to find.
+
+276
+00:34:04,000 --> 00:34:07,200
+I'm going to look at the first column.
+
+277
+00:34:12,000 --> 00:34:16,400
+Let me take this first column, A B. What's up there?
+
+278
+00:34:18,000 --> 00:34:22,800
+What -- tell me this. What equation does the first column satisfy?
+
+279
+00:34:25,000 --> 00:34:29,400
+The first column satisfies A times that column is one zero.
+
+280
+00:34:31,000 --> 00:34:37,000
+The first column of the answer. And the second column, C D, satisfies A times
+
+281
+00:34:38,000 --> 00:34:44,800
+that second column is zero one. You see that finding the inverse is like solving two systems.
+
+282
+00:34:48,000 --> 00:34:54,000
+One system, when the right-hand side is one zero -- I'm just going to split it into two pieces.
+
+283
+00:34:54,000 --> 00:35:01,599
+I don't even need to rewrite it. I can take A times -- so let me put it here.
+
+284
+00:35:04,000 --> 00:35:09,199
+A times column j of A inverse is column j of the identity.
+
+285
+00:35:18,000 --> 00:35:22,400
+I've got n equations. I've got, well, two in this case.
+
+286
+00:35:26,000 --> 00:35:32,000
+And they have the same matrix, A, but they have different right-hand sides. The right-hand sides are just the columns
+
+287
+00:35:32,000 --> 00:35:39,000
+of the identity, this guy and this guy. And these are the two solutions. Do you see what I'm going --
+
+288
+00:35:39,000 --> 00:35:41,800
+I'm looking at that equation by columns.
+
+289
+00:35:45,000 --> 00:35:55,000
+I'm looking at A times this column, giving that guy, and A times that column giving that guy. So -- Essentially -- so this is like the Gauss --
+
+290
+00:35:55,000 --> 00:36:00,000
+we're back to Gauss. We're back to solving systems of equations, but we're solving --
+
+291
+00:36:00,000 --> 00:36:05,199
+we've got two right-hand sides instead of one. That's where Jordan comes in.
+
+292
+00:36:07,000 --> 00:36:13,000
+So at the very beginning of the lecture, I mentioned Gauss-Jordan, let me write it up again.
+
+293
+00:36:13,000 --> 00:36:15,000
+Okay. Here's the Gauss-Jordan idea.
+
+294
+00:36:21,000 --> 00:36:23,400
+Gauss-Jordan solve two equations at once.
+
+295
+00:36:35,000 --> 00:36:38,599
+Okay. Let me show you how the mechanics go.
+
+296
+00:36:43,000 --> 00:36:45,800
+How do I solve a single equation?
+
+297
+00:36:48,000 --> 00:36:51,599
+So the two equations are one three two seven,
+
+298
+00:36:55,000 --> 00:36:57,400
+multiplying A B gives one zero.
+
+299
+00:37:01,000 --> 00:37:07,800
+And the other equation is the same one three two seven multiplying C D gives zero one.
+
+300
+00:37:12,000 --> 00:37:16,000
+Okay. That'll tell me the two columns of the inverse.
+
+301
+00:37:17,000 --> 00:37:22,000
+I'll have inverse. In other words, if I can solve with this matrix A,
+
+302
+00:37:22,000 --> 00:37:27,599
+if I can solve with that right-hand side and that right-hand side, I'm invertible.
+
+303
+00:37:28,000 --> 00:37:33,599
+I've got it. Okay. And Jordan sort of said to Gauss, solve them together,
+
+304
+00:37:36,000 --> 00:37:43,000
+look at the matrix -- if we just solve this one, I would look at one three two seven,
+
+305
+00:37:43,000 --> 00:37:50,199
+and how do I deal with the right-hand side? I stick it on as an extra column, right?
+
+306
+00:37:56,000 --> 00:38:01,000
+That's this augmented matrix. That's the matrix when I'm watching the right-hand side
+
+307
+00:38:01,000 --> 00:38:09,000
+at the same time, doing the same thing to the right side that I do to the left? So I just carry it along as an extra column.
+
+308
+00:38:09,000 --> 00:38:12,599
+Now I'm going to carry along two extra columns.
+
+309
+00:38:17,000 --> 00:38:22,599
+And I'm going to do whatever Gauss wants, right? I'm going to do elimination.
+
+310
+00:38:24,000 --> 00:38:30,000
+I'm going to get this to be simple and this thing will turn into the inverse.
+
+311
+00:38:30,000 --> 00:38:35,000
+This is what's coming. I'm going to do elimination steps to make this
+
+312
+00:38:35,000 --> 00:38:40,199
+into the identity, and lo and behold, the inverse will show up here.
+
+313
+00:38:41,000 --> 00:38:45,400
+K--- let's do it. Okay. So what are the elimination steps?
+
+314
+00:38:46,000 --> 00:38:52,000
+So you see -- here's my matrix A and here's the identity, like, stuck on, augmented on.
+
+315
+00:38:52,000 --> 00:38:58,000
+STUDENT: I'm sorry... STRANG: Yeah? STUDENT: -- is the two and the three supposed to be switched?
+
+316
+00:38:58,000 --> 00:39:03,599
+STRANG: Did I -- oh, no, they weren't supposed to be switched. Sorry. Thanks.
+
+317
+00:39:04,000 --> 00:39:08,800
+Okay. Thank you very much. And there -- I've got them right.
+
+318
+00:39:09,000 --> 00:39:10,500
+Okay, thanks. Okay.
+
+319
+00:39:15,000 --> 00:39:23,000
+So let's do elimination. All right, it's going to be simple, right? So I take two of this row away from this row.
+
+320
+00:39:23,000 --> 00:39:32,000
+So this row stays the same and two of those come away from this. That leaves me with a zero and a one and two of these away from
+
+321
+00:39:32,000 --> 00:39:36,800
+this is that what you're getting -- after one elimination step --
+
+322
+00:39:39,000 --> 00:39:44,599
+Let me sort of separate the -- the left half from the right half.
+
+323
+00:39:45,000 --> 00:39:52,599
+So two of that first row got subtracted from the second row. Now this is an upper triangular form.
+
+324
+00:39:53,000 --> 00:39:57,400
+Gauss would quit, but Jordan says keeps going. Use elimination upwards.
+
+325
+00:39:59,000 --> 00:40:05,000
+Subtract a multiple of equation two from equation one to get rid of the three.
+
+326
+00:40:05,000 --> 00:40:13,400
+So let's go the whole way. So now I'm going to -- this guy is fine, but I'm going to --
+
+327
+00:40:14,000 --> 00:40:19,000
+what do I do now? What's my final step that produces the inverse?
+
+328
+00:40:19,000 --> 00:40:25,400
+I multiply this by the right number to get up to ther to remove that three.
+
+329
+00:40:26,000 --> 00:40:33,000
+So I guess, I -- since this is a one, there's the pivot sitting there. I multiply it by three and subtract from that,
+
+330
+00:40:33,000 --> 00:40:41,000
+so what do I get? I'll have one zero -- oh, yeah that was my whole point. I'll multiply this by three and subtract from that,
+
+331
+00:40:41,000 --> 00:40:47,000
+which will give me seven. And I multiply this by three and subtract from that,
+
+332
+00:40:49,000 --> 00:40:51,400
+which gives me a minus three.
+
+333
+00:41:00,000 --> 00:41:02,000
+And what's my hope, belief?
+
+334
+00:41:06,000 --> 00:41:12,800
+Here I started with A and the identity, and I ended up with the identity and who?
+
+335
+00:41:16,000 --> 00:41:18,000
+That better be A inverse.
+
+336
+00:41:24,000 --> 00:41:29,599
+That's the Gauss Jordan idea. Start with this long matrix, double-length A I, eliminate,
+
+337
+00:41:33,000 --> 00:41:40,000
+eliminate until this part is down to I, then this one will -- must be for some reason,
+
+338
+00:41:40,000 --> 00:41:46,000
+and we've got to find the reason -- must be A inverse. Shall I just check that it works?
+
+339
+00:41:46,000 --> 00:41:51,199
+Let me just check that -- can I multiply this matrix this part
+
+340
+00:41:55,000 --> 00:41:59,400
+times A, I'll carry A over here and just do that
+
+341
+00:42:00,000 --> 00:42:06,000
+multiplication. You'll see I'll do it the old fashioned way. Seven minus six is a one.
+
+342
+00:42:06,000 --> 00:42:13,000
+Twenty one minus twenty one is a zero, minus two plus two is a zero, minus six plus seven is a one.
+
+343
+00:42:13,000 --> 00:42:15,400
+Check. So that is the inverse.
+
+344
+00:42:18,000 --> 00:42:24,000
+That's the Gauss-Jordan idea. So, you'll -- one of the homework problems or more than
+
+345
+00:42:24,000 --> 00:42:28,400
+one for Wednesday will ask you to go through those steps.
+
+346
+00:42:30,000 --> 00:42:36,400
+I think you just got to go through Gauss-Jordan a couple of times, but I --
+
+347
+00:42:38,000 --> 00:42:40,800
+yeah -- just to see the mechanics.
+
+348
+00:42:43,000 --> 00:42:47,400
+But the, important thing is, why -- is, like, what happened?
+
+349
+00:42:50,000 --> 00:42:56,400
+Why did we -- why did we get A inverse there? Let me ask you that.
+
+350
+00:42:57,000 --> 00:42:59,800
+We got -- so we take --
+
+351
+00:43:03,000 --> 00:43:09,800
+We do row reduction, we do elimination on this long matrix A I until the first half
+
+352
+00:43:12,000 --> 00:43:18,000
+Then a second half is A inverse. is up. Well, how do I see that?
+
+353
+00:43:20,000 --> 00:43:28,000
+Let me put up here how I see that. So here's my Gauss-Jordan thing, and I'm doing stuff to it.
+
+354
+00:43:30,000 --> 00:43:33,199
+So I'm -- well, whole lot of E's.
+
+355
+00:43:37,000 --> 00:43:42,000
+Remember those are those elimination matrices. Those are the -- those are the things that we figured out last
+
+356
+00:43:42,000 --> 00:43:46,800
+time. Yes, that's what an elimination step is it's in matrix form,
+
+357
+00:43:49,000 --> 00:43:55,000
+I'm multiplying by some Es. And the result -- well, so I'm multiplying by a whole bunch
+
+358
+00:43:55,000 --> 00:44:00,599
+of Es. So, I get a -- can I call the overall matrix E?
+
+359
+00:44:02,000 --> 00:44:09,000
+That's the elimination matrix, the product of all those little pieces. What do I mean by little pieces?
+
+360
+00:44:09,000 --> 00:44:14,000
+Well, there was an elimination matrix that subtracted two of that away from that.
+
+361
+00:44:14,000 --> 00:44:21,000
+Then there was an elimination matrix that subtracted three of that away from that. I guess in this case, that was all.
+
+362
+00:44:21,000 --> 00:44:26,000
+So there were just two Es in this case, one that did this step and one that did this step
+
+363
+00:44:26,000 --> 00:44:30,400
+and together they gave me an E that does both steps.
+
+364
+00:44:31,000 --> 00:44:35,000
+And the net result was to get an I here.
+
+365
+00:44:38,000 --> 00:44:42,000
+And you can tell me what that has to be.
+
+366
+00:44:45,000 --> 00:44:51,800
+This is, like, the picture of what happened. If E multiplied A, whatever that E is --
+
+367
+00:44:53,000 --> 00:44:56,199
+we never figured it out in this way.
+
+368
+00:44:59,000 --> 00:45:04,199
+But whatever that E times that E is, E times A is --
+
+369
+00:45:06,000 --> 00:45:07,599
+What's E times A?
+
+370
+00:45:12,000 --> 00:45:17,199
+It's I. That E, whatever the heck it was, multiplied A and produced
+
+371
+00:45:20,000 --> 00:45:27,599
+So E must be -- E A equaling I tells us what E is, I. namely it is --
+
+372
+00:45:30,000 --> 00:45:35,000
+STUDENT: It's the inverse of A. STRANG: It's the inverse of A. Great.
+
+373
+00:45:35,000 --> 00:45:40,199
+And therefore, when the second half, when E multiplies I, it's E --
+
+374
+00:45:41,000 --> 00:45:45,400
+Put this A inverse. You see the picture looking that way?
+
+375
+00:45:48,000 --> 00:45:53,000
+E times A is the identity. It tells us what E has to be.
+
+376
+00:45:53,000 --> 00:46:00,000
+It has to be the inverse, and therefore, on the right-hand side, where E -- where we just smartly tucked on the identity,
+
+377
+00:46:00,000 --> 00:46:04,800
+it's turning in, step by step -- It's turning into A inverse.
+
+378
+00:46:05,000 --> 00:46:07,800
+There is the statement of Gauss-Jordan elimination.
+
+379
+00:46:12,000 --> 00:46:17,599
+That's how you find the inverse. Where we can look at it as elimination,
+
+380
+00:46:19,000 --> 00:46:23,000
+as solving n equations at the same time -- --
+
+381
+00:46:24,000 --> 00:46:31,599
+and tacking on n columns, solving those equations and up goes the n columns of A inverse Okay, thanks.
+
+382
+00:46:32,000 --> 00:46:35,000
+See you on Wednesday.
+

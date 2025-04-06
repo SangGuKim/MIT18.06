@@ -16,14 +16,14 @@ Sections in the English scripts are marked with markdown `#` headers to improve 
 
 ```
 .
-├── README.md
-├── README.en.md          # English version README
+├── README.md             # English version README
+├── README.ko.md          # Korean version README
 ├── scripts
-│   ├── original          # Original English scripts
+│   ├── en                # Original English scripts
 │   │   ├── lec01.txt
 │   │   ├── lec02.txt
 │   │   └── ...
-│   └── translated        # Korean translated scripts
+│   └── ko                # Korean translated scripts
 │       ├── lec01.txt
 │       ├── lec02.txt
 │       └── ...
@@ -46,8 +46,8 @@ Sections in the English scripts are marked with markdown `#` headers to improve 
 1. Collect YouTube scripts and save them in the `scripts/original/` folder
 2. Mark sections in each lecture script with `#` markdown headers
 3. Translate to Korean using GPT and Claude
-4. Review and refine the translated content
-5. Generate SRT subtitle files using `tools/txt_to_srt.py`
+4. Generate SRT subtitle files using `tool/txt2srt.py`
+5. Review and refine the translated content
 
 ## How to Contribute
 

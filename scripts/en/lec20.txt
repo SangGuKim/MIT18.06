@@ -1,0 +1,849 @@
+https://www.youtube.com/watch?v=QNpj-gOXW9M
+
+0:00
+OK, this is lecture twenty.
+0:10
+And this is the final lecture on determinants.
+0:15
+And it's about the applications. So we worked hard in the last two lectures
+0:22
+to get a formula for the determinant and the properties of the determinant.
+0:27
+Now to use the determinant and, and always this determinant
+0:35
+packs all this information into a single number.
+0:40
+And that number can give us formulas
+0:45
+for all sorts of, things that we've been calculating already without formulas.
+0:51
+Now what was A inverse? So, so I'm beginning with the formula for A inverse.
+0:57
+Two, two by two formula we know, right?
+1:03
+The two by two formula for A inverse, the inverse of a b c d
+1:09
+inverse is one over the determinant times d a -b -c.
+1:22
+Somehow I want to see what's going on for three by three
+1:31
+and n by n. And actually maybe you can see what's going on from this two
+1:37
+by two case. So there's a formula for the inverse, and what did I divide by?
+1:44
+The determinant. So what I'm looking for is a formula
+1:50
+where it has one over the determinant and, and you remember why that makes good sense,
+1:56
+because then that's perfect as long as the determinant isn't
+2:02
+zero, and that's exactly when there is an inverse. But now I have to ask can we recognize any of this stuff?
+2:11
+Do you recognize what that number d is from the past? From last, from the last lecture?
+2:19
+My hint is think cofactors. Because my formula is going to be, my formula for the inverse
+2:28
+is going to be one over the determinant times a matrix of cofactors.
+2:33
+So you remember that D? What's that the cofactor of? Remember cofactors?
+2:39
+If -- that's the one one cofactor, because if I strike out row and column one, I'm left with d.
+2:47
+And what's minus b? OK. Which cofactor is that one?
+2:53
+Oh, minus b is the cofactor of c, right?
+3:00
+If I strike out the c, I'm left with a b there. And why the minus sign?
+3:07
+Because this c was in a two one position, and two plus one is odd.
+3:12
+So there was a minus went into the cofactor, and that's it. OK. I'll write down next what my formula is.
+3:21
+Here's the big formula for the A -- for A inverse.
+3:26
+It's one over the determinant of A and then some matrix.
+3:35
+And that matrix is the matrix of cofactors, c.
+3:41
+Only one thing, it turns -- you'll see, I have to, I transpose.
+3:47
+So this is the matrix of cofactors, the -- what I'll just -- but why don't we just call it the cofactor matrix.
+3:55
+So the one one entry of, of c is the cof- is the one one
+4:02
+cofactor, the thing that we get by throwing away row and column one. It's the d.
+4:09
+And, because of the transpose, what I see up here
+4:15
+is the cofactor of this guy down here, right? That's where the transpose came in.
+4:22
+What I see here, this is the cofactor not of this one, because I've transposed.
+4:28
+This is the cofactor of the b. When I throw away the b, the b row and the b column,
+4:35
+I'm left with c, and then I have that minus sign again. And of course the two two entry is the cofactor
+4:44
+of d, and that's this a. So there's the formula.
+4:49
+OK. But we got to think why. I mean, it worked in this two by two case,
+4:56
+but a lot of other formulas would have worked just as well. We, we have to see why that's true.
+5:02
+In other words, why is it -- so this is what I aim to find.
+5:09
+And, and let's just sort of look to see what is that telling us. That tells us that the -- the expression for A inverse --
+5:17
+let's look at a three by three. Can I just write down a a b c d e f g h i?
+5:27
+And I'm looking for its inverse. And what kind of a formula -- do I see there?
+5:33
+I mean, what -- the determinant is a bunch of products of three factors,
+5:38
+right? The determinant of this matrix'll involve a e i, and b f times g, and c times d times h, and minus c
+5:49
+e g, and so on. So things with three factors go in here.
+5:54
+Things with how many factors do things in the cofactor matrix
+6:03
+have? What's a typical cofactor? What's the cofactor of a?
+6:09
+The cofactor of a, the one one entry up here in the inverse is?
+6:14
+I throw away the row and column containing a and I take the determinant of what's left,
+6:19
+that's the cofactor. And that's e i minus f h. Products of two things.
+6:25
+Now, I'm just making the observation that the determinant of A involves products of n entries.
+6:36
+And the cofactor matrix involves products of n minus 1 entries.
+6:51
+And, like, we never noticed any of this stuff
+6:56
+when we were computing the inverse by the Gauss-Jordan method or whatever. You remember how we did it?
+7:02
+We took the matrix A, we tucked the identity next to it, we did elimination till A became the identity.
+7:10
+And then that, the identity suddenly was A inverse. Well, that was great numerically.
+7:16
+But we never knew what was going on, basically. And now we see what the formula is
+7:25
+in terms of letters, what's the algebra instead of the algorithm. OK.
+7:30
+But I have to say why this is right, right? I still -- that's a pretty magic formula.
+7:37
+Where does it come from? Well, I'll just check it. Having, having got it up there, let me --
+7:44
+I'll say, how can we check -- what do I want to check?
+7:50
+I want to check that A times its inverse gives the identity. So I want, I want to check that A times this thing,
+7:58
+A times this -- now I'm going to write in the inverse -- gives the identity.
+8:03
+So I check that A times C transpose -- let me bring the determinant up here.
+8:09
+Determinant of A times the identity.
+8:14
+That's my job. That's it, that if this is true, and it is, then, then I've
+8:24
+correctly identified A inverse as C transpose divided by the determinant.
+8:30
+OK. But why is this true? Why is that true? Let me, let me put down what I'm doing here.
+8:38
+I have A -- here, here's A, here's a11 --
+8:43
+I'm doing this multiplication -- along to a1n. And then down in this last row will be an an1 along to ann.
+8:53
+And I'm multiplying by the cofactor matrix transposed.
+8:59
+So when I transpose, it'll be c11 c12 down to c1n.
+9:07
+Notice usually that one coming first would mean I'm in row one, but I've transposed,
+9:15
+so that's, those are the cofactors. This first column are the cofactors from row one.
+9:21
+And then the last column would be the cofactors from row n.
+9:28
+And why should that come out to be anything good?
+9:33
+In fact, why should it come out to be as good as this? Well, you can tell me what the one one entry in the product
+9:43
+is. This is like you're seeing the main point if you just tell me one entry.
+9:49
+What do I get up there in the one one entry when I do this row of this row from A times
+10:00
+this column of cofactors? What, what will I get there?
+10:06
+Because we have seen this. I mean, we're, right, building exactly on what the last lecture reached.
+10:15
+So this is a11 times c11, a12 times c12, a1n times c1n.
+10:21
+What does that what does that sum up to? That's the cofactor formula for the determinant.
+10:32
+That's the, this cofactor formula, which I wrote, which we got last time.
+10:39
+The determinant of A is, if I use row one, let, let I equal one, then I have a11 times
+10:47
+its cofactor, a12 times its cofactor, and so on. And that gives me the determinant.
+10:54
+And it worked in this, in this case. This row times this thing is, sure enough, ad minus bc.
+11:06
+But this formula says it always works. So up here in this, in this position,
+11:12
+I'm getting determinant of A. What about in the two two position?
+11:18
+Row two times column two there, what, what is that?
+11:23
+That's just the cofactors, that's just row two times its cofactors.
+11:28
+So of course I get the determinant again. And in the last here, this is the last row
+11:36
+times its cofactors. It's exactly -- you see, we're realizing that the cofactor
+11:41
+formula is just this sum of products, so of course we think, hey, we've got a matrix
+11:47
+multiplication there. And we get determinant of A.
+11:57
+But there's one more idea here, right? Great. What else, what have I not -- so I haven't got that formula
+12:05
+completely proved yet, because I've still got to do all
+12:10
+the off-diagonal stuff, which I want to be zero, right? I just want this to be determinant
+12:17
+of A times the identity, and then I'm, I'm a happy person.
+12:22
+So why should that be? Why should it be that one row times the cofactors
+12:30
+from a different row, which become a column because I transpose, give zero?
+12:39
+In other words, the cofactor formula gives the determinant if the row and the, and the cofactors -- you know,
+12:48
+if the entries of A and the cofactors are for the same row.
+12:54
+But for some reason, if I take the cofactors from the -- entries from the first row and the cofactors from the second
+13:01
+row, for some reason I automatically get zero. And it's sort of like interesting
+13:08
+to say, why does that happen? And can I just check that -- of course, we know it happens,
+13:14
+in this case. Here are the numbers from row one and here are the cofactors from row two, right?
+13:24
+Those are the numbers in row one. And th- these are the cofactors from row two, because the cofactor of c is minus b
+13:32
+and the cofactor of d is a. And sure enough, that row times this column gives --
+13:40
+please say it. Zero, right. OK. So now how come?
+13:47
+How come? Can we even see it in this two by two case? Why did -- well, I mean, I guess we, you know,
+13:54
+in one way we certainly do see it, because it's right here. I mean, do we just do it, and then we get zero. But we want to think of some reason
+14:01
+why the answer's zero, some reason that we can use in the n
+14:07
+by n case. So let -- here, here is my thinking.
+14:13
+We must be, if we're getting the answer's zero, we suspect that what we're doing somehow,
+14:20
+we're taking the determinant of some matrix that has two equal rows.
+14:26
+So I believe that if we multiply these by the cofactors from some other row, we're taking the determinant -- ye,
+14:35
+what matrix are we taking the determinant of? Here it's, this is it. We're, when we do that times this, we're really taking --
+14:44
+can I put this in little letters down here? I'm taking -- let me look at the matrix a b a b.
+14:57
+Let me call that matrix AS, A screwed up.
+15:03
+OK. All right. So now that matrix is certainly singular.
+15:09
+So if we find its determinant, we're going to get zero. But I claim that if we find its determinant by the cofactor
+15:16
+rule, go along the first row, we would take a times the cofactor of a.
+15:23
+And what is the -- see, how -- oh no -- let me go along the second row.
+15:32
+OK. So let's see, which -- if I take -- I know I've got a singular matrix here.
+15:40
+And I believe that when I do this multiplication, what
+15:46
+I'm doing is using the cofactor formula for the determinant. And I know I'm going to get zero.
+15:52
+Let me try this again. So the cofactor formula for the determinant says I should take a times its cofactor, which is this b,
+16:04
+plus b times its cofactor, which is this minus a.
+16:09
+OK. That's what we're doing, apart from a sign here.
+16:15
+Oh yeah, so you know, there might be a minus multiplying
+16:20
+everything. So if I take this determinant, it's A -- the determinant of this, the determinant of A screwed up is
+16:29
+a times its cofactor, which is b, plus the second guy times its cofactor, which is minus a.
+16:38
+And of course I get the answer zero, and this is exactly what's happening in that, in that,
+16:45
+row times this wrong column. OK.
+16:52
+That's the two by two picture, and it's just the same here. That the reason I get a zero up in there is, the reason
+17:01
+I get a zero is that when I multiply the first row of A
+17:09
+and the last row of the cofactor matrix, it's as if I'm taking the determinant of this screwed up
+17:16
+matrix that has first and last rows identical.
+17:22
+The book pins this down more specific -- and more carefully than I can do in the lecture.
+17:29
+I hope you're seeing the point. That this is an identity. That it's a beautiful identity and it tells us what
+17:37
+the inverse of the matrix is. So it gives us the inverse, the formula for the inverse.
+17:43
+OK. So that's the first goal of my lecture, was to find this
+17:49
+formula. It's done. OK. And of course I could invert, now, I can,
+17:58
+I sort of like I can see what -- I can answer questions like this. Suppose I have a matrix, and let me move the one one
+18:08
+entry. What happens to the inverse?
+18:13
+Just, just think about that question. Suppose I have some matrix, I just write down some nice, non-singular matrix that's got an inverse,
+18:21
+and then I move the one one entry a little bit. I add one to it, for example.
+18:27
+What happens to the inverse matrix? Well, this formula should tell me.
+18:33
+I have to look to see what happens to the determinant and what happens to all the cofactors.
+18:39
+And, the picture, it's all there. It's all there.
+18:44
+We can really understand how the inverse changes when the matrix changes.
+18:51
+OK. Now my second application is to -- let me put that over here --
+18:58
+is to Ax=b. Well, the -- course, the solution is A inverse b.
+19:09
+But now I have a formula for A inverse. A inverse is one over the determinant
+19:17
+times this C transpose times B. I now know what A inverse is.
+19:24
+So now I just have to say, what have I got here? Is there any way to, to make this formula, this answer,
+19:33
+which is the one and only answer -- it's the very same answer we got on the first day of the class
+19:40
+by elimination. Now I'm -- now I've got a formula for the answer.
+19:47
+Can I play with it further to see what's going on? And Cramer's, this Cramer's Rule is exactly, that --
+20:01
+a way of looking at this formula.
+20:07
+OK. So this is a formula for x. Here's my formula.
+20:13
+Well, of course. The first thing I see from the formula is that the answer x always has that in the determinant.
+20:21
+I'm not surprised. There's a division by the determinant. But then I have to say a little more carefully what's going on
+20:29
+And let me tell you what Cramer's Rule is. up here. Let, let me take x1, the first component.
+20:35
+So this is the first component of the answer. Then there'll be a second component and a,
+20:40
+all the other components. Can I take just the first component of this formula?
+20:46
+Well, I certainly have determinant of A down under.
+20:52
+And what the heck is the first -- so what do I get in C transpose b?
+21:00
+What's the first entry of C transpose b? That's what I have to answer myself.
+21:06
+Well, what's the first entry of C transpose b?
+21:13
+This B is -- let me tell you what it is. OK. Somehow I'm multiplying cofactors
+21:22
+by the entries of B, right, in this product. Cofactors from the matrix times entries of b.
+21:30
+So any time I'm multiplying cofactors by numbers, I think, I'm getting the determinant of something.
+21:36
+And let me call that something B1. So this is a matrix, the matrix whose determinant is coming out
+21:46
+of that. And we'll, we'll see what it is. x2 will be the determinant of some other matrix B2, also
+21:54
+divided by determinant of A. So now I just -- Cramer just had a good idea.
+22:00
+He realized what matrix it was, what these B1 and B2 and B3
+22:06
+and so on matrices were. Let me write them on the board underneath.
+22:14
+OK. So what is this B1? This B1 is the matrix that has b in its first column
+22:24
+and otherwise the rest of it is A. So it otherwise it has the rest, the, the n-1 columns of A.
+22:38
+It's the matrix with -- it's just the matrix A with column one replaced
+22:51
+by the right-hand side, by the right-hand side b.
+22:58
+Because somehow when I take the determinant of this guy,
+23:04
+it's giving me this matrix multiplication. Well, how could that be?
+23:10
+How could -- so what's, what's the determinant formula
+23:16
+I'll use here? I'll use cofactors, of course.
+23:21
+And I might as well use cofactors down column one. So when I use cofactors down column one,
+23:27
+I'm taking the first entry of b times what? Times the cofactor c11.
+23:35
+Do you see that? When I, when I use cofactors here,
+23:40
+I take the first entry here, B one let's call it, times the cofactor there.
+23:47
+But what's the cofactor in -- my little hand-waving is meant to indicate that it's a matrix of one size smaller,
+23:54
+the cofactor. And it's exactly c11. Well, that's just what we wanted.
+24:01
+This first entry is c11 times b1.
+24:06
+And then the next entry is whatever, is c21 times b2,
+24:13
+and so on. And sure enough, if I look here, when I'm, when I do the cofactor expansion,
+24:19
+b2 is getting multiplied by the right thing, and so on.
+24:25
+So there's Cramer's Rule. And the book gives another kind of cute proof
+24:31
+without, without building so much on, on cofactors.
+24:36
+But here we've got cofactors, so I thought I'd just give you this proof. So what is B --
+24:42
+in general, what is Bj? This is the, this is A with column j replaced by, by b.
+24:58
+So that's -- the determinant of that matrix that you divide
+25:08
+by determinant of A to get xj. So x -- let me change this general formula.
+25:14
+xj, the j-th one, is the determinant of Bj divided by the determinant of A.
+25:22
+And now we've said what Bj is.
+25:30
+Well, so Cramer found a rule. And we could ask him, OK, great, good work, Cramer.
+25:39
+But is your rule any good in practice? So he says, well, you couldn't ask about a rule in mine,
+25:49
+right, because it's just -- all you have to do is find the determinant of A and these
+25:56
+other determinants, so I guess -- oh, he just says, well, all you have to do is find n+1 determinants,
+26:04
+the, the n Bs and the A. And actually, I remember reading -- there was a book,
+26:17
+popular book that, that kids interested in math read when I was a kid interested in math called Mathematics
+26:25
+for the Million or something, by a guy named Bell. And it had a little page about linear algebra.
+26:34
+And it said,-- so it explained elimination in a very complicated way.
+26:41
+I certainly didn't understand it. And, and it made it, you know, it sort of said, well,
+26:47
+there is this formula for elimination, but look at this great formula, Cramer's Rule.
+26:55
+So it certainly said Cramer's Rule was the way to go. But actually, Cramer's Rule is a disastrous way to go,
+27:05
+because to compute these determinants, it takes, like, approximately forever.
+27:12
+So actually I now think of that book title as being Mathematics for the Millionaire,
+27:18
+because you'd have to be able to pay for, a hopelessly long calculation where elimination, of course,
+27:26
+produced the x-s, in an instant. But having a formula allows you to, with, with letters, you
+27:36
+know, allows you to do algebra instead of, algorithms. So the, there's some value in the Cramer's Rule formula
+27:44
+for x and in the explicit formula for, for A inverse.
+27:52
+They're nice formulas, but I just don't want you to use them.
+27:57
+That'ss what it comes to. If you had to -- and Matlab would never, never do it.
+28:02
+I mean, it would use elimination. OK. Now I'm ready for number three in today's list
+28:11
+of amazing connections coming through the determinant.
+28:17
+And that number three is the fact that the determinant gives a volume.
+28:22
+OK. So now -- so that's my final topic for --
+28:28
+among these -- this my number three application, that the determinant is actually equals the volume of something.
+28:37
+Can I use this little space to consider a special case,
+28:42
+and then I'll use the far board to think about the general rule.
+28:47
+So what I going to prove? Or claim. I claim that the determinant of the matrix
+28:56
+is the volume of a box.
+29:02
+OK, and you say, which box? Fair enough. OK.
+29:08
+So let's see. I'm in -- shall we say we're in, say three by three?
+29:16
+Shall we suppose -- let's, let's say three by three. So, so we can really -- we're, we're talking about boxes
+29:22
+in three dimensions, and three by three matrices. And so all I do -- you could guess what the box is.
+29:30
+Here is, here is, three dimensions. OK. Now I take the first row of the matrix, a11, a22, A --
+29:41
+sorry. a11, a12, a13. That row is a vector.
+29:48
+It goes to some point. That point will be -- and that edge going to it,
+29:53
+will be an edge of the box, and that point will be a corner of the box. So here is zero zero zero, of course.
+30:01
+And here's the first row of the matrix: a11, a12, a13.
+30:09
+So that's one edge of the box.
+30:14
+Another edge of the box is to the second row of the matrix, row two.
+30:21
+Can I just call it there row two? And a third row of the box will be to --
+30:28
+a third row -- a third edge of the box will be given by row three. So, so there's row three.
+30:36
+That, the coordinates, what are the coordinates of that corner of the box? a31, a32, a33.
+30:47
+So I've got that edge of the box, that edge of the box, that edge of the box, and that's all I need.
+30:53
+Now I just finish out the box, right?
+30:59
+I just -- the proper word, of course, is parallelepiped. But for obvious reasons, I wrote box.
+31:08
+OK. So, OK. So there's the, there's the bottom of the box.
+31:14
+There're the four edge sides of the box.
+31:19
+There's the top of the box. Cute, right? It's the box that has these three edges
+31:28
+and then it's completed to a, to a, each, you know, each side is a, is a parallelogram.
+31:35
+And it's that box whose volume is given by the determinant.
+31:43
+That's -- now it's -- possible that the determinant is
+31:50
+negative. So we have to just say what's going on in that case.
+31:56
+If the determinant is negative, then the volume, we,
+32:01
+we should take the absolute value really. So the volume, if we, if we think of volume as positive,
+32:07
+we should take the absolute value of the determinant. But the, the sign, what does the sign of the determinant --
+32:14
+it always must tell us something. And somehow it, it will tell us whether these three is a --
+32:20
+whether it's a right-handed box or a left-handed box. If we, if we reversed two of the edges,
+32:30
+we would go between a right-handed box and a left-handed box. We wouldn't change the volume, but we would
+32:35
+change the, the cyclic, order.
+32:40
+So I won't worry about that. And, so one special case is what?
+32:47
+A equal identity matrix. So let's take that special case.
+32:52
+A equal identity matrix. Is the formula determinant of identity matrix,
+32:59
+does that equal the volume of the box? Well, what is the box?
+33:06
+What's the box? If A is the identity matrix, then these three rows are
+33:12
+the three coordinate vectors, and the box is --
+33:17
+it's a cube. It's the unit cube. So if, if A is the identity matrix, of course
+33:23
+our formula is Well, actually that proves property one --
+33:29
+that the volume right. has property one. Actually, we could, we could, we could get this thing if we --
+33:35
+if we can show that the box volume has the same three properties that define the determinant,
+33:42
+then it must be the determinant. So that's like the, the, the elegant way to prove this.
+33:51
+To prove this amazing fact that the determinant equals the volume, first we'll check it for the identity matrix.
+33:58
+That's fine. The box is a cube and its volume is one and the determinant is one and, and one agrees with one.
+34:07
+Now let me take one -- let me go up one level to an orthogonal matrix.
+34:12
+Because I'd like to take this chance to bring in chapter -- the, the previous chapter.
+34:18
+Suppose I have an orthogonal matrix. What did that mean? I always called those things Q.
+34:25
+What was the point of -- suppose I have, suppose instead of the identity matrix I'm now going to take A
+34:32
+equal Q, an orthogonal matrix.
+34:42
+What was Q then? That was a matrix whose columns were orthonormal, right?
+34:52
+Those were its columns were unit vectors, perpendicular unit vectors.
+34:59
+So what kind of a box have we got now? What kind of a box comes from the rows or the columns,
+35:06
+I don't mind, because the determinant is the determinant of the transpose, so I'm never worried about
+35:11
+that. What kind of a box, what shape box have we got if the matrix is an orthogonal matrix?
+35:20
+It's another cube. It's a cube again. How is it different from the identity cube?
+35:27
+It's just rotated.
+35:33
+It's just the orthogonal matrix Q doesn't have to be the identity matrix.
+35:38
+It's just the unit cube but turned in space. So sure enough, it's the unit cube, and its volume is one.
+35:48
+Now is the determinant one? What's the determinant of Q?
+35:55
+We believe that the determinant of Q better be one or minus one, so that our formula is -- checks out in that --
+36:03
+if we can't check it in these easy cases where we got a cube, we're not going to get it in the general case.
+36:11
+So why is the determinant of Q equal one or minus one?
+36:18
+What do we know about Q? What's the one matrix statement of the properties of Q?
+36:25
+A matrix with orthonormal columns has -- satisfies a certain equation.
+36:31
+What, what is that? It's if we have this orthogonal matrix, then the fact --
+36:38
+the way to say what it, what its properties are is this.
+36:45
+Q prime, u- u- Q transpose Q equals I.
+36:50
+Right? That's what -- those are the matrices that get the name Q,
+36:57
+the matrices that Q transpose Q is I. OK. Now from that, tell me why is the determinant one
+37:07
+or minus one. How do I, out of this fact --
+37:12
+this may even be a homework problem. It's there in the, in the list of exercises in the book,
+37:20
+and let's just do it. How do I get, how do I discover that the determinant of Q
+37:27
+is one or maybe minus one? I take determinants of both sides, everybody says,
+37:34
+so I won't -- I take determinants of both sides. On the right-hand side -- so I, when I take determinants
+37:41
+of both sides, let me just do it. Take the determinant of -- take determinants.
+37:48
+Determinant of the identity is one.
+37:53
+What's the determinant of that product? Rule nine is paying off now.
+38:02
+The determinant of a product is the determinant of this guy --
+38:07
+maybe I'll put it, I'll use that symbol for determinant. It's the determinant of that guy times the determinant
+38:14
+of the other guy. And then what's the determinant of Q transpose?
+38:21
+It's the same as the determinant of Q. Rule ten pays off. So this is just this thing squared.
+38:28
+So that determinant squared is one and sure enough it's one
+38:33
+or minus one. Great. So in these special cases of cubes,
+38:42
+we really do have determinant equals volume.
+38:48
+Now can I just push that to non-cubes.
+38:54
+Let me push it first to rectangles, rectangular boxes,
+39:02
+where I'm just multiplying the e- the edges are -- let me keep all the ninety degree angles,
+39:10
+because those are -- that, that makes my life easy. And just stretch the edges.
+39:16
+Suppose I stretch that first edge, suppose this first edge I double.
+39:23
+Suppose I double that first edge, keeping the other edges the same.
+39:31
+What happens to the volume? It doubles, right?
+39:36
+We know that the volume of a cube doubles. In fact, because we know that the new cube would sit right
+39:42
+on top -- I mean, the new, the added cube would sit right on -- would fit --
+39:47
+probably a geometer would say congruent or something -- would go right in, in the other. We'd have two.
+39:52
+We have two identical cubes. Total volume is now two.
+39:58
+OK. So I want -- if I double an edge, the volume doubles. What happens to the determinant?
+40:03
+If I double, the first row of a matrix, what ch-
+40:14
+ch- what's the effect on the determinant? It also doubles, right?
+40:21
+And that was rule number 3a. Remember rule 3a was that if I, I could,
+40:29
+if I had a factor in, in row one, T, I could factor it out.
+40:36
+So if, if I have a factor two in that row one, I can factor it out of the determinant.
+40:43
+It agrees with the -- the volume of the box has that factor two.
+40:48
+So, so volume satisfies this property 3a. And now I really close, but I -- but to get to the very end
+40:59
+of this proof, I have to get away from right angles. I have to allow the possibility of, other angles.
+41:10
+And -- or what's saying the same thing, I have to check that the volume also satisfies 3b.
+41:18
+So can I -- This is end of proof that the -- so I'm --
+41:24
+determinant of A equals volume of box, and where I right now?
+41:34
+This volume has properties, properties one, no problem.
+41:40
+If the box is the cube, everything is -- if the box is the unit cube, its volume is one.
+41:49
+Property two was if I reverse two rows,
+41:54
+but that doesn't change the box. And it doesn't change the absolute value, so no problem
+42:00
+there. Property 3a was if I mul- you remember what 3a was?
+42:06
+So property one was about the identity matrix. Property two was about a plus or minus sign
+42:12
+that I don't care about. Property 3a was a factor T in a row.
+42:18
+But now I've got property three B to deal with.
+42:24
+What was property 3b? This is a great way to review these, properties.
+42:30
+So that 3b, the property 3b said -- let's do, let's do two by two.
+42:36
+So said that if I had a+a', b+b', c,
+42:42
+d that this equaled what? So this is property 3b.
+42:49
+This is the linearity in row one by itself. So c d is staying the same, and I can split this into a b
+42:59
+and a' b'.
+43:06
+That's property 3b, at least in the two by two case.
+43:12
+And what I -- I wanted now to show that the volume, which
+43:20
+two, two by two, that means area, has this, has this property.
+43:25
+Let me just emphasize that we have got -- we're getting --
+43:32
+this is a formula, then, for the area of a parallelogram. The area of this parallelogram -- can I just draw it?
+43:40
+OK, here's the, here's the parallelogram. I have the row a b.
+43:45
+That's the first row. That's the point a b. And I tack on c d.
+43:54
+c d, coming out of here. And I complete the parallelogram.
+43:59
+So this is -- well, I better make it look right.
+44:08
+It's really this one that has coordinates c d and this has coordinates -- well, whatever the sum is.
+44:17
+And of course starting at zero zero.
+44:22
+So we all know, this is a+c, b+d.
+44:29
+Rather than -- I'm pausing on that proof for a minute just to going back to our formula.
+44:37
+Because I want you to see that unlike Cramer's Rule, that I wasn't that impressed by, I'm
+44:44
+very impressed by this formula for the area of a parallelogram. And what's our formula?
+44:50
+What, what's the area of that parallelogram? If I had asked you that last year,
+45:00
+you would have said OK, the area of a parallelogram is the base times the height,
+45:06
+right? So you would have figured out what this base, the -- how long that base was.
+45:12
+It's like the square root of A squared plus b squared. And then you would have figured out how much is this height, whatever it is.
+45:20
+It's horrible. This, I mean, we got square roots, and in that height
+45:28
+there would be other revolting stuff. But now what's the formula that we now know for the area?
+45:35
+45:42
+It's the determinant of our little matrix.
+45:48
+It's just ad-bc.
+45:56
+No square roots. Totally rememberable, because it's exactly a formula
+46:03
+that we've been studying the whole, for three lectures. OK.
+46:11
+That's, you know, that's the most important point I'm making here. Is that if you know the coordinates of a box,
+46:20
+of the corners, then you have a great formula for the volume, area or volume, that
+46:28
+doesn't involve any lengths or any angles or any heights, but just involves the coordinates that you've got.
+46:37
+And similarly, what's the area of this triangle? Suppose I chop that off and say what about --
+46:43
+because you might often be interested in a triangle instead of a parallelogram. What's the area of this triangle?
+46:48
+Now there again, everybody would have
+46:53
+said the area of a triangle is half the base times the height.
+47:01
+And in some cases, if you know the base that a, that's -- and the height, that's fine.
+47:06
+But here, we, what we know is the coordinates of the corners. We know the vertices.
+47:11
+And so what's the area of that triangle?
+47:17
+If I know these, if I know a b, c d, and zero zero, what's the area?
+47:25
+It's just half, so it's just half of this. So this is, this is a- a b -- a d -
+47:33
+b c for the parallelogram and one half of that,
+47:38
+one half of ad-bc for the triangle.
+47:47
+So I mean, this is a totally trivial remark, to say, well, divide by two.
+47:52
+But it's just that you more often see triangles, and you feel you know the formula for the area
+48:01
+but the good formula for the area is this one. And I'm just going to --
+48:06
+I'm just going to say one more thing about the area of a triangle. It's just because it's -- you know, it's so great to have a good formula for something.
+48:15
+What if our triangle did not start at zero zero?
+48:20
+What if our triangle, what if we had this -- what if we had -- so I'm coming back to triangles again.
+48:28
+But let me, let me put this triangle somewhere, it's --
+48:40
+I'm staying with triangles, I'm just in two dimensions, but I'm going to allow you to give me any three corners.
+48:53
+And in -- those six numbers must determine the area.
+49:01
+And what's the formula? The area is going to be, it's going to be, there'll be that half of a parallelogram.
+49:09
+I mean, basically this can't be completely new, right? We've got the area when -- we, we know the area when this is
+49:17
+zero zero. Now we just want to lift our sight slightly and get the area
+49:24
+when all th- so let me write down what it, what it comes out to be. It turns out that if you do this, x1 y1 and a 1, x2 y2
+49:37
+and a 1, x3 y3 and a 1, that that works.
+49:44
+That the determinant symbol, of course. It's just -- if I gave you that determinant to find,
+49:51
+you might subtract this row from this. It would kill that one. Subtract this row from this, it would kill that one.
+49:59
+Then you'd have a simple determinant to do with differences, and it would --
+50:06
+this little subtraction, what I did was equivalent to moving the triangle
+50:12
+to start at the origin. I did it fast, because time is up.
+50:19
+And I didn't complete that proof of 3b. I'll leave -- the book has a carefully drawn figure to show
+50:28
+why that works. But I hope you saw the main point is
+50:34
+that for area and volume, determinant gives a great formula.
+50:39
+OK. And next lectures are about eigenvalues, so we're really into the big stuff.
+50:47
+Thanks. 

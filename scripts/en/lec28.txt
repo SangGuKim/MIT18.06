@@ -1,0 +1,769 @@
+https://www.youtube.com/watch?v=TSdXJw83kyA
+
+# Intro
+0:00
+0:08
+Okay. This lecture is mostly about the idea of similar matrixes.
+0:15
+I'm going to tell you what that word similar means and in what way two matrixes are called similar.
+0:22
+But before I do that, I have a little more to say about positive definite matrixes.
+0:28
+You can tell this is a subject I think is really important and I
+# Positive definite matrices
+0:34
+told you what positive definite meant -- it means that this --
+0:41
+this expression, this quadratic form, x transpose I x is always positive.
+0:48
+But the direct way to test it was with eigenvalues or pivots or determinants.
+0:55
+So I -- we know what it means, we know how to test it, but I didn't really say where positive definite matrixes come
+1:03
+from. And so one thing I want to say is that they come from least
+1:10
+squares in -- and all sorts of physical problems start with
+1:15
+a rectangular matrix -- well, you remember in least squares the crucial combination was A transpose A.
+1:23
+So I want to show that that's a positive definite matrix. Can -- so I -- I'm going to speak a little more about positive definite
+1:31
+matrixes, just recapping -- so let me ask a question.
+1:38
+It may be on the homework. Suppose a matrix A is positive definite.
+1:45
+I mean by that it's all -- I'm assuming it's symmetric. That's always built into the definition.
+1:52
+So we have a symmetric positive definite matrix. What about its inverse?
+1:58
+Is the inverse of a symmetric positive definite matrix also symmetric positive definite?
+2:06
+So you quickly think, okay, what do I know about the pivots of the inverse matrix?
+2:15
+Not much. What do I know about the eigenvalues of the inverse matrix?
+2:22
+Everything, right? The eigenvalues of the inverse are one over the eigenvalues of the matrix.
+2:31
+So if my matrix starts out positive definite, then right away I know that its inverse is positive definite,
+2:39
+because those positive eigenvalues -- then one over the eigenvalue is also positive.
+2:47
+What if I know that A -- a matrix A and a matrix B are both positive definite?
+2:53
+But let me ask you this. Suppose if A and B are positive definite, what about --
+3:04
+what about A plus B? In some way, you hope that that would be true.
+3:11
+It's -- positive definite for a matrix is kind of like positive for a real number.
+3:18
+But we don't know the eigenvalues of A plus B. We don't know the pivots of A plus B.
+3:24
+So we just, like, have to go down this list of, all right, which approach to positive definite
+3:31
+can we get a handle on? And this is a good one. This is a good one.
+3:36
+Can we -- how would we decide that -- if A was like this and if B was like this,
+3:43
+then we would look at x transpose A plus B x. I'm sure this is in the homework.
+3:51
+Now -- so we have x transpose A x bigger than zero, x transpose B x positive for all -- for all x,
+3:59
+so now I ask you about this guy. And of course, you just add that and that
+4:06
+and we get what we want. If A and B are positive definites, so is A plus B.
+4:14
+So that's what I've shown. So is A plus B.
+4:20
+Just -- be sort of ready for all the approaches through
+4:27
+eigenvalues and through this expression. And now, finally, one more thought about positive definite
+4:35
+is this combination that came up in least squares. Can I do that?
+4:41
+So now -- now suppose A is rectangular, m by n.
+4:48
+I -- so I'm sorry that I've used the same letter A
+4:58
+for the positive definite matrixes in the eigenvalue chapter that I used way back in earlier chapters when
+5:07
+the matrix was rectangular. Now, that matrix -- a rectangular matrix,
+5:12
+no way its positive definite. It's not symmetric.
+5:18
+It's not even square in general. But you remember that the key for these rectangular ones
+5:25
+was A transpose A. That's square.
+5:34
+That's symmetric. Those are things we knew --
+5:41
+we knew back when we met this thing in the least square stuff, in the projection stuff.
+5:49
+But now we know something more -- we can ask a more important question, a deeper question --
+5:56
+is it positive definite? And we sort of hope so.
+6:02
+Like, we -- we might -- in analogy with numbers, this is like --
+6:09
+sort of like the square of a number, and that's positive.
+6:15
+So now I want to ask the matrix question. Is A transpose A positive definite?
+6:24
+Okay, now it's -- so again, it's a rectangular A that I'm starting with, but it's the combination A transpose A
+6:31
+that's the square, symmetric and hopefully positive definite matrix. So how -- how do I see that it is positive definite,
+6:41
+or at least positive semi-definite? You'll see that.
+6:47
+Well, I don't know the eigenvalues of this product.
+6:52
+I don't want to work with the pivots. The right thing -- the right quantity to look at is this,
+7:00
+x transpose Ax -- A -- x transpose times my matrix times x.
+7:07
+I'd like to see that this thing -- that that expression is always positive.
+7:13
+I'm not doing it with numbers, I'm doing it with symbols. Do you see -- how do I see that that expression comes out
+7:21
+positive? I'm taking a rectangular matrix A and an A transpose --
+7:29
+that gives me something square symmetric, but now I want to see that if I multiply -- that if I do this --
+7:34
+I form this quadratic expression that I get this positive thing that goes upwards when I graph it.
+7:42
+How do I see that that's positive, or absolutely it isn't negative anyway?
+7:47
+We'll have to, like, spend a minute on the question could it be zero, but it can't be negative.
+7:54
+Why can this never be negative? The argument is --
+8:02
+like the one key idea in so many steps in linear algebra --
+8:08
+put those parentheses in a good way. Put the parentheses around Ax and what's the first part?
+8:19
+What's this x transpose A transpose? That is Ax transpose.
+8:25
+So what do we have?
+8:30
+We have the length squared of Ax. We have -- that's the column vector Ax that's the row vector
+8:39
+Ax, its length squared, certainly greater than
+8:48
+or possibly equal to zero. So we have to deal with this little possibility.
+8:53
+Could it be equal? Well, when could the length squared be zero?
+8:58
+Only if the vector is zero, right? That's the only vector that has length squared zero.
+9:08
+So we have -- we would like to -- I would like to get that possibility out of there.
+9:15
+So I want to have Ax never -- never be zero, except of course for the zero vector.
+9:21
+How do I assure that Ax is never zero? The -- in other words, how do I show that there's no null space
+9:27
+of A? The rank should be --
+9:33
+so now remember -- what's the rank when there's no null
+9:39
+space? By no null space, you know what I mean. Only the zero vector in the null space.
+9:46
+So if I have a -- if I have an 11 by 5 matrix --
+9:52
+so it's got 11 rows, 5 columns, when is there no null space?
+9:59
+So the columns should be independent -- what's the rank?
+10:04
+n 5 -- rank n. Independent columns, when -- so if I --
+10:12
+then I conclude yes, positive definite. And this was the assumption -- then A transpose A is
+10:19
+invertible -- the least squares equations all work fine.
+10:27
+And more than that -- the matrix is even positive definite.
+10:33
+And I just to say one comment about numerical things, with a positive definite matrix, you never
+10:41
+have to do row exchanges. You never run into unsuitably small numbers or zeroes
+10:50
+in the pivot position. They're the right -- they're the great matrixes to compute with, and they're the great matrixes to study.
+10:57
+So that's -- I wanted to take this first ten minutes of grab
+11:05
+the first ten minutes away from similar matrixes and continue
+11:12
+a -- this much more with positive definite. I'm really at this point, now, coming close
+11:19
+to the end of the heart of linear algebra.
+11:24
+The positive definiteness brought everything together. Similar matrixes, which is coming the rest of this hour
+11:32
+is a key topic, and please come on Monday.
+11:38
+Monday is about what's called the SVD, singular values. It's the -- has become a central fact in --
+11:49
+a central part of linear algebra. I mean, you can come after Monday also, but --
+11:57
+Monday is, -- that singular value thing has made it
+12:04
+into this course. Ten years ago, five years ago it wasn't in the course, now it has to be.
+12:10
+Okay. So can I begin today's lecture proper with this idea
+12:16
+of similar matrixes. This is what similar matrixes mean.
+# Similar matrix
+12:22
+So here -- let's start again. I'll write it again. So A and B are similar.
+12:27
+A and B are -- now I'm -- these matrixes --
+12:33
+I'm no longer talking about symmetric matrixes, in --
+12:38
+at least no longer expecting symmetric matrixes. I'm talking about two square matrixes n by n.
+12:46
+A and B, they're n by n matrixes.
+12:54
+And I'm introducing this word similar. So I'm going to say what does it mean?
+13:00
+It means that they're connected in the way --
+13:08
+well, in the way I've written here, so let me rewrite it. That means that for some matrix M, which has to be invertible,
+13:24
+because you'll see that -- this one matrix is --
+13:29
+take the other matrix, multiply on the right by M and on the left by M inverse.
+13:39
+So the question is, why that combination? But part of the answer you know already.
+13:46
+You remember -- we've done this -- we've taken a matrix A --
+13:52
+so let's do an example of similar.
+13:58
+Suppose A -- the matrix A -- suppose it has a full set
+14:06
+of eigenvectors. They go in this eigenvector matrix S.
+14:12
+Then what was the main point of the whole -- the main calculation of the whole chapter was -- is --
+14:19
+use that eigenvector matrix S and its inverse
+14:25
+comes over there to produce the nicest possible matrix lambda.
+14:33
+Nicest possible because it's diagonal. So in our new language, this is saying A is similar to lambda.
+14:47
+A is similar to lambda, because there is a matrix,
+14:56
+and this particular -- there is an M and this particular M is this important guy, this eigenvector matrix.
+15:05
+But if I take a different matrix M and I look at M inverse A M,
+15:13
+the result won't come out diagonal, but it will come out a matrix B that's similar to A.
+15:21
+Do you see that I'm -- what I'm doing is, like -- I'm putting these matrixes into families.
+15:28
+All the matrixes in one -- in the family are similar to each
+15:34
+other. They're all -- each one in this family is connected to each
+15:39
+other one by some matrix M and the -- like the outstanding member of the family is the diagonal guy.
+15:47
+I mean, that's the simplest, neatest matrix in this family of all the matrixes that are similar to A,
+15:55
+the best one is lambda. But there are lots of others, because I can take different --
+16:01
+instead of S, I can take any old matrix M, any old invertible matrix and -- and do it.
+16:08
+I'd better do an example. Okay. Suppose I take A as the matrix two one one two.
+16:16
+Okay. Do you know the eigenvalue matrix for that?
+16:25
+The eigenvalues of that matrix are -- well, three and one.
+16:33
+So that -- and the eigenvectors would be easy to find. So this matrix is similar to this one.
+16:40
+But my point is -- but also, I can also take my matrix, two one one two,
+16:49
+I could multiply it by -- let's see, what -- I'm just going to cook up a matrix M here.
+16:55
+I'm -- I'll -- let me just invent -- one four one zero. And over here I'll put M inverse,
+17:02
+and because I happened to make that triangular, I know that its inverse is that, right?
+17:09
+So there's M inverse A M, that's going to produce some matrix -- oh, well, I've got to do the multiplication,
+17:17
+so hang on a second, let -- I'll just copy that one minus four zero one
+17:22
+and multiply these guys so I'm getting two nine one and six,
+17:33
+I think. Can you check it as I go, because you -- see I'm just --
+17:39
+so that's two minus four, I'm getting a minus two nine minus 24 is a minus 15, my God, how did I get this?
+17:48
+And that's probably one and six.
+17:54
+So there's my matrix B. And there's my matrix lambda, there's my matrix A
+18:02
+and my point is these are all similar matrixes.
+18:07
+They all have something in common, besides being just two by two.
+18:13
+They have something in common. And that's -- and what is it?
+18:21
+What's the point about two matrixes that are built out
+18:26
+of -- the B is built out of M inverse A M.
+18:32
+What is it that A and B have in common? That's the main -- now I'm telling you the main fact about
+18:38
+similar matrixes. They have the same eigenvalues.
+18:44
+This is -- this chapter is about eigenvalues, and that's why we're interested in this family of matrixes that
+18:51
+have the same eigenvalues. What are the eigenvalues in this example?
+18:56
+Lambda. The eigenvalues of that I could compute. The eigenvalues of that I can compute really fast.
+19:06
+So the eigenvalues are three and one -- for this for sure.
+19:11
+Now did we -- do you see why the eigenvalues are three and one for that one?
+19:17
+If I tell you the eigenvalues are three and one, you prick -- quickly process the trace, which is -- and four --
+19:26
+agrees with four and you process the determinant, three times one --
+19:31
+the determinant is three and you say yes, it's right. Now I'm hoping that the eigenvalues of this thing
+19:39
+are three and one. May I process the trace and the determinant for that one?
+19:45
+What's the trace here? The trace of this matrix is four minus two and six,
+19:52
+and that's what it should be. What's the determinant minus twelve plus fifteen is three.
+19:59
+The determinant is three. The eigenvalues of that matrix are also three and one. And you see I created this matrix just like --
+20:07
+I just took any M, like, one that popped into my head and computed M inverse A M, got that matrix,
+20:16
+it didn't look anything special but it's --
+20:22
+like A itself, it has those eigenvalues three and one. So that's the main fact and let me write it down.
+20:31
+Similar matrixes have the same eigenvalues.
+20:45
+So I'll just put that as an important point.
+20:51
+And think why.
+20:56
+Why is that? So that's what that family of matrixes is. The matrixes that are similar to this A
+21:03
+here are all the matrixes with eigenvalues three and one.
+21:09
+Every matrix with eigenvalues three and one, there's some M that connects this guy
+21:16
+to the one you think of. And then of course, the most special guy in the whole family
+21:22
+is the diagonal one with eigenvalues three and one sitting there on the diagonal.
+21:28
+But also, I could find -- I mean, tell me just a couple more members of the family.
+21:34
+Another -- tell me another matrix that has eigenvalues three and one.
+21:41
+Well, let's see, I -- oh, I'll just make it triangular.
+21:47
+That's in the family. There is some M that -- that connects to this one.
+21:53
+And -- and also this. There's some matrix M -- so that M inverse A M comes out to be
+22:02
+that. There's a whole family here. And they all share the same eigenvalues.
+22:11
+So why is that? Okay. I'm going to start -- the only possibility is to start with Ax
+22:21
+equal lambda x. Okay, so suppose A has the eigenvalue lambda.
+22:27
+Now I want to get B into the picture here somehow.
+22:33
+You remember B is M inverse A M. Let's just remember that over here.
+22:39
+B is M inverse A M. And I want to see its eigenvalues.
+22:48
+How I going to get M inverse A M into this equation? Let me just sort of do it.
+22:54
+I'll put an M times an M inverse in there, right?
+22:59
+That was -- I haven't changed the left-hand side, so I better not change the right-hand side.
+23:06
+So everybody's okay so far, I just put in there -- see,
+23:12
+I want to get a -- so now I'll multiply on the left by M inverse --
+23:17
+I have to do the same to this side and that number lambda's just a number,
+23:22
+so it factors out in the front. So what I have here is this was safe.
+23:32
+I did the same thing to both sides. And now I've got B. There's B.
+23:38
+That's B times this vector M inverse x is equal to lambda times this vector M inverse x.
+23:47
+So what have I learned? I've learned that B times some vector
+23:53
+is lambda times that vector. I've learned that lambda is an eigenvalue of B also. So this is -- if -- so this is --
+24:01
+if lambda's an eigenvalue of A, then I can write it this way and I discover that lambda's an eigenvalue of B.
+24:10
+That's the end of the proof. The eigenvector didn't stay the same.
+24:16
+Of course I don't expect the eigenvectors to stay the same. If all the eigenvalues are the same and all the eigenvectors
+24:22
+are the same, then probably the matrix is the same.
+24:27
+Here the eigenvector changes, so the eigenvector -- so the point is then the eigenvector of B --
+24:38
+of B is M inverse times the eigenvector of A.
+24:44
+Okay.
+24:51
+That's all that this says here. The eigenvector of A was X, and so the M inverse --
+24:58
+similar matrixes, then have the same eigenvalues and their eigenvectors are just moved around.
+25:05
+Of course, that's what we -- that's what happened way back -- and the most important similar matrixes are to diagonalize.
+25:15
+So what was the point when we diagonalized? The eigenvalues stayed the same, of course.
+25:20
+Three and one. What about the eigenvectors? The eigenvectors were whatever they were for the matrix A,
+25:29
+but then what were the eigenvectors for the diagonal matrix?
+25:34
+They're just -- what are the eigenvectors of a diagonal matrix? They're just one zero and zero one.
+25:41
+So this step made the eigenvectors nice, didn't change the eigenvalues, and every time we
+25:49
+don't change the eigenvalues. Same eigenvalues. Okay.
+25:56
+Now -- so I've got all these matrixes in -- I've got this family of matrixes with eigenvalues three and one.
+26:07
+Fine. That's a nice family. It's nice because those two eigenvalues are different.
+26:15
+I now have to -- to get into that -- the -- into the less happy possibility that the two
+26:25
+eigenvalues could be the same. And then it's a little trickier, because you remember
+26:32
+when two eigenvalues are the same, what's the bad possibility?
+26:38
+That there might not be enough -- a full set of eigenvectors and we might not be able
+26:44
+to diagonalize. So I need to discuss the bad case.
+26:50
+So the bad -- can I just say bad?
+26:57
+If lambda one equals lambda two, then the matrix
+27:03
+might not be diagonalizable. Suppose lambda one equals lambda two equals four,
+27:11
+say. Now if I look at the family of matrixes with eigenvalues four
+27:20
+and four, well, one possibility occurs to me. One family with eigenvalues four and four has this matrix in it,
+27:38
+four times the identity. Then another -- but now I want to ask also about the matrix
+27:46
+four four one zero.
+27:51
+And my point -- here's the whole point of this -- of this bad stuff, is that this guy is not in the same family
+28:00
+with that one. The family of a -- of matrixes that have eigenvalues four
+28:05
+and four is two families. There's this total loner here who's in a family off --
+28:16
+right? Just by himself. And all the others are in with this guy.
+28:23
+So the big family includes this one.
+28:35
+And it includes a whole lot of other matrixes, all -- in fact, in this two by two case, it -- you see where --
+28:44
+what do I mean -- so what I using, this word family -- in a family, I mean they're similar.
+28:51
+So my point is that the only matrix that's similar to this is itself.
+28:58
+The only matrix that's similar to four times the identity is four times the identity. It's off by itself.
+29:05
+Why is that? The -- if this is my matrix, four times the identity,
+29:11
+and I take it, I multiply on the right by any matrix M,
+29:17
+I multiply on the left by M inverse, what do I get?
+29:22
+This is any M, but what's the result?
+29:28
+Well, factoring out a four, that's just the identity matrix in there.
+29:34
+So then the M inverse cancels the M, so I've just got this matrix back again.
+29:42
+So whatever the M is, I'm not getting any more members of the family. So this is one small family, because it only has one person.
+29:57
+One matrix, excuse me. I think of these matrixes as people by this point, in eighteen oh six.
+30:04
+Okay, the other family includes all the rest -- all other matrixes that have eigenvalues four and four.
+30:13
+This is somehow the best one in that family.
+30:20
+See, I can't make it diagonal. If I -- if it's diagonal, it's this one. It's in its own, by itself.
+30:27
+So I have to think, okay, what's the nearest I can get to diagonal?
+30:32
+But it will not be diagonalizable. That -- do you know that that matrix is not diagonalizable?
+30:39
+Of course, because if it was diagonalizable, it would be similar to that, which it isn't.
+30:46
+The eigenvalues of this are four and four, but what's the catch with that matrix?
+30:52
+It's only got one eigenvector. That's a non-diagonalizable matrix. Only one eigenvector.
+30:59
+And somehow, if I made that one into a ten or to a million,
+31:06
+I could find an M, it's in the family, it's similar. But the best -- so the best guy in this family is this one.
+31:14
+And this is called the Jordan --
+31:19
+so this guy Jordan picked out -- so he, like, studied, these families of matrixes, and each family,
+31:29
+he picked out the nicest, most diagonal one.
+31:34
+But not completely diagonal, because there's nobody -- there isn't a diagonal matrix in this family,
+31:40
+so there's a one up there in the Jordan form. Okay.
+31:46
+I think we've got to see some more matrixes in that family. So, all right, let me -- let's just think of some other
+31:52
+matrixes whose eigenvalues are four and four but they're not
+31:58
+four times the identity. So -- and I believe that -- that this -- that all the examples we pick up will be
+32:06
+similar to each other and -- do you see why --
+32:13
+in this topic of similar matrixes, the climax is the Jordan form.
+32:21
+So it says that every matrix -- I'll write down what the Jordan form -- what Jordan discovered.
+32:29
+He found the best looking matrix in each family.
+32:35
+And that's -- then we've got -- then we've covered all matrixes
+32:41
+including the non-diagonalizable one. That -- that's the point, that in some way,
+32:47
+Jordan completed the diagonalization by coming as near as he could, which is his Jordan form.
+32:54
+And therefore, if you want to cover all matrixes, you've got to get him in the picture. It used to be -- when I took eighteen oh six,
+33:03
+that was the climax of the course, this Jordan form stuff. I think it's not the climax of linear algebra anymore,
+33:11
+because -- it's not easy to find this Jordan form
+33:20
+for a general matrix, because it depends on these eigenvalues being exactly the same.
+33:27
+You'd have to know exactly the eigenvalues and it -- and you'd have to know exactly the rank and the slightest
+33:35
+change in numbers will change those eigenvalues, change the rank and therefore the whole thing is numerically
+33:43
+not an -- a good thing. But for algebra, it's the right thing
+# More matrices
+33:51
+to understand this family. So just tell me another matrix -- a few more matrixes --
+33:56
+so more members of the family.
+34:03
+Let me put down again what the best one is.
+34:11
+Okay. All right. Some more matrixes. Let's see, what I looking for?
+34:17
+I'm looking for matrixes whose trace is what?
+34:22
+So if I'm looking for more matrixes in the family, they'll all have the same eigenvalues, four and four.
+34:28
+So their trace will be eight. So why don't I just take, like, five and three --
+34:34
+I've got the trace right, now the determinant should be what?
+34:40
+Sixteen. So I just fix this up -- shall I put maybe a one and a minus one there?
+34:46
+Okay. There's a matrix with eigenvalues four and four,
+34:52
+because the trace is eight and the determinant is sixteen. And I don't think it's diagonalizable.
+35:00
+Do you know why it's not diagonalizable? Because if it was diagonalizable,
+35:06
+the diagonal form would have to be this.
+35:12
+But I can't get to that form, because whatever I do with any M inverse and M I stay with that form.
+35:17
+I could never get -- connect those. So I can put down more members -- here -- here's another easy one.
+35:23
+I could put the four and the four and a seventeen down there.
+35:30
+All these matrixes are similar. If I'm -- I could find an M that would show that that one is
+35:35
+similar to that one. And in -- you can see the general picture is I can take
+35:40
+any a and any 8-a here and any -- oh, I don't know,
+35:45
+whatever you put it'd be -- anyway, you can see. I can fill this in, fill this in to make the trace equal eight,
+35:54
+the determinant equal 16, I get all that family of matrixes
+36:01
+and they're all similar. So we see what eigenvalues do.
+36:08
+They're all similar and they all have only one eigenvector. So I -- if I'm -- if you were going to --
+36:16
+allow me to add to this picture, they have the same lambdas and they also have the same number of independent
+36:25
+eigenvectors. Because if I get an eigenvector for x I get one for -- for A,
+36:33
+I get one for B also. So -- and same number of eigenvectors.
+36:43
+But even more than that -- even more than that -- I mean, it's not enough just to count eigenvectors.
+36:49
+Yes, let me give you an example why it's not even
+36:54
+enough to count eigenvectors. So another example.
+37:00
+So here are some matrixes -- oh, let me make them four by four --
+37:07
+okay, here -- here's a matrix. I mean, like if you want nightmares, think about matrixes like these.
+37:14
+Uh, so a one off the diagonal -- say a one there, how many --
+37:21
+what are the eigenvalues of that matrix? Oh, I mean --
+37:29
+okay. What are the eigenvalues of that matrix?
+37:35
+Please. Four 0s, right? So we're really getting bad matrixes now.
+37:44
+So I mean, this is, like -- Jordan was a good guy, but he had to think about matrixes
+37:53
+that all -- that had, like -- an eigenvalue repeated four times.
+37:58
+How many eigenvectors does that matrix have?
+38:04
+Well, I'm -- eigenvectors will be -- since the eigenvalue is zero, eigenvectors will be
+38:11
+in the null space, right? I'm -- eigenvectors have got to be A x equal zero x.
+38:17
+So what's the dimension of the null space? Two. Somebody said two.
+38:23
+And that's right. How -- why? Because you ask what's the rank of that matrix,
+38:29
+the rank is obviously two. The number of independent rows is two,
+38:35
+the number of independent columns is two, the rank is two so the null -- the dimension of the null space
+38:41
+is four minus two, so it's got two eigenvectors. Two eigenvectors.
+38:47
+Two independent eigenvectors. All right. The dimension of the null space is two.
+38:55
+Now, suppose I change this zero to a seven.
+39:03
+39:09
+The eigenvalues are all still zero, how -- what about -- how many eigenvectors?
+39:15
+What's the dimension of the -- what's the rank of this matrix now? Still two, right?
+39:20
+So it's okay. And actually, this would be similar to the one that
+39:26
+had a zero in there. But it's not as beautiful, Jordan picked this one.
+39:31
+He picked -- he put ones -- we have a one on the -- above the diagonal for every missing
+39:39
+eigenvector, and here we're missing two because we've got two, so we've got two eigenvectors and two are
+39:45
+missing, because it's a four by four matrix.
+39:53
+Okay, now -- but I was going to give you this second example.
+39:58
+0 1 0 0, let me just move the one.
+40:05
+Oop, not there.
+40:11
+Off the diagonal and zero zero zero zero zero. Okay.
+40:19
+So now tell me about this matrix. Its eigenvalues are four zeroes again.
+40:27
+Its rank is two again. So it has two eigenvectors and two missing.
+40:36
+But the darn thing is not similar to that one. A -- a count of eigenvectors looks like these could be
+40:44
+similar, but they're not. Jordan -- see, this is like -- a little three by three block
+40:52
+and a little one by one block. And this one is like a two by two block and a two
+40:58
+by two block, and those blocks are called Jordan blocks. So let me say what is a Jordan block?
+41:06
+J block number I has --
+41:17
+so a Jordan block has a repeated eigenvalue, lambda I, lambda I
+41:22
+on the diagonal. Zeroes below and ones above.
+41:30
+So there's a block with this guy repeated, but it only has one eigenvector.
+41:37
+So a Jordan block has one eigenvector only.
+41:43
+This one has one eigenvector, this block has one eigenvector and we get two.
+41:49
+This block has one eigenvector and that block has one eigenvector and we get two.
+41:54
+So -- but the blocks are different sizes.
+42:02
+And that -- it turns out Jordan worked out -- then this is not similar, not similar to this one.
+42:14
+So the -- so I'm, like, giving you the whole story --
+42:22
+well, not the whole story, but the main themes of the story -- is here's Jordan's theorem.
+# Summary
+42:29
+Every square matrix A is similar to A Jordan matrix J.
+42:49
+And what's a Jordan matrix J? It's a matrix with these blocks, block --
+42:56
+Jordan block number one, Jordan block number two and so on.
+43:03
+And let's say Jordan block number d.
+43:11
+And those Jordan blocks look like that, so the eigenvalues are sitting on the diagonal,
+43:17
+but we've got some of these ones above the diagonal. We've got the number of --
+43:25
+so the number of blocks -- the number of blocks is the number of eigenvectors,
+43:37
+because we get one eigenvector per block. So what I'm -- so if I summarize Jordan's idea --
+43:47
+start with any A. If its eigenvalues are distinct, then what's it similar
+43:54
+to? This is the good case. if I start with a matrix A and it has different eigenvalues --
+44:00
+it's n eigenvalues, none of them are repeated, then that's a diagonal -- diagonalizable matrix --
+44:09
+the Jordan blocks is -- has -- the Jordan matrix is diagonal. It's lambda.
+44:15
+So the good case -- the good case, J is lambda.
+44:22
+All -- there are --
+44:29
+d=n. There are n eigenvectors, n blocks, diagonal, everything great.
+44:35
+But Jordan covered all cases by including
+44:40
+these cases of repeated eigenvalues and missing eigenvectors.
+44:47
+Okay. That's a description of Jordan. That -- that's -- I haven't told you how to compute this thing,
+44:54
+and it isn't easy. Whereas the good case is the -- the good case is what 18.06 is
+45:00
+about. The -- this case is what 18.06 was about 20 years ago.
+45:07
+So you can see you probably won't have on the final exam
+45:12
+the computation of a Jordan matrix for some horrible thing
+45:18
+with four repeated eigenvalues. I'm not that crazy about the Jordan form.
+45:28
+But I'm very positive about positive definite matrixes
+45:34
+and about the idea that's coming Monday, the singular value decomposition.
+45:40
+So I'll see you on Monday, and have a great weekend. Bye. 

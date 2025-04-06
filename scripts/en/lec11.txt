@@ -1,0 +1,752 @@
+https://www.youtube.com/watch?v=2IdtqGM6KWU
+
+0:00
+0:10
+OK. This is linear algebra lecture eleven.
+0:17
+And at the end of lecture ten, I was talking about some vector
+0:22
+spaces, but they're -- the things in those vector spaces
+0:29
+were not what we usually call vectors. Nevertheless, you could add them and you
+0:36
+could multiply by numbers, so we can call them vectors. I think the example I was working
+0:41
+with they were matrices. So the -- so we had like a matrix space,
+0:46
+the space of all three by three matrices. And I'd like to just pick up on that, because --
+0:55
+we've been so specific about n dimensional space here,
+1:00
+and you really want to see that the same ideas work as long
+1:05
+as you can add and multiply by scalars. So these new, new vector spaces, the example I took
+1:16
+was the space M of all three by three matrices.
+1:24
+OK.
+1:29
+I can add them, I can multiply by scalars. I can multiply two of them together, but I don't do that.
+1:36
+That's not part of the vector space picture. The vector space part is just adding the matrices
+1:43
+and multiplying by numbers. And that's fine, we stay within this space of three
+1:50
+by three matrices. And I had some subspaces that were interesting,
+1:56
+like the symmetric, the subspace of symmetric matrices,
+2:02
+symmetric three by threes. Or the subspace of upper triangular three by threes.
+2:13
+Now I, I use the word subspace because it follows the rule.
+2:21
+If I add two symmetric matrices, I'm still symmetric. If I multiply two symmetric matrices,
+2:27
+is the product automatically symmetric? No. But I'm not multiplying matrices.
+2:34
+I'm just adding. So I'm fine. This is a subspace. Similarly, if I add two upper triangular matrices,
+2:42
+I'm still upper triangular. And, that's a subspace.
+2:48
+Now I just want to take these as example and ask, well, what's a basis for that subspace?
+2:55
+What's the dimension of that subspace? And what's bd- dimension of the whole space?
+3:00
+So, there's a natural basis for all three by three matrices,
+3:07
+and why don't we just write it down. So, so M, a basis for M.
+3:21
+Again, all three by threes.
+3:27
+OK. And then I'll just count how many members are in that basis
+3:34
+and I'll know the dimension. And OK, it's going to take me a little time.
+3:40
+In fact, what is the dimension? Any idea of what I'm coming up with next?
+3:47
+How many numbers does it take to specify that three by three matrix?
+3:53
+Nine. Nine is the, is the dimension I'm going to find.
+3:59
+And the most obvious basis would be the matrix that's
+4:04
+that matrix and then this matrix with a one there
+4:12
+and that's two of them, shall I put in the third one,
+4:21
+and then onwards, and the last one maybe
+4:27
+would end with the one. OK.
+4:34
+That's like the standard basis. In fact, our space is practically the same
+4:40
+as nine dimensional space. It's just the nine numbers are written in a square
+4:48
+instead of in a column. But somehow it's different and, and ought to be thought
+4:54
+of as -- natural for itself.
+5:01
+Because now what about the symmetric three by threes? So that's a subspace.
+5:09
+Just let's just think, what's the dimension of that subspace and what's a basis for that subspace.
+5:16
+OK. And I guess this question occurs to me. If I look at this subspace of symmetric three
+5:24
+by threes, well, how many of these original basis
+5:32
+members belong to the subspace? I think only three of them do.
+5:38
+This one is symmetric. This last one is symmetric.
+5:43
+And the one in the middle with a, with a one in that position -- in the two two position, would be symmetric.
+5:52
+But so I've got three of these original nine are symmetric, but, so this is an example where --
+6:03
+but that's, that's not all, right? What's the dimension? Let's put the dimensions down. Dimension of the, of M, was nine.
+6:13
+What's the dimension of -- shall we call this S -- is what?
+6:19
+What's the dimension of this? I'm sort of taking simple examples where we can, we can,
+6:25
+spot the answer to these questions. So how many -- if I have a symmetric --
+6:32
+think of all symmetric matrices as a subspace, how many parameters do I choose in three by three symmetric
+6:40
+matrices? Six, right. If I choose the diagonal that's three,
+6:49
+and the three entries above the diagonal, then I know what the three entries below.
+6:55
+So the dimension is six. I guess what's the dimension of this here?
+7:00
+Let's call this space U for upper triangular. So what's the dimension of that space of all upper triangular
+7:09
+three by threes? Again six. Again six.
+7:14
+And, but we haven't got a -- we haven't seen -- well, actually,
+7:24
+maybe we have got a basis here for, the upper triangulars.
+7:29
+I guess six of these guys, one, two, three, four,
+7:35
+and a, and a couple more, would be upper triangular. So there's a accidental case where the big basis contains
+7:44
+in it a basis for the subspace. But with the symmetric guy, it didn't have.
+7:50
+The symmetric guy the, basis -- so you see -- a basis is the basis for the big space,
+7:56
+we generally need to think it all over again to get a basis for the subspace.
+8:03
+And then how do I get other subspaces? Well, we spoke before about, the subspace the symmetric matrices
+8:15
+and the upper triangular. This is symmetric and upper triangular.
+8:24
+8:30
+What's the, what's the dimension of that space?
+8:36
+OK. Well, what's in that space? So what's -- if a matrix is symmetric and also upper
+8:42
+triangular, that makes it diagonal. So this is the same as the diagonal matrices,
+8:51
+diagonal three by threes. And the dimension of this, of S intersect U, right --
+9:03
+you're OK with that symbol? That's, that's the vectors that are in both S and U,
+9:10
+and that's D. So S intersect U is the diagonals.
+9:15
+And the dimension of the diagonal matrices is three.
+9:21
+And we've got a basis, no problem. OK, as I write that, I think, OK, what about putting --
+9:33
+so this is like, this intersection -- is taking all the vectors that are
+9:40
+in both, that are symmetric and also upper triangular. Now we looked at the union.
+9:50
+Suppose I take the matrices that are symmetric or upper triangular.
+9:59
+What -- why was that no good? So why is it no -- why I not interested in the union,
+10:08
+putting together those two subspaces? So this, these are matrices that are in S or in U, or possibly
+10:18
+both, so they, the diagonals included. But what's bad about this? It's not a subspace.
+10:27
+It's like having, taking, you know, a couple of lines in the plane and stopping there.
+10:34
+A line -- this is -- so there's a three dimensional subspace
+10:40
+of a nine dimensional space, there's -- ooh, sorry, six. There's a six dimensional subspace
+10:46
+of a nine dimensional space. There's another one. But they, they're headed in different directions,
+10:52
+so we, we can't just put them together. We have to fill in. So that's what we do.
+10:58
+To get this bigger space that I'll write with a plus sign, this is combinations of things in S and things in U.
+11:09
+OK. So that's the final space I'm going to introduce.
+11:15
+I have a couple of subspaces. I can take their intersection. And now I'm interested in not their union but their sum.
+11:24
+So this would be the, this is the intersection, and this will be their sum.
+11:31
+So what do I need for a subspace here?
+11:38
+I take anything in S plus anything in U.
+11:43
+I don't just take things that are in S and pop in also, separately, things that are in U.
+11:48
+This is the sum of any element of S,
+11:56
+that is, any symmetric matrix, plus any
+12:02
+in U, any element of U.
+12:08
+OK. Now as long as we've got an example here, tell me what we get.
+12:15
+If I take every symmetric matrix, take all symmetric matrices, and add them
+12:20
+to all upper triangular matrices, then I've got a whole lot of matrices and it is a subspace.
+12:27
+And what's -- it's a vector space, and what vector space would I then have?
+12:34
+Any idea what, what matrices can I get out of a symmetric plus an upper triangular?
+12:42
+I can get anything. I get all matrices. I get all three by threes.
+12:50
+It's worth thinking about that. It's just like stretch your mind a little, just a little,
+12:58
+to, to think of these subspaces and what their intersection is
+13:05
+and what their sum is. And now can I give you a little -- oh, well, let's figure out the dimension.
+13:10
+So what's the dimension of S plus U?
+13:17
+In this example is nine, because we got all three by threes.
+13:25
+So the original spaces had, the original symmetric space had
+13:31
+dimension six and the original upper triangular space had dimension six.
+13:38
+And actually I'm seeing here a nice formula.
+13:48
+That the dimension of S plus the dimension of U --
+13:54
+if I have two subspaces, the dimension of one plus the dimension of the other -- equals the dimension
+14:03
+of their intersection plus the dimension of their sum. Six plus six is three plus nine.
+14:12
+That's kind of satisfying, that these natural operations --
+14:20
+and we've -- this is it, actually, this is the set of natural things to do with,
+14:27
+with subspaces. That, the dimensions come out in a good way.
+14:36
+OK. Maybe I'll take just one more example of a vector space
+14:43
+that doesn't have vectors in it. It's come from differential equations.
+14:51
+So this is a one more new vector space
+14:57
+that we'll give just a few minutes to. Suppose I have a differential equation like d^2y/dx^2+ y=0.
+15:06
+OK.
+15:12
+I look at the solutions to that equation. So what are the solutions to that equation?
+15:21
+y=cos(x) is a solution.
+15:28
+y=sin(x) is a solution. y equals -- well, e to the (ix) is a solution, if you want,
+15:37
+if you allow me to put that in. But why should I put that in? It's already there.
+15:45
+You see, I'm really looking at a null space here. I'm looking at the null space of a differential equation.
+15:52
+That's the solution space. And describe the solution space, all solutions
+16:01
+to this differential equation. So the equation is y''+y=0.
+16:07
+Cosine's, cosine's a solution, sine is a solution. Now tell me all the solutions.
+16:14
+They're -- so I don't need e^(ix). Forget that.
+16:21
+What are all the complete solutions?
+16:30
+Is what? A combination of these. The complete solution is y equals
+16:38
+some multiple of the cosine plus some multiple of the sine.
+16:48
+That's a vector space. That's a vector space. What's the dimension of that space?
+16:54
+What's a basis for that space? OK, let me ask you a basis first.
+17:00
+If I take the set of solutions to that second order differential equation --
+17:06
+there it is, those are the solutions. What's a basis for that space?
+17:12
+Now remember, what's the, what question I asking? Because if you know the question I'm asking,
+17:18
+you'll see the answer. A basis means all the guys in the space
+17:25
+are combinations of these basis vectors. Well, this is a basis.
+17:31
+sin x, cos x there is a basis.
+17:38
+Those two -- they're like the special solutions, right?
+17:44
+We had special solutions to Ax=b. Now we've got special solutions to differential equations.
+17:53
+Sorry, we had special solutions to Ax=0, I misspoke.
+17:59
+The special solutions were for the null space just as here we're talking about the null space. Do you see that here is a -- those two --
+18:07
+and what's the dimension of the solution space?
+18:13
+How many vectors in this basis?
+18:23
+Two, the sine and cosine. Are those the only basis for this space?
+18:30
+By no means. e^(ix) and e^(-ix) would be another basis.
+18:37
+Lots of bases. But do you see that really what a course in differential --
+18:43
+in linear differential equations is about is finding a basis
+18:50
+for the solution space. The dimension of the solution space will always be --
+18:56
+will be two, because we have a second order equation. So that's, like there's 18.03 in --
+19:04
+five minutes of 18.06 is enough to, to take care of 18.03.
+19:10
+So there's a -- that's one more example. OK. And of course the point of the example
+19:16
+is these things don't look like vectors.
+19:24
+They look like functions. But we can call them vectors, because we can add them
+19:31
+and we can multiply by constants, so we can take linear combinations. That's all we have to be allowed to do.
+19:39
+So that's really why this idea of linear algebra and basis and dimension and so on plays a wider role than --
+19:51
+our constant discussions of m by n matrices.
+19:56
+OK. That's what I wanted to say about that topic. Now of course the key, number associated with matrices,
+20:09
+to go back to that number, is the rank. And the rank, what do we know about the rank?
+20:17
+Well, we know it's not bigger than m
+20:23
+and it's not bigger than n. So but I'd like to have a little discussion on the rank.
+20:29
+Maybe I'll put that here. So I'm picking up this topic of rank one matrices.
+20:38
+And the reason I'm interested in rank one matrices
+20:46
+is that they ought to be simple. If the rank is only one, the matrix can't get away from
+20:55
+us. So for example, let me take -- let me create a rank one matrix.
+21:00
+OK. Suppose it's three -- suppose it's two by three.
+21:07
+And let me give you the first row.
+21:16
+What can the second row be? Tell me a possible second row here, for, for this matrix
+21:24
+to have rank one. A possible second row is?
+21:30
+Two eight ten. The second row is a multiple of the first row.
+21:41
+It's not independent. So tell me a basis for the -- oh yeah, sorry to keep bringing up these same questions.
+21:50
+After the quiz I'll stop, but for now, tell me a basis for the row space.
+21:57
+A basis for the row space of that matrix is the first row,
+22:03
+right? The first row, one four five. A basis for the column space of this matrix is?
+22:11
+What's the dimension of the column space? The dimension of the column space is also one,
+22:19
+right? Because it's also the rank. The dimension -- you remember the dimension of the column
+22:24
+space equals the rank equals the dimension of the column space
+22:33
+of the transpose, which is the row space of A.
+22:38
+OK, and in this case it's one, r is one.
+22:44
+And sure enough, all the columns are -- all the other columns are multiples of that column.
+22:51
+Now there's -- there ought to be a nice way to see that,
+22:57
+and here it is. I can write that matrix as its pivot column, one two,
+23:06
+times its -- times one four five.
+23:11
+A column times a row, one column times one row
+23:18
+gives me a matrix, right? If I multiply a column by a row, that,
+23:25
+g- that's a two by one matrix times a one by three matrix,
+23:30
+and the result of the multiplication is two by three. And it comes out right.
+23:36
+So what I want to -- my point is the rank one matrices that
+23:45
+every rank one matrix has the form some column times some
+23:52
+row. So U is a column vector, V is a column vector --
+23:59
+but I make it into a row by putting in V transpose. So that's the -- complete picture of rank one matrices.
+24:12
+We'll be interested in rank one matrices. Later we'll find, oh, their determinant, that'll be easy,
+24:19
+their eigenvalues, that'll be interesting. Rank one matrices are like the building blocks
+24:26
+for all matrices. And actually maybe you can guess.
+24:37
+If I took any matrix, a five by seventeen matrix of rank four,
+24:47
+then it seems pretty likely -- and it's true, that I could break that five by seventeen matrix down
+24:56
+as a combination of rank one matrices. And probably how many of those would I need?
+25:03
+If I have a five by seventeen matrix of rank four, I'll need four of them, right.
+25:11
+Four rank one matrices. So the rank one matrices are the, are the building blocks.
+25:17
+And out -- I can produce every, I can produce every five by --
+25:23
+every rank four matrix out of four rank one matrices.
+25:29
+That brings me to a question, of course. OK. Would the rank four matrices form a subspace?
+25:36
+Let me take all five by seventeen matrices and think
+25:43
+about rank four -- the subset of rank four matrices.
+25:48
+Let me -- I'll write this down.
+25:53
+You seem I'm reviewing for the quiz, because I'm asking the kind of questions that are short enough
+26:00
+but -- that bring out do you know what these words mean. So I take --
+26:06
+my matrix space M now is all five by seventeen matrices.
+26:13
+And now the question I ask is the subset of, of rank four
+26:27
+matrices, is that a subspace?
+26:34
+If I add a matrix of -- so if I multiply a matrix of rank four by --
+26:39
+of rank four or less, let's say, because I have to let the zero matrix in if it's going to be a subspace.
+26:49
+But, but that doesn't just because the zero matrix got in there doesn't mean I have a subspace.
+26:56
+So if I -- so the, the question really comes down to -- if I add two rank four matrices, is the sum rank four?
+27:05
+What do you think?
+27:12
+If -- no, not usually. Not usually. If I add two rank four matrices, the sum is probably --
+27:20
+what could I say about the sum? Well, actually, well, the rank could be five.
+27:27
+It's a general fact, actually, that the rank of A plus B
+27:35
+can't be more than rank of A plus the rank of B.
+27:40
+So this would say if I added two of those, the rank couldn't be larger than eight, but I know actually the rank couldn't be as large as eight anyway.
+27:48
+What -- how big could the rank be, for, for the rank of a matrix in M? Could be as large as five, right, right.
+27:57
+So they're all sort of natural ideas. So it's rank four matrices or rank one matrices --
+28:05
+let me, let me change that to rank one. Let me take the subset of rank one matrices.
+28:12
+Is that a vector space? If I add a rank one matrix to a rank one matrix?
+28:19
+No. It's most likely going to have rank two. So this is -- So I'll just make that point.
+28:25
+Not a subspace.
+28:32
+OK. OK. Those are topics that I wanted to, just
+28:38
+fill out the, the previous lectures. The I'll ask one more subspace question, a,
+28:46
+a more, a more, likely example. Suppose I'm in -- let me put, put this example on a new
+28:53
+board. Suppose I'm in R, in R^4.
+28:58
+29:03
+So my typical vector in R^4 has four components, v1, v2, v3,
+29:10
+and v4. Suppose I take the subspace of vectors
+29:21
+whose components add to zero. So I let S be all v, all vectors v in four dimensional space
+29:34
+with v1+v2+v3+v4=0. So I just want to consider that bunch of vectors.
+29:39
+Is it a subspace, first of all? It is a subspace. It is a subspace.
+29:57
+What's -- how do we see that? It is a subspace.
+30:04
+I -- formally I should check. If I have one vector that with whose components add to zero
+30:11
+and I multiply that vector by six -- the components still add to zero, just six times as --
+30:16
+six times zero. If I have a couple of v and a w and I add them,
+30:22
+the, the components still add to zero. OK, it's a subspace. What's the dimension of that space
+30:29
+and what's a basis for that space? So you see how I can just describe a space and we --
+30:37
+we can ask for the dimension -- ask for the basis first and the dimension.
+30:42
+Of course, the dimension's the one that's easy to tell me in a single word.
+30:48
+What's the dimension of our subspace S here?
+30:55
+And a basis tell me -- some vectors in it.
+31:01
+Well, I'm going to make ask you again to guess the dimension.
+31:07
+Again I think I heard it. The dimension is three. Three.
+31:12
+Now how does this connect to our Ax=0?
+31:18
+Is this the null space of something? Is that the null space of a matrix?
+31:24
+And then we can look at the matrix and, and we know everything about those subspaces.
+31:30
+This is the null space of what matrix?
+31:39
+31:47
+What's the matrix where the null space is then Ab=0.
+31:53
+So I want this equation to be Ab=0.
+31:59
+b is now the vector. And what's the matrix that, that we're seeing there?
+32:07
+It's the matrix of four ones.
+32:14
+Do you see that that's -- that if I look at Ab=0 for this
+32:20
+matrix A, I multiply by b and I get this requirement,
+32:27
+that the components add to zero. So I'm really when I speak about S --
+32:33
+I'm speaking about the null space of that matrix. OK. Let's just say we've got a matrix now,
+32:41
+we want its null space. Well, we -- tell me its rank first.
+32:47
+The rank of that matrix is one, thanks.
+32:54
+So r is one. What's the general formula for the dimension of the null space?
+33:01
+The dimension of the null space of a matrix is --
+33:07
+in general, an m by n matrix of rank r? How many independent guys in the null space?
+33:16
+n-r, right?
+33:22
+n-r. In this case, n is four, four columns.
+33:31
+The rank is one, so the null space is three dimensions. So of course y- you could see it in this case,
+33:39
+but you can also see it here in our systematic way of dealing with the four fundamental subspaces
+33:49
+of a matrix. So what actually what, what are all four subspaces
+33:55
+then? The row space is clear. The row space is in R^4.
+34:01
+Yeah, can we take the four fundamental subspaces of this matrix?
+34:06
+Let's just kill this example. The row space is one dimensional.
+34:15
+It's all multiples of that, of that row. The null space is three dimensional.
+34:22
+Oh, you better give me a basis for the null space. So what's a basis for the null space?
+34:28
+The special solutions. To find the special solutions, I look for the free variables.
+34:34
+The free variables here are -- there's the pivot. The free variables are two, three, and four.
+34:44
+So the basis, basis for S, for S will be --
+34:52
+I'm expecting three vectors, three special solutions.
+35:01
+I give the value one to that free variable, and what's the pivot variable if the --
+35:12
+this is going to be a vector in S? Minus one. Now they're always added to -- the entries add to zero.
+35:20
+The second special solution has a one in the second free variable, and again a minus one
+35:26
+makes it right. The third one has a one in the third free variable, and again a minus one makes it right.
+35:34
+That's my answer. That's the answer I would be looking for. The -- a basis for this subspace S,
+35:43
+you would just list three vectors, and those would be the natural three to list.
+35:48
+Not the only possible three, but those are the special three.
+35:55
+OK, tell me about the column space, What's the column space of this matrix A?
+36:02
+So the column space is a subspace of R^1,
+36:13
+because m is only one. The columns only have one component. So the column space of S, the column space of A is somewhere
+36:23
+in the space R^1, because we only have -- these columns are short.
+36:30
+And what is the column space actually?
+36:36
+I just, it's just talking with these words is what I'm doing.
+36:42
+The column space for that matrix is R^1.
+36:48
+The column space for that matrix is all multiples of that column.
+36:55
+And all multiples give you all of R^1.
+37:00
+And what's the, the remaining fourth space,
+37:07
+the null space of A transpose is what?
+37:12
+So we transpose A.
+37:21
+We look for combinations of the columns now that give zero for A transpose.
+37:30
+And there aren't any. The only thing, the only combination of these rows
+37:36
+to give the zero row is the zero combination. OK.
+37:42
+So let's just check dimensions. The null space has dimension three.
+37:51
+The row space has dimension one. Three plus one is four.
+37:57
+The column space has dimension one, and what's the dimension of this, like,
+38:02
+smallest possible space? What's the dimension of the zero space?
+38:08
+It's a subspace. Zero.
+38:14
+What else could it be? I mean, let's -- we have to take a reasonable answer -- and the only reasonable answer is zero.
+38:20
+So one plus zero gives -- this was n, the number of columns,
+38:25
+and this is m, the number of rows. And let's just, let me just say again
+38:32
+then the, the, the subspace that has only that one point, that point is zero dimensional, of course.
+38:42
+And the basis is empty, because if the dimension is zero, there shouldn't be anybody in the basis.
+38:49
+So the basis of that smallest subspace is the empty set.
+38:56
+And the number of members in the empty set is zero, so that's the dimension.
+39:01
+OK. Good. Now I have just five minutes to tell you about --
+39:10
+well, actually, about some, some, some, this is now,
+39:16
+this last topic of small world graphs, and leads into,
+39:21
+a lecture about graphs and linear algebra.
+39:27
+But let me tell you -- in these last minutes the graph that I interested in.
+39:32
+It's the graph where -- so what is a graph?
+39:40
+Better tell you that first. OK. What's a graph?
+39:47
+OK. This isn't calculus. We're not, I'm not thinking of, like, some sine curve.
+39:54
+The word graph is used in a completely different way. It's a set of, a bunch of nodes and edges,
+40:07
+edges connecting the nodes. So I have nodes like five nodes and edges --
+40:17
+I'll put in some edges, I could put, include them all. There's -- well, let me put in a couple more.
+40:23
+There's a graph with five nodes and one two three four
+40:31
+five six edges. And some five by six matrix is going to tell us
+40:38
+everything about that graph. Let me leave that matrix to next time
+40:43
+and tell you about the question I'm interested in. Suppose, suppose the graph isn't just,
+40:52
+just doesn't have just five nodes, but suppose every, suppose every person in this room is a node.
+40:59
+And suppose there's an edge between two nodes
+41:07
+if those two people are friends. So have I described a graph?
+41:14
+It's a pretty big graph, hundred, hundred nodes. And I don't know how many edges are in there.
+41:21
+There's an edge if you're friends.
+41:27
+So that's the graph for this class. A, a similar graph you could take for the whole country,
+41:35
+so two hundred and sixty million nodes. And edges between friends.
+41:43
+And the question for that graph is how many steps does it take
+41:50
+to get from anybody to anybody?
+41:56
+What two people are furthest apart in this friendship graph,
+42:01
+say for the US? By furthest apart, I mean the distance from --
+42:08
+well, I'll tell you my distance to Clinton. It's two.
+42:14
+I happened to go to college with somebody who knows Clinton. I don't know him.
+42:19
+So my distance to Clinton is not one, because I don't, happily
+42:24
+or not, don't know him. But I know somebody who does. He's a Senator and so I presume he knows him.
+42:32
+OK. I don't know what your -- well, what's your distance to Clinton?
+42:39
+Well, not more than three, right. Actually, true. You know me.
+42:44
+I take credit for reducing your Clinton distance to three --
+42:50
+what's your distance to Monica. Not, anybody below -- below four is in trouble here.
+43:04
+Or maybe three, but, right. So -- and what's Hillary's distance to Monica?
+43:14
+I don't think we'd better put that on tape here. That's one or two, I guess.
+43:22
+Is that right? I don't -- well, we won't, think more about that.
+43:28
+So actually, the, the real question is what are large distances?
+43:38
+How, how far apart could people be separated? And roughly this number six degrees of separation
+43:46
+has kind of appeared as the movie title, as the book title, and it's with this meaning.
+43:52
+That roughly speaking -- six might be a fairly --
+43:59
+not too many people. If you sit next to somebody on an airplane,
+44:04
+you get talking to them. You begin to discuss mutual friends to sort of find out,
+44:12
+OK, what connections do you have, and very often you'll find you're
+44:17
+connected in, like, two or three or four steps. And you remark, it's a small world,
+44:23
+and that's how this expression small world came up. But six, I don't know if you could find -- if it took six,
+44:31
+I don't know if you would successfully discover those six in a, in an airplane conversation.
+44:36
+But here's the math question, and I'll leave it for next, for lecture twelve,
+44:42
+and do a lot of linear algebra in lecture twelve. But the interesting point is that with a few shortcuts,
+44:54
+the distances come down dramatically. That, I mean, all your distances to Clinton immediately drop
+45:03
+to three by taking linear algebra. That's, like, an extra bonus for taking linear algebra.
+45:11
+And to understand mathematically what it is about these graphs
+45:17
+-- or like the graphs of the World Wide Web. There's a fantastic graph.
+45:23
+So many people would like to understand and model the web. What the -- where the edges are links and the nodes are, sites,
+45:34
+websites. I'll leave you with that graph, and I'll see you --
+45:39
+have a good weekend, and see you on Monday. 
